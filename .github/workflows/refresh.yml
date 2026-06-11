@@ -1,4 +1,4 @@
-name: Auto Refresh Feishu Media
+name: Auto Refresh Feishu Portfolio
 
 on:
   schedule:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  refresh-media:
+  refresh-portfolio:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Refresh media files from Feishu
+      - name: Refresh portfolio data from Feishu
         env:
           LARK_APP_ID: ${{ secrets.LARK_APP_ID }}
           LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
@@ -32,5 +32,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add api/videos.json api/covers.json api/portfolio.json
+          git add api/portfolio.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto refresh feishu media" && git push)

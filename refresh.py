@@ -1,14 +1,4 @@
 #!/usr/bin/env python3
-"""
-Refresh Feishu media URLs from a Bitable table.
-
-This template is designed for static portfolio sites deployed to GitHub Pages:
-- authenticate with Feishu OpenAPI
-- fetch live Bitable records
-- resolve attachment tokens into tmp_download_url values
-- write static JSON files for the frontend
-"""
-
 from __future__ import annotations
 
 import json
@@ -17,15 +7,13 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-REPO_DIR = Path(__file__).resolve().parent
-API_DIR = REPO_DIR / "api"
-VIDEOS_FILE = API_DIR / "videos.json"
-COVERS_FILE = API_DIR / "covers.json"
+
+ROOT = Path(__file__).resolve().parent
+API_DIR = ROOT / "api"
 PORTFOLIO_FILE = API_DIR / "portfolio.json"
 
 APP_ID = os.environ.get("LARK_APP_ID", "").strip()
@@ -33,20 +21,26 @@ APP_SECRET = os.environ.get("LARK_APP_SECRET", "").strip()
 BASE_TOKEN = os.environ.get("LARK_BASE_TOKEN", "").strip()
 TABLE_ID = os.environ.get("LARK_TABLE_ID", "").strip()
 
-VIDEO_FIELD_CANDIDATES = ("样片", "视频", "作品", "附件", "视频作品")
-COVER_FIELD_CANDIDATES = ("封面", "封面图", "海报", "图片", "缩略图")
-TITLE_FIELD_CANDIDATES = ("内容", "标题", "作品名称", "名称")
-CATEGORY_FIELD_CANDIDATES = ("类型", "分类", "标签")
-DURATION_FIELD_CANDIDATES = ("时长", "片长")
-TOOLS_FIELD_CANDIDATES = ("AI工具", "工具", "使用工具")
-ORDER_FIELD_CANDIDATES = ("序号", "排序", "order", "Order")
+FIELD_TITLE = os.environ.get("LARK_FIELD_TITLE", "项目名称")
+FIELD_CATEGORY = os.environ.get("LARK_FIELD_CATEGORY", "前台分类")
+FIELD_SUMMARY = os.environ.get("LARK_FIELD_SUMMARY", "项目简介")
+FIELD_IMAGES = os.environ.get("LARK_FIELD_IMAGES", "图片")
+FIELD_YEAR = os.environ.get("LARK_FIELD_YEAR", "年份")
+FIELD_FEATURED = os.environ.get("LARK_FIELD_FEATURED", "是否精选")
+FIELD_VIDEO_URL = os.environ.get("LARK_FIELD_VIDEO_URL", "视频链接")
+FIELD_VIDEO_BV = os.environ.get("LARK_FIELD_VIDEO_BV", "视频BV号")
+FIELD_ROLE = os.environ.get("LARK_FIELD_ROLE", "角色")
+FIELD_TAGS = os.environ.get("LARK_FIELD_TAGS", "二级标签")
+FIELD_STATUS = os.environ.get("LARK_FIELD_STATUS", "项目状态")
+FIELD_ORDER = os.environ.get("LARK_FIELD_ORDER", "序号")
 
+CATEGORIES = ["政企展厅", "品牌空间", "文博展陈", "文旅体验", "大型展会", "临展活动", "其他创意"]
 BATCH_SIZE = 5
 
 
-def fail(message: str, code: int = 1) -> None:
+def fail(message: str) -> None:
     print(message, file=sys.stderr)
-    raise SystemExit(code)
+    raise SystemExit(1)
 
 
 def require_env() -> None:
@@ -61,27 +55,17 @@ def require_env() -> None:
         if not value
     ]
     if missing:
-        fail(
-            "Missing required environment variables: "
-            + ", ".join(missing)
-            + ". Configure them as repository secrets before running refresh.py."
-        )
+        fail("Missing required environment variables: " + ", ".join(missing))
 
 
-def request_json(
-    url: str,
-    *,
-    data: dict[str, Any] | None = None,
-    token: str | None = None,
-) -> dict[str, Any]:
-    headers = {"Content-Type": "application/json"}
+def request_json(url: str, *, data: dict[str, Any] | None = None, token: str | None = None) -> dict[str, Any]:
+    headers = {"Content-Type": "application/json; charset=utf-8"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
-
-    payload = None if data is None else json.dumps(data).encode("utf-8")
+    payload = None if data is None else json.dumps(data, ensure_ascii=False).encode("utf-8")
     req = urllib.request.Request(url, data=payload, headers=headers)
     try:
-        with urllib.request.urlopen(req) as response:
+        with urllib.request.urlopen(req, timeout=90) as response:
             return json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", "ignore")
@@ -90,20 +74,19 @@ def request_json(
         fail(f"Request failed for {url}: {exc}")
 
 
-def get_tenant_access_token() -> str:
+def tenant_access_token() -> str:
     res = request_json(
         "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal",
         data={"app_id": APP_ID, "app_secret": APP_SECRET},
     )
     if res.get("code") != 0 or not res.get("tenant_access_token"):
-        fail(f"Failed to get tenant access token: {json.dumps(res, ensure_ascii=False)}")
+        fail(f"Failed to get tenant token: {json.dumps(res, ensure_ascii=False)}")
     return str(res["tenant_access_token"])
 
 
-def get_records(tenant_token: str) -> list[dict[str, Any]]:
-    all_records: list[dict[str, Any]] = []
+def fetch_records(token: str) -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
     page_token = ""
-
     while True:
         params = {"page_size": 500}
         if page_token:
@@ -112,61 +95,17 @@ def get_records(tenant_token: str) -> list[dict[str, Any]]:
             f"https://open.feishu.cn/open-apis/bitable/v1/apps/{BASE_TOKEN}/tables/{TABLE_ID}/records?"
             + urllib.parse.urlencode(params)
         )
-        res = request_json(url, token=tenant_token)
+        res = request_json(url, token=token)
         if res.get("code") != 0:
-            fail(f"Failed to fetch Bitable records: {json.dumps(res, ensure_ascii=False)}")
-
+            fail(f"Failed to fetch records: {json.dumps(res, ensure_ascii=False)}")
         data = res.get("data", {})
-        all_records.extend(data.get("items", []))
-
+        records.extend(data.get("items", []))
         if not data.get("has_more"):
             break
         page_token = data.get("page_token", "")
         if not page_token:
             break
-
-    return all_records
-
-
-def batch_resolve_urls(tenant_token: str, file_tokens: list[str]) -> dict[str, str]:
-    resolved: dict[str, str] = {}
-    unique_tokens = [token for token in dict.fromkeys(file_tokens) if token]
-
-    extra = urllib.parse.quote(json.dumps({"bitablePerm": {"tableId": TABLE_ID}}, ensure_ascii=False))
-    base_url = "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url"
-
-    for start in range(0, len(unique_tokens), BATCH_SIZE):
-        batch = unique_tokens[start : start + BATCH_SIZE]
-        query = [("extra", extra)]
-        query.extend(("file_tokens", token) for token in batch)
-        url = base_url + "?" + "&".join(f"{k}={v}" for k, v in query)
-        res = request_json(url, token=tenant_token)
-        if res.get("code") != 0:
-            fail(f"Failed to resolve media URLs: {json.dumps(res, ensure_ascii=False)}")
-
-        for item in res.get("data", {}).get("tmp_download_urls", []):
-            token = item.get("file_token")
-            tmp_url = item.get("tmp_download_url")
-            if token and tmp_url:
-                resolved[str(token)] = str(tmp_url)
-
-    return resolved
-
-
-def pick_first_present(fields: dict[str, Any], candidates: tuple[str, ...]) -> Any:
-    for key in candidates:
-        if key in fields and fields[key] not in (None, "", []):
-            return fields[key]
-    return None
-
-
-def first_attachment_token(value: Any) -> str | None:
-    if isinstance(value, list) and value:
-        first = value[0]
-        if isinstance(first, dict):
-            token = first.get("file_token")
-            return str(token) if token else None
-    return None
+    return records
 
 
 def normalize_text(value: Any) -> str:
@@ -175,7 +114,7 @@ def normalize_text(value: Any) -> str:
     if isinstance(value, str):
         return value.strip()
     if isinstance(value, (int, float)):
-        return str(value)
+        return str(int(value)) if isinstance(value, float) and value.is_integer() else str(value)
     if isinstance(value, dict):
         for key in ("text", "name", "value"):
             if isinstance(value.get(key), str):
@@ -187,140 +126,119 @@ def normalize_text(value: Any) -> str:
     return str(value).strip()
 
 
-def normalize_categories(value: Any) -> list[str]:
+def normalize_list(value: Any) -> list[str]:
     if value is None:
         return []
-    if isinstance(value, str):
-        stripped = value.strip()
-        return [stripped] if stripped else []
-    if isinstance(value, dict):
-        text = normalize_text(value)
-        return [text] if text else []
     if isinstance(value, list):
-        categories: list[str] = []
+        return [text for text in (normalize_text(item) for item in value) if text]
+    text = normalize_text(value)
+    if not text:
+        return []
+    return [part.strip() for part in text.replace("；", ";").replace("，", ";").replace(",", ";").split(";") if part.strip()]
+
+
+def attachment_tokens(value: Any) -> list[str]:
+    tokens: list[str] = []
+    if isinstance(value, list):
         for item in value:
-            text = normalize_text(item)
-            if text:
-                categories.append(text)
-        return categories
-    return []
+            if isinstance(item, dict) and item.get("file_token"):
+                tokens.append(str(item["file_token"]))
+    return tokens
 
 
-def normalize_order(value: Any) -> float:
+def resolve_urls(token: str, file_tokens: list[str]) -> dict[str, str]:
+    resolved: dict[str, str] = {}
+    unique = [item for item in dict.fromkeys(file_tokens) if item]
+    if not unique:
+        return resolved
+
+    extra = urllib.parse.quote(json.dumps({"bitablePerm": {"tableId": TABLE_ID}}, ensure_ascii=False))
+    base_url = "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url"
+    for start in range(0, len(unique), BATCH_SIZE):
+        batch = unique[start : start + BATCH_SIZE]
+        query = [("extra", extra)]
+        query.extend(("file_tokens", file_token) for file_token in batch)
+        url = base_url + "?" + "&".join(f"{key}={value}" for key, value in query)
+        res = request_json(url, token=token)
+        if res.get("code") != 0:
+            fail(f"Failed to resolve media URLs: {json.dumps(res, ensure_ascii=False)}")
+        for item in res.get("data", {}).get("tmp_download_urls", []):
+            file_token = item.get("file_token")
+            tmp_url = item.get("tmp_download_url")
+            if file_token and tmp_url:
+                resolved[str(file_token)] = str(tmp_url)
+    return resolved
+
+
+def safe_order(value: Any, fallback: int) -> float:
     try:
         return float(value)
     except (TypeError, ValueError):
-        return 0.0
+        return float(fallback)
 
 
-def build_output(
-    records: list[dict[str, Any]],
-    resolved_urls: dict[str, str],
-) -> tuple[list[dict[str, Any]], dict[str, str], dict[str, str]]:
-    portfolio: list[dict[str, Any]] = []
-    video_map: dict[str, str] = {}
-    cover_map: dict[str, str] = {}
+def is_featured(value: Any) -> bool:
+    text = normalize_text(value)
+    return text in {"是", "精选", "true", "True", "1"}
 
-    for index, record in enumerate(records):
+
+def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    for index, record in enumerate(records, 1):
         fields = record.get("fields", {})
-        video_field = pick_first_present(fields, VIDEO_FIELD_CANDIDATES)
-        cover_field = pick_first_present(fields, COVER_FIELD_CANDIDATES)
-        video_token = first_attachment_token(video_field)
-        cover_token = first_attachment_token(cover_field)
-
-        if not video_token:
+        title = normalize_text(fields.get(FIELD_TITLE))
+        if not title:
             continue
-
-        video_url = resolved_urls.get(video_token)
-        if not video_url:
-            continue
-
-        if cover_token and resolved_urls.get(cover_token):
-            cover_map[cover_token] = resolved_urls[cover_token]
-
-        video_map[video_token] = video_url
-
-        title = normalize_text(pick_first_present(fields, TITLE_FIELD_CANDIDATES)) or f"作品 {index + 1}"
-        categories = normalize_categories(pick_first_present(fields, CATEGORY_FIELD_CANDIDATES))
-        duration = normalize_text(pick_first_present(fields, DURATION_FIELD_CANDIDATES))
-        tools = normalize_text(pick_first_present(fields, TOOLS_FIELD_CANDIDATES))
-        order = normalize_order(pick_first_present(fields, ORDER_FIELD_CANDIDATES))
-
-        portfolio.append(
-            {
-                "record_id": record.get("record_id", ""),
-                "title": title,
-                "order": order,
-                "categories": categories,
-                "duration": duration,
-                "tools": tools,
-                "video_token": video_token,
-                "video_url": video_url,
-                "cover_token": cover_token or "",
-                "cover_url": resolved_urls.get(cover_token, "") if cover_token else "",
-            }
-        )
-
-    portfolio.sort(key=lambda item: (item["order"], item["title"]))
-    return portfolio, video_map, cover_map
+        category = normalize_text(fields.get(FIELD_CATEGORY)) or "其他创意"
+        if category not in CATEGORIES:
+            category = "其他创意"
+        tokens = attachment_tokens(fields.get(FIELD_IMAGES))
+        images = [urls[token] for token in tokens if token in urls]
+        tags = normalize_list(fields.get(FIELD_TAGS))
+        item = {
+            "id": record.get("record_id") or f"project-{index}",
+            "order": safe_order(fields.get(FIELD_ORDER), index),
+            "title": title,
+            "category": category,
+            "summary": normalize_text(fields.get(FIELD_SUMMARY)),
+            "year": normalize_text(fields.get(FIELD_YEAR)),
+            "role": normalize_text(fields.get(FIELD_ROLE)),
+            "status": normalize_text(fields.get(FIELD_STATUS)),
+            "tags": tags[:6],
+            "featured": is_featured(fields.get(FIELD_FEATURED)),
+            "images": images,
+            "cover": images[0] if images else "",
+            "videoUrl": normalize_text(fields.get(FIELD_VIDEO_URL)),
+            "videoBv": normalize_text(fields.get(FIELD_VIDEO_BV)),
+        }
+        items.append(item)
+    items.sort(key=lambda row: (0 if row["featured"] else 1, row["order"], row["title"]))
+    return items
 
 
-def write_outputs(
-    portfolio: list[dict[str, Any]],
-    video_map: dict[str, str],
-    cover_map: dict[str, str],
-) -> None:
+def write_output(items: list[dict[str, Any]]) -> None:
     API_DIR.mkdir(parents=True, exist_ok=True)
-    refreshed_at = datetime.now(timezone.utc).isoformat()
-
-    videos_payload = dict(video_map)
-    videos_payload["_refreshed_at"] = refreshed_at
-    videos_payload["_count"] = len(video_map)
-
-    covers_payload = dict(cover_map)
-    covers_payload["_refreshed_at"] = refreshed_at
-    covers_payload["_count"] = len(cover_map)
-
-    stats = Counter()
-    for item in portfolio:
-        for category in item["categories"] or ["未分类"]:
-            stats[category] += 1
-
-    portfolio_payload = {
-        "_refreshed_at": refreshed_at,
-        "_count": len(portfolio),
-        "_stats": dict(sorted(stats.items())),
-        "items": portfolio,
+    payload = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "source": "feishu-bitable",
+        "categories": CATEGORIES,
+        "count": len(items),
+        "items": items,
     }
-
-    VIDEOS_FILE.write_text(json.dumps(videos_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    COVERS_FILE.write_text(json.dumps(covers_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    PORTFOLIO_FILE.write_text(json.dumps(portfolio_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    PORTFOLIO_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote {len(items)} items to {PORTFOLIO_FILE}")
 
 
 def main() -> None:
     require_env()
-    tenant_token = get_tenant_access_token()
-    records = get_records(tenant_token)
-    print(f"Fetched {len(records)} Bitable records.")
-
-    attachment_tokens: list[str] = []
+    token = tenant_access_token()
+    records = fetch_records(token)
+    all_tokens: list[str] = []
     for record in records:
-        fields = record.get("fields", {})
-        for candidates in (VIDEO_FIELD_CANDIDATES, COVER_FIELD_CANDIDATES):
-            token = first_attachment_token(pick_first_present(fields, candidates))
-            if token:
-                attachment_tokens.append(token)
-
-    resolved_urls = batch_resolve_urls(tenant_token, attachment_tokens)
-    print(f"Resolved {len(resolved_urls)} attachment URLs.")
-
-    portfolio, video_map, cover_map = build_output(records, resolved_urls)
-    write_outputs(portfolio, video_map, cover_map)
-
-    print(f"Wrote {len(portfolio)} items to {PORTFOLIO_FILE}.")
-    print(f"Wrote {len(video_map)} video URLs to {VIDEOS_FILE}.")
-    print(f"Wrote {len(cover_map)} cover URLs to {COVERS_FILE}.")
+        all_tokens.extend(attachment_tokens(record.get("fields", {}).get(FIELD_IMAGES)))
+    urls = resolve_urls(token, all_tokens)
+    items = build_portfolio(records, urls)
+    write_output(items)
 
 
 if __name__ == "__main__":
