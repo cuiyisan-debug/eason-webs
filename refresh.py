@@ -141,7 +141,12 @@ def attachment_tokens(value: Any) -> list[str]:
     tokens: list[str] = []
     if isinstance(value, list):
         for item in value:
-            if isinstance(item, dict) and item.get("file_token"):
+            if not isinstance(item, dict):
+                continue
+            file_name = normalize_text(item.get("name") or item.get("file_name"))
+            if file_name.startswith("00-slide-") or "-full-page" in file_name:
+                continue
+            if item.get("file_token"):
                 tokens.append(str(item["file_token"]))
     return tokens
 

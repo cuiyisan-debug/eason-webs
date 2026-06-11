@@ -34,6 +34,11 @@ const fallbackProjects = [
 let projects = [];
 let activeCategory = "全部";
 let featureIndex = 0;
+let expanded = false;
+let yearFilter = "全部";
+let allCategoryFilter = "全部";
+let activeGalleryImages = [];
+let activeGalleryIndex = 0;
 
 const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
@@ -47,13 +52,22 @@ const dialogTitle = document.querySelector("[data-dialog-title]");
 const dialogSummary = document.querySelector("[data-dialog-summary]");
 const dialogCategory = document.querySelector("[data-dialog-category]");
 const dialogMeta = document.querySelector("[data-dialog-meta]");
+const yearSelect = document.querySelector("[data-year-filter]");
+const allCategorySelect = document.querySelector("[data-category-filter]");
+const allFilters = document.querySelector("[data-all-filters]");
+const loadMore = document.querySelector("[data-load-more]");
+const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
 
 function imageOf(project) {
   return project.cover || project.images?.[0] || FALLBACK_IMAGE;
 }
 
 function filteredProjects() {
-  const list = activeCategory === "全部" ? projects : projects.filter((project) => project.category === activeCategory);
+  let list = activeCategory === "全部" ? projects : projects.filter((project) => project.category === activeCategory);
+  if (activeCategory === "全部") {
+    if (yearFilter !== "全部") list = list.filter((project) => String(project.year || "") === yearFilter);
+    if (allCategoryFilter !== "全部") list = list.filter((project) => project.category === allCategoryFilter);
+  }
   return [...list].sort((a, b) => Number(Boolean(b.cover)) - Number(Boolean(a.cover)) || (a.order || 0) - (b.order || 0));
 }
 
@@ -72,12 +86,16 @@ function renderFeature() {
 
 function renderProjects() {
   const list = filteredProjects();
-  countLabel.textContent = `${activeCategory} · ${list.length} 个项目`;
+  const visible = expanded ? list : list.slice(0, 12);
+  countLabel.textContent = `${activeCategory} · ${list.length} 个项目${expanded ? "" : " · 显示 12 个"}`;
+  allFilters.hidden = activeCategory !== "全部";
+  loadMore.hidden = list.length <= 12;
+  loadMore.textContent = expanded ? "收起项目" : `查看更多 ${list.length - 12} 个`;
   if (!list.length) {
     grid.innerHTML = `<div class="empty">当前分类暂无项目</div>`;
     return;
   }
-  grid.innerHTML = list
+  grid.innerHTML = visible
     .map((project, index) => {
       const meta = [project.year, ...(project.tags || []).slice(0, 2)].filter(Boolean);
       return `
@@ -96,13 +114,40 @@ function renderProjects() {
 }
 
 function openProject(project) {
-  dialogMedia.style.backgroundImage = `url("${imageOf(project)}")`;
+  activeGalleryImages = project.images?.length ? project.images : [imageOf(project)];
+  activeGalleryIndex = 0;
+  renderGallery();
   dialogCategory.textContent = project.category || "";
   dialogTitle.textContent = project.title;
   dialogSummary.textContent = project.summary || "该项目资料正在补充中。";
   const meta = [project.year, project.role, ...(project.tags || []), project.videoBv ? `BV: ${project.videoBv}` : ""].filter(Boolean);
   dialogMeta.innerHTML = meta.map((item) => `<span>${item}</span>`).join("");
   dialog.showModal();
+}
+
+function renderGallery() {
+  const image = activeGalleryImages[activeGalleryIndex] || FALLBACK_IMAGE;
+  dialogMedia.style.backgroundImage = `url("${image}")`;
+  galleryThumbs.innerHTML = activeGalleryImages
+    .map(
+      (item, index) => `
+        <button class="gallery-thumb ${index === activeGalleryIndex ? "active" : ""}" 
+          type="button" data-gallery-index="${index}" style="background-image:url('${item}')" 
+          aria-label="查看第 ${index + 1} 张图"></button>
+      `
+    )
+    .join("");
+}
+
+function changeGallery(delta) {
+  if (!activeGalleryImages.length) return;
+  activeGalleryIndex = (activeGalleryIndex + delta + activeGalleryImages.length) % activeGalleryImages.length;
+  renderGallery();
+}
+
+function populateYearFilter() {
+  const years = [...new Set(projects.map((project) => String(project.year || "").trim()).filter(Boolean))].sort((a, b) => Number(b) - Number(a));
+  yearSelect.innerHTML = `<option value="全部">全部年份</option>${years.map((year) => `<option value="${year}">${year}</option>`).join("")}`;
 }
 
 async function loadData() {
@@ -115,6 +160,7 @@ async function loadData() {
     projects = fallbackProjects;
   }
   if (!projects.length) projects = fallbackProjects;
+  populateYearFilter();
   renderFeature();
   renderProjects();
 }
@@ -124,6 +170,13 @@ document.querySelectorAll("[data-category]").forEach((button) => {
     document.querySelectorAll("[data-category]").forEach((item) => item.classList.remove("active"));
     button.classList.add("active");
     activeCategory = button.dataset.category;
+    expanded = false;
+    if (activeCategory !== "全部") {
+      yearFilter = "全部";
+      allCategoryFilter = "全部";
+      yearSelect.value = "全部";
+      allCategorySelect.value = "全部";
+    }
     renderProjects();
   });
 });
@@ -142,6 +195,28 @@ grid.addEventListener("keydown", (event) => {
 });
 
 document.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
+document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
+galleryThumbs.addEventListener("click", (event) => {
+  const thumb = event.target.closest("[data-gallery-index]");
+  if (!thumb) return;
+  activeGalleryIndex = Number(thumb.dataset.galleryIndex);
+  renderGallery();
+});
+loadMore.addEventListener("click", () => {
+  expanded = !expanded;
+  renderProjects();
+});
+yearSelect.addEventListener("change", () => {
+  yearFilter = yearSelect.value;
+  expanded = false;
+  renderProjects();
+});
+allCategorySelect.addEventListener("change", () => {
+  allCategoryFilter = allCategorySelect.value;
+  expanded = false;
+  renderProjects();
+});
 document.querySelector("[data-prev]").addEventListener("click", () => {
   featureIndex = Math.max(0, featureIndex - 1);
   renderFeature();

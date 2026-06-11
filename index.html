@@ -63,10 +63,6 @@
       </section>
 
       <section class="category-band" id="projects" aria-label="项目分类">
-        <button class="category active" type="button" data-category="全部">
-          <span>全部</span>
-          <small>All</small>
-        </button>
         <button class="category" type="button" data-category="政企展厅"><span>政企展厅</span><small>Gov</small></button>
         <button class="category" type="button" data-category="品牌空间"><span>品牌空间</span><small>Brand</small></button>
         <button class="category" type="button" data-category="文博展陈"><span>文博展陈</span><small>Museum</small></button>
@@ -74,6 +70,10 @@
         <button class="category" type="button" data-category="大型展会"><span>大型展会</span><small>Events</small></button>
         <button class="category" type="button" data-category="临展活动"><span>临展活动</span><small>Pop-up</small></button>
         <button class="category" type="button" data-category="其他创意"><span>其他创意</span><small>Ideas</small></button>
+        <button class="category active" type="button" data-category="全部">
+          <span>全部项目</span>
+          <small>All</small>
+        </button>
       </section>
 
       <section class="project-section">
@@ -84,7 +84,29 @@
           </div>
           <p data-count>正在读取飞书多维表格...</p>
         </div>
+        <div class="all-filters" data-all-filters hidden>
+          <label>
+            年份
+            <select data-year-filter>
+              <option value="全部">全部年份</option>
+            </select>
+          </label>
+          <label>
+            类别
+            <select data-category-filter>
+              <option value="全部">全部类别</option>
+              <option value="政企展厅">政企展厅</option>
+              <option value="品牌空间">品牌空间</option>
+              <option value="文博展陈">文博展陈</option>
+              <option value="文旅体验">文旅体验</option>
+              <option value="大型展会">大型展会</option>
+              <option value="临展活动">临展活动</option>
+              <option value="其他创意">其他创意</option>
+            </select>
+          </label>
+        </div>
         <div class="project-grid" data-project-grid></div>
+        <button class="load-more" type="button" data-load-more hidden>查看更多</button>
       </section>
 
       <section class="approach" id="approach">
@@ -141,7 +163,12 @@
 
     <dialog class="project-dialog" data-dialog>
       <button class="dialog-close" type="button" data-close aria-label="关闭">×</button>
-      <div class="dialog-media" data-dialog-media></div>
+      <div class="dialog-gallery">
+        <button class="gallery-nav prev" type="button" data-gallery-prev aria-label="上一张">←</button>
+        <div class="dialog-media" data-dialog-media></div>
+        <button class="gallery-nav next" type="button" data-gallery-next aria-label="下一张">→</button>
+        <div class="gallery-thumbs" data-gallery-thumbs></div>
+      </div>
       <div class="dialog-content">
         <p class="eyebrow" data-dialog-category></p>
         <h2 data-dialog-title></h2>

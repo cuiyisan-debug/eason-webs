@@ -207,7 +207,6 @@ h1 {
   align-self: stretch;
   min-height: 560px;
   overflow: hidden;
-  border-left: 1px solid var(--accent);
 }
 
 .feature-card {
@@ -307,10 +306,46 @@ h1 {
 }
 
 .category::before {
-  content: "";
+  content: "◆";
+  display: grid;
+  place-items: center;
   width: 26px;
   height: 26px;
   border: 2px solid currentColor;
+  color: currentColor;
+  font-size: 11px;
+}
+
+.category[data-category="政企展厅"]::before {
+  content: "▦";
+}
+
+.category[data-category="品牌空间"]::before {
+  content: "□";
+}
+
+.category[data-category="文博展陈"]::before {
+  content: "△";
+}
+
+.category[data-category="文旅体验"]::before {
+  content: "⌁";
+}
+
+.category[data-category="大型展会"]::before {
+  content: "✦";
+}
+
+.category[data-category="临展活动"]::before {
+  content: "↯";
+}
+
+.category[data-category="其他创意"]::before {
+  content: "✺";
+}
+
+.category[data-category="全部"]::before {
+  content: "●";
 }
 
 .category.active {
@@ -361,6 +396,48 @@ h1 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-top: 22px;
+}
+
+.all-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.all-filters[hidden] {
+  display: none;
+}
+
+.all-filters label {
+  display: inline-grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.all-filters select {
+  min-width: 168px;
+  height: 38px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.load-more {
+  display: block;
+  min-width: 170px;
+  height: 42px;
+  margin: 24px auto 0;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.load-more[hidden] {
+  display: none;
 }
 
 .project-card {
@@ -586,12 +663,61 @@ h1 {
   font-size: 24px;
 }
 
+.dialog-gallery {
+  position: relative;
+}
+
 .dialog-media {
   min-height: 520px;
+  transition: background-image 0.2s ease;
 }
 
 .dialog-content {
   padding: 26px;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 240px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 76%, transparent);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.gallery-nav.prev {
+  left: 14px;
+}
+
+.gallery-nav.next {
+  right: 14px;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px;
+  background: var(--bg-soft);
+}
+
+.gallery-thumb {
+  width: 86px;
+  height: 58px;
+  flex: 0 0 auto;
+  border: 2px solid transparent;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.gallery-thumb.active {
+  border-color: var(--accent);
 }
 
 .dialog-content h2 {
