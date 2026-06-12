@@ -935,6 +935,18 @@ h1 {
   font-size: 24px;
 }
 
+.dialog-video {
+  background: #000;
+  border-bottom: 1px solid var(--line);
+}
+
+.dialog-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 .dialog-gallery {
   position: relative;
 }

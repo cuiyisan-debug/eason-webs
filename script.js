@@ -48,6 +48,8 @@ const featureTitle = document.querySelector("[data-feature-title]");
 const featureSummary = document.querySelector("[data-feature-summary]");
 const nextTitle = document.querySelector("[data-next-title]");
 const dialog = document.querySelector("[data-dialog]");
+const dialogVideo = document.querySelector("[data-dialog-video]");
+const dialogVideoFrame = document.querySelector("[data-dialog-video-frame]");
 const dialogMedia = document.querySelector("[data-dialog-media]");
 const dialogTitle = document.querySelector("[data-dialog-title]");
 const dialogSummary = document.querySelector("[data-dialog-summary]");
@@ -64,6 +66,22 @@ const hasPortfolioGrid = Boolean(grid);
 
 function imageOf(project) {
   return project.cover || project.images?.[0] || FALLBACK_IMAGE;
+}
+
+function extractBilibiliBv(value) {
+  const text = String(value || "");
+  const match = text.match(/BV[0-9A-Za-z]+/);
+  return match ? match[0] : "";
+}
+
+function bilibiliEmbedUrl(project) {
+  const bv = extractBilibiliBv(project.videoBv) || extractBilibiliBv(project.videoUrl);
+  if (!bv) return "";
+  return `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bv)}&page=1&high_quality=1&autoplay=0`;
+}
+
+function hasVideo(project) {
+  return Boolean(bilibiliEmbedUrl(project));
 }
 
 function filteredProjects() {
@@ -141,10 +159,18 @@ function openProject(project) {
   activeGalleryImages = project.images?.length ? project.images : [imageOf(project)];
   activeGalleryIndex = 0;
   renderGallery();
+  const videoUrl = bilibiliEmbedUrl(project);
+  if (videoUrl) {
+    dialogVideo.hidden = false;
+    dialogVideoFrame.src = videoUrl;
+  } else {
+    dialogVideo.hidden = true;
+    dialogVideoFrame.removeAttribute("src");
+  }
   dialogCategory.textContent = project.category || "";
   dialogTitle.textContent = project.title;
   dialogSummary.textContent = project.summary || "该项目资料正在补充中。";
-  const meta = [project.year, project.role, ...(project.tags || []), project.videoBv ? `BV: ${project.videoBv}` : ""].filter(Boolean);
+  const meta = [project.year, project.role, ...(project.tags || []), hasVideo(project) ? "Bilibili" : ""].filter(Boolean);
   dialogMeta.innerHTML = meta.map((item) => `<span>${item}</span>`).join("");
   dialog.showModal();
 }
@@ -223,6 +249,9 @@ if (hasPortfolioGrid) {
   });
 
   document.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("close", () => {
+    dialogVideoFrame.removeAttribute("src");
+  });
   document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
   document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
   galleryThumbs.addEventListener("click", (event) => {
