@@ -535,8 +535,8 @@ h1 {
 }
 
 .portrait {
-  width: 92px;
-  height: 116px;
+  width: clamp(86px, 7vw, 126px);
+  aspect-ratio: 113 / 139;
   flex: 0 0 auto;
   background: url("./assets/portrait.webp") center 24% / cover no-repeat;
   border: 1px solid var(--line);
@@ -665,6 +665,7 @@ h1 {
   display: grid;
   gap: 8px;
   justify-items: center;
+  width: clamp(146px, 13vw, 208px);
   margin: 0;
   padding: 12px;
   border: 1px solid var(--line);
@@ -673,8 +674,9 @@ h1 {
 
 .wechat-card img {
   display: block;
-  width: 118px;
-  height: 118px;
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1;
   object-fit: contain;
   background: #fff;
 }
@@ -891,5 +893,6 @@ h1 {
 
   .wechat-card {
     justify-items: start;
+    width: min(100%, 220px);
   }
 }
