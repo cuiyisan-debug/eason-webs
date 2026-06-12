@@ -53,7 +53,7 @@ function renderDetail(project, allProjects) {
 
   const related = allProjects
     .filter((item) => item.id !== project.id && item.category === project.category)
-    .slice(0, 6);
+    .slice(0, 3);
   relatedProjects.innerHTML = related
     .map(
       (item) => `
