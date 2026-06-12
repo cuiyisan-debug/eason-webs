@@ -1067,6 +1067,14 @@ h1 {
   font-size: 34px;
 }
 
+.dialog-content h2 a {
+  display: inline-block;
+}
+
+.dialog-content h2 a:hover {
+  color: var(--accent);
+}
+
 .dialog-content p {
   color: var(--muted);
   line-height: 1.8;

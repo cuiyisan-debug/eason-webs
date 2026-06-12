@@ -170,7 +170,8 @@ function openProject(project) {
   mediaAutoplay = false;
   renderGallery();
   dialogCategory.textContent = project.category || "";
-  dialogTitle.textContent = project.title;
+  const href = `./project.html?id=${encodeURIComponent(project.id || projects.indexOf(project))}`;
+  dialogTitle.innerHTML = `<a href="${href}">${project.title}</a>`;
   dialogSummary.textContent = project.summary || "该项目资料正在补充中。";
   const meta = [project.year, project.role, ...(project.tags || []), hasVideo(project) ? "Bilibili" : ""].filter(Boolean);
   dialogMeta.innerHTML = meta.map((item) => `<span>${item}</span>`).join("");
