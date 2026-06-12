@@ -542,6 +542,33 @@ h1 {
   border-top: 1px solid var(--line);
 }
 
+.curation-page {
+  min-height: calc(100vh - 72px);
+}
+
+.curation-hero {
+  display: grid;
+  align-content: end;
+  min-height: 48vh;
+  padding: 72px 36px 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.curation-hero h1 {
+  max-width: 760px;
+}
+
+.curation-hero p:last-child {
+  max-width: 720px;
+  color: var(--text);
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.55;
+}
+
+.curation-page-list {
+  border-top: 0;
+}
+
 .curation .section-head > p {
   max-width: 360px;
   color: var(--muted);
@@ -1041,6 +1068,7 @@ h1 {
   }
 
   .hero,
+  .curation-hero,
   .project-section,
   .curation,
   .clients,
@@ -1053,6 +1081,11 @@ h1 {
     grid-template-columns: 1fr;
     min-height: auto;
     padding-top: 28px;
+  }
+
+  .curation-hero {
+    min-height: 42vh;
+    padding-top: 42px;
   }
 
   h1 {

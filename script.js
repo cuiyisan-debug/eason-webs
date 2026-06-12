@@ -60,6 +60,8 @@ const allFilters = document.querySelector("[data-all-filters]");
 const loadMore = document.querySelector("[data-load-more]");
 const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
 
+const hasPortfolioGrid = Boolean(grid);
+
 function imageOf(project) {
   return project.cover || project.images?.[0] || FALLBACK_IMAGE;
 }
@@ -173,6 +175,7 @@ function populateYearFilter() {
 }
 
 async function loadData() {
+  if (!hasPortfolioGrid) return;
   try {
     const response = await fetch(`./api/portfolio.json?ts=${Date.now()}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -187,73 +190,75 @@ async function loadData() {
   renderProjects();
 }
 
-document.querySelectorAll("[data-category]").forEach((button) => {
-  button.addEventListener("click", () => {
-    document.querySelectorAll("[data-category]").forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
-    activeCategory = button.dataset.category;
-    expanded = false;
-    if (activeCategory !== "全部") {
-      yearFilter = "全部";
-      allCategoryFilter = "全部";
-      searchQuery = "";
-      yearSelect.value = "全部";
-      allCategorySelect.value = "全部";
-      searchInput.value = "";
-    }
+if (hasPortfolioGrid) {
+  document.querySelectorAll("[data-category]").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll("[data-category]").forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      activeCategory = button.dataset.category;
+      expanded = false;
+      if (activeCategory !== "全部") {
+        yearFilter = "全部";
+        allCategoryFilter = "全部";
+        searchQuery = "";
+        yearSelect.value = "全部";
+        allCategorySelect.value = "全部";
+        searchInput.value = "";
+      }
+      renderProjects();
+    });
+  });
+
+  grid.addEventListener("click", (event) => {
+    const card = event.target.closest(".project-card");
+    if (!card) return;
+    openProject(projects[Number(card.dataset.index)]);
+  });
+
+  grid.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+    const card = event.target.closest(".project-card");
+    if (!card) return;
+    openProject(projects[Number(card.dataset.index)]);
+  });
+
+  document.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
+  document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
+  galleryThumbs.addEventListener("click", (event) => {
+    const thumb = event.target.closest("[data-gallery-index]");
+    if (!thumb) return;
+    activeGalleryIndex = Number(thumb.dataset.galleryIndex);
+    renderGallery();
+  });
+  loadMore.addEventListener("click", () => {
+    expanded = !expanded;
     renderProjects();
   });
-});
-
-grid.addEventListener("click", (event) => {
-  const card = event.target.closest(".project-card");
-  if (!card) return;
-  openProject(projects[Number(card.dataset.index)]);
-});
-
-grid.addEventListener("keydown", (event) => {
-  if (event.key !== "Enter") return;
-  const card = event.target.closest(".project-card");
-  if (!card) return;
-  openProject(projects[Number(card.dataset.index)]);
-});
-
-document.querySelector("[data-close]").addEventListener("click", () => dialog.close());
-document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
-document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
-galleryThumbs.addEventListener("click", (event) => {
-  const thumb = event.target.closest("[data-gallery-index]");
-  if (!thumb) return;
-  activeGalleryIndex = Number(thumb.dataset.galleryIndex);
-  renderGallery();
-});
-loadMore.addEventListener("click", () => {
-  expanded = !expanded;
-  renderProjects();
-});
-yearSelect.addEventListener("change", () => {
-  yearFilter = yearSelect.value;
-  expanded = false;
-  renderProjects();
-});
-allCategorySelect.addEventListener("change", () => {
-  allCategoryFilter = allCategorySelect.value;
-  expanded = false;
-  renderProjects();
-});
-searchInput.addEventListener("input", () => {
-  searchQuery = searchInput.value;
-  expanded = false;
-  renderProjects();
-});
-document.querySelector("[data-prev]").addEventListener("click", () => {
-  featureIndex = Math.max(0, featureIndex - 1);
-  renderFeature();
-});
-document.querySelector("[data-next]").addEventListener("click", () => {
-  featureIndex += 1;
-  renderFeature();
-});
+  yearSelect.addEventListener("change", () => {
+    yearFilter = yearSelect.value;
+    expanded = false;
+    renderProjects();
+  });
+  allCategorySelect.addEventListener("change", () => {
+    allCategoryFilter = allCategorySelect.value;
+    expanded = false;
+    renderProjects();
+  });
+  searchInput.addEventListener("input", () => {
+    searchQuery = searchInput.value;
+    expanded = false;
+    renderProjects();
+  });
+  document.querySelector("[data-prev]").addEventListener("click", () => {
+    featureIndex = Math.max(0, featureIndex - 1);
+    renderFeature();
+  });
+  document.querySelector("[data-next]").addEventListener("click", () => {
+    featureIndex += 1;
+    renderFeature();
+  });
+}
 
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
