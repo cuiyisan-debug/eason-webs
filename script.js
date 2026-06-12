@@ -255,13 +255,22 @@ document.querySelector("[data-next]").addEventListener("click", () => {
   renderFeature();
 });
 
-document.querySelector(".theme-toggle").addEventListener("click", () => {
-  document.documentElement.classList.toggle("light");
-  localStorage.setItem("portfolio-theme", document.documentElement.classList.contains("light") ? "light" : "dark");
+const themeToggle = document.querySelector(".theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+function setTheme(theme) {
+  const isLight = theme === "light";
+  document.documentElement.classList.toggle("light", isLight);
+  document.documentElement.dataset.theme = isLight ? "light" : "dark";
+  themeToggle.setAttribute("aria-pressed", String(isLight));
+  themeIcon.textContent = isLight ? "☾" : "◐";
+  localStorage.setItem("portfolio-theme", isLight ? "light" : "dark");
+}
+
+themeToggle.addEventListener("click", () => {
+  setTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
 });
 
-if (localStorage.getItem("portfolio-theme") === "light") {
-  document.documentElement.classList.add("light");
-}
+setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
 loadData();

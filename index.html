@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,10 +20,11 @@
       <nav class="nav" aria-label="页面导航">
         <a href="#projects">项目</a>
         <a href="#approach">方法</a>
+        <a href="#curation">策展</a>
         <a href="#clients">客户</a>
         <a href="#contact">联系</a>
       </nav>
-      <button class="theme-toggle" type="button" aria-label="切换深色浅色">
+      <button class="theme-toggle" type="button" aria-label="切换深色浅色" aria-pressed="false">
         <span class="theme-icon">◐</span>
       </button>
     </header>
@@ -136,6 +137,33 @@
         </div>
       </section>
 
+      <section class="curation" id="curation">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">CURATION NOTES</p>
+            <h2>策展思路</h2>
+          </div>
+          <p>后续可接入飞书表格、公众号文章或专题长文。</p>
+        </div>
+        <div class="curation-grid">
+          <article>
+            <span>01</span>
+            <h3>主题如何成为空间线索</h3>
+            <p>从项目命题出发，把品牌、产业或文化内容整理成可被参观者理解的叙事路径。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>体验动线与记忆点设计</h3>
+            <p>用节奏、停留点和视觉高潮组织观看顺序，让空间不只是陈列，而是一次完整体验。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>创意提案与 AI 工作流</h3>
+            <p>记录提案拆解、视觉试验、素材管理和 AI 辅助创意的方法，形成可持续更新的知识库。</p>
+          </article>
+        </div>
+      </section>
+
       <section class="clients" id="clients">
         <h2>合作客户</h2>
         <div class="client-strip">
@@ -168,6 +196,12 @@
           </figure>
         </div>
       </section>
+      <footer class="footer-line">
+        <span>崔一三作品集</span>
+        <span>Spatial Experience Portfolio</span>
+        <span>Exhibition · Brand · Culture · Curation</span>
+        <span>mycys.top</span>
+      </footer>
     </main>
 
     <dialog class="project-dialog" data-dialog>
