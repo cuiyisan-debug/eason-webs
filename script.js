@@ -129,7 +129,7 @@ function renderFeature() {
   featureCover.style.backgroundImage = `url("${imageOf(current)}")`;
   featureTitle.textContent = current.title;
   featureSummary.textContent = current.summary || current.category;
-  nextTitle.textContent = next?.title || "更多项目";
+  if (nextTitle) nextTitle.textContent = next?.title || "更多项目";
 }
 
 function renderProjects() {
@@ -148,12 +148,13 @@ function renderProjects() {
   grid.innerHTML = visible
     .map((project, index) => {
       const meta = [project.year, ...(project.tags || []).slice(0, 2)].filter(Boolean);
+      const href = `./project.html?id=${encodeURIComponent(project.id || projects.indexOf(project))}`;
       return `
         <article class="project-card" data-index="${projects.indexOf(project)}" tabindex="0">
           <div class="project-thumb" style="background-image:url('${imageOf(project)}')"></div>
           <div class="project-body">
             <span class="tag">${project.category || "其他创意"}</span>
-            <h3>${project.title}</h3>
+            <h3><a href="${href}">${project.title}</a></h3>
             <p>${project.summary || ""}</p>
             <div class="project-meta">${meta.map((item) => `<span>${item}</span>`).join("")}</div>
           </div>
@@ -251,6 +252,7 @@ if (hasPortfolioGrid) {
   });
 
   grid.addEventListener("click", (event) => {
+    if (event.target.closest("a")) return;
     const card = event.target.closest(".project-card");
     if (!card) return;
     openProject(projects[Number(card.dataset.index)]);
@@ -316,6 +318,11 @@ if (hasPortfolioGrid) {
     featureIndex += 1;
     renderFeature();
   });
+  window.setInterval(() => {
+    if (!projects.length) return;
+    featureIndex += 1;
+    renderFeature();
+  }, 5200);
 }
 
 const themeToggle = document.querySelector(".theme-toggle");

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>项目详情 | EASON.CUI</title>
+    <meta name="description" content="崔一三空间体验作品集项目详情。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html#top" aria-label="返回首页">
+        <span class="brand-mark">E</span>
+        <span>
+          <strong>EASON.CUI</strong>
+          <small>Spatial Experience Portfolio</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="./about.html">关于我</a>
+        <a href="./index.html#projects">项目</a>
+        <a href="./curation.html">策展</a>
+        <a href="./index.html#clients">客户</a>
+        <a href="./index.html#contact">联系</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="切换深色浅色" aria-pressed="false">
+        <span class="theme-icon">●</span>
+      </button>
+    </header>
+
+    <main class="project-page" data-project-page>
+      <section class="project-detail-hero">
+        <a class="back-link" href="./index.html#projects">← 返回项目</a>
+        <div class="project-detail-cover" data-detail-cover></div>
+      </section>
+
+      <section class="project-detail-intro">
+        <div>
+          <p class="eyebrow" data-detail-category>PROJECT</p>
+          <h1 data-detail-title>项目详情</h1>
+          <p data-detail-summary></p>
+        </div>
+        <dl class="project-facts" data-detail-facts></dl>
+      </section>
+
+      <section class="project-story" data-detail-story></section>
+
+      <section class="related-projects">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">RELATED PROJECTS</p>
+            <h2>同类别项目</h2>
+          </div>
+        </div>
+        <div class="related-grid" data-related-projects></div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+    <script src="./project.js"></script>
+  </body>
+</html>
