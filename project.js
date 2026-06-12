@@ -55,7 +55,15 @@ function renderDetail(project, allProjects) {
     .filter((item) => item.id !== project.id && item.category === project.category)
     .slice(0, 6);
   relatedProjects.innerHTML = related
-    .map((item) => `<a class="related-card" href="./project.html?id=${encodeURIComponent(item.id)}"><span>${item.category}</span><strong>${item.title}</strong></a>`)
+    .map(
+      (item) => `
+        <a class="related-card" href="./project.html?id=${encodeURIComponent(item.id)}">
+          <span class="related-thumb" style="background-image:url('${detailImageOf(item)}')"></span>
+          <span class="related-category">${item.category || "项目"}</span>
+          <strong>${item.title}</strong>
+        </a>
+      `
+    )
     .join("");
 }
 

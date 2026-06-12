@@ -1223,13 +1223,37 @@ h1 {
 }
 
 .related-card {
-  min-height: 132px;
+  position: relative;
+  min-height: 260px;
+  overflow: hidden;
   padding: 20px;
   border: 1px solid var(--line);
   background: var(--panel);
 }
 
-.related-card span {
+.related-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 36%, rgba(0, 0, 0, 0.82));
+}
+
+.related-thumb {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.35s ease;
+}
+
+.related-card:hover .related-thumb {
+  transform: scale(1.04);
+}
+
+.related-category {
+  position: relative;
+  z-index: 1;
   display: block;
   margin-bottom: 18px;
   color: var(--accent);
@@ -1237,7 +1261,14 @@ h1 {
 }
 
 .related-card strong {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+  color: #fff;
   font-size: 20px;
+  line-height: 1.35;
 }
 
 .about-hero {
