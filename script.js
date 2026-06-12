@@ -40,6 +40,7 @@ let allCategoryFilter = "全部";
 let searchQuery = "";
 let activeMediaItems = [];
 let activeMediaIndex = 0;
+let mediaAutoplay = false;
 
 const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
@@ -72,10 +73,10 @@ function extractBilibiliBv(value) {
   return match ? match[0] : "";
 }
 
-function bilibiliEmbedUrl(project) {
+function bilibiliEmbedUrl(project, autoplay = false) {
   const bv = extractBilibiliBv(project.videoBv) || extractBilibiliBv(project.videoUrl);
   if (!bv) return "";
-  return `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bv)}&page=1&high_quality=1&autoplay=0`;
+  return `https://player.bilibili.com/player.html?bvid=${encodeURIComponent(bv)}&page=1&high_quality=1&autoplay=${autoplay ? 1 : 0}`;
 }
 
 function hasVideo(project) {
@@ -165,6 +166,7 @@ function renderProjects() {
 function openProject(project) {
   activeMediaItems = mediaItemsFor(project);
   activeMediaIndex = 0;
+  mediaAutoplay = false;
   renderGallery();
   dialogCategory.textContent = project.category || "";
   dialogTitle.textContent = project.title;
@@ -176,11 +178,12 @@ function openProject(project) {
 
 function renderGallery() {
   const item = activeMediaItems[activeMediaIndex] || { type: "image", src: FALLBACK_IMAGE, label: "1" };
+  const mediaSrc = item.type === "video" ? item.src.replace(/autoplay=\d/, `autoplay=${mediaAutoplay ? 1 : 0}`) : item.src;
   dialogMedia.classList.toggle("video-mode", item.type === "video");
-  dialogMedia.style.backgroundImage = item.type === "image" ? `url("${item.src}")` : "";
+  dialogMedia.style.backgroundImage = item.type === "image" ? `url("${mediaSrc}")` : "";
   dialogMedia.innerHTML =
     item.type === "video"
-      ? `<iframe src="${item.src}" title="项目视频" loading="lazy" allowfullscreen></iframe>`
+      ? `<iframe src="${mediaSrc}" title="项目视频" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe>`
       : "";
   galleryThumbs.innerHTML = activeMediaItems
     .map(
@@ -196,6 +199,14 @@ function renderGallery() {
 function changeGallery(delta) {
   if (!activeMediaItems.length) return;
   activeMediaIndex = (activeMediaIndex + delta + activeMediaItems.length) % activeMediaItems.length;
+  mediaAutoplay = false;
+  renderGallery();
+}
+
+function activateVideoAutoplay() {
+  const item = activeMediaItems[activeMediaIndex];
+  if (!item || item.type !== "video" || mediaAutoplay) return;
+  mediaAutoplay = true;
   renderGallery();
 }
 
@@ -253,15 +264,29 @@ if (hasPortfolioGrid) {
   });
 
   document.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
   dialog.addEventListener("close", () => {
     dialogMedia.innerHTML = "";
   });
+  dialogMedia.addEventListener("mouseenter", activateVideoAutoplay);
   document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
   document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
   galleryThumbs.addEventListener("click", (event) => {
     const thumb = event.target.closest("[data-gallery-index]");
     if (!thumb) return;
     activeMediaIndex = Number(thumb.dataset.galleryIndex);
+    mediaAutoplay = false;
+    renderGallery();
+  });
+  galleryThumbs.addEventListener("mouseover", (event) => {
+    const thumb = event.target.closest("[data-gallery-index]");
+    if (!thumb || !thumb.classList.contains("video-thumb")) return;
+    const nextIndex = Number(thumb.dataset.galleryIndex);
+    if (activeMediaIndex === nextIndex && mediaAutoplay) return;
+    activeMediaIndex = nextIndex;
+    mediaAutoplay = true;
     renderGallery();
   });
   loadMore.addEventListener("click", () => {
