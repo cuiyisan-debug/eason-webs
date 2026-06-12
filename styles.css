@@ -416,13 +416,27 @@ h1 {
   font-size: 12px;
 }
 
-.all-filters select {
+.search-field {
+  flex: 1 1 280px;
+}
+
+.all-filters select,
+.all-filters input {
   min-width: 168px;
   height: 38px;
   border: 1px solid var(--line);
   background: var(--panel);
   color: var(--text);
   padding: 0 10px;
+}
+
+.all-filters input {
+  width: 100%;
+  min-width: min(420px, 100%);
+}
+
+.all-filters input::placeholder {
+  color: color-mix(in srgb, var(--muted) 70%, transparent);
 }
 
 .load-more {
@@ -524,9 +538,7 @@ h1 {
   width: 92px;
   height: 116px;
   flex: 0 0 auto;
-  background:
-    radial-gradient(circle at 50% 24%, rgba(255, 255, 255, 0.68) 0 12%, transparent 13%),
-    linear-gradient(145deg, #2d2d2d, #050505);
+  background: url("./assets/portrait.webp") center 24% / cover no-repeat;
   border: 1px solid var(--line);
 }
 
@@ -624,6 +636,12 @@ h1 {
   max-width: 720px;
 }
 
+.contact-panel {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
 .contact-list {
   display: grid;
   gap: 10px;
@@ -641,6 +659,29 @@ h1 {
 
 .contact-list span {
   color: var(--muted);
+}
+
+.wechat-card {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.wechat-card img {
+  display: block;
+  width: 118px;
+  height: 118px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.wechat-card figcaption {
+  color: var(--muted);
+  font-size: 12px;
 }
 
 .project-dialog {
@@ -833,7 +874,22 @@ h1 {
     display: block;
   }
 
+  .contact-panel {
+    align-items: stretch;
+    margin-top: 22px;
+  }
+
   .dialog-media {
     min-height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-panel {
+    display: grid;
+  }
+
+  .wechat-card {
+    justify-items: start;
   }
 }

@@ -37,6 +37,7 @@ let featureIndex = 0;
 let expanded = false;
 let yearFilter = "全部";
 let allCategoryFilter = "全部";
+let searchQuery = "";
 let activeGalleryImages = [];
 let activeGalleryIndex = 0;
 
@@ -54,6 +55,7 @@ const dialogCategory = document.querySelector("[data-dialog-category]");
 const dialogMeta = document.querySelector("[data-dialog-meta]");
 const yearSelect = document.querySelector("[data-year-filter]");
 const allCategorySelect = document.querySelector("[data-category-filter]");
+const searchInput = document.querySelector("[data-search-filter]");
 const allFilters = document.querySelector("[data-all-filters]");
 const loadMore = document.querySelector("[data-load-more]");
 const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
@@ -67,6 +69,24 @@ function filteredProjects() {
   if (activeCategory === "全部") {
     if (yearFilter !== "全部") list = list.filter((project) => String(project.year || "") === yearFilter);
     if (allCategoryFilter !== "全部") list = list.filter((project) => project.category === allCategoryFilter);
+    const keyword = searchQuery.trim().toLowerCase();
+    if (keyword) {
+      list = list.filter((project) => {
+        const searchable = [
+          project.title,
+          project.category,
+          project.summary,
+          project.year,
+          project.role,
+          project.status,
+          ...(project.tags || []),
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return searchable.includes(keyword);
+      });
+    }
   }
   return [...list].sort((a, b) => Number(Boolean(b.cover)) - Number(Boolean(a.cover)) || (a.order || 0) - (b.order || 0));
 }
@@ -87,12 +107,14 @@ function renderFeature() {
 function renderProjects() {
   const list = filteredProjects();
   const visible = expanded ? list : list.slice(0, 12);
-  countLabel.textContent = `${activeCategory} · ${list.length} 个项目${expanded ? "" : " · 显示 12 个"}`;
+  const searchText = activeCategory === "全部" && searchQuery.trim() ? ` · 搜索“${searchQuery.trim()}”` : "";
+  const visibleText = !expanded && list.length > 12 ? " · 显示 12 个" : "";
+  countLabel.textContent = `${activeCategory} · ${list.length} 个项目${searchText}${visibleText}`;
   allFilters.hidden = activeCategory !== "全部";
   loadMore.hidden = list.length <= 12;
   loadMore.textContent = expanded ? "收起项目" : `查看更多 ${list.length - 12} 个`;
   if (!list.length) {
-    grid.innerHTML = `<div class="empty">当前分类暂无项目</div>`;
+    grid.innerHTML = `<div class="empty">没有找到匹配的项目</div>`;
     return;
   }
   grid.innerHTML = visible
@@ -174,8 +196,10 @@ document.querySelectorAll("[data-category]").forEach((button) => {
     if (activeCategory !== "全部") {
       yearFilter = "全部";
       allCategoryFilter = "全部";
+      searchQuery = "";
       yearSelect.value = "全部";
       allCategorySelect.value = "全部";
+      searchInput.value = "";
     }
     renderProjects();
   });
@@ -214,6 +238,11 @@ yearSelect.addEventListener("change", () => {
 });
 allCategorySelect.addEventListener("change", () => {
   allCategoryFilter = allCategorySelect.value;
+  expanded = false;
+  renderProjects();
+});
+searchInput.addEventListener("input", () => {
+  searchQuery = searchInput.value;
   expanded = false;
   renderProjects();
 });
