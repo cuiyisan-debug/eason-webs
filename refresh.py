@@ -18,6 +18,7 @@ PORTFOLIO_FILE = API_DIR / "portfolio.json"
 
 APP_ID = os.environ.get("LARK_APP_ID", "").strip()
 APP_SECRET = os.environ.get("LARK_APP_SECRET", "").strip()
+ACCESS_TOKEN = os.environ.get("LARK_ACCESS_TOKEN", "").strip()
 BASE_TOKEN = os.environ.get("LARK_BASE_TOKEN", "").strip()
 TABLE_ID = os.environ.get("LARK_TABLE_ID", "").strip()
 
@@ -46,14 +47,15 @@ def fail(message: str) -> None:
 def require_env() -> None:
     missing = [
         name
-        for name, value in (
-            ("LARK_APP_ID", APP_ID),
-            ("LARK_APP_SECRET", APP_SECRET),
-            ("LARK_BASE_TOKEN", BASE_TOKEN),
-            ("LARK_TABLE_ID", TABLE_ID),
-        )
+        for name, value in (("LARK_BASE_TOKEN", BASE_TOKEN), ("LARK_TABLE_ID", TABLE_ID))
         if not value
     ]
+    if not ACCESS_TOKEN:
+        missing.extend(
+            name
+            for name, value in (("LARK_APP_ID", APP_ID), ("LARK_APP_SECRET", APP_SECRET))
+            if not value
+        )
     if missing:
         fail("Missing required environment variables: " + ", ".join(missing))
 
@@ -82,6 +84,12 @@ def tenant_access_token() -> str:
     if res.get("code") != 0 or not res.get("tenant_access_token"):
         fail(f"Failed to get tenant token: {json.dumps(res, ensure_ascii=False)}")
     return str(res["tenant_access_token"])
+
+
+def access_token() -> str:
+    if ACCESS_TOKEN:
+        return ACCESS_TOKEN
+    return tenant_access_token()
 
 
 def fetch_records(token: str) -> list[dict[str, Any]]:
@@ -236,7 +244,7 @@ def write_output(items: list[dict[str, Any]]) -> None:
 
 def main() -> None:
     require_env()
-    token = tenant_access_token()
+    token = access_token()
     records = fetch_records(token)
     all_tokens: list[str] = []
     for record in records:
