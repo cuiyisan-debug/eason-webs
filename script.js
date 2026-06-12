@@ -38,8 +38,8 @@ let expanded = false;
 let yearFilter = "全部";
 let allCategoryFilter = "全部";
 let searchQuery = "";
-let activeGalleryImages = [];
-let activeGalleryIndex = 0;
+let activeMediaItems = [];
+let activeMediaIndex = 0;
 
 const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
@@ -48,8 +48,6 @@ const featureTitle = document.querySelector("[data-feature-title]");
 const featureSummary = document.querySelector("[data-feature-summary]");
 const nextTitle = document.querySelector("[data-next-title]");
 const dialog = document.querySelector("[data-dialog]");
-const dialogVideo = document.querySelector("[data-dialog-video]");
-const dialogVideoFrame = document.querySelector("[data-dialog-video-frame]");
 const dialogMedia = document.querySelector("[data-dialog-media]");
 const dialogTitle = document.querySelector("[data-dialog-title]");
 const dialogSummary = document.querySelector("[data-dialog-summary]");
@@ -82,6 +80,15 @@ function bilibiliEmbedUrl(project) {
 
 function hasVideo(project) {
   return Boolean(bilibiliEmbedUrl(project));
+}
+
+function mediaItemsFor(project) {
+  const items = [];
+  const videoUrl = bilibiliEmbedUrl(project);
+  if (videoUrl) items.push({ type: "video", src: videoUrl, label: "VIDEO" });
+  const images = project.images?.length ? project.images : [imageOf(project)];
+  images.forEach((src, index) => items.push({ type: "image", src, label: String(index + 1) }));
+  return items;
 }
 
 function filteredProjects() {
@@ -156,17 +163,9 @@ function renderProjects() {
 }
 
 function openProject(project) {
-  activeGalleryImages = project.images?.length ? project.images : [imageOf(project)];
-  activeGalleryIndex = 0;
+  activeMediaItems = mediaItemsFor(project);
+  activeMediaIndex = 0;
   renderGallery();
-  const videoUrl = bilibiliEmbedUrl(project);
-  if (videoUrl) {
-    dialogVideo.hidden = false;
-    dialogVideoFrame.src = videoUrl;
-  } else {
-    dialogVideo.hidden = true;
-    dialogVideoFrame.removeAttribute("src");
-  }
   dialogCategory.textContent = project.category || "";
   dialogTitle.textContent = project.title;
   dialogSummary.textContent = project.summary || "该项目资料正在补充中。";
@@ -176,22 +175,27 @@ function openProject(project) {
 }
 
 function renderGallery() {
-  const image = activeGalleryImages[activeGalleryIndex] || FALLBACK_IMAGE;
-  dialogMedia.style.backgroundImage = `url("${image}")`;
-  galleryThumbs.innerHTML = activeGalleryImages
+  const item = activeMediaItems[activeMediaIndex] || { type: "image", src: FALLBACK_IMAGE, label: "1" };
+  dialogMedia.classList.toggle("video-mode", item.type === "video");
+  dialogMedia.style.backgroundImage = item.type === "image" ? `url("${item.src}")` : "";
+  dialogMedia.innerHTML =
+    item.type === "video"
+      ? `<iframe src="${item.src}" title="项目视频" loading="lazy" allowfullscreen></iframe>`
+      : "";
+  galleryThumbs.innerHTML = activeMediaItems
     .map(
       (item, index) => `
-        <button class="gallery-thumb ${index === activeGalleryIndex ? "active" : ""}" 
-          type="button" data-gallery-index="${index}" style="background-image:url('${item}')" 
-          aria-label="查看第 ${index + 1} 张图"></button>
+        <button class="gallery-thumb ${item.type === "video" ? "video-thumb" : ""} ${index === activeMediaIndex ? "active" : ""}" 
+          type="button" data-gallery-index="${index}" ${item.type === "image" ? `style="background-image:url('${item.src}')"` : ""}
+          aria-label="${item.type === "video" ? "查看项目视频" : `查看第 ${index + 1} 张图`}">${item.type === "video" ? item.label : ""}</button>
       `
     )
     .join("");
 }
 
 function changeGallery(delta) {
-  if (!activeGalleryImages.length) return;
-  activeGalleryIndex = (activeGalleryIndex + delta + activeGalleryImages.length) % activeGalleryImages.length;
+  if (!activeMediaItems.length) return;
+  activeMediaIndex = (activeMediaIndex + delta + activeMediaItems.length) % activeMediaItems.length;
   renderGallery();
 }
 
@@ -250,14 +254,14 @@ if (hasPortfolioGrid) {
 
   document.querySelector("[data-close]").addEventListener("click", () => dialog.close());
   dialog.addEventListener("close", () => {
-    dialogVideoFrame.removeAttribute("src");
+    dialogMedia.innerHTML = "";
   });
   document.querySelector("[data-gallery-prev]").addEventListener("click", () => changeGallery(-1));
   document.querySelector("[data-gallery-next]").addEventListener("click", () => changeGallery(1));
   galleryThumbs.addEventListener("click", (event) => {
     const thumb = event.target.closest("[data-gallery-index]");
     if (!thumb) return;
-    activeGalleryIndex = Number(thumb.dataset.galleryIndex);
+    activeMediaIndex = Number(thumb.dataset.galleryIndex);
     renderGallery();
   });
   loadMore.addEventListener("click", () => {

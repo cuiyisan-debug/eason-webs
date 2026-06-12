@@ -935,18 +935,6 @@ h1 {
   font-size: 24px;
 }
 
-.dialog-video {
-  background: #000;
-  border-bottom: 1px solid var(--line);
-}
-
-.dialog-video iframe {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 0;
-}
-
 .dialog-gallery {
   position: relative;
 }
@@ -954,6 +942,20 @@ h1 {
 .dialog-media {
   min-height: 520px;
   transition: background-image 0.2s ease;
+}
+
+.dialog-media.video-mode {
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  background: #000;
+}
+
+.dialog-media.video-mode iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
 }
 
 .dialog-content {
@@ -998,6 +1000,16 @@ h1 {
   background-position: center;
   background-size: cover;
   cursor: pointer;
+}
+
+.gallery-thumb.video-thumb {
+  display: grid;
+  place-items: center;
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
+  background: #050505;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.08em;
 }
 
 .gallery-thumb.active {

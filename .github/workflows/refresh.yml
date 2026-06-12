@@ -1,6 +1,11 @@
 name: Auto Refresh Feishu Portfolio
 
 on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "api/portfolio.json"
   schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
