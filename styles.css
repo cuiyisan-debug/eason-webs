@@ -779,7 +779,7 @@ h1 {
 
 .approach {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 28px;
   margin: 16px 36px 34px;
   padding: 22px 28px;
@@ -803,10 +803,10 @@ h1 {
 
 .signature {
   display: inline-block;
-  width: min(190px, 42vw);
+  width: min(170px, 40vw);
   height: auto;
   margin-bottom: 6px;
-  transform: rotate(-3deg);
+  transform: rotate(-2deg);
   transform-origin: left center;
 }
 
