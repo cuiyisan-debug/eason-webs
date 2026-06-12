@@ -790,7 +790,7 @@ h1 {
 .profile-block {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
 }
 
 .portrait {
@@ -805,6 +805,7 @@ h1 {
   display: inline-block;
   width: min(170px, 40vw);
   height: auto;
+  margin-left: -14px;
   margin-bottom: 6px;
   transform: rotate(-2deg);
   transform-origin: left center;
