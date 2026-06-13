@@ -120,9 +120,10 @@ function filteredProjects() {
 }
 
 function renderFeature() {
-  const withImages = projects.filter((project) => project.cover).slice(0, 8);
-  const featured = projects.filter((project) => project.featured).slice(0, 8);
-  const source = withImages.length ? withImages : featured.length ? featured : projects;
+  const featured = projects.filter((project) => project.featured);
+  const featuredWithImages = featured.filter((project) => project.cover);
+  const withImages = projects.filter((project) => project.cover);
+  const source = (featuredWithImages.length ? featuredWithImages : featured.length ? featured : withImages.length ? withImages : projects).slice(0, 8);
   if (!source.length) return;
   const current = source[featureIndex % source.length];
   const next = source[(featureIndex + 1) % source.length];
