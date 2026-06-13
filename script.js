@@ -121,12 +121,7 @@ function filteredProjects() {
 
 function renderFeature() {
   const featured = projects.filter((project) => project.featured);
-  const source = featured
-    .flatMap((project) => {
-      const images = project.images?.length ? project.images : project.cover ? [project.cover] : [];
-      return images.map((image) => ({ ...project, cover: image, images: [image] }));
-    })
-    .slice(0, 12);
+  const source = featured.filter((project) => project.cover).slice(0, 8);
   if (!source.length) {
     featureCard.hidden = true;
     featureCover.style.backgroundImage = "";
