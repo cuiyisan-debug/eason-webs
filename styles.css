@@ -310,14 +310,7 @@ h1 {
 }
 
 .feature-zone::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 54px;
-  height: 96px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(0, 0, 0, 0.18);
-  transform: translateY(-50%);
+  content: none;
 }
 
 .feature-zone-prev {
