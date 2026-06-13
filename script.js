@@ -45,6 +45,7 @@ let mediaAutoplay = false;
 const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
 const featureCover = document.querySelector("[data-feature-cover]");
+const featureCard = document.querySelector(".feature-card");
 const featureTitle = document.querySelector("[data-feature-title]");
 const nextTitle = document.querySelector("[data-next-title]");
 const dialog = document.querySelector("[data-dialog]");
@@ -121,8 +122,14 @@ function filteredProjects() {
 function renderFeature() {
   const featured = projects.filter((project) => project.featured);
   const featuredWithImages = featured.filter((project) => project.cover);
-  const source = (featuredWithImages.length ? featuredWithImages : featured).slice(0, 8);
-  if (!source.length) return;
+  const source = featuredWithImages.slice(0, 8);
+  if (!source.length) {
+    featureCard.hidden = true;
+    featureCover.style.backgroundImage = "";
+    featureTitle.textContent = "";
+    return;
+  }
+  featureCard.hidden = false;
   const currentIndex = ((featureIndex % source.length) + source.length) % source.length;
   const current = source[currentIndex];
   const next = source[(currentIndex + 1) % source.length];
