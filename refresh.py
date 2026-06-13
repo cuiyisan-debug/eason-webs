@@ -28,7 +28,6 @@ FIELD_SUMMARY = os.environ.get("LARK_FIELD_SUMMARY", "项目简介")
 FIELD_IMAGES = os.environ.get("LARK_FIELD_IMAGES", "图片")
 FIELD_YEAR = os.environ.get("LARK_FIELD_YEAR", "年份")
 FIELD_FEATURED = os.environ.get("LARK_FIELD_FEATURED", "首页轮播")
-FIELD_FEATURED_ALIASES = [FIELD_FEATURED, "首页轮播", "是否精选", "首页推荐", "精选", "推荐"]
 FIELD_VIDEO_URL = os.environ.get("LARK_FIELD_VIDEO_URL", "视频链接")
 FIELD_VIDEO_BV = os.environ.get("LARK_FIELD_VIDEO_BV", "视频BV号")
 FIELD_ROLE = os.environ.get("LARK_FIELD_ROLE", "角色")
@@ -196,13 +195,6 @@ def is_featured(value: Any) -> bool:
     return text in {"是", "精选", "推荐", "首页", "true", "True", "TRUE", "1", "yes", "Yes", "YES"}
 
 
-def first_field(fields: dict[str, Any], names: list[str]) -> Any:
-    for name in dict.fromkeys(names):
-        if name in fields:
-            return fields.get(name)
-    return None
-
-
 def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
     for index, record in enumerate(records, 1):
@@ -226,7 +218,7 @@ def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list
             "role": normalize_text(fields.get(FIELD_ROLE)),
             "status": normalize_text(fields.get(FIELD_STATUS)),
             "tags": tags[:6],
-            "featured": is_featured(first_field(fields, FIELD_FEATURED_ALIASES)),
+            "featured": is_featured(fields.get(FIELD_FEATURED)),
             "images": images,
             "cover": images[0] if images else "",
             "videoUrl": normalize_text(fields.get(FIELD_VIDEO_URL)),

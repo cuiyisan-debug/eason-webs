@@ -46,7 +46,6 @@ const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
 const featureCover = document.querySelector("[data-feature-cover]");
 const featureTitle = document.querySelector("[data-feature-title]");
-const featureSummary = document.querySelector("[data-feature-summary]");
 const nextTitle = document.querySelector("[data-next-title]");
 const dialog = document.querySelector("[data-dialog]");
 const dialogMedia = document.querySelector("[data-dialog-media]");
@@ -122,14 +121,13 @@ function filteredProjects() {
 function renderFeature() {
   const featured = projects.filter((project) => project.featured);
   const featuredWithImages = featured.filter((project) => project.cover);
-  const withImages = projects.filter((project) => project.cover);
-  const source = (featuredWithImages.length ? featuredWithImages : featured.length ? featured : withImages.length ? withImages : projects).slice(0, 8);
+  const source = (featuredWithImages.length ? featuredWithImages : featured).slice(0, 8);
   if (!source.length) return;
-  const current = source[featureIndex % source.length];
-  const next = source[(featureIndex + 1) % source.length];
+  const currentIndex = ((featureIndex % source.length) + source.length) % source.length;
+  const current = source[currentIndex];
+  const next = source[(currentIndex + 1) % source.length];
   featureCover.style.backgroundImage = `url("${imageOf(current)}")`;
   featureTitle.textContent = current.title;
-  featureSummary.textContent = current.summary || current.category;
   if (nextTitle) nextTitle.textContent = next?.title || "更多项目";
 }
 
@@ -313,7 +311,7 @@ if (hasPortfolioGrid) {
     renderProjects();
   });
   document.querySelector("[data-prev]").addEventListener("click", () => {
-    featureIndex = Math.max(0, featureIndex - 1);
+    featureIndex -= 1;
     renderFeature();
   });
   document.querySelector("[data-next]").addEventListener("click", () => {
