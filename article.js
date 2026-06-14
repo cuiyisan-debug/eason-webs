@@ -12,6 +12,9 @@ const sourceNames = {
   curation: "策展",
 };
 
+let articleImages = [];
+let activeArticleImageIndex = 0;
+
 function escapeHtml(value) {
   return String(value || "")
     .replace(/&/g, "&amp;")
@@ -62,7 +65,9 @@ function renderContentBlock(block) {
   if (block.type === "image" && block.url) {
     return `
       <figure class="article-inline-media">
-        <img src="${escapeHtml(block.url)}" alt="" loading="lazy" />
+        <button class="article-image-button" type="button" data-article-image-url="${escapeHtml(block.url)}" aria-label="打开图片浏览">
+          <img src="${escapeHtml(block.url)}" alt="" loading="lazy" />
+        </button>
       </figure>
     `;
   }
@@ -104,6 +109,78 @@ function renderBody(article) {
     : `<p>正文内容正在同步解析中，可点击原文链接查看。</p>`;
 }
 
+function collectArticleImages(article) {
+  const fromBlocks = Array.isArray(article.contentBlocks)
+    ? article.contentBlocks.filter((block) => block.type === "image" && block.url).map((block) => block.url)
+    : [];
+  const fromMedia = Array.isArray(article.media) ? article.media.filter((url) => !isVideo(url)) : [];
+  return [...new Set([...fromBlocks, ...fromMedia])];
+}
+
+function renderArticleImageLightbox() {
+  const stage = document.querySelector("[data-article-image-stage]");
+  const thumbs = document.querySelector("[data-article-image-thumbs]");
+  if (!stage || !thumbs || !articleImages.length) return;
+  const activeUrl = articleImages[activeArticleImageIndex] || articleImages[0];
+  stage.style.backgroundImage = `url("${activeUrl}")`;
+  thumbs.innerHTML = articleImages
+    .map(
+      (url, index) => `
+        <button class="gallery-thumb ${index === activeArticleImageIndex ? "active" : ""}" 
+          type="button" data-article-thumb-index="${index}" style="background-image:url('${escapeHtml(url)}')"
+          aria-label="查看第 ${index + 1} 张图片"></button>
+      `
+    )
+    .join("");
+}
+
+function openArticleImageLightbox(url) {
+  const dialog = document.querySelector("[data-article-image-dialog]");
+  if (!dialog || !articleImages.length) return;
+  const index = articleImages.indexOf(url);
+  activeArticleImageIndex = index >= 0 ? index : 0;
+  renderArticleImageLightbox();
+  dialog.showModal();
+}
+
+function changeArticleImage(delta) {
+  if (!articleImages.length) return;
+  activeArticleImageIndex = (activeArticleImageIndex + delta + articleImages.length) % articleImages.length;
+  renderArticleImageLightbox();
+}
+
+function bindArticleImageLightbox() {
+  const dialog = document.querySelector("[data-article-image-dialog]");
+  if (!dialog) return;
+  document.querySelector("[data-article-image-close]")?.addEventListener("click", () => dialog.close());
+  document.querySelector("[data-article-image-prev]")?.addEventListener("click", () => changeArticleImage(-1));
+  document.querySelector("[data-article-image-next]")?.addEventListener("click", () => changeArticleImage(1));
+  document.querySelector("[data-article-image-thumbs]")?.addEventListener("click", (event) => {
+    const thumb = event.target.closest("[data-article-thumb-index]");
+    if (!thumb) return;
+    activeArticleImageIndex = Number(thumb.dataset.articleThumbIndex);
+    renderArticleImageLightbox();
+  });
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!dialog.open) return;
+    if (event.key === "ArrowLeft") changeArticleImage(-1);
+    if (event.key === "ArrowRight") changeArticleImage(1);
+  });
+}
+
+function bindArticleInlineImages() {
+  const body = document.querySelector("[data-article-body]");
+  if (!body) return;
+  body.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-article-image-url]");
+    if (!button) return;
+    openArticleImageLightbox(button.dataset.articleImageUrl);
+  });
+}
+
 function renderRelated(current, items) {
   const container = document.querySelector("[data-related-articles]");
   if (!container) return;
@@ -138,6 +215,8 @@ function renderArticle(article, items) {
 
   renderMedia(article.contentBlocks?.length ? [] : article.media || []);
   renderBody(article);
+  articleImages = collectArticleImages(article);
+  activeArticleImageIndex = 0;
   renderRelated(article, items);
 }
 
@@ -157,4 +236,6 @@ async function loadArticle() {
   }
 }
 
+bindArticleImageLightbox();
+bindArticleInlineImages();
 loadArticle();

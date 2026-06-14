@@ -876,10 +876,24 @@ h1 {
   background: var(--panel);
 }
 
+.article-image-button {
+  display: block;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
 .article-inline-media img {
   display: block;
   width: 100%;
   height: auto;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.article-image-button:hover img {
+  opacity: 0.86;
 }
 
 .article-table-wrap {
@@ -915,6 +929,28 @@ h1 {
   background:
     linear-gradient(145deg, rgba(255, 103, 0, 0.16), transparent 48%),
     var(--panel);
+}
+
+.article-image-dialog {
+  width: min(1180px, calc(100vw - 32px));
+}
+
+.article-image-gallery {
+  display: grid;
+  grid-template-rows: minmax(360px, 72vh) auto;
+  background: #080808;
+}
+
+.article-image-stage {
+  min-height: 360px;
+  background-color: #080808;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.article-image-thumbs {
+  border-top: 1px solid var(--line);
 }
 
 .section-head > p {
