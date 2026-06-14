@@ -43,8 +43,8 @@ CATEGORIES = ["政企展厅", "品牌空间", "文博展陈", "文旅体验", "�
 BATCH_SIZE = 5
 ZHIXING_TITLE_FIELDS = ["标题", "文章标题", "名称", "主题", "Title", "title"]
 ZHIXING_SUMMARY_FIELDS = ["简介", "摘要", "说明", "描述", "Summary", "summary"]
-ZHIXING_BODY_FIELDS = ["正文", "内容", "文章内容", "Body", "body", "Content", "content"]
-ZHIXING_LINK_FIELDS = ["正文链接", "文章链接", "链接", "URL", "url", "Link", "link"]
+ZHIXING_BODY_FIELDS = ["正文", "正文内容", "内容", "详细内容", "文章内容", "文章正文", "全文", "Body", "body", "Content", "content"]
+ZHIXING_LINK_FIELDS = ["正文链接", "文章链接", "原文链接", "外部链接", "链接", "URL", "url", "Link", "link"]
 ZHIXING_MEDIA_FIELDS = ["附件", "图片", "封面", "视频", "媒体", "素材"]
 
 
