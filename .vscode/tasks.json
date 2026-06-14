@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Portfolio: Start local server",
+      "type": "shell",
+      "command": "python -m http.server 4177 --bind 127.0.0.1",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Portfolio: Check scripts",
+      "type": "shell",
+      "command": "python -m py_compile refresh.py; node --check script.js; node --check project.js; node --check articles.js; node --check article.js",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Portfolio: Refresh Feishu data",
+      "type": "shell",
+      "command": "python refresh.py",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
