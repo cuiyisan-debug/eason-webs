@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T05:29:17.637810+00:00",
+  "generatedAt": "2026-06-14T05:39:22.116970+00:00",
   "source": "feishu-bitable",
   "sourceType": "curation",
   "baseToken": "CtqgbzQHVazUyhsSiOEcIrxfnSd",
@@ -18,9 +18,9 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWRjMGM1ZTI2NzcyNDg0YzU0NTJlYzIxYTA1MmM2ZTdfOGYzY2RjODhlZThhNzY4NDYxODczNGI4OWViNTJjZDVfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzBjYTEzNjY2YjM5YmM0NGIwMDA1MzZmN2M5NGVkY2NfNzU0MDAxZTJmODM3MmJjNDY0ZmZmMzdkNzkxY2UwMmVfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Yzc3MGJmMThmNzAxYWZkYWM0Mjg2NTA4Y2M5ODc2NjBfMGMzYWRlZjE0MDkzNGRiM2YwNmI0ZWE1ZWI5ODc3MmZfSUQ6NzY1MTA4NTQ0ODY4ODk5NTUyMV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWE0ODFmNDM5YWFlNGMwN2YxZjFlYTZjNGE1NTA4MjhfMWJmNmY5YTEwNTg0YTM5ZWYyNDFlOGU5ZjkwOTJiMWRfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDY2YmYxNDc0YWFhYzU4N2IxZThmMzNlMzcwMjBmMjVfNDVkMGFkYmNiNDc0YjdiYmIwNGM2ZDJkYzZiNzQ5ZTJfSUQ6NzY1MTA4NTQ0ODY4ODk5NTUyMV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2E2NjRmYTVmMTliYjkwZDgxMjUwMzdkN2Q2MTMyMWFfMGQyNmVkNTA2NjM0YzUyNWE4OTIzMjNhZmI0MGJkMjZfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM"
       ],
       "contentBlocks": [
         {
@@ -30,7 +30,7 @@
         {
           "type": "image",
           "token": "TPeqbJoguoIqpDx0PLScmaVlngn",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWRjMGM1ZTI2NzcyNDg0YzU0NTJlYzIxYTA1MmM2ZTdfOGYzY2RjODhlZThhNzY4NDYxODczNGI4OWViNTJjZDVfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2E2NjRmYTVmMTliYjkwZDgxMjUwMzdkN2Q2MTMyMWFfMGQyNmVkNTA2NjM0YzUyNWE4OTIzMjNhZmI0MGJkMjZfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM"
         },
         {
           "type": "paragraph",
@@ -103,7 +103,7 @@
         {
           "type": "image",
           "token": "MURibABo3o2czExbXeEcXMaEn2d",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzBjYTEzNjY2YjM5YmM0NGIwMDA1MzZmN2M5NGVkY2NfNzU0MDAxZTJmODM3MmJjNDY0ZmZmMzdkNzkxY2UwMmVfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWE0ODFmNDM5YWFlNGMwN2YxZjFlYTZjNGE1NTA4MjhfMWJmNmY5YTEwNTg0YTM5ZWYyNDFlOGU5ZjkwOTJiMWRfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM"
         },
         {
           "type": "paragraph",
@@ -164,7 +164,7 @@
         {
           "type": "image",
           "token": "XCvPb37OGocsdzxcoYHcHwVKnyh",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Yzc3MGJmMThmNzAxYWZkYWM0Mjg2NTA4Y2M5ODc2NjBfMGMzYWRlZjE0MDkzNGRiM2YwNmI0ZWE1ZWI5ODc3MmZfSUQ6NzY1MTA4NTQ0ODY4ODk5NTUyMV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDY2YmYxNDc0YWFhYzU4N2IxZThmMzNlMzcwMjBmMjVfNDVkMGFkYmNiNDc0YjdiYmIwNGM2ZDJkYzZiNzQ5ZTJfSUQ6NzY1MTA4NTQ0ODY4ODk5NTUyMV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM"
         },
         {
           "type": "paragraph",
@@ -187,7 +187,7 @@
           "text": "真正好的策展，是在复杂信息中找到方向，在材料中提炼观点，在空间中组织体验，在运营中延续价值。策展的本质，不是摆放展品，而是建立一套关于人、内容、空间与时间的关系系统。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWRjMGM1ZTI2NzcyNDg0YzU0NTJlYzIxYTA1MmM2ZTdfOGYzY2RjODhlZThhNzY4NDYxODczNGI4OWViNTJjZDVfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzgxNDE0OTU3OjE3ODE1MDEzNTdfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWE0ODFmNDM5YWFlNGMwN2YxZjFlYTZjNGE1NTA4MjhfMWJmNmY5YTEwNTg0YTM5ZWYyNDFlOGU5ZjkwOTJiMWRfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzgxNDE1NTYxOjE3ODE1MDE5NjFfVjM"
     }
   ]
 }
