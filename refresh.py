@@ -445,6 +445,36 @@ def fetch_feishu_doc_block_tree(token: str, document_id: str) -> list[dict[str, 
     return blocks
 
 
+def fetch_feishu_descendant_blocks(token: str, document_id: str, parent_block_id: str) -> list[dict[str, Any]]:
+    blocks: list[dict[str, Any]] = []
+    page_token = ""
+    while True:
+        params = {"page_size": 500, "document_revision_id": -1}
+        if page_token:
+            params["page_token"] = page_token
+        api_url = (
+            f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}"
+            f"/blocks/{urllib.parse.quote(parent_block_id)}/descendant?"
+            + urllib.parse.urlencode(params)
+        )
+        req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                res = json.loads(response.read().decode("utf-8"))
+        except Exception:
+            return blocks
+        if res.get("code") != 0:
+            return blocks
+        data = res.get("data", {})
+        blocks.extend(data.get("items", []))
+        if not data.get("has_more"):
+            break
+        page_token = data.get("page_token", "")
+        if not page_token:
+            break
+    return blocks
+
+
 def collect_doc_media_tokens(value: Any, path: tuple[str, ...] = ()) -> list[str]:
     tokens: list[str] = []
     if isinstance(value, dict):
@@ -615,7 +645,9 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     document_id = feishu_doc_id_from_url(url)
     if not document_id:
         return {}
-    blocks = fetch_feishu_doc_block_tree(token, document_id)
+    blocks = fetch_feishu_descendant_blocks(token, document_id, document_id)
+    if not blocks:
+        blocks = fetch_feishu_doc_block_tree(token, document_id)
     if len(blocks) <= 1:
         blocks = fetch_feishu_doc_blocks(token, document_id)
     media_tokens = collect_doc_media_tokens(blocks)
