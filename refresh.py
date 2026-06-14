@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parent
 API_DIR = ROOT / "api"
 PORTFOLIO_FILE = API_DIR / "portfolio.json"
 ZHIXING_FILE = API_DIR / "zhixing.json"
+CURATION_FILE = API_DIR / "curation.json"
 
 APP_ID = os.environ.get("LARK_APP_ID", "").strip()
 APP_SECRET = os.environ.get("LARK_APP_SECRET", "").strip()
@@ -24,6 +25,8 @@ BASE_TOKEN = os.environ.get("LARK_BASE_TOKEN", "").strip()
 TABLE_ID = os.environ.get("LARK_TABLE_ID", "").strip()
 ZHIXING_BASE_TOKEN = os.environ.get("LARK_ZHIXING_BASE_TOKEN", "Vn7hbNMygaDrSMseVgycCCJen1e").strip()
 ZHIXING_TABLE_ID = os.environ.get("LARK_ZHIXING_TABLE_ID", "").strip()
+CURATION_BASE_TOKEN = os.environ.get("LARK_CURATION_BASE_TOKEN", "CtqgbzQHVazUyhsSiOEcIrxfnSd").strip()
+CURATION_TABLE_ID = os.environ.get("LARK_CURATION_TABLE_ID", "").strip()
 
 FIELD_TITLE = os.environ.get("LARK_FIELD_TITLE", "项目名称")
 FIELD_CATEGORY = os.environ.get("LARK_FIELD_CATEGORY", "前台分类")
@@ -46,6 +49,7 @@ ZHIXING_SUMMARY_FIELDS = ["简介", "摘要", "说明", "描述", "Summary", "su
 ZHIXING_BODY_FIELDS = ["正文", "正文内容", "内容", "详细内容", "文章内容", "文章正文", "全文", "Body", "body", "Content", "content"]
 ZHIXING_LINK_FIELDS = ["正文链接", "文章链接", "原文链接", "外部链接", "链接", "URL", "url", "Link", "link"]
 ZHIXING_MEDIA_FIELDS = ["附件", "图片", "封面", "视频", "媒体", "素材"]
+ARTICLE_ORDER_FIELDS = ["附件顺序", "图片顺序", "媒体顺序"]
 
 
 def fail(message: str) -> None:
@@ -277,10 +281,10 @@ def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list
     return items
 
 
-def choose_zhixing_table(token: str) -> str:
-    if ZHIXING_TABLE_ID:
-        return ZHIXING_TABLE_ID
-    tables = list_tables(token, ZHIXING_BASE_TOKEN)
+def choose_article_table(token: str, base_token: str, table_id: str) -> str:
+    if table_id:
+        return table_id
+    tables = list_tables(token, base_token)
     best_table = ""
     best_score = -1
     for table in tables:
@@ -288,7 +292,7 @@ def choose_zhixing_table(token: str) -> str:
         if not table_id:
             continue
         try:
-            records = fetch_records(token, base_token=ZHIXING_BASE_TOKEN, table_id=table_id)
+            records = fetch_records(token, base_token=base_token, table_id=table_id)
         except SystemExit:
             raise
         except Exception:
@@ -350,10 +354,14 @@ def media_from_fields(fields: dict[str, Any]) -> list[str]:
     tokens: list[str] = []
     for field_name in ZHIXING_MEDIA_FIELDS:
         tokens.extend(attachment_tokens(fields.get(field_name)))
-    return list(dict.fromkeys(tokens))
+    media = list(dict.fromkeys(tokens))
+    order_text = normalize_text(first_field(fields, ARTICLE_ORDER_FIELDS))
+    if "倒序" in order_text:
+        media.reverse()
+    return media
 
 
-def build_zhixing_articles(records: list[dict[str, Any]], urls: dict[str, str]) -> list[dict[str, Any]]:
+def build_articles(records: list[dict[str, Any]], urls: dict[str, str], source_type: str, fallback_title: str) -> list[dict[str, Any]]:
     articles: list[dict[str, Any]] = []
     for index, record in enumerate(records, 1):
         fields = record.get("fields", {})
@@ -365,7 +373,7 @@ def build_zhixing_articles(records: list[dict[str, Any]], urls: dict[str, str]) 
             continue
         linked = fetch_link_content(content_url) if content_url else {}
         if not title:
-            title = linked.get("title") or f"知行记录 {index}"
+            title = linked.get("title") or f"{fallback_title} {index}"
         if not body and linked.get("body"):
             body = linked["body"]
         if not summary:
@@ -374,7 +382,8 @@ def build_zhixing_articles(records: list[dict[str, Any]], urls: dict[str, str]) 
         media = [urls[token] for token in media_tokens if token in urls]
         articles.append(
             {
-                "id": record.get("record_id") or f"zhixing-{index}",
+                "id": record.get("record_id") or f"{source_type}-{index}",
+                "sourceType": source_type,
                 "order": safe_order(fields.get("序号") or fields.get("排序"), index),
                 "title": title,
                 "summary": summary,
@@ -403,19 +412,70 @@ def write_output(items: list[dict[str, Any]]) -> None:
     print(f"Wrote {len(items)} items to {PORTFOLIO_FILE}")
 
 
-def write_zhixing_output(items: list[dict[str, Any]], table_id: str, error: str = "") -> None:
+def write_article_output(
+    output_file: Path,
+    items: list[dict[str, Any]],
+    *,
+    base_token: str,
+    table_id: str,
+    source_type: str,
+    error: str = "",
+) -> None:
     API_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "source": "feishu-bitable",
-        "baseToken": ZHIXING_BASE_TOKEN,
+        "sourceType": source_type,
+        "baseToken": base_token,
         "tableId": table_id,
         "count": len(items),
         "error": error,
         "items": items,
     }
-    ZHIXING_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {len(items)} items to {ZHIXING_FILE}")
+    output_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote {len(items)} items to {output_file}")
+
+
+def refresh_article_source(
+    token: str,
+    *,
+    output_file: Path,
+    base_token: str,
+    explicit_table_id: str,
+    source_type: str,
+    fallback_title: str,
+) -> None:
+    if not base_token:
+        write_article_output(output_file, [], base_token=base_token, table_id="", source_type=source_type)
+        return
+    try:
+        table_id = choose_article_table(token, base_token, explicit_table_id)
+        if not table_id:
+            write_article_output(
+                output_file,
+                [],
+                base_token=base_token,
+                table_id="",
+                source_type=source_type,
+                error=f"No suitable {source_type} table found.",
+            )
+            return
+        article_records = fetch_records(token, base_token=base_token, table_id=table_id)
+        article_tokens: list[str] = []
+        for record in article_records:
+            article_tokens.extend(media_from_fields(record.get("fields", {})))
+        article_urls = resolve_urls(token, article_tokens, table_id=table_id)
+        write_article_output(
+            output_file,
+            build_articles(article_records, article_urls, source_type, fallback_title),
+            base_token=base_token,
+            table_id=table_id,
+            source_type=source_type,
+        )
+    except SystemExit as exc:
+        write_article_output(output_file, [], base_token=base_token, table_id="", source_type=source_type, error=str(exc))
+    except Exception as exc:
+        write_article_output(output_file, [], base_token=base_token, table_id="", source_type=source_type, error=str(exc))
 
 
 def main() -> None:
@@ -430,22 +490,22 @@ def main() -> None:
     urls = resolve_urls(token, all_tokens)
     items = build_portfolio(records, urls)
     write_output(items)
-    if ZHIXING_BASE_TOKEN:
-        try:
-            zhixing_table_id = choose_zhixing_table(token)
-            if zhixing_table_id:
-                zhixing_records = fetch_records(token, base_token=ZHIXING_BASE_TOKEN, table_id=zhixing_table_id)
-                zhixing_tokens: list[str] = []
-                for record in zhixing_records:
-                    zhixing_tokens.extend(media_from_fields(record.get("fields", {})))
-                zhixing_urls = resolve_urls(token, zhixing_tokens, table_id=zhixing_table_id)
-                write_zhixing_output(build_zhixing_articles(zhixing_records, zhixing_urls), zhixing_table_id)
-            else:
-                write_zhixing_output([], "", "No suitable zhixing table found.")
-        except SystemExit as exc:
-            write_zhixing_output([], "", str(exc))
-        except Exception as exc:
-            write_zhixing_output([], "", str(exc))
+    refresh_article_source(
+        token,
+        output_file=ZHIXING_FILE,
+        base_token=ZHIXING_BASE_TOKEN,
+        explicit_table_id=ZHIXING_TABLE_ID,
+        source_type="zhixing",
+        fallback_title="知行记录",
+    )
+    refresh_article_source(
+        token,
+        output_file=CURATION_FILE,
+        base_token=CURATION_BASE_TOKEN,
+        explicit_table_id=CURATION_TABLE_ID,
+        source_type="curation",
+        fallback_title="策展文章",
+    )
 
 
 if __name__ == "__main__":

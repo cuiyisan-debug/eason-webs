@@ -28,7 +28,7 @@
       </button>
     </header>
 
-    <main class="curation-page">
+    <main class="curation-page" data-article-source="curation">
       <section class="curation-hero">
         <p class="eyebrow">CURATION NOTES</p>
         <h1>策展思路</h1>
@@ -43,7 +43,18 @@
             <p class="eyebrow">THINKING ARCHIVE</p>
             <h2>文章与方法</h2>
           </div>
-          <p>先保留结构，等飞书表格或公众号文章整理好后再自动读取。</p>
+          <p data-article-status>正在读取飞书策展表格；如果暂时没有真实文章，会保留下方示意内容。</p>
+        </div>
+        <div class="curation-grid zhixing-grid" data-article-grid hidden></div>
+      </section>
+
+      <section class="curation curation-page-list">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">PLACEHOLDER IDEAS</p>
+            <h2>后续示意</h2>
+          </div>
+          <p>其他文章还保持原来的示意，等表格继续补充后会被真实内容替换到上方。</p>
         </div>
         <div class="curation-grid">
           <article>
@@ -73,5 +84,6 @@
     </main>
 
     <script src="./script.js"></script>
+    <script src="./articles.js"></script>
   </body>
 </html>

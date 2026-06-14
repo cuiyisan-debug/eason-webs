@@ -741,6 +741,14 @@ h1 {
   cursor: pointer;
 }
 
+.article-card h3 a {
+  color: inherit;
+}
+
+.article-card h3 a:hover {
+  color: var(--accent);
+}
+
 .zhixing-card:hover,
 .zhixing-card:focus-visible {
   border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
@@ -812,6 +820,60 @@ h1 {
 
 .zhixing-media video {
   aspect-ratio: 16 / 9;
+}
+
+.article-page {
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.article-hero {
+  padding: 74px 36px 42px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-hero h1 {
+  max-width: 1120px;
+  margin: 0;
+  font-size: clamp(42px, 7vw, 96px);
+  line-height: 1.05;
+}
+
+.article-hero > p:not(.eyebrow) {
+  max-width: 880px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.article-story {
+  display: grid;
+  gap: 28px;
+  padding: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article-media {
+  grid-template-columns: 1fr;
+  max-width: 1280px;
+}
+
+.article-media img,
+.article-media video {
+  max-height: none;
+  object-fit: contain;
+}
+
+.article-body {
+  max-width: 920px;
+  font-size: 17px;
+}
+
+.article-related-card.no-thumb {
+  background:
+    linear-gradient(145deg, rgba(255, 103, 0, 0.16), transparent 48%),
+    var(--panel);
 }
 
 .section-head > p {
@@ -1561,6 +1623,8 @@ h1 {
 
   .hero,
   .curation-hero,
+  .article-hero,
+  .article-story,
   .project-section,
   .curation,
   .clients,
