@@ -239,6 +239,14 @@ async function loadData() {
 }
 
 if (hasPortfolioGrid) {
+  const navLinks = document.querySelectorAll(".nav a");
+  function setActiveNav(target) {
+    navLinks.forEach((link) => link.classList.toggle("active", link === target));
+  }
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => setActiveNav(link));
+  });
+
   document.querySelectorAll("[data-category]").forEach((button) => {
     button.addEventListener("click", () => {
       document.querySelectorAll("[data-category]").forEach((item) => item.classList.remove("active"));
