@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -393,6 +394,57 @@ def fetch_feishu_doc_blocks(token: str, document_id: str) -> list[dict[str, Any]
     return blocks
 
 
+def fetch_feishu_child_blocks(token: str, document_id: str, parent_block_id: str) -> list[dict[str, Any]]:
+    blocks: list[dict[str, Any]] = []
+    page_token = ""
+    while True:
+        params = {"page_size": 500}
+        if page_token:
+            params["page_token"] = page_token
+        api_url = (
+            f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}"
+            f"/blocks/{urllib.parse.quote(parent_block_id)}/children?"
+            + urllib.parse.urlencode(params)
+        )
+        req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                res = json.loads(response.read().decode("utf-8"))
+        except Exception:
+            return blocks
+        if res.get("code") != 0:
+            return blocks
+        data = res.get("data", {})
+        blocks.extend(data.get("items", []))
+        if not data.get("has_more"):
+            break
+        page_token = data.get("page_token", "")
+        if not page_token:
+            break
+    return blocks
+
+
+def fetch_feishu_doc_block_tree(token: str, document_id: str) -> list[dict[str, Any]]:
+    root_children = fetch_feishu_child_blocks(token, document_id, document_id)
+    root = {"block_id": document_id, "children": [block_id(block) for block in root_children if block_id(block)]}
+    blocks = [root, *root_children]
+    seen = {document_id}
+    queue = list(root["children"])
+    while queue:
+        parent_id = queue.pop(0)
+        if parent_id in seen:
+            continue
+        seen.add(parent_id)
+        children = fetch_feishu_child_blocks(token, document_id, parent_id)
+        for child in children:
+            child_id = block_id(child)
+            if child_id:
+                blocks.append(child)
+                queue.extend(item for item in child_ids(child) if item not in seen)
+        time.sleep(0.08)
+    return blocks
+
+
 def collect_doc_media_tokens(value: Any, path: tuple[str, ...] = ()) -> list[str]:
     tokens: list[str] = []
     if isinstance(value, dict):
@@ -461,6 +513,15 @@ def text_from_block(block: dict[str, Any]) -> str:
     return " ".join(text.split())
 
 
+def text_from_block_tree(block: dict[str, Any], block_map: dict[str, dict[str, Any]]) -> str:
+    parts = [text_from_block(block)]
+    for child_id in child_ids(block):
+        child = block_map.get(child_id)
+        if child:
+            parts.append(text_from_block_tree(child, block_map))
+    return " ".join(part for part in parts if part).strip()
+
+
 def looks_like_table(block: dict[str, Any]) -> bool:
     return bool(first_nested_dict(block, "table")) or "table" in str(block.get("block_type", "")).lower()
 
@@ -490,9 +551,10 @@ def table_rows_from_block(block: dict[str, Any], block_map: dict[str, dict[str, 
     table_children = [block_map[item] for item in child_ids(block) if item in block_map]
     if not cells and table_children:
         for index, child in enumerate(table_children):
-            row_index = int(child.get("row_index") or child.get("row") or (index // max(col_count, 1)))
-            col_index = int(child.get("column_index") or child.get("col") or child.get("column") or (index % max(col_count, 1)))
-            cells.append((row_index, col_index, text_from_block(child)))
+            table_cell = first_nested_dict(child, "table_cell")
+            row_index = int(table_cell.get("row_index") or child.get("row_index") or child.get("row") or (index // max(col_count, 1)))
+            col_index = int(table_cell.get("column_index") or child.get("column_index") or child.get("col") or child.get("column") or (index % max(col_count, 1)))
+            cells.append((row_index, col_index, text_from_block_tree(child, block_map)))
 
     if not cells:
         return []
@@ -509,7 +571,16 @@ def table_rows_from_block(block: dict[str, Any], block_map: dict[str, dict[str, 
 
 def build_doc_content_blocks(blocks: list[dict[str, Any]], title: str) -> list[dict[str, Any]]:
     block_map = {block_id(block): block for block in blocks if block_id(block)}
-    table_child_ids = {child for block in blocks if looks_like_table(block) for child in child_ids(block)}
+    table_child_ids: set[str] = set()
+    for block in blocks:
+        if not looks_like_table(block):
+            continue
+        queue = list(child_ids(block))
+        while queue:
+            item_id = queue.pop(0)
+            table_child_ids.add(item_id)
+            if item_id in block_map:
+                queue.extend(child_ids(block_map[item_id]))
     content: list[dict[str, Any]] = []
     seen_media: set[str] = set()
     title_skipped = False
@@ -544,7 +615,9 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     document_id = feishu_doc_id_from_url(url)
     if not document_id:
         return {}
-    blocks = fetch_feishu_doc_blocks(token, document_id)
+    blocks = fetch_feishu_doc_block_tree(token, document_id)
+    if len(blocks) <= 1:
+        blocks = fetch_feishu_doc_blocks(token, document_id)
     media_tokens = collect_doc_media_tokens(blocks)
     api_url = f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}/raw_content"
     req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
