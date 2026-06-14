@@ -57,9 +57,47 @@ function renderMedia(urls) {
     .join("");
 }
 
+function renderContentBlock(block) {
+  if (!block || !block.type) return "";
+  if (block.type === "image" && block.url) {
+    return `
+      <figure class="article-inline-media">
+        <img src="${escapeHtml(block.url)}" alt="" loading="lazy" />
+      </figure>
+    `;
+  }
+  if (block.type === "table" && Array.isArray(block.rows) && block.rows.length) {
+    return `
+      <div class="article-table-wrap">
+        <table class="article-table">
+          <tbody>
+            ${block.rows
+              .map(
+                (row) => `
+                  <tr>
+                    ${(row || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}
+                  </tr>
+                `
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+  if (block.type === "paragraph" && block.text) {
+    return `<p>${escapeHtml(block.text)}</p>`;
+  }
+  return "";
+}
+
 function renderBody(article) {
   const container = document.querySelector("[data-article-body]");
   if (!container) return;
+  if (Array.isArray(article.contentBlocks) && article.contentBlocks.length) {
+    container.innerHTML = article.contentBlocks.map(renderContentBlock).join("");
+    return;
+  }
   const body = paragraphs(article.body);
   container.innerHTML = body.length
     ? body.map((item) => `<p>${escapeHtml(item)}</p>`).join("")
@@ -98,7 +136,7 @@ function renderArticle(article, items) {
   const currentNav = document.querySelector(`[data-nav-${source}]`);
   if (currentNav) currentNav.setAttribute("aria-current", "page");
 
-  renderMedia(article.media || []);
+  renderMedia(article.contentBlocks?.length ? [] : article.media || []);
   renderBody(article);
   renderRelated(article, items);
 }

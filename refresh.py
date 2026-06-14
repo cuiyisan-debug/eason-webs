@@ -409,6 +409,137 @@ def collect_doc_media_tokens(value: Any, path: tuple[str, ...] = ()) -> list[str
     return list(dict.fromkeys(tokens))
 
 
+def block_id(block: dict[str, Any]) -> str:
+    return normalize_text(block.get("block_id") or block.get("id"))
+
+
+def child_ids(block: dict[str, Any]) -> list[str]:
+    children = block.get("children")
+    if isinstance(children, list):
+        return [normalize_text(item) for item in children if normalize_text(item)]
+    return []
+
+
+def first_nested_dict(value: Any, target_key: str) -> dict[str, Any]:
+    if isinstance(value, dict):
+        for key, item in value.items():
+            if str(key).lower() == target_key.lower() and isinstance(item, dict):
+                return item
+        for item in value.values():
+            found = first_nested_dict(item, target_key)
+            if found:
+                return found
+    elif isinstance(value, list):
+        for item in value:
+            found = first_nested_dict(item, target_key)
+            if found:
+                return found
+    return {}
+
+
+def collect_block_text(value: Any, path: tuple[str, ...] = ()) -> list[str]:
+    parts: list[str] = []
+    if isinstance(value, dict):
+        for key, item in value.items():
+            key_text = str(key).lower()
+            if key_text in {"block_id", "parent_id", "token", "file_token", "url", "href"}:
+                continue
+            if key_text in {"content", "text"} and isinstance(item, str):
+                text = item.strip()
+                if text:
+                    parts.append(text)
+                continue
+            parts.extend(collect_block_text(item, path + (str(key),)))
+    elif isinstance(value, list):
+        for item in value:
+            parts.extend(collect_block_text(item, path))
+    return parts
+
+
+def text_from_block(block: dict[str, Any]) -> str:
+    text = "".join(collect_block_text(block))
+    return " ".join(text.split())
+
+
+def looks_like_table(block: dict[str, Any]) -> bool:
+    return bool(first_nested_dict(block, "table")) or "table" in str(block.get("block_type", "")).lower()
+
+
+def table_rows_from_block(block: dict[str, Any], block_map: dict[str, dict[str, Any]]) -> list[list[str]]:
+    table = first_nested_dict(block, "table")
+    row_count = int(table.get("row_size") or table.get("row_count") or table.get("rows") or 0) if table else 0
+    col_count = int(table.get("column_size") or table.get("column_count") or table.get("columns") or 0) if table else 0
+    cells: list[tuple[int, int, str]] = []
+
+    raw_cells = table.get("cells") if table else None
+    if isinstance(raw_cells, list):
+        for index, cell in enumerate(raw_cells):
+            if isinstance(cell, list):
+                row = [normalize_text(item) for item in cell]
+                cells.extend((len(cells), col, value) for col, value in enumerate(row))
+                continue
+            if not isinstance(cell, dict):
+                continue
+            row_index = int(cell.get("row_index") or cell.get("row") or (index // max(col_count, 1)))
+            col_index = int(cell.get("column_index") or cell.get("col") or cell.get("column") or (index % max(col_count, 1)))
+            text = text_from_block(cell)
+            if not text and cell.get("block_id") in block_map:
+                text = text_from_block(block_map[str(cell["block_id"])])
+            cells.append((row_index, col_index, text))
+
+    table_children = [block_map[item] for item in child_ids(block) if item in block_map]
+    if not cells and table_children:
+        for index, child in enumerate(table_children):
+            row_index = int(child.get("row_index") or child.get("row") or (index // max(col_count, 1)))
+            col_index = int(child.get("column_index") or child.get("col") or child.get("column") or (index % max(col_count, 1)))
+            cells.append((row_index, col_index, text_from_block(child)))
+
+    if not cells:
+        return []
+    max_row = max(row for row, _, _ in cells)
+    max_col = max(col for _, col, _ in cells)
+    row_total = max(row_count, max_row + 1)
+    col_total = max(col_count, max_col + 1)
+    rows = [["" for _ in range(col_total)] for _ in range(row_total)]
+    for row, col, text in cells:
+        if row < row_total and col < col_total:
+            rows[row][col] = text
+    return [row for row in rows if any(cell.strip() for cell in row)]
+
+
+def build_doc_content_blocks(blocks: list[dict[str, Any]], title: str) -> list[dict[str, Any]]:
+    block_map = {block_id(block): block for block in blocks if block_id(block)}
+    table_child_ids = {child for block in blocks if looks_like_table(block) for child in child_ids(block)}
+    content: list[dict[str, Any]] = []
+    seen_media: set[str] = set()
+    title_skipped = False
+
+    for block in blocks:
+        current_id = block_id(block)
+        if current_id and current_id in table_child_ids:
+            continue
+        if looks_like_table(block):
+            rows = table_rows_from_block(block, block_map)
+            if rows:
+                content.append({"type": "table", "rows": rows})
+            continue
+        media_tokens = collect_doc_media_tokens(block)
+        if media_tokens:
+            for media_token in media_tokens:
+                if media_token not in seen_media:
+                    content.append({"type": "image", "token": media_token})
+                    seen_media.add(media_token)
+            continue
+        text = text_from_block(block)
+        if not text:
+            continue
+        if not title_skipped and strip_duplicate_title(text, title) == "":
+            title_skipped = True
+            continue
+        content.append({"type": "paragraph", "text": text})
+    return content
+
+
 def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     document_id = feishu_doc_id_from_url(url)
     if not document_id:
@@ -426,7 +557,7 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
         return {"error": json.dumps(res, ensure_ascii=False), "mediaTokens": media_tokens}
     data = res.get("data", {})
     content = normalize_text(data.get("content") or data.get("text") or data.get("raw_content"))
-    result: dict[str, Any] = {"mediaTokens": media_tokens}
+    result: dict[str, Any] = {"mediaTokens": media_tokens, "rawBlocks": blocks}
     if content:
         result["body"] = content[:8000]
     return result
@@ -496,12 +627,21 @@ def build_articles(
         media_tokens = media_from_fields(fields)
         media = [urls[token] for token in media_tokens if token in urls]
         doc_tokens = linked.get("mediaTokens") if isinstance(linked.get("mediaTokens"), list) else []
+        doc_urls: dict[str, str] = {}
         if doc_tokens:
             try:
                 doc_urls = resolve_urls(token, [str(item) for item in doc_tokens], use_bitable_extra=False)
                 media.extend(url for file_token, url in doc_urls.items() if file_token in doc_tokens and url not in media)
             except SystemExit:
                 pass
+        content_blocks = []
+        raw_blocks = linked.get("rawBlocks") if isinstance(linked.get("rawBlocks"), list) else []
+        if raw_blocks:
+            content_blocks = build_doc_content_blocks(raw_blocks, title)
+            for content_block in content_blocks:
+                if content_block.get("type") == "image":
+                    image_token = normalize_text(content_block.get("token"))
+                    content_block["url"] = doc_urls.get(image_token, "")
         articles.append(
             {
                 "id": record.get("record_id") or f"{source_type}-{index}",
@@ -514,6 +654,7 @@ def build_articles(
                 "linkedTitle": linked.get("title", ""),
                 "linkedError": linked.get("error", ""),
                 "media": media,
+                "contentBlocks": content_blocks,
                 "cover": media[0] if media else "",
             }
         )
