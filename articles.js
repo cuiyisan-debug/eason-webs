@@ -38,7 +38,7 @@ function renderArticleCards(source, items) {
 
   articleGrid.hidden = false;
   articleGrid.innerHTML = items
-    .map((article, index) => {
+    .map((article) => {
       const href = articleUrl(source, article);
       return `
         <article class="zhixing-card article-card" data-article-href="${escapeHtml(href)}" tabindex="0">
@@ -47,7 +47,6 @@ function renderArticleCards(source, items) {
               ? `<a class="zhixing-thumb article-thumb" href="${escapeHtml(href)}" style="background-image:url('${escapeHtml(article.cover)}')" aria-label="${escapeHtml(article.title)}"></a>`
               : ""
           }
-          <span>${String(index + 1).padStart(2, "0")}</span>
           <h3><a href="${escapeHtml(href)}">${escapeHtml(article.title)}</a></h3>
           <p>${escapeHtml(article.summary || "")}</p>
         </article>

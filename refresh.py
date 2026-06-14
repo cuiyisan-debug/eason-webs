@@ -49,7 +49,8 @@ ZHIXING_TITLE_FIELDS = ["标题", "文章标题", "名称", "主题", "Title", "
 ZHIXING_SUMMARY_FIELDS = ["简介", "摘要", "说明", "描述", "Summary", "summary"]
 ZHIXING_BODY_FIELDS = ["正文", "正文内容", "内容", "详细内容", "文章内容", "文章正文", "全文", "Body", "body", "Content", "content"]
 ZHIXING_LINK_FIELDS = ["正文链接", "文章链接", "原文链接", "外部链接", "链接", "URL", "url", "Link", "link"]
-ZHIXING_MEDIA_FIELDS = ["附件", "图片", "封面", "视频", "媒体", "素材"]
+ARTICLE_COVER_FIELDS = ["封面图", "封面图片", "封面", "Cover", "cover"]
+ZHIXING_MEDIA_FIELDS = ["附件", "图片", "视频", "媒体", "素材"]
 ARTICLE_ORDER_FIELDS = ["附件顺序", "图片顺序", "媒体顺序"]
 
 
@@ -698,6 +699,10 @@ def media_from_fields(fields: dict[str, Any]) -> list[str]:
     return media
 
 
+def article_cover_tokens(fields: dict[str, Any]) -> list[str]:
+    return attachment_tokens(first_field(fields, ARTICLE_COVER_FIELDS))
+
+
 def build_articles(
     records: list[dict[str, Any]],
     urls: dict[str, str],
@@ -729,7 +734,9 @@ def build_articles(
         body = strip_duplicate_title(body, title)
         if not summary:
             summary = body[:120] if body else "工具、方法与创意工作流记录。"
+        cover_tokens = article_cover_tokens(fields)
         media_tokens = media_from_fields(fields)
+        cover_images = [urls[token] for token in cover_tokens if token in urls]
         media = [urls[token] for token in media_tokens if token in urls]
         doc_tokens = linked.get("mediaTokens") if isinstance(linked.get("mediaTokens"), list) else []
         doc_urls: dict[str, str] = {}
@@ -760,7 +767,7 @@ def build_articles(
                 "linkedError": linked.get("error", ""),
                 "media": media,
                 "contentBlocks": content_blocks,
-                "cover": media[0] if media else "",
+                "cover": cover_images[0] if cover_images else media[0] if media else "",
             }
         )
     articles.sort(key=lambda row: (row["order"], row["title"]))
@@ -832,6 +839,7 @@ def refresh_article_source(
         article_tokens: list[str] = []
         for record in article_records:
             article_tokens.extend(media_from_fields(record.get("fields", {})))
+            article_tokens.extend(article_cover_tokens(record.get("fields", {})))
         article_urls = resolve_urls(token, article_tokens, table_id=table_id)
         write_article_output(
             output_file,
