@@ -26,6 +26,7 @@ FIELD_TITLE = os.environ.get("LARK_FIELD_TITLE", "项目名称")
 FIELD_CATEGORY = os.environ.get("LARK_FIELD_CATEGORY", "前台分类")
 FIELD_SUMMARY = os.environ.get("LARK_FIELD_SUMMARY", "项目简介")
 FIELD_IMAGES = os.environ.get("LARK_FIELD_IMAGES", "图片")
+FIELD_COVER = os.environ.get("LARK_FIELD_COVER", "封面")
 FIELD_YEAR = os.environ.get("LARK_FIELD_YEAR", "年份")
 FIELD_FEATURED = os.environ.get("LARK_FIELD_FEATURED", "首页轮播")
 FIELD_VIDEO_URL = os.environ.get("LARK_FIELD_VIDEO_URL", "视频链接")
@@ -206,7 +207,9 @@ def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list
         if category not in CATEGORIES:
             category = "其他创意"
         tokens = attachment_tokens(fields.get(FIELD_IMAGES))
+        cover_tokens = attachment_tokens(fields.get(FIELD_COVER))
         images = [urls[token] for token in tokens if token in urls]
+        cover_images = [urls[token] for token in cover_tokens if token in urls]
         tags = normalize_list(fields.get(FIELD_TAGS))
         item = {
             "id": record.get("record_id") or f"project-{index}",
@@ -220,7 +223,7 @@ def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list
             "tags": tags[:6],
             "featured": is_featured(fields.get(FIELD_FEATURED)),
             "images": images,
-            "cover": images[0] if images else "",
+            "cover": cover_images[0] if cover_images else images[0] if images else "",
             "videoUrl": normalize_text(fields.get(FIELD_VIDEO_URL)),
             "videoBv": normalize_text(fields.get(FIELD_VIDEO_BV)),
         }
@@ -248,7 +251,9 @@ def main() -> None:
     records = fetch_records(token)
     all_tokens: list[str] = []
     for record in records:
-        all_tokens.extend(attachment_tokens(record.get("fields", {}).get(FIELD_IMAGES)))
+        fields = record.get("fields", {})
+        all_tokens.extend(attachment_tokens(fields.get(FIELD_IMAGES)))
+        all_tokens.extend(attachment_tokens(fields.get(FIELD_COVER)))
     urls = resolve_urls(token, all_tokens)
     items = build_portfolio(records, urls)
     write_output(items)
