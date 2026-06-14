@@ -350,6 +350,36 @@ def fetch_link_content(url: str) -> dict[str, str]:
     return {"title": title, "body": body[:6000]}
 
 
+def feishu_doc_id_from_url(url: str) -> str:
+    if not url:
+        return ""
+    parsed = urllib.parse.urlparse(url)
+    if not parsed.netloc.endswith(("feishu.cn", "larksuite.com")):
+        return ""
+    parts = [part for part in parsed.path.split("/") if part]
+    if len(parts) >= 2 and parts[0] == "docx":
+        return parts[1]
+    return ""
+
+
+def fetch_feishu_doc_content(token: str, url: str) -> dict[str, str]:
+    document_id = feishu_doc_id_from_url(url)
+    if not document_id:
+        return {}
+    api_url = f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}/raw_content"
+    req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            res = json.loads(response.read().decode("utf-8"))
+    except Exception as exc:
+        return {"error": str(exc)}
+    if res.get("code") != 0:
+        return {"error": json.dumps(res, ensure_ascii=False)}
+    data = res.get("data", {})
+    content = normalize_text(data.get("content") or data.get("text") or data.get("raw_content"))
+    return {"body": content[:8000]} if content else {}
+
+
 def media_from_fields(fields: dict[str, Any]) -> list[str]:
     tokens: list[str] = []
     for field_name in ZHIXING_MEDIA_FIELDS:
@@ -361,7 +391,13 @@ def media_from_fields(fields: dict[str, Any]) -> list[str]:
     return media
 
 
-def build_articles(records: list[dict[str, Any]], urls: dict[str, str], source_type: str, fallback_title: str) -> list[dict[str, Any]]:
+def build_articles(
+    records: list[dict[str, Any]],
+    urls: dict[str, str],
+    source_type: str,
+    fallback_title: str,
+    token: str = "",
+) -> list[dict[str, Any]]:
     articles: list[dict[str, Any]] = []
     for index, record in enumerate(records, 1):
         fields = record.get("fields", {})
@@ -371,7 +407,14 @@ def build_articles(records: list[dict[str, Any]], urls: dict[str, str], source_t
         content_url = normalize_url(first_field(fields, ZHIXING_LINK_FIELDS))
         if not title and not summary and not body and not content_url:
             continue
-        linked = fetch_link_content(content_url) if content_url else {}
+        linked = fetch_feishu_doc_content(token, content_url) if token and content_url else {}
+        if content_url and not linked.get("body"):
+            fallback_linked = fetch_link_content(content_url)
+            linked = {
+                **fallback_linked,
+                **{key: value for key, value in linked.items() if value},
+                "error": linked.get("error") or fallback_linked.get("error", ""),
+            }
         if not title:
             title = linked.get("title") or f"{fallback_title} {index}"
         if not body and linked.get("body"):
@@ -467,7 +510,7 @@ def refresh_article_source(
         article_urls = resolve_urls(token, article_tokens, table_id=table_id)
         write_article_output(
             output_file,
-            build_articles(article_records, article_urls, source_type, fallback_title),
+            build_articles(article_records, article_urls, source_type, fallback_title, token),
             base_token=base_token,
             table_id=table_id,
             source_type=source_type,
