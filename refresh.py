@@ -237,6 +237,20 @@ def resolve_urls(token: str, file_tokens: list[str], *, table_id: str = TABLE_ID
     return resolved
 
 
+def resolve_urls_best_effort(
+    token: str,
+    file_tokens: list[str],
+    *,
+    table_id: str = TABLE_ID,
+    use_bitable_extra: bool = True,
+) -> dict[str, str]:
+    try:
+        return resolve_urls(token, file_tokens, table_id=table_id, use_bitable_extra=use_bitable_extra)
+    except SystemExit as exc:
+        print(f"Warning: skipped article media URL resolution: {exc}", file=sys.stderr)
+        return {}
+
+
 def safe_order(value: Any, fallback: int) -> float:
     try:
         return float(value)
@@ -741,11 +755,8 @@ def build_articles(
         doc_tokens = linked.get("mediaTokens") if isinstance(linked.get("mediaTokens"), list) else []
         doc_urls: dict[str, str] = {}
         if doc_tokens:
-            try:
-                doc_urls = resolve_urls(token, [str(item) for item in doc_tokens], use_bitable_extra=False)
-                media.extend(url for file_token, url in doc_urls.items() if file_token in doc_tokens and url not in media)
-            except SystemExit:
-                pass
+            doc_urls = resolve_urls_best_effort(token, [str(item) for item in doc_tokens], use_bitable_extra=False)
+            media.extend(url for file_token, url in doc_urls.items() if file_token in doc_tokens and url not in media)
         content_blocks = []
         raw_blocks = linked.get("rawBlocks") if isinstance(linked.get("rawBlocks"), list) else []
         if raw_blocks:
@@ -840,7 +851,7 @@ def refresh_article_source(
         for record in article_records:
             article_tokens.extend(media_from_fields(record.get("fields", {})))
             article_tokens.extend(article_cover_tokens(record.get("fields", {})))
-        article_urls = resolve_urls(token, article_tokens, table_id=table_id)
+        article_urls = resolve_urls_best_effort(token, article_tokens, table_id=table_id)
         write_article_output(
             output_file,
             build_articles(article_records, article_urls, source_type, fallback_title, token),
