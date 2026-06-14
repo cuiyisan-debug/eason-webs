@@ -30,38 +30,64 @@
 
     <main class="about-page">
       <section class="about-hero">
-        <div class="about-photo"></div>
-        <div>
+        <div class="about-portrait-panel">
+          <div class="about-photo"></div>
+          <img class="about-signature" src="./assets/signature-cuiyisan.svg" alt="崔一三艺术签名" />
+        </div>
+        <div class="about-hero-copy">
           <p class="eyebrow">ABOUT EASON.CUI</p>
-          <h1>用策展思维组织内容<br />用空间体验传递价值</h1>
-          <p>
-            我长期关注展陈、品牌空间、文旅体验和大型活动中的内容叙事、空间动线与视觉系统，
-            擅长把复杂信息转化为可理解、可体验、可传播的空间方案。
-          </p>
+          <h1>把复杂内容<br />转化为空间体验</h1>
+          <p class="about-lead">复合型展陈创意总监，长期服务国家级会展、政企展厅、博物馆、品牌空间与数字多媒体项目。</p>
+          <div class="about-points" aria-label="关于我的关键数字">
+            <div><strong>10+</strong><span>年展陈会展经验</span></div>
+            <div><strong>300+</strong><span>创意方案与提案</span></div>
+            <div><strong>50+</strong><span>落地项目经验</span></div>
+          </div>
         </div>
       </section>
 
       <section class="about-content">
         <article>
-          <span>01</span>
-          <h2>策展叙事</h2>
-          <p>从主题提炼、内容结构、参观动线到记忆点设置，建立清晰的体验逻辑。</p>
+          <span>策略</span>
+          <h2>从目标到主题</h2>
+          <p>把城市、产业、企业和文化资料，提炼为清晰的主题方向、内容主线和参观逻辑。</p>
         </article>
         <article>
-          <span>02</span>
-          <h2>空间指导</h2>
-          <p>把展陈内容与空间场景、互动媒介、视觉表达进行整合，形成完整体验。</p>
+          <span>叙事</span>
+          <h2>从资料到体验</h2>
+          <p>用策展结构组织故事线、章节节奏、展项表达和记忆点，避免信息堆叠。</p>
         </article>
         <article>
-          <span>03</span>
-          <h2>项目把控</h2>
-          <p>面向真实落地的项目节奏，兼顾创意表达、资源协同和执行质量。</p>
+          <span>空间</span>
+          <h2>从概念到场景</h2>
+          <p>指导空间、平面、多媒体与互动表达，统一视觉符号、动线体验和场景氛围。</p>
         </article>
         <article>
-          <span>04</span>
-          <h2>AI 协同</h2>
-          <p>结合 AI 工具进行资料梳理、视觉探索和提案增效，让创意流程更敏捷。</p>
+          <span>落地</span>
+          <h2>从提案到交付</h2>
+          <p>理解材料、工艺、多媒体技术与成本边界，在创意表达和施工可行性之间做判断。</p>
         </article>
+      </section>
+
+      <section class="about-feature">
+        <div>
+          <p class="eyebrow">POSITIONING</p>
+          <h2>不是单一策划，也不是单一设计，而是贯通内容、空间、技术和落地的创意统筹。</h2>
+        </div>
+        <div class="about-feature-list">
+          <p>既能做前期策略、内容体系、主题创意和提案表达，也能深入空间设计、多媒体表现和施工落地逻辑。</p>
+          <p>既能作为创意负责人判断方向、定调风格、把控方案质量，也能进入项目节点协调资源、推动落地。</p>
+          <p>持续把 AI 工具用于资料整理、概念发散、视觉参考、分镜脚本和提案包装，提高团队创意效率。</p>
+        </div>
+      </section>
+
+      <section class="about-scope">
+        <p class="eyebrow">PROJECT SCOPE</p>
+        <div class="scope-head">
+          <h2>项目名称阵列</h2>
+          <p id="projectCloudCount">项目索引生成中</p>
+        </div>
+        <div class="project-cloud" id="projectCloud" aria-label="所有项目名称词云"></div>
       </section>
 
       <section class="contact about-contact">
@@ -91,5 +117,6 @@
     </main>
 
     <script src="./script.js"></script>
+    <script src="./about.js"></script>
   </body>
 </html>
