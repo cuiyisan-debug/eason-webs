@@ -55,7 +55,11 @@ function renderMedia(urls) {
     .map((url) =>
       isVideo(url)
         ? `<video src="${escapeHtml(url)}" controls playsinline preload="metadata"></video>`
-        : `<img src="${escapeHtml(url)}" alt="" loading="lazy" />`
+        : `
+          <button class="article-image-button" type="button" data-article-image-url="${escapeHtml(url)}" aria-label="打开图片浏览">
+            <img src="${escapeHtml(url)}" alt="" loading="lazy" />
+          </button>
+        `
     )
     .join("");
 }
@@ -172,9 +176,7 @@ function bindArticleImageLightbox() {
 }
 
 function bindArticleInlineImages() {
-  const body = document.querySelector("[data-article-body]");
-  if (!body) return;
-  body.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
     const button = event.target.closest("[data-article-image-url]");
     if (!button) return;
     openArticleImageLightbox(button.dataset.articleImageUrl);
