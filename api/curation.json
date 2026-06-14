@@ -1,10 +1,24 @@
 {
-  "generatedAt": "",
+  "generatedAt": "2026-06-14T04:06:14.374764+00:00",
   "source": "feishu-bitable",
   "sourceType": "curation",
   "baseToken": "CtqgbzQHVazUyhsSiOEcIrxfnSd",
-  "tableId": "",
-  "count": 0,
+  "tableId": "tblQVW1hJindfDgc",
+  "count": 1,
   "error": "",
-  "items": []
+  "items": [
+    {
+      "id": "rec27AzxRcLsWl",
+      "sourceType": "curation",
+      "order": 1.0,
+      "title": "策展四要素：从定位到运营，一座馆真正成立的底层逻辑",
+      "summary": "策展不是把展品摆进空间，也不是把文案贴到墙上。真正的策展，是从“我们要做一个什么样的馆”开始，依次完成定位、内容、空间和运营四个系统的搭建。定位决定方向，内容决定灵魂，空间决定体验，运营决定它能否长期活下去。",
+      "body": "",
+      "contentUrl": "https://my.feishu.cn/docx/LVxhdAHzvoqwPvxhNb3cliMunig?from=from_copylink",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [],
+      "cover": ""
+    }
+  ]
 }
