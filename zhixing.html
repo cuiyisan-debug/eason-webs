@@ -44,9 +44,21 @@
             <p class="eyebrow">BUILDING IN PUBLIC</p>
             <h2>工具与方法</h2>
           </div>
-          <p>先保留页面框架，等你补充工具清单、文章链接或飞书表格后，再改成自动读取的数据页面。</p>
+          <p data-zhixing-status>正在读取飞书知行表格；如果暂时没有真实文章，会保留下方示意内容。</p>
         </div>
-        <div class="curation-grid">
+        <div class="curation-grid zhixing-grid" data-zhixing-grid hidden></div>
+        <article class="zhixing-detail" data-zhixing-detail hidden></article>
+      </section>
+
+      <section class="curation curation-page-list">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">PLACEHOLDER IDEAS</p>
+            <h2>后续方向</h2>
+          </div>
+          <p>其他文章和工具还没整理进表格前，先保留这些栏目示意。</p>
+        </div>
+        <div class="curation-grid zhixing-placeholder">
           <article>
             <span>01</span>
             <h3>软件工具</h3>
@@ -74,5 +86,6 @@
     </main>
 
     <script src="./script.js"></script>
+    <script src="./zhixing.js"></script>
   </body>
 </html>

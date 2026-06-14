@@ -15,12 +15,15 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent
 API_DIR = ROOT / "api"
 PORTFOLIO_FILE = API_DIR / "portfolio.json"
+ZHIXING_FILE = API_DIR / "zhixing.json"
 
 APP_ID = os.environ.get("LARK_APP_ID", "").strip()
 APP_SECRET = os.environ.get("LARK_APP_SECRET", "").strip()
 ACCESS_TOKEN = os.environ.get("LARK_ACCESS_TOKEN", "").strip()
 BASE_TOKEN = os.environ.get("LARK_BASE_TOKEN", "").strip()
 TABLE_ID = os.environ.get("LARK_TABLE_ID", "").strip()
+ZHIXING_BASE_TOKEN = os.environ.get("LARK_ZHIXING_BASE_TOKEN", "Vn7hbNMygaDrSMseVgycCCJen1e").strip()
+ZHIXING_TABLE_ID = os.environ.get("LARK_ZHIXING_TABLE_ID", "").strip()
 
 FIELD_TITLE = os.environ.get("LARK_FIELD_TITLE", "项目名称")
 FIELD_CATEGORY = os.environ.get("LARK_FIELD_CATEGORY", "前台分类")
@@ -38,6 +41,11 @@ FIELD_ORDER = os.environ.get("LARK_FIELD_ORDER", "序号")
 
 CATEGORIES = ["政企展厅", "品牌空间", "文博展陈", "文旅体验", "大型展会", "临展活动", "其他创意"]
 BATCH_SIZE = 5
+ZHIXING_TITLE_FIELDS = ["标题", "文章标题", "名称", "主题", "Title", "title"]
+ZHIXING_SUMMARY_FIELDS = ["简介", "摘要", "说明", "描述", "Summary", "summary"]
+ZHIXING_BODY_FIELDS = ["正文", "内容", "文章内容", "Body", "body", "Content", "content"]
+ZHIXING_LINK_FIELDS = ["正文链接", "文章链接", "链接", "URL", "url", "Link", "link"]
+ZHIXING_MEDIA_FIELDS = ["附件", "图片", "封面", "视频", "媒体", "素材"]
 
 
 def fail(message: str) -> None:
@@ -93,7 +101,15 @@ def access_token() -> str:
     return tenant_access_token()
 
 
-def fetch_records(token: str) -> list[dict[str, Any]]:
+def list_tables(token: str, base_token: str) -> list[dict[str, Any]]:
+    url = f"https://open.feishu.cn/open-apis/bitable/v1/apps/{base_token}/tables"
+    res = request_json(url, token=token)
+    if res.get("code") != 0:
+        fail(f"Failed to fetch tables: {json.dumps(res, ensure_ascii=False)}")
+    return res.get("data", {}).get("items", [])
+
+
+def fetch_records(token: str, *, base_token: str = BASE_TOKEN, table_id: str = TABLE_ID) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     page_token = ""
     while True:
@@ -101,7 +117,7 @@ def fetch_records(token: str) -> list[dict[str, Any]]:
         if page_token:
             params["page_token"] = page_token
         url = (
-            f"https://open.feishu.cn/open-apis/bitable/v1/apps/{BASE_TOKEN}/tables/{TABLE_ID}/records?"
+            f"https://open.feishu.cn/open-apis/bitable/v1/apps/{base_token}/tables/{table_id}/records?"
             + urllib.parse.urlencode(params)
         )
         res = request_json(url, token=token)
@@ -135,6 +151,35 @@ def normalize_text(value: Any) -> str:
     return str(value).strip()
 
 
+def first_field(fields: dict[str, Any], names: list[str]) -> Any:
+    for name in names:
+        if name in fields:
+            return fields.get(name)
+    lower_map = {str(key).strip().lower(): key for key in fields}
+    for name in names:
+        key = lower_map.get(name.lower())
+        if key:
+            return fields.get(key)
+    return None
+
+
+def normalize_url(value: Any) -> str:
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, dict):
+        for key in ("link", "url", "href", "text"):
+            text = normalize_url(value.get(key))
+            if text.startswith(("http://", "https://")):
+                return text
+    if isinstance(value, list):
+        for item in value:
+            text = normalize_url(item)
+            if text.startswith(("http://", "https://")):
+                return text
+    text = normalize_text(value)
+    return text if text.startswith(("http://", "https://")) else ""
+
+
 def normalize_list(value: Any) -> list[str]:
     if value is None:
         return []
@@ -160,13 +205,13 @@ def attachment_tokens(value: Any) -> list[str]:
     return tokens
 
 
-def resolve_urls(token: str, file_tokens: list[str]) -> dict[str, str]:
+def resolve_urls(token: str, file_tokens: list[str], *, table_id: str = TABLE_ID) -> dict[str, str]:
     resolved: dict[str, str] = {}
     unique = [item for item in dict.fromkeys(file_tokens) if item]
     if not unique:
         return resolved
 
-    extra = urllib.parse.quote(json.dumps({"bitablePerm": {"tableId": TABLE_ID}}, ensure_ascii=False))
+    extra = urllib.parse.quote(json.dumps({"bitablePerm": {"tableId": table_id}}, ensure_ascii=False))
     base_url = "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url"
     for start in range(0, len(unique), BATCH_SIZE):
         batch = unique[start : start + BATCH_SIZE]
@@ -232,6 +277,119 @@ def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list
     return items
 
 
+def choose_zhixing_table(token: str) -> str:
+    if ZHIXING_TABLE_ID:
+        return ZHIXING_TABLE_ID
+    tables = list_tables(token, ZHIXING_BASE_TOKEN)
+    best_table = ""
+    best_score = -1
+    for table in tables:
+        table_id = table.get("table_id")
+        if not table_id:
+            continue
+        try:
+            records = fetch_records(token, base_token=ZHIXING_BASE_TOKEN, table_id=table_id)
+        except SystemExit:
+            raise
+        except Exception:
+            continue
+        score = len(records)
+        for record in records[:5]:
+            fields = record.get("fields", {})
+            if first_field(fields, ZHIXING_TITLE_FIELDS):
+                score += 10
+            if first_field(fields, ZHIXING_BODY_FIELDS) or first_field(fields, ZHIXING_LINK_FIELDS):
+                score += 6
+            if first_field(fields, ZHIXING_MEDIA_FIELDS):
+                score += 3
+        if score > best_score:
+            best_table = str(table_id)
+            best_score = score
+    return best_table
+
+
+def fetch_link_content(url: str) -> dict[str, str]:
+    if not url:
+        return {}
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (compatible; EasonPortfolioBot/1.0)",
+            },
+        )
+        with urllib.request.urlopen(req, timeout=25) as response:
+            raw = response.read(1_200_000)
+            charset = response.headers.get_content_charset() or "utf-8"
+        html = raw.decode(charset, "ignore")
+    except Exception as exc:
+        return {"error": str(exc)}
+    import re
+
+    title_match = re.search(r"<title[^>]*>(.*?)</title>", html, flags=re.I | re.S)
+    title = re.sub(r"\s+", " ", title_match.group(1)).strip() if title_match else ""
+    html = re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>|<noscript[\s\S]*?</noscript>", " ", html, flags=re.I)
+    paragraphs = re.findall(r"<p[^>]*>(.*?)</p>", html, flags=re.I | re.S)
+    if not paragraphs:
+        paragraphs = re.findall(r"<article[^>]*>(.*?)</article>", html, flags=re.I | re.S)
+    text_parts: list[str] = []
+    for paragraph in paragraphs[:80]:
+        text = re.sub(r"<[^>]+>", " ", paragraph)
+        text = re.sub(r"&nbsp;?", " ", text)
+        text = re.sub(r"&amp;", "&", text)
+        text = re.sub(r"&lt;", "<", text)
+        text = re.sub(r"&gt;", ">", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        if len(text) >= 12:
+            text_parts.append(text)
+    body = "\n\n".join(text_parts)
+    return {"title": title, "body": body[:6000]}
+
+
+def media_from_fields(fields: dict[str, Any]) -> list[str]:
+    tokens: list[str] = []
+    for field_name in ZHIXING_MEDIA_FIELDS:
+        tokens.extend(attachment_tokens(fields.get(field_name)))
+    return list(dict.fromkeys(tokens))
+
+
+def build_zhixing_articles(records: list[dict[str, Any]], urls: dict[str, str]) -> list[dict[str, Any]]:
+    articles: list[dict[str, Any]] = []
+    for index, record in enumerate(records, 1):
+        fields = record.get("fields", {})
+        title = normalize_text(first_field(fields, ZHIXING_TITLE_FIELDS))
+        summary = normalize_text(first_field(fields, ZHIXING_SUMMARY_FIELDS))
+        body = normalize_text(first_field(fields, ZHIXING_BODY_FIELDS))
+        content_url = normalize_url(first_field(fields, ZHIXING_LINK_FIELDS))
+        if not title and not summary and not body and not content_url:
+            continue
+        linked = fetch_link_content(content_url) if content_url else {}
+        if not title:
+            title = linked.get("title") or f"知行记录 {index}"
+        if not body and linked.get("body"):
+            body = linked["body"]
+        if not summary:
+            summary = body[:120] if body else "工具、方法与创意工作流记录。"
+        media_tokens = media_from_fields(fields)
+        media = [urls[token] for token in media_tokens if token in urls]
+        articles.append(
+            {
+                "id": record.get("record_id") or f"zhixing-{index}",
+                "order": safe_order(fields.get("序号") or fields.get("排序"), index),
+                "title": title,
+                "summary": summary,
+                "body": body,
+                "contentUrl": content_url,
+                "linkedTitle": linked.get("title", ""),
+                "linkedError": linked.get("error", ""),
+                "media": media,
+                "cover": media[0] if media else "",
+            }
+        )
+    articles.sort(key=lambda row: (row["order"], row["title"]))
+    return articles
+
+
 def write_output(items: list[dict[str, Any]]) -> None:
     API_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
@@ -243,6 +401,21 @@ def write_output(items: list[dict[str, Any]]) -> None:
     }
     PORTFOLIO_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Wrote {len(items)} items to {PORTFOLIO_FILE}")
+
+
+def write_zhixing_output(items: list[dict[str, Any]], table_id: str, error: str = "") -> None:
+    API_DIR.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "source": "feishu-bitable",
+        "baseToken": ZHIXING_BASE_TOKEN,
+        "tableId": table_id,
+        "count": len(items),
+        "error": error,
+        "items": items,
+    }
+    ZHIXING_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"Wrote {len(items)} items to {ZHIXING_FILE}")
 
 
 def main() -> None:
@@ -257,6 +430,22 @@ def main() -> None:
     urls = resolve_urls(token, all_tokens)
     items = build_portfolio(records, urls)
     write_output(items)
+    if ZHIXING_BASE_TOKEN:
+        try:
+            zhixing_table_id = choose_zhixing_table(token)
+            if zhixing_table_id:
+                zhixing_records = fetch_records(token, base_token=ZHIXING_BASE_TOKEN, table_id=zhixing_table_id)
+                zhixing_tokens: list[str] = []
+                for record in zhixing_records:
+                    zhixing_tokens.extend(media_from_fields(record.get("fields", {})))
+                zhixing_urls = resolve_urls(token, zhixing_tokens, table_id=zhixing_table_id)
+                write_zhixing_output(build_zhixing_articles(zhixing_records, zhixing_urls), zhixing_table_id)
+            else:
+                write_zhixing_output([], "", "No suitable zhixing table found.")
+        except SystemExit as exc:
+            write_zhixing_output([], "", str(exc))
+        except Exception as exc:
+            write_zhixing_output([], "", str(exc))
 
 
 if __name__ == "__main__":

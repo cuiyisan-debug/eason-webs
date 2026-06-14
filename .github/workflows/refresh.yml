@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - "api/portfolio.json"
+      - "api/zhixing.json"
   schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
@@ -31,11 +32,13 @@ jobs:
           LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
           LARK_BASE_TOKEN: ${{ secrets.LARK_BASE_TOKEN }}
           LARK_TABLE_ID: ${{ secrets.LARK_TABLE_ID }}
+          LARK_ZHIXING_BASE_TOKEN: Vn7hbNMygaDrSMseVgycCCJen1e
+          LARK_ZHIXING_TABLE_ID: ${{ secrets.LARK_ZHIXING_TABLE_ID }}
         run: python refresh.py
 
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add api/portfolio.json
+          git add api/portfolio.json api/zhixing.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto refresh feishu media" && git push)
