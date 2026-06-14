@@ -47,8 +47,7 @@ function renderArticleCards(source, items) {
               ? `<a class="zhixing-thumb article-thumb" href="${escapeHtml(href)}" style="background-image:url('${escapeHtml(article.cover)}')" aria-label="${escapeHtml(article.title)}"></a>`
               : ""
           }
-          <h3><a href="${escapeHtml(href)}">${escapeHtml(article.title)}</a></h3>
-          <p>${escapeHtml(article.summary || "")}</p>
+          <h3><a href="${escapeHtml(href)}" title="${escapeHtml(article.title)}">${escapeHtml(article.title)}</a></h3>
         </article>
       `;
     })
