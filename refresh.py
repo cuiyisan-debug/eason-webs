@@ -209,17 +209,19 @@ def attachment_tokens(value: Any) -> list[str]:
     return tokens
 
 
-def resolve_urls(token: str, file_tokens: list[str], *, table_id: str = TABLE_ID) -> dict[str, str]:
+def resolve_urls(token: str, file_tokens: list[str], *, table_id: str = TABLE_ID, use_bitable_extra: bool = True) -> dict[str, str]:
     resolved: dict[str, str] = {}
     unique = [item for item in dict.fromkeys(file_tokens) if item]
     if not unique:
         return resolved
 
-    extra = urllib.parse.quote(json.dumps({"bitablePerm": {"tableId": table_id}}, ensure_ascii=False))
     base_url = "https://open.feishu.cn/open-apis/drive/v1/medias/batch_get_tmp_download_url"
     for start in range(0, len(unique), BATCH_SIZE):
         batch = unique[start : start + BATCH_SIZE]
-        query = [("extra", extra)]
+        query: list[tuple[str, str]] = []
+        if use_bitable_extra:
+            extra = urllib.parse.quote(json.dumps({"bitablePerm": {"tableId": table_id}}, ensure_ascii=False))
+            query.append(("extra", extra))
         query.extend(("file_tokens", file_token) for file_token in batch)
         url = base_url + "?" + "&".join(f"{key}={value}" for key, value in query)
         res = request_json(url, token=token)
@@ -362,10 +364,57 @@ def feishu_doc_id_from_url(url: str) -> str:
     return ""
 
 
-def fetch_feishu_doc_content(token: str, url: str) -> dict[str, str]:
+def fetch_feishu_doc_blocks(token: str, document_id: str) -> list[dict[str, Any]]:
+    blocks: list[dict[str, Any]] = []
+    page_token = ""
+    while True:
+        params = {"page_size": 500}
+        if page_token:
+            params["page_token"] = page_token
+        api_url = (
+            f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}/blocks?"
+            + urllib.parse.urlencode(params)
+        )
+        req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                res = json.loads(response.read().decode("utf-8"))
+        except Exception:
+            return blocks
+        if res.get("code") != 0:
+            return blocks
+        data = res.get("data", {})
+        blocks.extend(data.get("items", []))
+        if not data.get("has_more"):
+            break
+        page_token = data.get("page_token", "")
+        if not page_token:
+            break
+    return blocks
+
+
+def collect_doc_media_tokens(value: Any, path: tuple[str, ...] = ()) -> list[str]:
+    tokens: list[str] = []
+    if isinstance(value, dict):
+        keys = tuple(str(part).lower() for part in path)
+        looks_like_media = any(part in {"image", "file", "media"} or "image" in part for part in keys)
+        for key, item in value.items():
+            key_text = str(key).lower()
+            if looks_like_media and key_text in {"file_token", "token"} and isinstance(item, str):
+                tokens.append(item)
+            tokens.extend(collect_doc_media_tokens(item, path + (str(key),)))
+    elif isinstance(value, list):
+        for item in value:
+            tokens.extend(collect_doc_media_tokens(item, path))
+    return list(dict.fromkeys(tokens))
+
+
+def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     document_id = feishu_doc_id_from_url(url)
     if not document_id:
         return {}
+    blocks = fetch_feishu_doc_blocks(token, document_id)
+    media_tokens = collect_doc_media_tokens(blocks)
     api_url = f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}/raw_content"
     req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
     try:
@@ -374,10 +423,32 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, str]:
     except Exception as exc:
         return {"error": str(exc)}
     if res.get("code") != 0:
-        return {"error": json.dumps(res, ensure_ascii=False)}
+        return {"error": json.dumps(res, ensure_ascii=False), "mediaTokens": media_tokens}
     data = res.get("data", {})
     content = normalize_text(data.get("content") or data.get("text") or data.get("raw_content"))
-    return {"body": content[:8000]} if content else {}
+    result: dict[str, Any] = {"mediaTokens": media_tokens}
+    if content:
+        result["body"] = content[:8000]
+    return result
+
+
+def strip_duplicate_title(body: str, title: str) -> str:
+    if not body or not title:
+        return body
+    lines = [line.strip() for line in body.splitlines()]
+    while lines and not lines[0]:
+        lines.pop(0)
+    if not lines:
+        return ""
+
+    def compact(text: str) -> str:
+        return "".join(str(text).split()).strip("：:丨|-— ")
+
+    if compact(lines[0]) == compact(title):
+        lines = lines[1:]
+        while lines and not lines[0]:
+            lines.pop(0)
+    return "\n".join(lines).strip()
 
 
 def media_from_fields(fields: dict[str, Any]) -> list[str]:
@@ -419,10 +490,18 @@ def build_articles(
             title = linked.get("title") or f"{fallback_title} {index}"
         if not body and linked.get("body"):
             body = linked["body"]
+        body = strip_duplicate_title(body, title)
         if not summary:
             summary = body[:120] if body else "工具、方法与创意工作流记录。"
         media_tokens = media_from_fields(fields)
         media = [urls[token] for token in media_tokens if token in urls]
+        doc_tokens = linked.get("mediaTokens") if isinstance(linked.get("mediaTokens"), list) else []
+        if doc_tokens:
+            try:
+                doc_urls = resolve_urls(token, [str(item) for item in doc_tokens], use_bitable_extra=False)
+                media.extend(url for file_token, url in doc_urls.items() if file_token in doc_tokens and url not in media)
+            except SystemExit:
+                pass
         articles.append(
             {
                 "id": record.get("record_id") or f"{source_type}-{index}",
