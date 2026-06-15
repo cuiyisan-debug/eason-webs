@@ -52,6 +52,7 @@ ZHIXING_LINK_FIELDS = ["正文链接", "文章链接", "原文链接", "外部�
 ARTICLE_COVER_FIELDS = ["封面图", "封面图片", "封面", "Cover", "cover"]
 ZHIXING_MEDIA_FIELDS = ["附件", "图片", "视频", "媒体", "素材"]
 ARTICLE_ORDER_FIELDS = ["附件顺序", "图片顺序", "媒体顺序"]
+ARTICLE_DISPLAY_MODE_FIELDS = ["显示方式", "渲染方式", "文章显示方式", "展示方式", "Display Mode", "displayMode"]
 
 
 def fail(message: str) -> None:
@@ -571,6 +572,41 @@ def looks_like_table(block: dict[str, Any]) -> bool:
     return bool(first_nested_dict(block, "table")) or "table" in str(block.get("block_type", "")).lower()
 
 
+def block_heading_level(block: dict[str, Any]) -> int:
+    block_type = str(block.get("block_type") or block.get("type") or "").lower()
+    named_types = {
+        "heading1": 1,
+        "heading_1": 1,
+        "h1": 1,
+        "heading2": 2,
+        "heading_2": 2,
+        "h2": 2,
+        "heading3": 3,
+        "heading_3": 3,
+        "h3": 3,
+        "heading4": 4,
+        "heading_4": 4,
+        "h4": 4,
+        "heading5": 5,
+        "heading_5": 5,
+        "h5": 5,
+        "heading6": 6,
+        "heading_6": 6,
+        "h6": 6,
+    }
+    if block_type in named_types:
+        return named_types[block_type]
+    for name, level in named_types.items():
+        if first_nested_dict(block, name):
+            return level
+    if "heading" in block_type:
+        for level in range(1, 7):
+            if str(level) in block_type:
+                return level
+        return 2
+    return 0
+
+
 def table_rows_from_block(block: dict[str, Any], block_map: dict[str, dict[str, Any]]) -> list[list[str]]:
     table = first_nested_dict(block, "table")
     row_count = int(table.get("row_size") or table.get("row_count") or table.get("rows") or 0) if table else 0
@@ -652,7 +688,11 @@ def build_doc_content_blocks(blocks: list[dict[str, Any]], title: str) -> list[d
         if not title_skipped and strip_duplicate_title(text, title) == "":
             title_skipped = True
             continue
-        content.append({"type": "paragraph", "text": text})
+        heading_level = block_heading_level(block)
+        if heading_level:
+            content.append({"type": "heading", "level": heading_level, "text": text})
+        else:
+            content.append({"type": "paragraph", "text": text})
     return content
 
 
@@ -767,6 +807,7 @@ def build_articles(
         summary = normalize_text(first_field(fields, ZHIXING_SUMMARY_FIELDS))
         body = normalize_text(first_field(fields, ZHIXING_BODY_FIELDS))
         content_url = normalize_url(first_field(fields, ZHIXING_LINK_FIELDS))
+        display_mode = normalize_text(first_field(fields, ARTICLE_DISPLAY_MODE_FIELDS)) or "网站排版"
         if not title and not summary and not body and not content_url:
             continue
         linked = fetch_feishu_doc_content(token, content_url) if token and content_url else {}
@@ -811,6 +852,7 @@ def build_articles(
                 "summary": summary,
                 "body": body,
                 "contentUrl": content_url,
+                "displayMode": display_mode,
                 "linkedTitle": linked.get("title", ""),
                 "linkedError": linked.get("error", ""),
                 "media": media,

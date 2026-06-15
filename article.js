@@ -35,6 +35,86 @@ function isVideo(url) {
   return /\.(mp4|webm|ogg|mov)(\?|$)/i.test(String(url || ""));
 }
 
+function shouldEmbedOriginal(article) {
+  const mode = String(article?.displayMode || "").trim();
+  return Boolean(article?.contentUrl && (mode.includes("飞书原文") || mode.includes("嵌入")));
+}
+
+function isCaptionText(text) {
+  const value = String(text || "").trim();
+  return /^(图\s*\d+|Figure\s*\d+|封面[:：]|配图[:：])/i.test(value) && value.length <= 90;
+}
+
+function inferredHeadingLevel(text) {
+  const value = String(text || "").trim();
+  if (!value) return 0;
+  if (/^(简介|结语|来源|四要素的关系)$/.test(value)) return 2;
+  if (/^[一二三四五六七八九十]+[、.．]\s*/.test(value)) return 2;
+  if (/^第[一二三四五六七八九十]+[章节部分]/.test(value)) return 2;
+  if (/^\d+([.．、])\s*\S+/.test(value) && value.length <= 42) return 3;
+  return 0;
+}
+
+function headingSlug(text, index) {
+  return `section-${index + 1}-${String(text || "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\u4e00-\u9fa5-]/g, "")
+    .slice(0, 36)}`;
+}
+
+function normalizeArticleBlocks(article) {
+  const sourceBlocks = Array.isArray(article.contentBlocks) && article.contentBlocks.length
+    ? article.contentBlocks
+    : paragraphs(article.body).map((text) => ({ type: "paragraph", text }));
+  const blocks = [];
+  for (let index = 0; index < sourceBlocks.length; index += 1) {
+    const block = sourceBlocks[index];
+    if (!block || !block.type) continue;
+    if (block.type === "image") {
+      const next = sourceBlocks[index + 1];
+      const caption = next?.type === "paragraph" && isCaptionText(next.text) ? next.text : block.caption || "";
+      blocks.push({ ...block, caption });
+      if (caption) index += 1;
+      continue;
+    }
+    if (block.type === "paragraph") {
+      const text = String(block.text || "").trim();
+      if (!text) continue;
+      if (isCaptionText(text)) {
+        blocks.push({ type: "caption", text });
+        continue;
+      }
+      const level = Number(block.level || block.headingLevel || inferredHeadingLevel(text));
+      if (level >= 1 && level <= 6) {
+        blocks.push({ type: "heading", level, text });
+      } else {
+        blocks.push({ ...block, text });
+      }
+      continue;
+    }
+    blocks.push(block);
+  }
+  return blocks;
+}
+
+function renderArticleToc(headings) {
+  const toc = document.querySelector("[data-article-toc]");
+  if (!toc) return;
+  const visibleHeadings = headings.filter((item) => item.level <= 3);
+  toc.hidden = visibleHeadings.length < 2;
+  toc.innerHTML = visibleHeadings.length
+    ? `
+      <p>文章框架</p>
+      <nav aria-label="文章目录">
+        ${visibleHeadings
+          .map((item) => `<a class="level-${item.level}" href="#${escapeHtml(item.id)}">${escapeHtml(item.text)}</a>`)
+          .join("")}
+      </nav>
+    `
+    : "";
+}
+
 function articleUrl(item) {
   const next = new URLSearchParams({
     source,
@@ -64,7 +144,7 @@ function renderMedia(urls) {
     .join("");
 }
 
-function renderContentBlock(block) {
+function renderContentBlock(block, index) {
   if (!block || !block.type) return "";
   if (block.type === "image" && block.url) {
     return `
@@ -72,8 +152,17 @@ function renderContentBlock(block) {
         <button class="article-image-button" type="button" data-article-image-url="${escapeHtml(block.url)}" aria-label="打开图片浏览">
           <img src="${escapeHtml(block.url)}" alt="" loading="lazy" />
         </button>
+        ${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ""}
       </figure>
     `;
+  }
+  if (block.type === "caption" && block.text) {
+    return `<p class="article-caption">${escapeHtml(block.text)}</p>`;
+  }
+  if (block.type === "heading" && block.text) {
+    const level = Math.min(Math.max(Number(block.level || 2), 2), 4);
+    const id = block.id || headingSlug(block.text, index);
+    return `<h${level} id="${escapeHtml(id)}">${escapeHtml(block.text)}</h${level}>`;
   }
   if (block.type === "table" && Array.isArray(block.rows) && block.rows.length) {
     return `
@@ -82,11 +171,16 @@ function renderContentBlock(block) {
           <tbody>
             ${block.rows
               .map(
-                (row) => `
+                (row, rowIndex) => {
+                  const cellTag = rowIndex === 0 ? "th" : "td";
+                  return `
                   <tr>
-                    ${(row || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}
+                    ${(row || [])
+                      .map((cell) => `<${cellTag}>${escapeHtml(cell)}</${cellTag}>`)
+                      .join("")}
                   </tr>
-                `
+                `;
+                }
               )
               .join("")}
           </tbody>
@@ -103,13 +197,24 @@ function renderContentBlock(block) {
 function renderBody(article) {
   const container = document.querySelector("[data-article-body]");
   if (!container) return;
-  if (Array.isArray(article.contentBlocks) && article.contentBlocks.length) {
-    container.innerHTML = article.contentBlocks.map(renderContentBlock).join("");
+  if (shouldEmbedOriginal(article)) {
+    renderArticleToc([]);
+    container.innerHTML = `
+      <div class="article-source-embed">
+        <iframe src="${escapeHtml(article.contentUrl)}" title="${escapeHtml(article.title || "飞书原文")}" loading="lazy"></iframe>
+        <p>如果飞书限制嵌入显示，可以点击上方“查看原文链接”打开原文。</p>
+      </div>
+    `;
     return;
   }
-  const body = paragraphs(article.body);
-  container.innerHTML = body.length
-    ? body.map((item) => `<p>${escapeHtml(item)}</p>`).join("")
+  const blocks = normalizeArticleBlocks(article).map((block, index) => {
+    if (block.type !== "heading") return block;
+    return { ...block, id: headingSlug(block.text, index) };
+  });
+  const headings = blocks.filter((block) => block.type === "heading");
+  renderArticleToc(headings);
+  container.innerHTML = blocks.length
+    ? blocks.map(renderContentBlock).join("")
     : `<p>正文内容正在同步解析中，可点击原文链接查看。</p>`;
 }
 
