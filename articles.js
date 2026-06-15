@@ -82,12 +82,12 @@ async function loadArticleList() {
     if (payload.error && articleStatus) {
       articleStatus.textContent = `${sourceName}表格暂未同步成功：${payload.error}`;
     } else if (articleStatus) {
-      articleStatus.textContent = `已从飞书读取 ${items.length} 篇${sourceName}文章。`;
+      articleStatus.textContent = `当前收录 ${items.length} 篇${sourceName}文章。`;
     }
     renderArticleCards(source, items);
   } catch (error) {
     if (articleStatus) {
-      articleStatus.textContent = `${sourceName}表格暂未生成，先显示示意内容。`;
+      articleStatus.textContent = `${sourceName}文章暂时无法读取。`;
     }
     renderArticleCards(source, []);
   }

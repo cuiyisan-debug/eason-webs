@@ -12,13 +12,19 @@ function escapeHtml(value) {
   });
 }
 
+function stableHash(value) {
+  return String(value || "").split("").reduce((hash, char) => ((hash << 5) - hash + char.charCodeAt(0)) | 0, 0);
+}
+
 function cloudClass(project, index) {
   const title = project.title || "";
-  if (project.featured) return "is-featured";
-  if (title.length <= 6) return "is-short";
-  if (index % 11 === 0) return "is-large";
-  if (index % 7 === 0) return "is-medium";
-  return "";
+  const hash = Math.abs(stableHash(`${project.id || index}-${title}`));
+  const classes = [];
+  if (hash % 10 === 0) classes.push("is-featured");
+  if (title.length <= 6) classes.push("is-short");
+  if (hash % 17 === 0) classes.push("is-large");
+  if (hash % 13 === 0) classes.push("is-medium");
+  return classes.join(" ");
 }
 
 function renderProjectCloud(projects) {
