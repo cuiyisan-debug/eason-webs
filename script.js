@@ -249,6 +249,31 @@ function scrollToCurrentHash() {
 
 window.scrollToCurrentHash = scrollToCurrentHash;
 
+function initVisitorStats() {
+  if (document.querySelector(".visitor-stats")) return;
+  const stats = document.createElement("div");
+  stats.className = "visitor-stats";
+  stats.setAttribute("aria-label", "浏览统计");
+  stats.innerHTML = `
+    <span id="busuanzi_container_site_pv">浏览 <strong id="busuanzi_value_site_pv">--</strong> 次</span>
+    <span id="busuanzi_container_site_uv">访客 <strong id="busuanzi_value_site_uv">--</strong> 人</span>
+  `;
+  const footer = document.querySelector(".footer-line");
+  if (footer) {
+    footer.insertAdjacentElement("afterend", stats);
+  } else {
+    document.querySelector("main")?.insertAdjacentElement("beforeend", stats);
+  }
+  if (!document.querySelector('script[data-visitor-counter="busuanzi"]')) {
+    const counterScript = document.createElement("script");
+    counterScript.async = true;
+    counterScript.defer = true;
+    counterScript.dataset.visitorCounter = "busuanzi";
+    counterScript.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+    document.body.appendChild(counterScript);
+  }
+}
+
 if (hasPortfolioGrid) {
   const navLinks = document.querySelectorAll(".nav a");
   function setActiveNav(target) {
@@ -368,6 +393,7 @@ themeToggle.addEventListener("click", () => {
 
 setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
+initVisitorStats();
 scrollToCurrentHash();
 loadData().finally(() => {
   scrollToCurrentHash();
