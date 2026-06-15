@@ -55,6 +55,43 @@ function inferredHeadingLevel(text) {
   return 0;
 }
 
+function isLikelyTableHeader(text) {
+  const value = String(text || "").trim();
+  return Boolean(value) && value.length <= 16 && !/[。！？!?；;]/.test(value) && !isCaptionText(value) && !inferredHeadingLevel(value);
+}
+
+function isLikelyStandaloneHeading(text) {
+  const value = String(text || "").trim();
+  return Boolean(value) && inferredHeadingLevel(value) > 0 && !isLikelyTableHeader(value);
+}
+
+function rawTablesByHeading(body) {
+  const lines = paragraphs(body);
+  const tables = new Map();
+  for (let index = 0; index < lines.length; index += 1) {
+    const heading = lines[index];
+    if (!inferredHeadingLevel(heading)) continue;
+    for (let columns = 6; columns >= 2; columns -= 1) {
+      const headers = lines.slice(index + 1, index + 1 + columns);
+      if (headers.length !== columns || !headers.every(isLikelyTableHeader)) continue;
+      const values = [];
+      let cursor = index + 1 + columns;
+      while (cursor < lines.length && !isLikelyStandaloneHeading(lines[cursor]) && !isCaptionText(lines[cursor])) {
+        values.push(lines[cursor]);
+        cursor += 1;
+      }
+      if (values.length < columns || values.length % columns !== 0) continue;
+      const rows = [headers];
+      for (let offset = 0; offset < values.length; offset += columns) {
+        rows.push(values.slice(offset, offset + columns));
+      }
+      tables.set(heading, rows);
+      break;
+    }
+  }
+  return tables;
+}
+
 function headingSlug(text, index) {
   return `section-${index + 1}-${String(text || "")
     .trim()
@@ -67,12 +104,30 @@ function normalizeArticleBlocks(article) {
   const sourceBlocks = Array.isArray(article.contentBlocks) && article.contentBlocks.length
     ? article.contentBlocks
     : paragraphs(article.body).map((text) => ({ type: "paragraph", text }));
+  const fallbackTables = rawTablesByHeading(article.body);
+  const normalizedSourceBlocks = [];
+  const existingTableKeys = new Set(
+    sourceBlocks
+      .filter((block) => block?.type === "table")
+      .flatMap((block) => (Array.isArray(block.rows?.[0]) ? [block.rows[0].join("|")] : []))
+  );
+  sourceBlocks.forEach((block) => {
+    normalizedSourceBlocks.push(block);
+    const text = String(block?.text || "").trim();
+    const rows = fallbackTables.get(text);
+    const tableKey = rows?.[0]?.join("|");
+    if (rows && tableKey && !existingTableKeys.has(tableKey)) {
+      normalizedSourceBlocks.push({ type: "table", rows });
+      existingTableKeys.add(tableKey);
+    }
+  });
+
   const blocks = [];
-  for (let index = 0; index < sourceBlocks.length; index += 1) {
-    const block = sourceBlocks[index];
+  for (let index = 0; index < normalizedSourceBlocks.length; index += 1) {
+    const block = normalizedSourceBlocks[index];
     if (!block || !block.type) continue;
     if (block.type === "image") {
-      const next = sourceBlocks[index + 1];
+      const next = normalizedSourceBlocks[index + 1];
       const caption = next?.type === "paragraph" && isCaptionText(next.text) ? next.text : block.caption || "";
       blocks.push({ ...block, caption });
       if (caption) index += 1;

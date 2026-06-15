@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -700,16 +701,34 @@ def parse_tables_from_body(body: str) -> list[dict[str, Any]]:
     lines = [line.strip() for line in (body or "").splitlines() if line.strip()]
     tables: list[dict[str, Any]] = []
 
+    def is_heading(text: str) -> bool:
+        return bool(
+            text in {"简介", "结语", "来源", "四要素的关系"}
+            or re.match(r"^[一二三四五六七八九十]+[、.．]\s*", text)
+            or re.match(r"^第[一二三四五六七八九十]+[章节部分]", text)
+        )
+
+    def is_header(text: str) -> bool:
+        return bool(text) and len(text) <= 16 and not re.search(r"[。！？!?；;]", text) and not is_heading(text)
+
     for index, line in enumerate(lines):
-        if line != "四要素的关系":
+        if not is_heading(line):
             continue
-        headers = lines[index + 1 : index + 5]
-        values = lines[index + 5 : index + 9]
-        if len(headers) != 4 or len(values) != 4:
-            continue
-        if headers != ["定位", "内容", "空间", "运营"]:
-            continue
-        tables.append({"after": line, "rows": [headers, values]})
+        for columns in range(6, 1, -1):
+            headers = lines[index + 1 : index + 1 + columns]
+            if len(headers) != columns or not all(is_header(item) for item in headers):
+                continue
+            values: list[str] = []
+            cursor = index + 1 + columns
+            while cursor < len(lines) and not is_heading(lines[cursor]) and not re.match(r"^图\s*\d+", lines[cursor]):
+                values.append(lines[cursor])
+                cursor += 1
+            if len(values) < columns or len(values) % columns:
+                continue
+            rows = [headers]
+            rows.extend(values[start : start + columns] for start in range(0, len(values), columns))
+            tables.append({"after": line, "rows": rows})
+            break
     return tables
 
 
@@ -722,7 +741,7 @@ def merge_body_tables(content_blocks: list[dict[str, Any]], body: str) -> list[d
     pending = list(body_tables)
     for block in content_blocks:
         merged.append(block)
-        if block.get("type") != "paragraph":
+        if block.get("type") not in {"paragraph", "heading"}:
             continue
         text = normalize_text(block.get("text"))
         matches = [table for table in pending if table["after"] == text]
