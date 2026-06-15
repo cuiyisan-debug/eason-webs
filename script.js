@@ -238,6 +238,17 @@ async function loadData() {
   renderProjects();
 }
 
+function scrollToCurrentHash() {
+  if (!window.location.hash) return;
+  const target = document.querySelector(window.location.hash);
+  if (target) {
+    const top = target.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({ top, behavior: "auto" });
+  }
+}
+
+window.scrollToCurrentHash = scrollToCurrentHash;
+
 if (hasPortfolioGrid) {
   const navLinks = document.querySelectorAll(".nav a");
   function setActiveNav(target) {
@@ -357,4 +368,10 @@ themeToggle.addEventListener("click", () => {
 
 setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
-loadData();
+scrollToCurrentHash();
+loadData().finally(() => {
+  scrollToCurrentHash();
+  window.setTimeout(scrollToCurrentHash, 300);
+  window.setTimeout(scrollToCurrentHash, 900);
+});
+window.addEventListener("load", scrollToCurrentHash);

@@ -153,7 +153,7 @@
       <section class="contact" id="contact">
         <div>
           <p class="eyebrow">CONTACT</p>
-          <h2>讲述有温度的故事<br /><span class="contact-english">TELL STORIES WITH WARMTH</span></h2>
+          <h2>一起把内容变成可被记住的空间体验</h2>
         </div>
         <div class="contact-panel">
           <div class="contact-list">
@@ -191,6 +191,18 @@
       </div>
     </dialog>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=20260615-contact3"></script>
+    <script>
+      if (location.hash) {
+        const scrollToHashTarget = () => {
+          const target = document.querySelector(location.hash);
+          if (target) window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY);
+        };
+        scrollToHashTarget();
+        window.addEventListener("load", scrollToHashTarget);
+        setTimeout(scrollToHashTarget, 500);
+        setTimeout(scrollToHashTarget, 1200);
+      }
+    </script>
   </body>
 </html>
