@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-15T02:43:33.686645+00:00",
+  "generatedAt": "2026-06-15T02:56:38.787381+00:00",
   "source": "feishu-bitable",
   "sourceType": "zhixing",
   "baseToken": "Vn7hbNMygaDrSMseVgycCCJen1e",
   "tableId": "tbllnUjzNh9UkkpR",
-  "count": 1,
+  "count": 2,
   "error": "",
   "items": [
     {
@@ -18,30 +18,197 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=ZTY1NmYzNjY5MjZjNDc3MWQwZjhkZWJiYTE4ZTk3MjlfZDVjMzExZTMzN2U1YmYxODkxNDI4ZjY2ZDI1NWYxZmFfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNDkxNDEwOjE3ODE1Nzc4MTBfVjM",
-        "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=MWFlMGUwOWRmMjA3NGM4YjY3YzliODNhMGVhOGY4OGJfZGE5MWIzMWU0YmYwMzhlYjZmNDdmODZlOTRjY2FkMDlfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgxNDkxNDEwOjE3ODE1Nzc4MTBfVjM",
-        "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=NTIzMTkxZDFhYWVhZmYwOTNmNmQ4NDUyZWQzOTQwYWFfNDQ5NTExM2IzNzJkYmYxZDUwYWVhNzk1YjI4MmNkY2JfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgxNDkxNDEwOjE3ODE1Nzc4MTBfVjM",
-        "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=OTdhMjZmODgyNTZmOTYxNGM4NTUxMjgyMGQ2OTY5NjNfMTRhMDZlODM4MDBlZDFiYjdiZTkyZTIzZTcwNGNhNTlfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgxNDkxNDEwOjE3ODE1Nzc4MTBfVjM",
-        "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=Y2JhMGI1YjY0YjFkMWEyZTg3OGMwNTI0NGI1NjdjNWNfZDExYjUzMWEzYmY0MTNkMmNhMzkzNTdiMjRjODQxNWRfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgxNDkxNDEwOjE3ODE1Nzc4MTBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGI5NGJkZTFjNDZlNjgxNmIxNzg1YjQ4MjE2NDVmNjRfNmMwZmU0ZDZjMWUwMmZhZmZlNzgxNjcwYmM5MjUxZjFfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2NhNzkwZDAzYjg4ZDYyNTBhYjk4NDhmMWZhMTU2MTJfYmYyNmYzYTVmYmUyMjdhY2Q5NWFjZTE2ZjRkMTFiMmNfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDMzZGY5OGFkZTVhYjNmMzM1NTE2ZWM3MGRlMThhMDNfYTdhMjQ2ODNlNzE5YWFmMGI2NzE5OTVhNDljZThiZjdfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTA0ODg3MTNiNTI1YWRiZmQyYmNmNjU4YWNmYjY2ZThfZjRiN2Q2ZDhkM2M3NTRkNGU2Yzg3NDVlODY4NzIwMDlfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzA5MWMzMzViNzUzZTY4NDQ4OTM2YTE5MjI2NDVlNDhfNjI4MjFiNjNjZTVkMGRiNGM2YWFiMThmYTk4YmZjNjNfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGRkMmI1NzJmYzQ3ZjM0NGUxNWEyZTQzNjMwNDViMTFfMWM5MTU5ODk4MzMyYTliMGZlZjc3NWUwNWI0ZWY3M2ZfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGJmNWY4OGNkNWU2MzVmOTI3NDFjNWFhY2MxYmM2MDBfNmZlMWU2NTA3YmY5ZjJhNTJmYmY2ZGY0NWFkZGZjNGVfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmE0ZTkzNDU4OTg0ZGJmMTkyOGI2OGIwNzczYzBiNjJfNWQ5ZDM5ZWU2YTE3N2FkZDg3Y2UxZmQ3NGQ2Yzk1NGRfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgxNDkxNDEyOjE3ODE1Nzc4MTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTdiNTY5NzI1NThmYzBlMjMxZGRiYTM1NTEyYTI4NGFfYmY5NzQ4ZTU1ZGE2ZTliODk0ODhjYWYyMGYzNTYyMjhfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTkzYjdmOGQxODhmM2YwNTY2MWI1M2RmODYyZWVlOTZfOTZkYjdjZWNlNmQyZDVhNzVjMTRiZGYyZjkyMjJlYmZfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgxNDkxNDExOjE3ODE1Nzc4MTFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Yzc2Y2Y4ZmE3YjMzM2U5YTdhMjY3NmFhN2Q5ZGJkOGFfYzIxODgyZWExZDFiYWNjYmQ1ZTkzYjQ1ZGIxYWU0NzRfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgxNDkxNDEyOjE3ODE1Nzc4MTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODY0Njk4MzJlMzMyYjYyYzYxMjFmZDRmZGQwODVkMzNfNDg0MWJhN2E2MjJmZjZlZmFkODk3OTNiNGFkMjYwOTlfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgxNDkxNDEyOjE3ODE1Nzc4MTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjFmMzNjMGRlNjA2MWQxMWUwYjg0ZDM5ZDAyYTYzNWFfMjM2MDdiODAxZTBjMDhmZWI2NDAzYWRhNGUxOTQ3NjNfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgxNDkxNDEyOjE3ODE1Nzc4MTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2ZiN2ZjZmQyNGUwMmUwNjVjYTcyOTY4YmNlNTA4YWZfYmU4MDY1MWQ3NDdjY2ZjMzYwMzU3MTMxYTRlMDkxYmJfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgxNDkxNDEyOjE3ODE1Nzc4MTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDUyNTA2MGU4YzY1YWI1NWEwYWQyYjEzN2UxNTA4NTBfZGFjNGNiZWViYjIzMDgwMTg4ZGFkMjE2YjY3ZDM1ODhfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgxNDkxNDEyOjE3ODE1Nzc4MTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTBiNTYxNDA2MWNhOTZkYzZhNjNhMGQ2MmEyZTZlMzRfMzMyYjM2YmM3MTVlMTkyNjk3Yzc5NGM5MGQ3ODAzM2NfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgxNDkxNDEzOjE3ODE1Nzc4MTNfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjhmNDY3NzYzOWRjNWQ5YjdkYmQ0ZjRkM2FmZDI4ZDhfYjMxYTU1MDc3YTdjMzZjOWQyODc2Y2Q2YTlkZjIwOTNfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTU3ZWVmZGZiOGRmOWI1YTBkMDBjNWIyMjc2MThjNWNfNWI2YWUyNjU3ODJlN2NlZDY2OTM1OGI4NTc5NjBiY2ZfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjY5OWIzZDQyNTQ1MjBkMWVlYTEwNmRkMmNlNmY4N2VfNjU2ZTRmZDc3MmVmNWE1N2UxZTU3ZjMzZDQxNmJmOWZfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGIwOTE2NWMwZjZjM2M2N2Q5NWVhNmNkY2UyYThlYmFfMzhkYzM5MzZjMDM5NTExZjU0MDYyMjA3MzYzNDFiZGZfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2NmNDYxN2EyMTZiYmVkZTkxN2MwNzk0ZmUyYjc5MjlfMTIzZmE4NDVmMzUzOTEyZWIwMTBiNDE1MTUxNGI1MGNfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGFhMmQ5M2E3NDNkNTg1NmIxOWQzNmE2YThkZDA0MjFfOWJjMDExY2VlNTEwMzE1ZGRkN2NlYjk2MDcwMTgzZDNfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDRiNzRjYWYyODMzODEwYzZmMjUwYmY4MGE5MDk5MTRfOTIwYTAyYzAyYjA2NGY2YzA3ZjBmZTM5ODdiNjk4MzFfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjVhYWEzYTM2YmUyMTU0NjRjN2EyYmYxNTc1NTg4N2FfNDNiNjliMjI5ZDNkNjQ1Zjk3ZGNhOTY0NjhmODg4NjRfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWQwYzQ2OTc5MTJhN2I5NTc0ZWU0NGJkMGQzMmRmYjdfNTM1MzQ2YTllN2EzZDk1NDA4NDVjOTJhOGExNDM2ODlfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmY1ZjY4YTdkNjgxMWE5ZTNiNWMzYjkzYWI2NTI1ZDBfOTE0YWE3Mzc0M2NmNWQwNGRkYzVkODM3MGRiMDdhMTBfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTQzMDk0NDUxNjE3MTgyMmZjNzQ2YmNkZDMxN2ViOGRfODVmOTg0NzI3M2VjODUwOTcyODIxMTg4MjgwYzFmMWNfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgxNDkyMTUwOjE3ODE1Nzg1NTBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2U5MTUxODM4ODEzZWQxZjQzOTQ3NjY0MzUxZWRiOTdfYzU2MzY5NjYwYjM1ODFiMmM0M2VmZDA0NGZjYTQxODJfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgxNDkyMTUwOjE3ODE1Nzg1NTBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTEwNWY1YWM3OTEzOGQ3NTE0ODQyMDk2MzkxMTA1MmZfZDc1YWZmZTNkZTdlYjE4Njk4YTBiYzJkZDAzMmRhMzdfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgxNDkyMTUwOjE3ODE1Nzg1NTBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTBmY2NiZGFmODlhY2JkMTU2MzQyMmJlN2NiYTU3MjhfODZiMWIwM2E3Y2E1NDNjODc3NzI5MzlhMmJlNmE4ZGVfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgxNDkyMTUwOjE3ODE1Nzg1NTBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTgzODExYjI1Mjg3Mzk4MGEwYzAzMmUwYzUxNjdhZDNfOTZmYjYyMGE1MWVlMTEzYWI4MTE1YTVhYThhYWQ5NDZfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgxNDkyMTUwOjE3ODE1Nzg1NTBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mjg2M2FiNDA3ZmRkOTc2M2Q2MmRiMjk3OGU5YzA5N2NfZDNmYmUwNGY3M2QxYTE4NDMxNjZkZTM1ZjZlY2JlOTVfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgxNDkyMTUxOjE3ODE1Nzg1NTFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MThhNDgzNjYxNmNkZWEzNDY2ZmExMjM0MDg1ZTkyNDRfOWFjNTZjMjBmNTVlZTI0ODc5NjFhMzIwMmM0ZjA2ZjBfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgxNDkyMTUxOjE3ODE1Nzg1NTFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTc3NTg5MTEwNDMwZWMyYjU3MzljYWE5OWUzZGQzZTZfNTcwYjA2ZTg5Mjg4OTY2YzkwZDMzZjBkMTY0MTVjNjlfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgxNDkyMTUxOjE3ODE1Nzg1NTFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODA2ZTMzMDNiMzkyNWFkNjM3ZWQ3MjVjYTVkMjMxYmZfYzU4NjllNDhlYmRhMTAyYWFjZDNjYTE2ZTU4NWNlMWJfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgxNDkyMTUxOjE3ODE1Nzg1NTFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzkwOGNlNDA2MjEwYWY3Y2YxNWExMzgyOTcyMjE1YTFfNTc3ZTIyZGVhMzc2ODJiYzI4YjY4MmE0NTM0MGM4NWNfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgxNDkyMTUxOjE3ODE1Nzg1NTFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGZiM2IxMjUyODhjMGM0YzI0ZTRlODY2MGQxNmFhNDNfMTg0Y2JjOWVjMDRjY2UzY2QwYjUwNjdiYTg0MzUzZjJfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgxNDkyMTUyOjE3ODE1Nzg1NTJfVjM"
       ],
       "contentBlocks": [],
-      "cover": "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=ZTY1NmYzNjY5MjZjNDc3MWQwZjhkZWJiYTE4ZTk3MjlfZDVjMzExZTMzN2U1YmYxODkxNDI4ZjY2ZDI1NWYxZmFfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNDkxNDEwOjE3ODE1Nzc4MTBfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjhmNDY3NzYzOWRjNWQ5YjdkYmQ0ZjRkM2FmZDI4ZDhfYjMxYTU1MDc3YTdjMzZjOWQyODc2Y2Q2YTlkZjIwOTNfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNDkyMTQ5OjE3ODE1Nzg1NDlfVjM"
+    },
+    {
+      "id": "recvmzQDUI9yOJ",
+      "sourceType": "zhixing",
+      "order": 6.0,
+      "title": "GitHub 通用一键更新器使用说明",
+      "summary": "GitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。",
+      "body": "GitHub通用一键更新器_使用说明\nGitHub 通用一键更新器使用说明\n用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新\nimage1.png\n\n封面：GitHubUniversalUpdater 的核心流程示意。\n一、它解决什么问题\nGitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。\n它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。\n二、下载入口\n推荐下载：GitHubUniversalUpdater-v1.0.6.zip\nRelease 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases\nGitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater\n源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip\n当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。\n三、快速上手\n下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。\n双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。\n首次运行会在同目录生成 apps.json 配置文件。\n在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。\n点击“检查更新”，确认有新版本后点击“一键更新”。\n四、配置项怎么理解\n\n\n字段\n\n用途\n\n建议\n\nName\n\n软件名称。\n\n写成自己能识别的名字，例如 Everything、PicGo。\n\nInstallDir\n\n安装目录或主程序 exe 路径。\n\n如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。\n\nGitHubUrl\n\n对应的 GitHub 仓库地址。\n\n填写仓库主页，例如 https://github.com/owner/repository。\n\nLastInstalledTag\n\n记录当前已安装版本。\n\n首次可保持“未安装”，更新后由工具记录。\n\nPreferredAssetRegex\n\n资产筛选正则，可选。\n\n当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。\n\nUseIdm / IdmPath\n\n是否调用本机 IDM 下载。\n\n下载慢时可开启；也可以手动指定 IDMan.exe。\n五、它如何选择更新包\n通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。\n优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。\n会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。\n如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。\n六、下载与更新过程\n下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。\n如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。\n七、注意事项\n覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。\nrar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。\n工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。\n如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。\n八、适合谁使用\n它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。\n对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。\n来源\n本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater",
+      "contentUrl": "https://my.feishu.cn/docx/RyAEd4pZjoRqMRxeyBccs0x7nGb",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzVjZTZhMGZlNjhhNTFmMzlmNTEzMDQ0OTkzYzRlNjlfOTc2NDRjYzA2ZDE5NjQ1MTZjODM4NDE0YjExODIxMmJfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgxNDkyMTUyOjE3ODE1Nzg1NTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWFkOGMwY2YyMTUwOTIwZWViY2U5NTM2YTQ2MTgyMjZfNThlMDA5ODkwM2MzYzk2Zjc1YmQ1MWY2OGU1ZjFjOTNfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgxNDkyMTk4OjE3ODE1Nzg1OThfVjM"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新"
+        },
+        {
+          "type": "image",
+          "token": "E9bzb9jn3oc6g5xo4zyc01NKnug",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWFkOGMwY2YyMTUwOTIwZWViY2U5NTM2YTQ2MTgyMjZfNThlMDA5ODkwM2MzYzk2Zjc1YmQ1MWY2OGU1ZjFjOTNfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgxNDkyMTk4OjE3ODE1Nzg1OThfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "封面：GitHubUniversalUpdater 的核心流程示意。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一、它解决什么问题"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。"
+        },
+        {
+          "type": "paragraph",
+          "text": "它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。"
+        },
+        {
+          "type": "paragraph",
+          "text": "二、下载入口"
+        },
+        {
+          "type": "paragraph",
+          "text": "推荐下载：GitHubUniversalUpdater-v1.0.6.zip"
+        },
+        {
+          "type": "paragraph",
+          "text": "Release 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater"
+        },
+        {
+          "type": "paragraph",
+          "text": "源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip"
+        },
+        {
+          "type": "paragraph",
+          "text": "当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。"
+        },
+        {
+          "type": "paragraph",
+          "text": "三、快速上手"
+        },
+        {
+          "type": "paragraph",
+          "text": "下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。"
+        },
+        {
+          "type": "paragraph",
+          "text": "双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。"
+        },
+        {
+          "type": "paragraph",
+          "text": "首次运行会在同目录生成 apps.json 配置文件。"
+        },
+        {
+          "type": "paragraph",
+          "text": "在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。"
+        },
+        {
+          "type": "paragraph",
+          "text": "点击“检查更新”，确认有新版本后点击“一键更新”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "四、配置项怎么理解"
+        },
+        {
+          "type": "paragraph",
+          "text": "五、它如何选择更新包"
+        },
+        {
+          "type": "paragraph",
+          "text": "通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。"
+        },
+        {
+          "type": "paragraph",
+          "text": "优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。"
+        },
+        {
+          "type": "paragraph",
+          "text": "会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。"
+        },
+        {
+          "type": "paragraph",
+          "text": "六、下载与更新过程"
+        },
+        {
+          "type": "paragraph",
+          "text": "下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。"
+        },
+        {
+          "type": "paragraph",
+          "text": "七、注意事项"
+        },
+        {
+          "type": "paragraph",
+          "text": "覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。"
+        },
+        {
+          "type": "paragraph",
+          "text": "rar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。"
+        },
+        {
+          "type": "paragraph",
+          "text": "工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。"
+        },
+        {
+          "type": "paragraph",
+          "text": "八、适合谁使用"
+        },
+        {
+          "type": "paragraph",
+          "text": "它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。"
+        },
+        {
+          "type": "paragraph",
+          "text": "来源"
+        },
+        {
+          "type": "paragraph",
+          "text": "本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater"
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzVjZTZhMGZlNjhhNTFmMzlmNTEzMDQ0OTkzYzRlNjlfOTc2NDRjYzA2ZDE5NjQ1MTZjODM4NDE0YjExODIxMmJfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgxNDkyMTUyOjE3ODE1Nzg1NTJfVjM"
     }
   ]
 }
