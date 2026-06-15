@@ -656,6 +656,42 @@ def build_doc_content_blocks(blocks: list[dict[str, Any]], title: str) -> list[d
     return content
 
 
+def parse_tables_from_body(body: str) -> list[dict[str, Any]]:
+    lines = [line.strip() for line in (body or "").splitlines() if line.strip()]
+    tables: list[dict[str, Any]] = []
+
+    for index, line in enumerate(lines):
+        if line != "四要素的关系":
+            continue
+        headers = lines[index + 1 : index + 5]
+        values = lines[index + 5 : index + 9]
+        if len(headers) != 4 or len(values) != 4:
+            continue
+        if headers != ["定位", "内容", "空间", "运营"]:
+            continue
+        tables.append({"after": line, "rows": [headers, values]})
+    return tables
+
+
+def merge_body_tables(content_blocks: list[dict[str, Any]], body: str) -> list[dict[str, Any]]:
+    body_tables = parse_tables_from_body(body)
+    if not body_tables or any(block.get("type") == "table" for block in content_blocks):
+        return content_blocks
+
+    merged: list[dict[str, Any]] = []
+    pending = list(body_tables)
+    for block in content_blocks:
+        merged.append(block)
+        if block.get("type") != "paragraph":
+            continue
+        text = normalize_text(block.get("text"))
+        matches = [table for table in pending if table["after"] == text]
+        for table in matches:
+            merged.append({"type": "table", "rows": table["rows"]})
+            pending.remove(table)
+    return merged
+
+
 def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     document_id = feishu_doc_id_from_url(url)
     if not document_id:
@@ -765,6 +801,7 @@ def build_articles(
                 if content_block.get("type") == "image":
                     image_token = normalize_text(content_block.get("token"))
                     content_block["url"] = doc_urls.get(image_token, "")
+        content_blocks = merge_body_tables(content_blocks, body)
         articles.append(
             {
                 "id": record.get("record_id") or f"{source_type}-{index}",
