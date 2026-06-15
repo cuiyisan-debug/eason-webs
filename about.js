@@ -1,6 +1,4 @@
 const projectCloud = document.getElementById("projectCloud");
-const projectCloudCount = document.getElementById("projectCloudCount");
-
 function escapeHtml(value) {
   return String(value ?? "").replace(/[&<>"']/g, (char) => {
     const map = {
@@ -35,10 +33,6 @@ function renderProjectCloud(projects) {
     uniqueProjects.push(project);
   });
 
-  if (projectCloudCount) {
-    projectCloudCount.textContent = `${uniqueProjects.length} 个项目名称 / FEISHU PROJECT INDEX`;
-  }
-
   const rows = [[], [], []];
   uniqueProjects.forEach((project, index) => {
     rows[index % rows.length].push({ project, index });
@@ -68,7 +62,6 @@ async function loadProjectCloud() {
     renderProjectCloud(Array.isArray(payload.items) ? payload.items : []);
   } catch (error) {
     projectCloud.innerHTML = "<span>项目名称暂时无法读取</span>";
-    if (projectCloudCount) projectCloudCount.textContent = "飞书项目库读取失败，请稍后刷新。";
   }
 }
 

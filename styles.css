@@ -1762,22 +1762,7 @@ h1 {
 }
 
 .scope-head {
-  display: flex;
-  gap: 24px;
-  align-items: end;
-  justify-content: space-between;
   margin-bottom: 30px;
-}
-
-.scope-head p {
-  max-width: 320px;
-  margin: 0 0 8px;
-  color: var(--accent);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-align: right;
-  line-height: 1.6;
-  text-transform: uppercase;
 }
 
 .project-cloud {
@@ -2048,16 +2033,6 @@ h1 {
 
   .about-points {
     grid-template-columns: 1fr;
-  }
-
-  .scope-head {
-    display: block;
-  }
-
-  .scope-head p {
-    max-width: none;
-    margin-top: 10px;
-    text-align: left;
   }
 
   .project-cloud {
