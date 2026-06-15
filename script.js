@@ -258,6 +258,9 @@ function initVisitorStats() {
     <span id="busuanzi_container_site_pv">浏览 <strong id="busuanzi_value_site_pv">--</strong> 次</span>
     <span id="busuanzi_container_site_uv">访客 <strong id="busuanzi_value_site_uv">--</strong> 人</span>
   `;
+  stats.querySelectorAll("span").forEach((item) => {
+    item.style.display = "inline-flex";
+  });
   const footer = document.querySelector(".footer-line");
   if (footer) {
     footer.insertAdjacentElement("afterend", stats);

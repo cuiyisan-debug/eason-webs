@@ -1023,6 +1023,12 @@ h1 {
   background: color-mix(in srgb, var(--panel-2) 76%, transparent);
 }
 
+.article-table tr:first-child td {
+  color: var(--text);
+  font-weight: 700;
+  background: color-mix(in srgb, var(--panel-2) 76%, transparent);
+}
+
 .article-source-embed {
   display: grid;
   gap: 14px;
@@ -1384,6 +1390,13 @@ h1 {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.visitor-stats span,
+.visitor-stats [id^="busuanzi_container"] {
+  display: inline-flex !important;
+  align-items: baseline;
+  gap: 4px;
 }
 
 .visitor-stats strong {

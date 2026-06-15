@@ -165,22 +165,23 @@ function renderContentBlock(block, index) {
     return `<h${level} id="${escapeHtml(id)}">${escapeHtml(block.text)}</h${level}>`;
   }
   if (block.type === "table" && Array.isArray(block.rows) && block.rows.length) {
+    const [headRow, ...bodyRows] = block.rows;
     return `
       <div class="article-table-wrap">
         <table class="article-table">
+          <thead>
+            <tr>
+              ${(headRow || []).map((cell) => `<th scope="col">${escapeHtml(cell)}</th>`).join("")}
+            </tr>
+          </thead>
           <tbody>
-            ${block.rows
+            ${bodyRows
               .map(
-                (row, rowIndex) => {
-                  const cellTag = rowIndex === 0 ? "th" : "td";
-                  return `
-                  <tr>
-                    ${(row || [])
-                      .map((cell) => `<${cellTag}>${escapeHtml(cell)}</${cellTag}>`)
-                      .join("")}
-                  </tr>
-                `;
-                }
+                (row) => `
+                <tr>
+                  ${(row || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}
+                </tr>
+              `
               )
               .join("")}
           </tbody>
