@@ -1903,6 +1903,22 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .about-portrait-panel {
+    min-height: 0;
+    height: clamp(520px, 64vw, 760px);
+  }
+
+  .about-photo {
+    background-position: center top;
+    background-size: contain;
+  }
+
+  .about-signature {
+    left: clamp(28px, 7vw, 96px);
+    bottom: clamp(26px, 5vw, 68px);
+    width: min(26vw, 220px);
+  }
+
 }
 
 @media (max-width: 760px) {
@@ -2036,6 +2052,7 @@ h1 {
 
   .about-portrait-panel {
     min-height: 58vh;
+    height: auto;
   }
 
   .about-points {
@@ -2084,6 +2101,8 @@ h1 {
   }
 
   .about-signature {
+    left: 28px;
+    bottom: 28px;
     width: min(52%, 180px);
   }
 }
