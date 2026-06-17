@@ -280,6 +280,7 @@ h1 {
   align-self: stretch;
   min-height: 660px;
   overflow: hidden;
+  contain: layout paint;
 }
 
 .feature-card {
@@ -301,6 +302,8 @@ h1 {
 .feature-image {
   width: 100%;
   height: 100%;
+  transform: translateZ(0);
+  will-change: background-image;
 }
 
 .feature-image::after,

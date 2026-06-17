@@ -41,6 +41,8 @@ let searchQuery = "";
 let activeMediaItems = [];
 let activeMediaIndex = 0;
 let mediaAutoplay = false;
+let lastScrollAt = 0;
+let featureRenderToken = 0;
 
 const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
@@ -132,7 +134,16 @@ function renderFeature() {
   const currentIndex = ((featureIndex % source.length) + source.length) % source.length;
   const current = source[currentIndex];
   const next = source[(currentIndex + 1) % source.length];
-  featureCover.style.backgroundImage = `url("${imageOf(current)}")`;
+  const nextImage = imageOf(current);
+  const renderToken = ++featureRenderToken;
+  const image = new Image();
+  image.onload = () => {
+    if (renderToken === featureRenderToken) {
+      featureCover.style.backgroundImage = `url("${nextImage}")`;
+    }
+  };
+  image.onerror = image.onload;
+  image.src = nextImage;
   featureTitle.textContent = current.title;
   if (nextTitle) nextTitle.textContent = next?.title || "更多项目";
 }
@@ -275,6 +286,23 @@ function initVisitorStats() {
     counterScript.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
     document.body.appendChild(counterScript);
   }
+  window.setTimeout(sanitizeVisitorStats, 2600);
+  window.setTimeout(sanitizeVisitorStats, 5200);
+}
+
+function sanitizeVisitorStats() {
+  const pv = document.querySelector("#busuanzi_value_site_pv");
+  const uv = document.querySelector("#busuanzi_value_site_uv");
+  if (!pv || !uv) return;
+  const pvValue = Number(String(pv.textContent || "").replace(/\D/g, ""));
+  const uvValue = Number(String(uv.textContent || "").replace(/\D/g, ""));
+  if (!Number.isFinite(pvValue) || !Number.isFinite(uvValue)) return;
+  if (pvValue > 1000000 || uvValue > 1000000 || uvValue > pvValue) {
+    const stats = document.querySelector(".visitor-stats");
+    if (stats) {
+      stats.innerHTML = `<span>\u8bbf\u5ba2\u7edf\u8ba1\u6682\u4e0d\u53ef\u7528</span>`;
+    }
+  }
 }
 
 if (hasPortfolioGrid) {
@@ -373,10 +401,19 @@ if (hasPortfolioGrid) {
   });
   window.setInterval(() => {
     if (!projects.length) return;
+    if (document.hidden || Date.now() - lastScrollAt < 1200) return;
     featureIndex += 1;
     renderFeature();
   }, 5200);
 }
+
+window.addEventListener(
+  "scroll",
+  () => {
+    lastScrollAt = Date.now();
+  },
+  { passive: true }
+);
 
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
