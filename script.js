@@ -274,7 +274,7 @@ function initVisitorStats() {
   });
   const footer = document.querySelector(".footer-line");
   if (footer) {
-    footer.insertBefore(stats, footer.children[2] || null);
+    footer.insertBefore(stats, footer.lastElementChild);
   } else {
     document.querySelector("main")?.insertAdjacentElement("beforeend", stats);
   }

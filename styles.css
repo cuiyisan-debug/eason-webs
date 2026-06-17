@@ -1292,7 +1292,7 @@ h1 {
 
 .footer-line {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, auto) minmax(0, auto) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
   align-items: center;
   gap: 24px;
   padding: 16px 36px;
@@ -1308,6 +1308,10 @@ h1 {
   word-break: normal;
 }
 
+.footer-line > span:last-child {
+  justify-self: end;
+}
+
 .visitor-stats {
   display: flex;
   justify-content: center;
@@ -1319,6 +1323,7 @@ h1 {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .visitor-stats span,
@@ -2066,6 +2071,16 @@ h1 {
     padding-right: 18px;
   }
 
+  .category {
+    grid-template-columns: 52px minmax(0, 1fr);
+    column-gap: 10px;
+    padding: 10px 10px 10px 12px;
+  }
+
+  .category span {
+    white-space: nowrap;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
@@ -2095,18 +2110,26 @@ h1 {
   }
 
   .footer-line {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, auto) minmax(0, 1fr);
+    gap: 10px;
     padding-left: 18px;
     padding-right: 18px;
+    font-size: 11px;
+  }
+
+  .footer-line span {
+    overflow-wrap: normal;
+    white-space: nowrap;
   }
 
   .visitor-stats {
     justify-content: center;
-    justify-self: stretch;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-    padding: 2px 0;
+    justify-self: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 0;
+    font-size: 11px;
+    letter-spacing: 0.02em;
   }
 
   .dialog-media {
