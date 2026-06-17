@@ -263,7 +263,7 @@ function initVisitorStats() {
   });
   const footer = document.querySelector(".footer-line");
   if (footer) {
-    footer.insertAdjacentElement("afterend", stats);
+    footer.insertBefore(stats, footer.children[2] || null);
   } else {
     document.querySelector("main")?.insertAdjacentElement("beforeend", stats);
   }

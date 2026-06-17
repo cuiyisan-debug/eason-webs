@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="全部项目">
+  <title>全部项目</title>
+  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="15" y="15" width="14" height="14" rx="2"/>
+<rect x="35" y="15" width="14" height="14" rx="2"/>
+<rect x="15" y="35" width="14" height="14" rx="2"/>
+<rect x="35" y="35" width="14" height="14" rx="2"/>
+<path d="M22 22h.01M42 22h.01M22 42h.01M42 42h.01"/>
+  </g>
+</svg>
