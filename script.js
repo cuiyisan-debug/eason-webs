@@ -32,7 +32,7 @@ const fallbackProjects = [
 ];
 
 let projects = [];
-let activeCategory = "全部";
+let activeCategory = "政企展厅";
 let featureIndex = 0;
 let expanded = false;
 let yearFilter = "全部";
