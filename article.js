@@ -125,7 +125,8 @@ function normalizeArticleBlocks(article) {
   const sourceBlocks = Array.isArray(article.contentBlocks) && article.contentBlocks.length
     ? article.contentBlocks
     : paragraphs(article.body).map((text) => ({ type: "paragraph", text }));
-  const fallbackTables = rawTablesByHeading(article.body);
+  const hasSourceTables = sourceBlocks.some((block) => block?.type === "table");
+  const fallbackTables = hasSourceTables ? new Map() : rawTablesByHeading(article.body);
   const normalizedSourceBlocks = [];
   const existingTableKeys = new Set(
     sourceBlocks
