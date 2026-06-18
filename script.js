@@ -305,6 +305,35 @@ function sanitizeVisitorStats() {
   }
 }
 
+function protectPortfolioMedia() {
+  const protectedSelector = [
+    ".feature-image",
+    ".project-thumb",
+    ".dialog-media",
+    ".project-detail-cover",
+    ".story-image",
+    ".article-image-button",
+    ".zhixing-thumb",
+    ".related-thumb",
+  ].join(",");
+
+  document.addEventListener("contextmenu", (event) => {
+    if (event.target.closest(protectedSelector)) {
+      event.preventDefault();
+    }
+  });
+
+  document.addEventListener("dragstart", (event) => {
+    if (event.target.closest(protectedSelector) || event.target.matches("img")) {
+      event.preventDefault();
+    }
+  });
+
+  document.querySelectorAll("img").forEach((image) => {
+    image.setAttribute("draggable", "false");
+  });
+}
+
 if (hasPortfolioGrid) {
   const navLinks = document.querySelectorAll(".nav a");
   function setActiveNav(target) {
@@ -434,6 +463,7 @@ themeToggle.addEventListener("click", () => {
 setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
 initVisitorStats();
+protectPortfolioMedia();
 scrollToCurrentHash();
 loadData().finally(() => {
   scrollToCurrentHash();

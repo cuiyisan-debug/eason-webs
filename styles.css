@@ -299,6 +299,42 @@ h1 {
   background-size: cover;
 }
 
+.feature-image,
+.project-thumb,
+.dialog-media,
+.project-detail-cover,
+.story-image,
+.article-image-button,
+.zhixing-thumb,
+.related-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-image::before,
+.project-thumb::before,
+.dialog-media:not(.video-mode)::before,
+.project-detail-cover::before,
+.story-image::before,
+.article-image-button::before,
+.zhixing-thumb::before,
+.related-thumb::before {
+  content: "EASON.CUI / mycys.top";
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  z-index: 4;
+  padding: 4px 7px;
+  background: rgba(0, 0, 0, 0.34);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+}
+
 .feature-image {
   width: 100%;
   height: 100%;
@@ -309,10 +345,11 @@ h1 {
 .feature-image::after,
 .project-thumb::after {
   content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, 0.7));
+  pointer-events: none;
 }
 
 .feature-info {
@@ -890,6 +927,7 @@ h1 {
 
 .article-image-button {
   display: block;
+  position: relative;
   width: 100%;
   border: 0;
   padding: 0;
@@ -1559,10 +1597,12 @@ h1 {
 
 .project-detail-cover::after {
   content: "";
-  display: block;
-  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
   height: min(76vh, 760px);
   background: linear-gradient(180deg, transparent 58%, color-mix(in srgb, var(--bg) 78%, transparent));
+  pointer-events: none;
 }
 
 .project-detail-intro {
