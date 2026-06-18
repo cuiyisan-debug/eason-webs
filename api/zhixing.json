@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T04:00:37.506187+00:00",
+  "generatedAt": "2026-06-18T04:31:53.775383+00:00",
   "source": "feishu-bitable",
   "sourceType": "zhixing",
   "baseToken": "Vn7hbNMygaDrSMseVgycCCJen1e",
@@ -19,30 +19,30 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjZiNDcwMzY1NDQ2OTFkYmVjZWYwYzRkYWQ1ZWQzMThfMzNkNzI3YWZkNGRhM2RjZWYyMmY3ZjA4ODNmYzljNTBfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjUwZmMyMGZiNjFiMzRlZTZkZmYwZmE2OGE5ZTVlZDdfOTJjY2Q4MmJiNTU2NzkyNjE3MDA0NjhiMGQxNWVjZDVfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjMxZGU1MTNkZjQxYjkwZjNkZmQwYmM1NjA3M2YyY2JfYWUyYzMyZTg4MTdlMDZkMmU4ODEyOWY5NTQxMGQ0Y2FfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDA5ZTE5NTU4Y2MwZDY3ZTk1NzA4YmY0N2MyZTVlNmVfYTY5M2JlZjU0MWNjYzg5NzJjOWYyNDg1NzI1NzU4YWJfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzA1NDA4MTk1ZWVlNGVlYTVlM2QwM2Q2YTdmY2Y2NTBfMzY1NjQ0ZjhkMjk5Njk3MmIzMDJmZDE5OTVhOGFmODdfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjFiNjFmMDIxM2UyZDRkM2JjZjk2Y2M2ODAxYTA3ODJfOGE1ZmQxYjkzODE0Njc1OTAwMDg3NmIwYmRjZDI0ZGFfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjQ0MjVhZjgyZTAzYjRkM2ZlOWU4OWI4YTI0Y2YxMjhfOTNmNDdkODdkZjdhYThkOGYyMjc0YTU1MzgxMTJiM2NfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGU0MDcxODU0NDExODUxYzA3NmVmZTE2MmY5OTFhYTlfNjgxNzI3OTc2ZmY1MDBjOTA2MjY1NTBmMTQ2ODcyMDlfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Zjk1ZTljMDRkZWZhNWNmYmUwYmEyMGJiNGJkYzYzYTFfZDQ5NzVhNWIyOWQwOWFjNmZhNzc0YjljNjJhZWQ5Y2NfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGNjYzRjNzBmM2I0ZGE4OGRiMDNkMGM3YmMwY2FiMzdfYmNhMjFmMGQ0OWZiYTE3NDkxNjYxYzc5MDg5NmQwYzVfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGE4MzFiZjE5M2FiN2JmNzE1OWI0MjA2MDg4YjE5NWJfMmQyYmRhZjg2OTMyOWQxYTYxMGUzMWFiOTA4OGUwNzdfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWU5N2U0MTJjNTBkMzA2ZjYzZTJmMWY4NmRhZjFhNmJfNTdkZDFmMmMwN2VlOTljMWE3Mzc2NTBiNGUyOWE4NWJfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDExYmIwOWY1ZWI5ZDMyNTQ4M2E2OTdlMDZjMDVlMzRfMDI1Nzk3MzA2OGRkZTBiMTIyMzZkMzVmOTMzNjMyOTlfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjMyOWExNWYwMWIwM2U0MGFiZTM4MTFhNTNjMmVjZjhfMDVlNzFiZWE0ZTg5ZDg2YjA3Mzk0ZTAyZGZhZjUzMGVfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2UyNjg2ZDJkZTlkMjFjYTQwYzBiYzY0NThkYmE5NzNfMzhkODliMDBkZDI4MGRlYzkwMDk3M2VlYzkzMzhjNmZfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjJlMWQ3YzkyNTY5ZDI3N2RiZDZhZGI5NTM5MjI1YTBfNGY5ZmRjMjU0ZjYwNjhhOGQxYjY2YmZhYzQ5M2M5NTVfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjBkNTJiMDQ0ZmI3MThlN2Y4NTExMmJhZWE5ODZmODJfMWE5ZTI3ZTZjMjU5MmMxOGEyNTMxM2IzMDQ5MzE5MzdfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgxNzU1MDgyOjE3ODE4NDE0ODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2IxNTAwMDlkODM0MzU0NmJmNWZjNmU3MTYwYTBlZmNfZGRkZWVjMDAxZjBjNzNhMWViYjhhZDBkYTFjYjA2ODlfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgxNzU1MDgyOjE3ODE4NDE0ODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTg2NzRkMjI5NWUzOWI5OTAwOGJjOTAxN2Y1YjNjMDRfZmEyMGE0ZGM5OTQ1NzBiM2I3NjQ3NjFiYWEzMjZjZDhfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2NhYTEwMjE4ZThjY2E5OTgwZDk4YWFhMThjNTI5ODRfMGRiMWFkNmQ0ZGE2N2MwZmEzNDJlZmQyYzdiNmE5NzNfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgxNzU1MDgxOjE3ODE4NDE0ODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTU5YjM1ZTA5OWM1MjYxYjgwNzQ1MTc1NzYyMmJhOGZfNGY4NzlkYzQzZWY2N2M5M2MyNDc0NjFiYjE5OTNkNGVfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgxNzU1MDgyOjE3ODE4NDE0ODJfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2VjNDZjODE4ZmUyZTIxNWRiM2NjYjkzMDI1YzEzOGFfNjBkMWExMzdkZjc0YjdjODI2MjA2ODMwMWM3ZGY1YzJfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTBlZGY1ODRjMmNiMzcyNjdiNTAyY2MyYjhiMGZmYzBfOWExMGRhNWFhNzZjNjk0ZGIxMGM3M2YwZTY3MDJmZWFfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWFiM2IwNmNjYWIyZWE3Y2NiNzg3OTlhMTk3OWZkY2NfZmIzMzk1NTI0ZjU5NzA0NmNjNTNkOTIzYWRmOTFhMmRfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Njk1NzE0ZTRiMzI3MDIxZGNkNzZmMzc0YjY4NTBkMzlfZGUyZjgyYWNiOTcwOTJlYWIxNWVkNjIxZDJkNTUwNzVfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWRhZDg2MTNmZDk3ZTdmY2M4ZWEwYzczYmM2NzlhYzVfYzI5MzdjMjdkMjVmZjZlYzM0ZTA5NjdjMzA5NmMwODRfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmNkZmI3MWRlNTg1MjNmZGRiNDgxYWI0MDk3YjlkOWZfMTg5MWIwMGZjMDVjMTVmZGZiNTJmN2U5ODQ2MTEyMjVfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjM1ZTQzMmQwODI1OWRjMGI1NTdlZDliMmIyYThmMzZfMWRkNzlhMzM2NGJjYjY5MGRhYjhhYjNmMmVmYzIwNDVfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YThhZDU1MDM4OThjMTVhNmYyZTc4YmEyMmU2NWU2NzNfZTZjZjQ3YzI1OTVkNTY2NzVlMTlkMmUxNmM1MjIxZjRfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDQwYjE4MWYxZmU1YzNjZGE1MDVmM2FlMGEyYzFmNzZfMWVkNzFhZGE1YjI3Yjg1ZjFhMDhlYjhiZTQ5MmMwYzdfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDMyOTFkNjU1NGUzYWRiYjc1MGM0NzZkNzEwMDlhNzJfNTYzYTNjODQxMDk1ZTM1NjU2NmIwOTEwZTE3NjliMzBfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjE3M2U2MGYyYjQxZTU3ZmVlNGY2MTZiMTZjODBiMWRfNmE4YWE5Yjc5ZDBiODJkNGM1ODgyYmI1MTMyNzZkNjdfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjI5Zjk5Y2MzNTAyZTg3MjY2ZDgyOTM4NzNiNjBhZGVfYzE0ZTA5ZDExMWQ3MGQ3NWUzY2IxYTA0YzhmYzNhNThfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mzc3MWY5ODJkOGUxZTBmNTI2NmIxYzJlYzI1YmUzMjBfNjRkYzc4OTM1Y2RhNzU5ZWIxZmI0ZDk2NTEwMjc4MjJfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjFiY2IyODRkNjc3NGUwM2Y0YTFiOTRjM2RmMGU1ZjNfM2E3ZTFiYTE4Zjc4NmRiYzkwZjFkYzE3ZjIxMWI2MmRfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTE2M2FhYTMwM2Y3MmNjY2YxMTE1NjgyOWViMWU5YTNfMzEyZjM4NmM2NWE5MGEyMGM3ZTBlMmVlNDAxY2M0MjJfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWJmYmU2NTNlYzkzNGE3MzIwODkxN2U5OTc0YzliZDVfNDAwYTQ1ZDk3MTgyZDgzZGM5NDAxNWE4Y2NiNTI3NjRfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmRmYWE3ZDYwNTJkMmU3NWNiZjA1OGZkMDUwZGZiODhfZmM4ODEzZGQ0YTEwOWU1MGIwZGU0NzBkZDBkMGQ2OGZfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWM0Y2ZjN2UwMzhmMzFhOTc2Y2QyOGM5M2UwMmI5OGJfYWJiYzUxMGI1ZmU1ZDI3MWIyYTQ4ZTlhNDc5NGI5MzZfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Nzk4ZTI4OWFjNDFmMGE4ZTYxMWUxZjU0OGZkMjZiNjBfODg4MmI4YmFmMzM0ZTI2OTQ5NTk4OWY3ZTEyYjNmYmNfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzY3MzNlNjA0YzJkYTczZTcyNzViMGNjN2JkYTEzN2JfNmU5ZWU0YmNhZDZkNWVjOWY4ZWNmZTFlYWQ0Mjk0NzFfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmNmYmNkMmNhZTkzMDk5OWZjZmE1MDI1MTY3OWRlNzJfMmM5NDUxYmUxMDBlMzhiZDBhZjExNDgyNGMyOGRiOGZfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM"
       ],
       "contentBlocks": [],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjZiNDcwMzY1NDQ2OTFkYmVjZWYwYzRkYWQ1ZWQzMThfMzNkNzI3YWZkNGRhM2RjZWYyMmY3ZjA4ODNmYzljNTBfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNzU1MDgwOjE3ODE4NDE0ODBfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2VjNDZjODE4ZmUyZTIxNWRiM2NjYjkzMDI1YzEzOGFfNjBkMWExMzdkZjc0YjdjODI2MjA2ODMwMWM3ZGY1YzJfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgxNzU3MDU4OjE3ODE4NDM0NThfVjM"
     },
     {
       "id": "recvmzQDUI9yOJ",
@@ -50,14 +50,14 @@
       "order": 2.0,
       "title": "GitHub 通用一键更新器使用说明",
       "summary": "GitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。",
-      "body": "GitHub通用一键更新器_使用说明\nGitHub 通用一键更新器使用说明\n用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新\nimage1.png\n\n封面：GitHubUniversalUpdater 的核心流程示意。\n一、它解决什么问题\nGitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。\n它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。\n二、下载入口\n推荐下载：GitHubUniversalUpdater-v1.0.6.zip\nRelease 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases\nGitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater\n源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip\n当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。\n三、快速上手\n下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。\n双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。\n首次运行会在同目录生成 apps.json 配置文件。\n在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。\n点击“检查更新”，确认有新版本后点击“一键更新”。\n四、配置项怎么理解\n\n\n字段\n\n用途\n\n建议\n\nName\n\n软件名称。\n\n写成自己能识别的名字，例如 Everything、PicGo。\n\nInstallDir\n\n安装目录或主程序 exe 路径。\n\n如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。\n\nGitHubUrl\n\n对应的 GitHub 仓库地址。\n\n填写仓库主页，例如 https://github.com/owner/repository。\n\nLastInstalledTag\n\n记录当前已安装版本。\n\n首次可保持“未安装”，更新后由工具记录。\n\nPreferredAssetRegex\n\n资产筛选正则，可选。\n\n当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。\n\nUseIdm / IdmPath\n\n是否调用本机 IDM 下载。\n\n下载慢时可开启；也可以手动指定 IDMan.exe。\n五、它如何选择更新包\n通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。\n优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。\n会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。\n如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。\n六、下载与更新过程\n下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。\n如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。\n七、注意事项\n覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。\nrar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。\n工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。\n如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。\n八、适合谁使用\n它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。\n对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。\n来源\n本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater",
+      "body": "GitHub通用一键更新器_使用说明\nGitHub 通用一键更新器使用说明\n用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新\nimage1.png\n\n\n封面：GitHubUniversalUpdater 的核心流程示意。\n一、它解决什么问题\nGitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。\n它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。\n二、下载入口\n推荐下载：GitHubUniversalUpdater-v1.0.6.zip\nRelease 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases\nGitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater\n源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip\n当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。\n三、快速上手\n下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。\n双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。\n首次运行会在同目录生成 apps.json 配置文件。\n在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。\n点击“检查更新”，确认有新版本后点击“一键更新”。\n四、配置项怎么理解\n\n\n字段\n\n用途\n\n建议\n\nName\n\n软件名称。\n\n写成自己能识别的名字，例如 Everything、PicGo。\n\nInstallDir\n\n安装目录或主程序 exe 路径。\n\n如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。\n\nGitHubUrl\n\n对应的 GitHub 仓库地址。\n\n填写仓库主页，例如 https://github.com/owner/repository。\n\nLastInstalledTag\n\n记录当前已安装版本。\n\n首次可保持“未安装”，更新后由工具记录。\n\nPreferredAssetRegex\n\n资产筛选正则，可选。\n\n当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。\n\nUseIdm / IdmPath\n\n是否调用本机 IDM 下载。\n\n下载慢时可开启；也可以手动指定 IDMan.exe。\n五、它如何选择更新包\n通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。\n优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。\n会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。\n如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。\n六、下载与更新过程\n下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。\n如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。\n七、注意事项\n覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。\nrar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。\n工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。\n如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。\n八、适合谁使用\n它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。\n对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。\n来源\n本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater",
       "contentUrl": "https://my.feishu.cn/docx/RyAEd4pZjoRqMRxeyBccs0x7nGb",
       "displayMode": "网站排版",
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWIwNWRlMTE1NjgxNmYxNzJlNjYzNmRlYmY5YzZjNDlfZTIzNGEzZTQ1YTU4ZWRhZTE5NDIwMGMwNjg0YmI5NmNfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgxNzU1MDgyOjE3ODE4NDE0ODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzE3ZWRjNmExYzcyOWU3MzIwYWY1NjRiZWEwOTRhNjZfNGExYjQ1MjE3NGNjYzUyNzE2MmVmYzI3ODk5YTM2Y2ZfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgxNzU1MTMxOjE3ODE4NDE1MzFfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzA2NTg5Y2UxNjJjYzVlYTEyMDZmZjc5M2NiNTIwYjVfZjdlOTUzOWIzZTk4NTFhZjcxNjBjMzNiYmYyOTk0N2NfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGQ3NWMzYmJlZTgwMDQ4MGZmZTFlZjZmZGJjYWZiNjBfYTZlZDdhNDljMzdhYTdhZTNmYjU5MmI1OThmZTQ5ZDFfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgxNzU3MDc2OjE3ODE4NDM0NzZfVjM"
       ],
       "contentBlocks": [
         {
@@ -67,7 +67,7 @@
         {
           "type": "image",
           "token": "E9bzb9jn3oc6g5xo4zyc01NKnug",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzE3ZWRjNmExYzcyOWU3MzIwYWY1NjRiZWEwOTRhNjZfNGExYjQ1MjE3NGNjYzUyNzE2MmVmYzI3ODk5YTM2Y2ZfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgxNzU1MTMxOjE3ODE4NDE1MzFfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGQ3NWMzYmJlZTgwMDQ4MGZmZTFlZjZmZGJjYWZiNjBfYTZlZDdhNDljMzdhYTdhZTNmYjU5MmI1OThmZTQ5ZDFfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgxNzU3MDc2OjE3ODE4NDM0NzZfVjM"
         },
         {
           "type": "paragraph",
@@ -117,23 +117,28 @@
           "text": "三、快速上手"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "ordered",
           "text": "下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "ordered",
           "text": "双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "ordered",
           "text": "首次运行会在同目录生成 apps.json 配置文件。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "ordered",
           "text": "在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "ordered",
           "text": "点击“检查更新”，确认有新版本后点击“一键更新”。"
         },
         {
@@ -187,19 +192,23 @@
           "text": "五、它如何选择更新包"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。"
         },
         {
@@ -221,19 +230,23 @@
           "text": "七、注意事项"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "rar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。"
         },
         {
@@ -259,7 +272,7 @@
           "text": "本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWIwNWRlMTE1NjgxNmYxNzJlNjYzNmRlYmY5YzZjNDlfZTIzNGEzZTQ1YTU4ZWRhZTE5NDIwMGMwNjg0YmI5NmNfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgxNzU1MDgyOjE3ODE4NDE0ODJfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzA2NTg5Y2UxNjJjYzVlYTEyMDZmZjc5M2NiNTIwYjVfZjdlOTUzOWIzZTk4NTFhZjcxNjBjMzNiYmYyOTk0N2NfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM"
     },
     {
       "id": "recvmOMM2EAVsS",
@@ -267,22 +280,22 @@
       "order": 3.0,
       "title": "Chrome浏览器插件与油猴脚本推荐",
       "summary": "Chrome浏览器插作为功能最全、AI时代匹配度最高的浏览器，有一些相关插件，推荐如下",
-      "body": "chrome浏览器必装插件\nChrome浏览器插作为功能最全、AI时代匹配度最高的浏览器，有一些相关插件，推荐如下。\nChrome 扩展推荐\n1. Infinity 新标签页 (Pro)\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/nnnkddnnlpamobajfibfdgfnbcnkgngh\n\n主要功能\n\n新标签页美化和效率入口，聚合搜索、快捷方式和小组件。安装后首页就可以自定义常用网站，还可以新建文件夹，而且还可以自由更换壁纸。可以登录第三方账号，永久同步图标等设置。\nimage1.png\n\n截图：Infinity 新标签页 (Pro) 效果\n具体用法：\n适合把新标签页作为工作台，集中放常用网站和工具。\n如果喜欢极简浏览器，也可以不作为默认必装。\n2. Tampermonkey / 篡改猴\n\n\n分类\n\n脚本底座\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo\n\n主要功能\n\n浏览器增强功能的必装基座，之后就可以拓展浏览器的各种下载、自动填充等高阶玩法。用户脚本管理器，是安装油猴脚本的基础扩展。\nimage2.png\n\n截图：Tampermonkey / 篡改猴 原始安装页\n3. bilibili 下载助手\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://csser.top/\n\n主要功能\n\n用于辅助下载 B 站视频资源，可以下载B站任意视频。视频下面会有一个打开B站下载助手的图标，打开后就如图示，点击合并下载就可。谷歌插件商店已经不可安装，需要在网址上自行下载CRX然后拖入浏览器插件安装安装，安装时需要改打开插件的开发者模式。\nimage3.png\n\n截图：bilibili 下载助手 原始安装页\n4. 小电视空降助手\n\n\n分类\n\n媒体增强\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/eaoelafamejbnggahofapllmfhlhajdd\n\n主要功能\n\n可以自动显示B站视频的内嵌广告位置，然后观看视频时候可以手动跳动过广告。\nimage4.png\n\n截图：小电视空降助手 原始安装页\n5. 沉浸式翻译\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/bpoadfkcbjbfhfodiogcnhhhpibjhbnh\n\n主要功能\n\n非常好用的翻译插件，而且可以自己定义API进行更精准·的翻译。\nimage5.png\n\n截图：沉浸式翻译 原始安装页\n6. OneTab\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall\n\n主要功能\n\n把一组标签页折叠成列表，降低内存占用，也方便临时收纳研究资料。\nimage6.png\n\n截图：OneTab 原始安装页\n具体用法：\n资料查找时打开很多标签页后，点击 OneTab 一键收纳。\n需要恢复时从 OneTab 列表逐个打开或整组恢复。\n适合把临时研究会话保存成一个轻量目录。\nTampermonkey（篡改猴）的常用插件\n（安装之后，点击获取新脚本, 去greasyfork搜索脚本）\n1. AC-baidu-重定向优化百度搜狗谷歌必应搜索_favicon_双列\n\n\n分类\n\n搜索引擎增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/14178-ac-baidu-重定向优化百度搜狗谷歌必应搜索-favicon-双列\n\n主要功能\n\n让百度等搜索引擎移除广告，而且双列排序还可以自动加载\nimage7.png\n\n截图：安装后搜索效果呈现\n2. 花瓣\"去\"水印和png图识别\n\n\n分类\n\n浏览增强\n\n原始地址\n\nhttps://scriptcat.org/zh-CN/script-show-page/6484\n\n主要功能\n\n1.显示花瓣真假PNG（原理：脚本通过给花瓣图片添加背景色，显示出透明PNG图片，透出背景色的即为透明PNG，非透明PNG就会被过滤掉） 2.通过自定义修改背景色，区分VIP素材和免费素材。花瓣带水印的版权素材会自动去水印，右键点击即可下载\nimage8.png\n\n3. GitHub Enhancement - High Speed Download\n\n\n分类\n\n开发效率\n\n原始地址\n\nhttps://greasyfork.org/scripts/412245\n\n主要功能\n\n为 GitHub 下载提供镜像或加速入口。GitHub上直接就会有镜像的选择，可以直接点击下载\nimage9.png\n\n截图：GitHub Enhancement - High Speed Download 加速页面\n具体用法：\n适合经常下载 Release、源码包和仓库文件的用户。\n下载重要文件时仍建议校验来源。\n4. 网页右键与复制限制解除\n\n\n分类\n\n浏览增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/528940-网页右键与复制限制解除-轻量版\n\n主要功能\n\n解除网页禁止右键、禁止复制、禁止选中文本等限制。\n\n5. Twitter 媒体下载\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/529453-twitter-x-media-downloader\n\n主要功能\n\n可以批量下载推特上的图片、视频等\nimage10.png\n\n截图：懒人专用多功能工具箱 原始页面\n6. 通用视频嗅探器\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/557721-universal-video-sniffer\n\n主要功能\n\n会自动识别网页中的视频，然后可以下载\n7. 更多插件去greasyfork自行下载\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts\n\n主要功能\n\n网站上有非常多的篡改猴插件，比如说购物比价、自动填表儿等等",
+      "body": "chrome浏览器必装插件\nChrome浏览器插作为功能最全、AI时代匹配度最高的浏览器，有一些相关插件，推荐如下。\nChrome 扩展推荐\n1. Infinity 新标签页 (Pro)\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/nnnkddnnlpamobajfibfdgfnbcnkgngh\n\n主要功能\n\n新标签页美化和效率入口，聚合搜索、快捷方式和小组件。安装后首页就可以自定义常用网站，还可以新建文件夹，而且还可以自由更换壁纸。可以登录第三方账号，永久同步图标等设置。\nimage1.png\n\n\n截图：Infinity 新标签页 (Pro) 效果\n具体用法：\n适合把新标签页作为工作台，集中放常用网站和工具。\n如果喜欢极简浏览器，也可以不作为默认必装。\n2. Tampermonkey / 篡改猴\n\n\n分类\n\n脚本底座\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo\n\n主要功能\n\n浏览器增强功能的必装基座，之后就可以拓展浏览器的各种下载、自动填充等高阶玩法。用户脚本管理器，是安装油猴脚本的基础扩展。\nimage2.png\n\n截图：Tampermonkey / 篡改猴\n3. bilibili 下载助手\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://csser.top/\n\n主要功能\n\n用于辅助下载 B 站视频资源，可以下载B站任意视频。视频下面会有一个打开B站下载助手的图标，打开后就如图示，点击合并下载就可。谷歌插件商店已经不可安装，需要在网址上自行下载CRX然后拖入浏览器插件安装安装，安装时需要改打开插件的开发者模式。\nimage3.png\n\n截图：bilibili 下载助手 原始安装页\n4. 小电视空降助手\n\n\n分类\n\n媒体增强\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/eaoelafamejbnggahofapllmfhlhajdd\n\n主要功能\n\n可以自动显示B站视频的内嵌广告位置，然后观看视频时候可以手动跳动过广告。\nimage4.png\n\n截图：小电视空降助手 原始安装页\n5. 沉浸式翻译\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/bpoadfkcbjbfhfodiogcnhhhpibjhbnh\n\n主要功能\n\n非常好用的翻译插件，而且可以自己定义API进行更精准·的翻译。\nimage5.png\n\n截图：沉浸式翻译 原始安装页\n6. OneTab\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall\n\n主要功能\n\n把一组标签页折叠成列表，降低内存占用，也方便临时收纳研究资料。\nimage6.png\n\n截图：OneTab 原始安装页\n具体用法：\n资料查找时打开很多标签页后，点击 OneTab 一键收纳。\n需要恢复时从 OneTab 列表逐个打开或整组恢复。\n适合把临时研究会话保存成一个轻量目录。\nTampermonkey（篡改猴）的常用插件\n（安装之后，点击获取新脚本, 去greasyfork搜索脚本）\n1. AC-baidu-重定向优化百度搜狗谷歌必应搜索_favicon_双列\n\n\n分类\n\n搜索引擎增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/14178-ac-baidu-重定向优化百度搜狗谷歌必应搜索-favicon-双列\n\n主要功能\n\n让百度等搜索引擎移除广告，而且双列排序还可以自动加载\nimage7.png\n\n\n截图：安装后搜索效果呈现\n2. 花瓣\"去\"水印和png图识别\n\n\n分类\n\n浏览增强\n\n原始地址\n\nhttps://scriptcat.org/zh-CN/script-show-page/6484\n\n主要功能\n\n1.显示花瓣真假PNG（原理：脚本通过给花瓣图片添加背景色，显示出透明PNG图片，透出背景色的即为透明PNG，非透明PNG就会被过滤掉） 2.通过自定义修改背景色，区分VIP素材和免费素材。花瓣带水印的版权素材会自动去水印，右键点击即可下载\nimage8.png\n\n3. GitHub Enhancement - High Speed Download\n\n\n分类\n\n开发效率\n\n原始地址\n\nhttps://greasyfork.org/scripts/412245\n\n主要功能\n\n为 GitHub 下载提供镜像或加速入口。GitHub上直接就会有镜像的选择，可以直接点击下载\nimage9.png\n\n截图：GitHub Enhancement - High Speed Download 加速页面\n具体用法：\n适合经常下载 Release、源码包和仓库文件的用户。\n下载重要文件时仍建议校验来源。\n4. 网页右键与复制限制解除\n\n\n分类\n\n浏览增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/528940-网页右键与复制限制解除-轻量版\n\n主要功能\n\n解除网页禁止右键、禁止复制、禁止选中文本等限制。\n5. Twitter 媒体下载\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/529453-twitter-x-media-downloader\n\n主要功能\n\n可以批量下载推特上的图片、视频等\nimage10.png\n\n截图：懒人专用多功能工具箱 原始页面\n6. 通用视频嗅探器\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/557721-universal-video-sniffer\n\n主要功能\n\n会自动识别网页中的视频，然后可以下载\n7. 更多插件去greasyfork自行下载\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts\n\n主要功能\n\n网站上有非常多的篡改猴插件，比如说购物比价、自动填表儿等等",
       "contentUrl": "https://my.feishu.cn/docx/GxgsdWQOzosgZTxllE7cBGZRnBh?from=from_copylink",
       "displayMode": "网站排版",
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjA1MTg0YjE4ZmQ1MTI2ZTMxNmY2OGVmYmQ3NTk4YWRfNmU4YThjZDBkNzFmMDhmMDg1OTc5MzEzOGQzMDdmMjdfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2Y3Mzg0ZWEzNTVjYTljZTYzZDA3NDcxZmRkZTY3NjFfYWZkNmQ5NTk1MWQ4NTJkNDhjOTQyYmE4OTE1NTE2MTlfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDIzZDRjMDRjNDdmM2MwMmUzYjBjODY1MzM2MTFiNTlfNTdkNzc2MWE3NWYyNzhlZGVkZjdkNDdhM2JmMmFjODJfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODhjN2EzNmZkZmFlNTVjMzdjMzY3NWU4YTNjOWVhMzJfMTcxOWY3YTM0ZGRlY2QyOTlhYzVmZTlkYWE4MWEzZTdfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGI3MDk0MTYzZTM5NTE4ZmY4ZjM4Yzc2N2QxZTNiNzBfY2NiYjViOWE3Mzg3YTIxNWEwMWYzZDAyODAxYTkxZGVfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODE0NzhiN2U0ZDliNmZlNzVkMTc0YWM0MTlmNzhlZTRfZTk0ODhlZTY2YmZlMTFlOTAzODIxZGU3ZDc5YWY5YmJfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTg0NGNmYTZkOWFiMGQ5OWRiZmIxM2E0ZmNjOWU0NjBfYjI2ZDk3NzNiMWQ2ZDg1YmY0OWExNGI3ZjE5MjUxN2RfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjJhY2MxY2E0Y2E2NzFjZjBhNTY5ZmEyMmUzYTdjOGVfMjRhOGQ3Mjk4OGVhNjFjMjgxYjEwZjI2YmQ4NDIxZmVfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTc1ZDc5MTEzZGE0N2ZkMTQxMTc1YWJkM2FiMGQ4MzVfYTlkODkxYTJjZjE3MWU2NzNiZjVhZjliM2RkN2U4ZTlfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWIyOGM2Yzk3MjgxNzZmMzNlZWY1ZmI0OTA2NmJiM2NfZWQyMDQzOWNjYjJlNDhiMWNmZDA5OWE4OTJiOTVhNzVfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDgzMDM3NDllMDFiMTgyMmQwZjkzODA3YzdlNzc2NmNfMDE4NmM5MzgyNGU2MWI3Y2JjYzBhYzM0MjJkODg1YjNfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTI1NWQ0M2Y1YmVlOWE0YmIyNjBjZmNiNjZhNGNlZjZfN2FlNzZiYmUwYTgzZjJlN2QyOGQ1NWNkZmVjNTQzYzVfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mzk4ODhiNjM3ODc3YTVlMDNkNDI2YmJhZjAxNWVmODJfYjBlZTMyNjI2NGI4MDQzYTg2NDA3YjY5OTI5ODE0YTdfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGE4NzNjMTY3OWNmM2MzMjcwOTljMzgzZmE4MDE5MWRfY2IyZDMzZTFkYjkwYTIxNWMyYmFiMjcwMTdiZDM0OTRfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWMxZjA3MGE5MTI1YTFmNzBhOGM5MTYwMmQyM2U0YWJfOTk2MzRmYzBjZGE1NjBhODRmYjA3ZjliZjJmNmZkNWJfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTgwNWFhNTUwNGY5ODBkNjQ0N2NmMWVhYTY0NTg2YTRfMmM0MzgwOTE5YzRhY2E2ZGM5ODJmMWEyZTBiMmI3NjVfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzEyM2Y2ZDMzNDczNWM5MWNmZWEyYmIwYzJhMzAzOThfMGVkMzhmNmRkNDg3NDMyODNmNzQ5NzM3M2VkNGU4ZWVfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDA4MjViMTVkODgyYWU4YjMxYjcyODYzODg0Y2RiMzZfMGQ1OGQzN2JjYWEzZDQ4Yjc5NmM2YTI3ODNmZjQwYWJfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmE1NzQzODgxM2I3YWU4MDllMDIyNGY3MWFkNTk2MTdfMmUwNjY4YTU2OTIxNjU0MzU3MTE5MTJhMGQwMjdlMTZfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2ZhNjYwYWMyYzQwNTY4ZTRjMGVkMjM0MmRlMjI0ZDFfMjk5NTNlNTU4YjZiYjVkNjg5ZTIyN2YzN2NkYTc2NWFfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
       ],
       "contentBlocks": [
         {
@@ -300,24 +313,43 @@
           "text": "1. Infinity 新标签页 (Pro)"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "基础效率"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/nnnkddnnlpamobajfibfdgfnbcnkgngh"
+            ],
+            [
+              "主要功能",
+              "新标签页美化和效率入口，聚合搜索、快捷方式和小组件。安装后首页就可以自定义常用网站，还可以新建文件夹，而且还可以自由更换壁纸。可以登录第三方账号，永久同步图标等设置。"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "ARRHbg1bIogJosxmKQMcgTuJn7g",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODhjN2EzNmZkZmFlNTVjMzdjMzY3NWU4YTNjOWVhMzJfMTcxOWY3YTM0ZGRlY2QyOTlhYzVmZTlkYWE4MWEzZTdfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTI1NWQ0M2Y1YmVlOWE0YmIyNjBjZmNiNjZhNGNlZjZfN2FlNzZiYmUwYTgzZjJlN2QyOGQ1NWNkZmVjNTQzYzVfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
-          "text": "截图：Infinity 新标签页 (Pro)效果"
+          "text": "截图：Infinity 新标签页 (Pro) 效果"
         },
         {
           "type": "paragraph",
           "text": "具体用法："
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "适合把新标签页作为工作台，集中放常用网站和工具。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "如果喜欢极简浏览器，也可以不作为默认必装。"
         },
         {
@@ -326,13 +358,30 @@
           "text": "2. Tampermonkey / 篡改猴"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "脚本底座"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+            ],
+            [
+              "主要功能",
+              "浏览器增强功能的必装基座，之后就可以拓展浏览器的各种下载、自动填充等高阶玩法。用户脚本管理器，是安装油猴脚本的基础扩展。"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "GpkMbSOsPoU6YJxYM8DcLWu1nac",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGI3MDk0MTYzZTM5NTE4ZmY4ZjM4Yzc2N2QxZTNiNzBfY2NiYjViOWE3Mzg3YTIxNWEwMWYzZDAyODAxYTkxZGVfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mzk4ODhiNjM3ODc3YTVlMDNkNDI2YmJhZjAxNWVmODJfYjBlZTMyNjI2NGI4MDQzYTg2NDA3YjY5OTI5ODE0YTdfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
-          "text": "截图：Tampermonkey / 篡改猴 原始安装页"
+          "text": "截图：Tampermonkey / 篡改猴"
         },
         {
           "type": "heading",
@@ -340,9 +389,26 @@
           "text": "3. bilibili 下载助手"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://csser.top/"
+            ],
+            [
+              "主要功能",
+              "用于辅助下载 B 站视频资源，可以下载B站任意视频。视频下面会有一个打开B站下载助手的图标，打开后就如图示，点击合并下载就可。谷歌插件商店已经不可安装，需要在网址上自行下载CRX然后拖入浏览器插件安装安装，安装时需要改打开插件的开发者模式。"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "BBeXbKFtmozV07xLIuccrVeRn4C",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjA1MTg0YjE4ZmQ1MTI2ZTMxNmY2OGVmYmQ3NTk4YWRfNmU4YThjZDBkNzFmMDhmMDg1OTc5MzEzOGQzMDdmMjdfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGE4NzNjMTY3OWNmM2MzMjcwOTljMzgzZmE4MDE5MWRfY2IyZDMzZTFkYjkwYTIxNWMyYmFiMjcwMTdiZDM0OTRfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -354,9 +420,26 @@
           "text": "4. 小电视空降助手"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "媒体增强"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/eaoelafamejbnggahofapllmfhlhajdd"
+            ],
+            [
+              "主要功能",
+              "可以自动显示B站视频的内嵌广告位置，然后观看视频时候可以手动跳动过广告。"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "JwPpbV6KHoRsZcx8uVGcuwujnw5",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2Y3Mzg0ZWEzNTVjYTljZTYzZDA3NDcxZmRkZTY3NjFfYWZkNmQ5NTk1MWQ4NTJkNDhjOTQyYmE4OTE1NTE2MTlfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWMxZjA3MGE5MTI1YTFmNzBhOGM5MTYwMmQyM2U0YWJfOTk2MzRmYzBjZGE1NjBhODRmYjA3ZjliZjJmNmZkNWJfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -368,9 +451,26 @@
           "text": "5. 沉浸式翻译"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "基础效率"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/bpoadfkcbjbfhfodiogcnhhhpibjhbnh"
+            ],
+            [
+              "主要功能",
+              "非常好用的翻译插件，而且可以自己定义API进行更精准·的翻译。"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "HEBUb4RCRorEg4x67cNcqiqnnsf",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDIzZDRjMDRjNDdmM2MwMmUzYjBjODY1MzM2MTFiNTlfNTdkNzc2MWE3NWYyNzhlZGVkZjdkNDdhM2JmMmFjODJfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgxNzU1MjM2OjE3ODE4NDE2MzZfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDgzMDM3NDllMDFiMTgyMmQwZjkzODA3YzdlNzc2NmNfMDE4NmM5MzgyNGU2MWI3Y2JjYzBhYzM0MjJkODg1YjNfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -382,9 +482,26 @@
           "text": "6. OneTab"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "基础效率"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall"
+            ],
+            [
+              "主要功能",
+              "把一组标签页折叠成列表，降低内存占用，也方便临时收纳研究资料。"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "SH7Mbqoy6oR1kBxMOB7cQwtVnVf",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWIyOGM2Yzk3MjgxNzZmMzNlZWY1ZmI0OTA2NmJiM2NfZWQyMDQzOWNjYjJlNDhiMWNmZDA5OWE4OTJiOTVhNzVfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzEyM2Y2ZDMzNDczNWM5MWNmZWEyYmIwYzJhMzAzOThfMGVkMzhmNmRkNDg3NDMyODNmNzQ5NzM3M2VkNGU4ZWVfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -395,15 +512,18 @@
           "text": "具体用法："
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "资料查找时打开很多标签页后，点击 OneTab 一键收纳。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "需要恢复时从 OneTab 列表逐个打开或整组恢复。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "适合把临时研究会话保存成一个轻量目录。"
         },
         {
@@ -421,9 +541,26 @@
           "text": "1. AC-baidu-重定向优化百度搜狗谷歌必应搜索_favicon_双列"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "搜索引擎增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/14178-ac-baidu-重定向优化百度搜狗谷歌必应搜索-favicon-双列"
+            ],
+            [
+              "主要功能",
+              "让百度等搜索引擎移除广告，而且双列排序还可以自动加载"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "Oof9bTCHboJy32xmMphcZiplnwe",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODE0NzhiN2U0ZDliNmZlNzVkMTc0YWM0MTlmNzhlZTRfZTk0ODhlZTY2YmZlMTFlOTAzODIxZGU3ZDc5YWY5YmJfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDA4MjViMTVkODgyYWU4YjMxYjcyODYzODg0Y2RiMzZfMGQ1OGQzN2JjYWEzZDQ4Yjc5NmM2YTI3ODNmZjQwYWJfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -435,9 +572,26 @@
           "text": "2. 花瓣\"去\"水印和png图识别"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "浏览增强"
+            ],
+            [
+              "原始地址",
+              "https://scriptcat.org/zh-CN/script-show-page/6484"
+            ],
+            [
+              "主要功能",
+              "1.显示花瓣真假PNG（原理：脚本通过给花瓣图片添加背景色，显示出透明PNG图片，透出背景色的即为透明PNG，非透明PNG就会被过滤掉） 2.通过自定义修改背景色，区分VIP素材和免费素材。花瓣带水印的版权素材会自动去水印，右键点击即可下载"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "H1y3bz4dCossm7xb0UYcKghenCc",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTg0NGNmYTZkOWFiMGQ5OWRiZmIxM2E0ZmNjOWU0NjBfYjI2ZDk3NzNiMWQ2ZDg1YmY0OWExNGI3ZjE5MjUxN2RfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmE1NzQzODgxM2I3YWU4MDllMDIyNGY3MWFkNTk2MTdfMmUwNjY4YTU2OTIxNjU0MzU3MTE5MTJhMGQwMjdlMTZfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "heading",
@@ -445,9 +599,26 @@
           "text": "3. GitHub Enhancement - High Speed Download"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "开发效率"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/scripts/412245"
+            ],
+            [
+              "主要功能",
+              "为 GitHub 下载提供镜像或加速入口。GitHub上直接就会有镜像的选择，可以直接点击下载"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "GuByb4CaGol0P4xjuwncb83bn1e",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjJhY2MxY2E0Y2E2NzFjZjBhNTY5ZmEyMmUzYTdjOGVfMjRhOGQ3Mjk4OGVhNjFjMjgxYjEwZjI2YmQ4NDIxZmVfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2ZhNjYwYWMyYzQwNTY4ZTRjMGVkMjM0MmRlMjI0ZDFfMjk5NTNlNTU4YjZiYjVkNjg5ZTIyN2YzN2NkYTc2NWFfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -458,11 +629,13 @@
           "text": "具体用法："
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "适合经常下载 Release、源码包和仓库文件的用户。"
         },
         {
-          "type": "paragraph",
+          "type": "list_item",
+          "style": "bullet",
           "text": "下载重要文件时仍建议校验来源。"
         },
         {
@@ -471,14 +644,48 @@
           "text": "4. 网页右键与复制限制解除"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "浏览增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/528940-网页右键与复制限制解除-轻量版"
+            ],
+            [
+              "主要功能",
+              "解除网页禁止右键、禁止复制、禁止选中文本等限制。"
+            ]
+          ]
+        },
+        {
           "type": "heading",
           "level": 2,
           "text": "5. Twitter 媒体下载"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/529453-twitter-x-media-downloader"
+            ],
+            [
+              "主要功能",
+              "可以批量下载推特上的图片、视频等"
+            ]
+          ]
+        },
+        {
           "type": "image",
           "token": "NPwhbdNwioeWldxpwoRcP3CRnlh",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTc1ZDc5MTEzZGE0N2ZkMTQxMTc1YWJkM2FiMGQ4MzVfYTlkODkxYTJjZjE3MWU2NzNiZjVhZjliM2RkN2U4ZTlfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgxNzU1MjM3OjE3ODE4NDE2MzdfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTgwNWFhNTUwNGY5ODBkNjQ0N2NmMWVhYTY0NTg2YTRfMmM0MzgwOTE5YzRhY2E2ZGM5ODJmMWEyZTBiMmI3NjVfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgxNzU3MTEyOjE3ODE4NDM1MTJfVjM"
         },
         {
           "type": "paragraph",
@@ -490,12 +697,46 @@
           "text": "6. 通用视频嗅探器"
         },
         {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/557721-universal-video-sniffer"
+            ],
+            [
+              "主要功能",
+              "会自动识别网页中的视频，然后可以下载"
+            ]
+          ]
+        },
+        {
           "type": "heading",
           "level": 2,
           "text": "7. 更多插件去greasyfork自行下载"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts"
+            ],
+            [
+              "主要功能",
+              "网站上有非常多的篡改猴插件，比如说购物比价、自动填表儿等等"
+            ]
+          ]
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTZmOTAxNGUxZDAwYzI1ODdmMGQ5NTM4ZTVmMGNhNDFfODA4NmZjYmY1YTY1YjM5MDhkZTAwZWFhNDdiZjM1NWVfSUQ6NzY1MjM5NzYxNjY4MTU1MzA4Nl8xNzgxNzU1MDgyOjE3ODE4NDE0ODJfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTBkZWNhNGFiNThiMzIxYWU5OWIyYjBmZTE3MjY1MzVfZDZmOTk2NzFhZWQ2NTY0NzYwODViM2M1ZGRmNGQ5YWRfSUQ6NzY1MjM5NzYxNjY4MTU1MzA4Nl8xNzgxNzU3MDU5OjE3ODE4NDM0NTlfVjM"
     }
   ]
 }
