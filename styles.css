@@ -962,6 +962,17 @@ h1 {
   color: var(--accent-2);
 }
 
+.article-list {
+  margin: 10px 0 22px;
+  padding-left: 24px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.article-list li + li {
+  margin-top: 6px;
+}
+
 .article-table tr:first-child td {
   color: var(--text);
   font-weight: 700;

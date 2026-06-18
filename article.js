@@ -171,7 +171,27 @@ function normalizeArticleBlocks(article) {
     }
     blocks.push(block);
   }
-  return blocks;
+  return groupListBlocks(blocks);
+}
+
+function groupListBlocks(blocks) {
+  const grouped = [];
+  for (let index = 0; index < blocks.length; index += 1) {
+    const block = blocks[index];
+    if (block?.type !== "list_item") {
+      grouped.push(block);
+      continue;
+    }
+    const ordered = block.style === "ordered";
+    const items = [];
+    while (index < blocks.length && blocks[index]?.type === "list_item" && (blocks[index].style === "ordered") === ordered) {
+      items.push(blocks[index].text || "");
+      index += 1;
+    }
+    index -= 1;
+    grouped.push({ type: "list", ordered, items });
+  }
+  return grouped;
 }
 
 function renderArticleToc(headings) {
@@ -263,6 +283,14 @@ function renderContentBlock(block, index) {
           </tbody>
         </table>
       </div>
+    `;
+  }
+  if (block.type === "list" && Array.isArray(block.items) && block.items.length) {
+    const tag = block.ordered ? "ol" : "ul";
+    return `
+      <${tag} class="article-list">
+        ${block.items.map((item) => `<li>${renderRichText(item)}</li>`).join("")}
+      </${tag}>
     `;
   }
   if (block.type === "paragraph" && block.text) {

@@ -608,10 +608,36 @@ def block_heading_level(block: dict[str, Any]) -> int:
     return 0
 
 
+def block_list_style(block: dict[str, Any]) -> str:
+    block_type = str(block.get("block_type") or block.get("type") or "").lower()
+    if block_type in {"12", "bullet", "bullet_list", "bullet_list_item"} or first_nested_dict(block, "bullet"):
+        return "bullet"
+    if block_type in {"13", "ordered", "ordered_list", "ordered_list_item", "numbered", "numbered_list_item"}:
+        return "ordered"
+    if first_nested_dict(block, "ordered") or first_nested_dict(block, "ordered_list") or first_nested_dict(block, "numbered"):
+        return "ordered"
+    return ""
+
+
 def table_rows_from_block(block: dict[str, Any], block_map: dict[str, dict[str, Any]]) -> list[list[str]]:
     table = first_nested_dict(block, "table")
-    row_count = int(table.get("row_size") or table.get("row_count") or table.get("rows") or 0) if table else 0
-    col_count = int(table.get("column_size") or table.get("column_count") or table.get("columns") or 0) if table else 0
+    table_property = table.get("property") if isinstance(table.get("property"), dict) else {}
+    row_count = int(
+        table.get("row_size")
+        or table.get("row_count")
+        or table.get("rows")
+        or table_property.get("row_size")
+        or table_property.get("row_count")
+        or 0
+    ) if table else 0
+    col_count = int(
+        table.get("column_size")
+        or table.get("column_count")
+        or table.get("columns")
+        or table_property.get("column_size")
+        or table_property.get("column_count")
+        or 0
+    ) if table else 0
     cells: list[tuple[int, int, str]] = []
 
     raw_cells = table.get("cells") if table else None
@@ -620,6 +646,12 @@ def table_rows_from_block(block: dict[str, Any], block_map: dict[str, dict[str, 
             if isinstance(cell, list):
                 row = [normalize_text(item) for item in cell]
                 cells.extend((len(cells), col, value) for col, value in enumerate(row))
+                continue
+            if isinstance(cell, str):
+                row_index = index // max(col_count, 1)
+                col_index = index % max(col_count, 1)
+                text = text_from_block_tree(block_map.get(cell, {}), block_map)
+                cells.append((row_index, col_index, text))
                 continue
             if not isinstance(cell, dict):
                 continue
@@ -692,6 +724,8 @@ def build_doc_content_blocks(blocks: list[dict[str, Any]], title: str) -> list[d
         heading_level = block_heading_level(block)
         if heading_level:
             content.append({"type": "heading", "level": heading_level, "text": text})
+        elif list_style := block_list_style(block):
+            content.append({"type": "list_item", "style": list_style, "text": text})
         else:
             content.append({"type": "paragraph", "text": text})
     return content
@@ -758,8 +792,12 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     blocks = fetch_feishu_descendant_blocks(token, document_id, document_id)
     if not blocks:
         blocks = fetch_feishu_doc_block_tree(token, document_id)
+    flat_blocks = fetch_feishu_doc_blocks(token, document_id)
     if len(blocks) <= 1:
-        blocks = fetch_feishu_doc_blocks(token, document_id)
+        blocks = flat_blocks
+    elif flat_blocks:
+        seen_block_ids = {block_id(block) for block in blocks if block_id(block)}
+        blocks.extend(block for block in flat_blocks if block_id(block) and block_id(block) not in seen_block_ids)
     media_tokens = collect_doc_media_tokens(blocks)
     api_url = f"https://open.feishu.cn/open-apis/docx/v1/documents/{urllib.parse.quote(document_id)}/raw_content"
     req = urllib.request.Request(api_url, headers={"Authorization": f"Bearer {token}"})
