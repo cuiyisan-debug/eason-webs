@@ -1348,8 +1348,20 @@ h1 {
   padding-bottom: 8px;
 }
 
+.contact-list a {
+  color: var(--text);
+  font-weight: 700;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+}
+
 .contact-list span {
   color: var(--muted);
+  flex: 0 0 auto;
 }
 
 .footer-line {

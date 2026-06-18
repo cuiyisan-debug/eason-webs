@@ -43,6 +43,7 @@ let activeMediaIndex = 0;
 let mediaAutoplay = false;
 let lastScrollAt = 0;
 let featureRenderToken = 0;
+let hashScrollDone = false;
 
 const grid = document.querySelector("[data-project-grid]");
 const countLabel = document.querySelector("[data-count]");
@@ -251,10 +252,13 @@ async function loadData() {
 
 function scrollToCurrentHash() {
   if (!window.location.hash) return;
+  if (hashScrollDone) return;
+  if (lastScrollAt && Date.now() - lastScrollAt < 900) return;
   const target = document.querySelector(window.location.hash);
   if (target) {
     const top = target.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({ top, behavior: "auto" });
+    hashScrollDone = true;
   }
 }
 
@@ -467,7 +471,8 @@ protectPortfolioMedia();
 scrollToCurrentHash();
 loadData().finally(() => {
   scrollToCurrentHash();
-  window.setTimeout(scrollToCurrentHash, 300);
-  window.setTimeout(scrollToCurrentHash, 900);
 });
-window.addEventListener("load", scrollToCurrentHash);
+window.addEventListener("hashchange", () => {
+  hashScrollDone = false;
+  window.setTimeout(scrollToCurrentHash, 0);
+});
