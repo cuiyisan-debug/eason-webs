@@ -24,6 +24,27 @@ function escapeHtml(value) {
     .replace(/'/g, "&#039;");
 }
 
+function renderRichText(value) {
+  const text = String(value || "");
+  const urlPattern = /https?:\/\/[^\s<>"']+/g;
+  let html = "";
+  let cursor = 0;
+  for (const match of text.matchAll(urlPattern)) {
+    let url = match[0];
+    const start = match.index || 0;
+    const trailing = url.match(/[),.，。；;：:!?！？]+$/)?.[0] || "";
+    if (trailing) {
+      url = url.slice(0, -trailing.length);
+    }
+    html += escapeHtml(text.slice(cursor, start));
+    html += `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(url)}</a>`;
+    html += escapeHtml(trailing);
+    cursor = start + match[0].length;
+  }
+  html += escapeHtml(text.slice(cursor));
+  return html;
+}
+
 function paragraphs(text) {
   return String(text || "")
     .split(/\n{1,}/)
@@ -212,7 +233,7 @@ function renderContentBlock(block, index) {
     `;
   }
   if (block.type === "caption" && block.text) {
-    return `<p class="article-caption">${escapeHtml(block.text)}</p>`;
+    return `<p class="article-caption">${renderRichText(block.text)}</p>`;
   }
   if (block.type === "heading" && block.text) {
     const level = Math.min(Math.max(Number(block.level || 2), 2), 4);
@@ -226,7 +247,7 @@ function renderContentBlock(block, index) {
         <table class="article-table">
           <thead>
             <tr>
-              ${(headRow || []).map((cell) => `<th scope="col">${escapeHtml(cell)}</th>`).join("")}
+              ${(headRow || []).map((cell) => `<th scope="col">${renderRichText(cell)}</th>`).join("")}
             </tr>
           </thead>
           <tbody>
@@ -234,7 +255,7 @@ function renderContentBlock(block, index) {
               .map(
                 (row) => `
                 <tr>
-                  ${(row || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}
+                  ${(row || []).map((cell) => `<td>${renderRichText(cell)}</td>`).join("")}
                 </tr>
               `
               )
@@ -245,7 +266,7 @@ function renderContentBlock(block, index) {
     `;
   }
   if (block.type === "paragraph" && block.text) {
-    return `<p>${escapeHtml(block.text)}</p>`;
+    return `<p>${renderRichText(block.text)}</p>`;
   }
   return "";
 }

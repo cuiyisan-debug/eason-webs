@@ -949,6 +949,19 @@ h1 {
   background: color-mix(in srgb, var(--panel-2) 76%, transparent);
 }
 
+.article-body a,
+.article-table a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.article-body a:hover,
+.article-table a:hover {
+  color: var(--accent-2);
+}
+
 .article-table tr:first-child td {
   color: var(--text);
   font-weight: 700;
