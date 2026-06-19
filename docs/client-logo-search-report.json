@@ -1,0 +1,259 @@
+{
+  "generatedAt": "2026-06-19T23:15:20+0800",
+  "found": 8,
+  "missing": [
+    "安徽自贸区",
+    "成都传媒",
+    "达利集团",
+    "信华信",
+    "国家电网",
+    "迪信通",
+    "国家电投",
+    "国家海洋局",
+    "国际知识产权局",
+    "河北钢铁集团",
+    "河北银行",
+    "恒信德龙",
+    "华润集团",
+    "康吉森自动化技术",
+    "泸州老窖",
+    "蒙牛",
+    "江西齐云山食品",
+    "千寻科技",
+    "中国人民保险集团",
+    "神州泰岳",
+    "首都博物馆",
+    "首都机场",
+    "数博会",
+    "新华保险",
+    "盈创回收",
+    "智博会",
+    "中关村论坛",
+    "中国电信",
+    "中国科技馆",
+    "中国商飞集团",
+    "中国石油",
+    "中航工业",
+    "中铁集团",
+    "中冶集团",
+    "远洋集团",
+    "唯迈医疗",
+    "北京红星股份",
+    "华夏幸福",
+    "国家大剧院"
+  ],
+  "report": [
+    {
+      "name": "阿里巴巴",
+      "domain": "alibaba.com",
+      "status": "ok",
+      "file": "alibaba-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "达利集团",
+      "domain": "dali-group.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "国家电网",
+      "domain": "sgcc.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "国家电投",
+      "domain": "spic.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "河北银行",
+      "domain": "hebbank.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "华润集团",
+      "domain": "crc.com.hk",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "京东方",
+      "domain": "boe.com",
+      "status": "ok",
+      "file": "boe-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "开源基金会",
+      "domain": "openatom.org",
+      "status": "ok",
+      "file": "openatom-org.png",
+      "source": "existing"
+    },
+    {
+      "name": "泸州老窖",
+      "domain": "luzhoulaojiao.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "蒙牛",
+      "domain": "mengniu.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中国人民保险集团",
+      "domain": "picc.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "三一重工",
+      "domain": "sanyglobal.com",
+      "status": "ok",
+      "file": "sanyglobal-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "山东临工工程机械",
+      "domain": "sdlg.com",
+      "status": "ok",
+      "file": "sdlg-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "神州泰岳",
+      "domain": "ultrapower.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "首都博物馆",
+      "domain": "capitalmuseum.org.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "首都机场",
+      "domain": "bcia.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "腾讯",
+      "domain": "tencent.com",
+      "status": "ok",
+      "file": "tencent-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "万科集团",
+      "domain": "vanke.com",
+      "status": "ok",
+      "file": "vanke-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "新华保险",
+      "domain": "newchinalife.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中关村论坛",
+      "domain": "zgcforum.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中国电信",
+      "domain": "chinatelecom.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中国科技馆",
+      "domain": "cstm.org.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中国商飞集团",
+      "domain": "comac.cc",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中国石油",
+      "domain": "petrochina.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中航工业",
+      "domain": "avic.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中铁集团",
+      "domain": "crec.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "中信集团",
+      "domain": "citic.com",
+      "status": "ok",
+      "file": "citic-com.png",
+      "source": "existing"
+    },
+    {
+      "name": "中冶集团",
+      "domain": "mcc.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "远洋集团",
+      "domain": "sinooceangroup.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "国家大剧院",
+      "domain": "chncpa.org",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "信华信",
+      "domain": "dhc.com.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "国际知识产权局",
+      "domain": "cnipa.gov.cn",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "迪信通",
+      "domain": "dixintong.com",
+      "status": "failed",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "华夏幸福",
+      "domain": "cfldcn.com",
+      "status": "failed",
+      "error": "<urlopen error _ssl.c:993: The handshake operation timed out>"
+    }
+  ]
+}

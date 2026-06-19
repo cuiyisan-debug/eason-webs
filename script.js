@@ -45,6 +45,7 @@ const fallbackClients = [
 
 let projects = [];
 let clients = [];
+let clientLogoFallbacks = {};
 let activeCategory = "政企展厅";
 let featureIndex = 0;
 let expanded = false;
@@ -283,7 +284,8 @@ function renderClients() {
       ${repeated
         .map((client) => {
           const name = escapeHtml(client.name || "");
-          const logo = client.logo ? `<img src="${escapeHtml(client.logo)}" alt="${name}" loading="lazy" draggable="false" />` : `<strong>${name}</strong>`;
+          const logoSrc = client.logo || clientLogoFallbacks[client.name];
+          const logo = logoSrc ? `<img src="${escapeHtml(logoSrc)}" alt="${name}" loading="lazy" draggable="false" />` : `<strong>${name}</strong>`;
           return `<span class="client-item">${logo}<small>${name}</small></span>`;
         })
         .join("")}
@@ -294,9 +296,15 @@ function renderClients() {
 async function loadClients() {
   if (!clientStrip) return;
   try {
-    const response = await fetch(`./api/clients.json?ts=${Date.now()}`);
+    const [response, logoResponse] = await Promise.all([
+      fetch(`./api/clients.json?ts=${Date.now()}`),
+      fetch(`./assets/client-logos/manifest.json?ts=${Date.now()}`).catch(() => null),
+    ]);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
+    if (logoResponse?.ok) {
+      clientLogoFallbacks = await logoResponse.json();
+    }
     clients = (payload.items || []).filter((client) => client.name);
   } catch (error) {
     clients = fallbackClients;
