@@ -1294,20 +1294,79 @@ h1 {
 }
 
 .client-strip {
-  display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-  gap: 10px;
+  position: relative;
+  display: flex;
   margin-top: 20px;
-  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
 }
 
-.client-strip span {
+.client-track {
+  display: flex;
+  gap: 10px;
+  min-width: max-content;
+  padding: 14px 0;
+  animation: client-scroll 36s linear infinite;
+}
+
+.client-strip:hover .client-track {
+  animation-play-state: paused;
+}
+
+.client-item {
   display: grid;
+  grid-template-rows: 44px auto;
   place-items: center;
-  min-height: 54px;
-  border-bottom: 1px solid var(--line);
+  gap: 8px;
+  min-width: 136px;
+  min-height: 78px;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 82%, transparent);
   color: var(--muted);
   font-weight: 700;
+}
+
+.client-item img {
+  display: block;
+  max-width: 96px;
+  max-height: 42px;
+  object-fit: contain;
+  filter: grayscale(1) contrast(0.9) brightness(1.55);
+  opacity: 0.84;
+}
+
+.client-item strong {
+  display: grid;
+  place-items: center;
+  min-height: 42px;
+  color: var(--text);
+  font-size: 16px;
+  text-align: center;
+}
+
+.client-item small {
+  max-width: 112px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes client-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .contact {
@@ -2030,7 +2089,6 @@ h1 {
   }
 
   .method-list,
-  .client-strip,
   .curation-grid,
   .related-grid,
   .about-content {
@@ -2168,7 +2226,6 @@ h1 {
   }
 
   .method-list,
-  .client-strip,
   .curation-grid,
   .related-grid,
   .about-content {

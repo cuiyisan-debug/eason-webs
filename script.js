@@ -31,7 +31,20 @@ const fallbackProjects = [
   },
 ];
 
+const fallbackClients = [
+  { name: "CIFTIS", logo: "" },
+  { name: "中关村论坛", logo: "" },
+  { name: "中国科技馆", logo: "" },
+  { name: "安徽自贸区", logo: "" },
+  { name: "vivo", logo: "" },
+  { name: "ANTA", logo: "" },
+  { name: "OPPO", logo: "" },
+  { name: "DJI", logo: "" },
+  { name: "LYNK&CO", logo: "" },
+];
+
 let projects = [];
+let clients = [];
 let activeCategory = "政企展厅";
 let featureIndex = 0;
 let expanded = false;
@@ -63,11 +76,21 @@ const searchInput = document.querySelector("[data-search-filter]");
 const allFilters = document.querySelector("[data-all-filters]");
 const loadMore = document.querySelector("[data-load-more]");
 const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
+const clientStrip = document.querySelector("[data-client-strip]");
 
 const hasPortfolioGrid = Boolean(grid);
 
 function imageOf(project) {
   return project.cover || project.images?.[0] || FALLBACK_IMAGE;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function extractBilibiliBv(value) {
@@ -248,6 +271,37 @@ async function loadData() {
   populateYearFilter();
   renderFeature();
   renderProjects();
+  await loadClients();
+}
+
+function renderClients() {
+  if (!clientStrip) return;
+  const source = clients.length ? clients : fallbackClients;
+  const repeated = source.length > 1 ? [...source, ...source] : source;
+  clientStrip.innerHTML = `
+    <div class="client-track">
+      ${repeated
+        .map((client) => {
+          const name = escapeHtml(client.name || "");
+          const logo = client.logo ? `<img src="${escapeHtml(client.logo)}" alt="${name}" loading="lazy" draggable="false" />` : `<strong>${name}</strong>`;
+          return `<span class="client-item">${logo}<small>${name}</small></span>`;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
+async function loadClients() {
+  if (!clientStrip) return;
+  try {
+    const response = await fetch(`./api/clients.json?ts=${Date.now()}`);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    clients = (payload.items || []).filter((client) => client.name);
+  } catch (error) {
+    clients = fallbackClients;
+  }
+  renderClients();
 }
 
 function scrollToCurrentHash() {

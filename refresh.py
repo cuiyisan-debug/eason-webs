@@ -19,6 +19,7 @@ API_DIR = ROOT / "api"
 PORTFOLIO_FILE = API_DIR / "portfolio.json"
 ZHIXING_FILE = API_DIR / "zhixing.json"
 CURATION_FILE = API_DIR / "curation.json"
+CLIENTS_FILE = API_DIR / "clients.json"
 
 APP_ID = os.environ.get("LARK_APP_ID", "").strip()
 APP_SECRET = os.environ.get("LARK_APP_SECRET", "").strip()
@@ -43,6 +44,8 @@ FIELD_ROLE = os.environ.get("LARK_FIELD_ROLE", "角色")
 FIELD_TAGS = os.environ.get("LARK_FIELD_TAGS", "二级标签")
 FIELD_STATUS = os.environ.get("LARK_FIELD_STATUS", "项目状态")
 FIELD_ORDER = os.environ.get("LARK_FIELD_ORDER", "序号")
+FIELD_CLIENT_NAME = os.environ.get("LARK_FIELD_CLIENT_NAME", "客户名")
+FIELD_CLIENT_LOGO = os.environ.get("LARK_FIELD_CLIENT_LOGO", "客户logo")
 
 CATEGORIES = ["政企展厅", "品牌空间", "文博展陈", "文旅体验", "大型展会", "临展活动", "其他创意"]
 BATCH_SIZE = 5
@@ -299,6 +302,50 @@ def build_portfolio(records: list[dict[str, Any]], urls: dict[str, str]) -> list
         items.append(item)
     items.sort(key=lambda row: (0 if row["featured"] else 1, row["order"], row["title"]))
     return items
+
+
+def build_clients(records: list[dict[str, Any]], urls: dict[str, str]) -> list[dict[str, Any]]:
+    clients: dict[str, dict[str, Any]] = {}
+    for index, record in enumerate(records, 1):
+        fields = record.get("fields", {})
+        names = normalize_list(fields.get(FIELD_CLIENT_NAME))
+        if not names:
+            continue
+        logo_tokens = attachment_tokens(fields.get(FIELD_CLIENT_LOGO))
+        logos = [urls[token] for token in logo_tokens if token in urls]
+        order = safe_order(fields.get(FIELD_ORDER), index)
+        project_title = normalize_text(fields.get(FIELD_TITLE))
+        for name_index, name in enumerate(names):
+            client = clients.setdefault(
+                name,
+                {
+                    "name": name,
+                    "logo": "",
+                    "order": order,
+                    "projects": [],
+                },
+            )
+            client["order"] = min(float(client.get("order", order)), order)
+            if not client.get("logo") and logos:
+                client["logo"] = logos[min(name_index, len(logos) - 1)]
+            if project_title and project_title not in client["projects"]:
+                client["projects"].append(project_title)
+    result = list(clients.values())
+    for client in result:
+        client["projectCount"] = len(client.get("projects", []))
+        client["projects"] = client.get("projects", [])[:6]
+    result.sort(key=lambda row: (row.get("order", 999999), row.get("name", "")))
+    return result
+
+
+def write_clients_output(items: list[dict[str, Any]]) -> None:
+    API_DIR.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "source": "feishu",
+        "items": items,
+    }
+    CLIENTS_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def choose_article_table(token: str, base_token: str, table_id: str) -> str:
@@ -1010,9 +1057,12 @@ def main() -> None:
         fields = record.get("fields", {})
         all_tokens.extend(attachment_tokens(fields.get(FIELD_IMAGES)))
         all_tokens.extend(attachment_tokens(fields.get(FIELD_COVER)))
+        all_tokens.extend(attachment_tokens(fields.get(FIELD_CLIENT_LOGO)))
     urls = resolve_urls(token, all_tokens)
     items = build_portfolio(records, urls)
+    clients = build_clients(records, urls)
     write_output(items)
+    write_clients_output(clients)
     refresh_article_source(
         token,
         output_file=ZHIXING_FILE,
