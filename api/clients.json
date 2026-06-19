@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-19T13:47:09.433152+00:00",
+  "generatedAt": "2026-06-19T15:30:32.787521+00:00",
   "source": "feishu",
   "items": [
     {
       "name": "阿里巴巴",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2I2Yjk0ZTBjMTE0NGU0ZDBkOGViMDA1NjRkY2QxOWNfN2M4ODdmM2RjZDUyMTg3YjA3OTI2NjkzZjliMjY3NTRfSUQ6NzY1MzEyODUyNDgyNzY3NTYxOV8xNzgxODgyOTc0OjE3ODE5NjkzNzRfVjM",
       "order": 5.0,
       "projects": [
         "阿里巴巴西溪园区文化软装"
@@ -22,7 +22,7 @@
     },
     {
       "name": "北京马拉松",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGJhODIwOGExMmMxN2JjN2UwOTA1ZDE2MzZhMjYzMzJfYjdhYjMyNWI4MmM1MGVmNDQyMDZjZTI2NGFjZmQ3YWZfSUQ6NzY1MzA4MTMyNzU5OTkxMzkxMl8xNzgxODc2Njc2OjE3ODE5NjMwNzZfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmFjNDhmOTQ4YzhmZmI2OGRjYmE5MGRiZWY1YmJhMDZfMzE0MzExMzc0ZTlmMzc4Mjc0MjVmODNiZGVmYzUwYjZfSUQ6NzY1MzA4MTMyNzU5OTkxMzkxMl8xNzgxODgyODc0OjE3ODE5NjkyNzRfVjM",
       "order": 12.0,
       "projects": [
         "北京马拉松博览会"
@@ -31,7 +31,7 @@
     },
     {
       "name": "成都传媒",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGEwZTdmYmU3NGVmYWQxNTViNDA2MjBmMjg4OWQ3ZTJfNDFlOTk2MDQ5MzY1ZTQ2OTVlYjAwODgwMGYzNzg1OTdfSUQ6NzY1MzEyNjEzODA3NTY5NjMzN18xNzgxODgyODkwOjE3ODE5NjkyOTBfVjM",
       "order": 18.0,
       "projects": [
         "成都传媒集团展厅"
@@ -76,7 +76,7 @@
     },
     {
       "name": "服贸会",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGQzMjNkOGE2ODgxODUzZmY4ZmFmMGFkODA2ZjkzZGZfMDQ3MDVjN2JjNmM0NzgwMTEyNGNiMGUyMjM1MGY5YjhfSUQ6NzY1MzA4MjQyNDA1NTQxNzgzN18xNzgxODc2NjcwOjE3ODE5NjMwNzBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWExYjMyMzUyODg2ZTJkODg0OTQ1ZmEyMzBjYjVmNTRfMTFhMWZkOTA3OWRhYWIyMjY3NmVlOTcxN2QwNGQwODRfSUQ6NzY1MzA4MjQyNDA1NTQxNzgzN18xNzgxODgyODY4OjE3ODE5NjkyNjhfVjM",
       "order": 36.0,
       "projects": [
         "服贸会（服贸小镇转型）"
@@ -183,7 +183,7 @@
       "projectCount": 1
     },
     {
-      "name": "蒙牛",
+      "name": "蒙牛集团",
       "logo": "",
       "order": 82.0,
       "projects": [
