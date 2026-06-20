@@ -1200,11 +1200,11 @@ h1 {
 .approach {
   position: relative;
   display: grid;
-  grid-template-columns: 356px 1fr;
-  gap: 24px;
+  grid-template-columns: 360px 1fr;
+  gap: 22px;
   align-items: center;
-  margin: 52px 36px 28px;
-  padding: 14px 24px 14px 28px;
+  margin: 72px 36px 28px;
+  padding: 12px 24px 12px 28px;
   border: 1px solid var(--line);
   background: linear-gradient(90deg, color-mix(in srgb, var(--panel) 94%, #000), var(--bg-soft));
   overflow: visible;
@@ -1212,19 +1212,26 @@ h1 {
 
 .profile-block {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 170px 1fr;
   align-items: center;
-  gap: 10px;
-  min-height: 150px;
-  padding-left: 150px;
+  gap: 18px;
+  min-height: 156px;
+}
+
+.profile-figure {
+  position: absolute;
+  left: 0;
+  top: -58px;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  width: 160px;
 }
 
 .portrait {
-  position: absolute;
-  left: 0;
-  top: -36px;
-  width: clamp(142px, 9vw, 166px);
-  height: clamp(186px, 11vw, 218px);
+  width: 150px;
+  height: 176px;
   flex: 0 0 auto;
   background: url("./assets/portrait.webp") center 18% / cover no-repeat;
   border: 1px solid var(--line);
@@ -1233,16 +1240,21 @@ h1 {
 
 .signature {
   display: inline-block;
-  width: min(118px, 30vw);
+  width: min(114px, 28vw);
   height: auto;
-  margin-left: -8px;
-  margin-bottom: 6px;
+  margin: 0;
   transform: rotate(-2deg);
-  transform-origin: left center;
+  transform-origin: center center;
+}
+
+.profile-copy {
+  grid-column: 2;
+  min-width: 0;
 }
 
 .profile-block p,
 .profile-block a {
+  margin: 10px 0 0;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.8;
@@ -1250,19 +1262,19 @@ h1 {
 
 .method-block {
   align-self: center;
-  margin-left: -36px;
+  margin-left: -34px;
 }
 
 .method-title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: -2px 0 10px;
+  display: grid;
+  gap: 3px;
+  align-items: start;
+  margin: 0;
 }
 
 .method-title span {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .method-list {
