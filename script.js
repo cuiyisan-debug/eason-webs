@@ -78,6 +78,9 @@ const allFilters = document.querySelector("[data-all-filters]");
 const loadMore = document.querySelector("[data-load-more]");
 const galleryThumbs = document.querySelector("[data-gallery-thumbs]");
 const clientStrip = document.querySelector("[data-client-strip]");
+const siteHeader = document.querySelector(".site-header");
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector(".nav");
 
 const hasPortfolioGrid = Boolean(grid);
 
@@ -510,8 +513,54 @@ window.addEventListener(
   { passive: true }
 );
 
+function initResponsiveHeader() {
+  if (!siteHeader) return;
+
+  const closeNav = () => {
+    siteHeader.classList.remove("nav-open");
+    navToggle?.setAttribute("aria-expanded", "false");
+  };
+
+  navToggle?.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    if (isOpen) {
+      siteHeader.classList.remove("header-hidden");
+    }
+  });
+
+  siteNav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeNav);
+  });
+
+  let lastY = window.scrollY;
+  let ticking = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        const currentY = window.scrollY;
+        const delta = currentY - lastY;
+        if (siteHeader.classList.contains("nav-open")) {
+          siteHeader.classList.remove("header-hidden");
+        } else if (delta > 8 && currentY > 120) {
+          siteHeader.classList.add("header-hidden");
+        } else if (delta < -6 || currentY <= 20) {
+          siteHeader.classList.remove("header-hidden");
+        }
+        lastY = currentY;
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
+}
+
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
+const brandLogo = document.querySelector(".brand-logo");
 
 function setTheme(theme) {
   const isLight = theme === "light";
@@ -519,6 +568,9 @@ function setTheme(theme) {
   document.documentElement.dataset.theme = isLight ? "light" : "dark";
   themeToggle.setAttribute("aria-pressed", String(isLight));
   themeIcon.textContent = isLight ? "☾" : "◐";
+  if (brandLogo) {
+    brandLogo.src = isLight ? "./assets/site-logo-light.svg" : "./assets/site-logo-dark.svg";
+  }
   localStorage.setItem("portfolio-theme", isLight ? "light" : "dark");
 }
 
@@ -528,6 +580,7 @@ themeToggle.addEventListener("click", () => {
 
 setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
+initResponsiveHeader();
 initVisitorStats();
 protectPortfolioMedia();
 scrollToCurrentHash();
