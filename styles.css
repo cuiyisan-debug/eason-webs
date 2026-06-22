@@ -73,9 +73,9 @@ button {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 28px;
+  gap: clamp(18px, 2vw, 30px);
   min-height: 72px;
   padding: 0 36px;
   background: color-mix(in srgb, var(--bg) 58%, transparent);
@@ -127,13 +127,14 @@ button {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 28px;
-  min-width: 0;
+  gap: 22px;
+  min-width: max-content;
+  white-space: nowrap;
 }
 
 .brand-logo {
   display: block;
-  width: clamp(150px, 12vw, 190px);
+  width: clamp(142px, 11vw, 184px);
   height: auto;
   flex: 0 0 auto;
 }
@@ -142,9 +143,10 @@ button {
   display: flex;
   align-items: flex-end;
   height: 24px;
-  min-width: 0;
+  min-width: max-content;
   position: relative;
   transform: translateY(2px);
+  writing-mode: horizontal-tb;
 }
 
 .brand-text::before {
@@ -152,7 +154,7 @@ button {
   display: block;
   width: 1px;
   height: 22px;
-  margin-right: 28px;
+  margin-right: 22px;
   background: color-mix(in srgb, var(--text) 46%, transparent);
   align-self: flex-end;
 }
@@ -167,6 +169,7 @@ button {
   font-weight: 600;
   line-height: 1;
   white-space: nowrap;
+  writing-mode: horizontal-tb;
 }
 
 .brand small,
@@ -181,7 +184,8 @@ button {
 
 .nav {
   display: flex;
-  gap: 30px;
+  justify-self: end;
+  gap: clamp(20px, 1.6vw, 30px);
   white-space: nowrap;
 }
 
@@ -191,8 +195,8 @@ button {
   align-items: center;
   min-height: 44px;
   color: var(--text);
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   opacity: 0.9;
   transition:
     color 0.18s ease,
@@ -227,8 +231,7 @@ button {
   transform: scaleX(1);
 }
 
-.theme-toggle,
-.dialog-close {
+.theme-toggle {
   display: grid;
   place-items: center;
   width: 38px;
@@ -240,19 +243,41 @@ button {
 }
 
 .theme-toggle[aria-pressed="true"] {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .theme-icon {
+  position: relative;
   display: block;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, currentColor 0 50%, transparent 50% 100%);
-  box-shadow: inset 0 0 0 1.5px currentColor;
   font-size: 0;
   line-height: 0;
   overflow: hidden;
+}
+
+.theme-icon::before,
+.theme-icon::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.theme-toggle[aria-pressed="false"] .theme-icon::before {
+  inset: 2px;
+  background: linear-gradient(90deg, currentColor 0 50%, transparent 50% 100%);
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+.theme-toggle[aria-pressed="true"] .theme-icon::before {
+  inset: 2px;
+  background: var(--accent);
+  -webkit-mask: radial-gradient(circle at 72% 44%, transparent 0 46%, #000 48%);
+  mask: radial-gradient(circle at 72% 44%, transparent 0 46%, #000 48%);
+}
+
+.theme-toggle[aria-pressed="true"] .theme-icon::after {
+  display: none;
 }
 
 .hero {
@@ -1622,6 +1647,14 @@ h1 {
   top: 14px;
   right: 14px;
   z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
   font-size: 24px;
 }
 
@@ -2241,27 +2274,49 @@ h1 {
 
 @media (max-width: 760px) {
   .site-header {
-    grid-template-columns: 44px minmax(0, 1fr) 44px;
-    gap: 8px;
-    padding: 0 18px;
-    min-height: 86px;
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    grid-template-rows: 60px auto;
+    column-gap: 10px;
+    row-gap: 0;
+    padding: 0 14px;
+    min-height: 60px;
     background: color-mix(in srgb, var(--bg) 72%, transparent);
   }
 
   .nav-toggle {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1;
     justify-self: start;
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
+    gap: 4px;
+  }
+
+  .nav-toggle span {
+    width: 16px;
+    height: 2px;
+    margin: 0;
+  }
+
+  .site-header.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .site-header.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .brand {
+    grid-row: 1;
     justify-self: center;
+    min-width: 0;
   }
 
   .brand-logo {
-    width: clamp(128px, 38vw, 168px);
+    width: clamp(120px, 32vw, 152px);
   }
 
   .brand-text {
@@ -2269,23 +2324,41 @@ h1 {
   }
 
   .theme-toggle {
+    grid-row: 1;
     justify-self: end;
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     border: 0;
     background: transparent;
   }
 
+  .theme-icon {
+    width: 20px;
+    height: 20px;
+  }
+
   .nav {
     grid-column: 1 / -1;
+    grid-row: 2;
     display: none;
     justify-content: center;
-    gap: 24px;
+    justify-self: center;
+    width: 100%;
+    gap: 22px;
     order: 3;
     overflow-x: auto;
-    padding: 0 0 14px;
+    padding: 0 0 8px;
     border-top: 1px solid var(--line);
     scrollbar-width: none;
+  }
+
+  .nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30px;
+    font-size: 15px;
+    line-height: 1;
   }
 
   .site-header.nav-open .nav {
@@ -2370,20 +2443,22 @@ h1 {
     margin-left: 18px;
     margin-right: 18px;
     margin-top: 120px;
-    padding: 18px;
+    padding: 18px 18px 22px;
   }
 
   .profile-block {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 16px;
     min-height: 0;
-    padding-top: 112px;
+    padding-top: 0;
   }
 
   .profile-figure {
-    left: 24px;
-    top: -104px;
-    width: min(56vw, 230px);
+    position: relative;
+    left: auto;
+    top: auto;
+    width: min(58vw, 230px);
+    margin: -118px 0 0 30px;
   }
 
   .portrait {
@@ -2392,8 +2467,8 @@ h1 {
 
   .profile-copy {
     grid-column: 1 / -1;
-    padding-left: clamp(42vw, 190px, 46vw);
-    min-height: 140px;
+    padding-left: 0;
+    min-height: 0;
     align-self: start;
   }
 
@@ -2410,8 +2485,9 @@ h1 {
     white-space: normal;
     word-break: keep-all;
     overflow-wrap: keep-all;
-    font-size: clamp(18px, 4.8vw, 24px);
-    line-height: 1.8;
+    max-width: 13em;
+    font-size: clamp(17px, 4.4vw, 22px);
+    line-height: 1.6;
   }
 
   .profile-block p br {

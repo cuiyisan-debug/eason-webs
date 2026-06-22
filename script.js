@@ -567,7 +567,8 @@ function setTheme(theme) {
   document.documentElement.classList.toggle("light", isLight);
   document.documentElement.dataset.theme = isLight ? "light" : "dark";
   themeToggle.setAttribute("aria-pressed", String(isLight));
-  themeIcon.textContent = isLight ? "☾" : "◐";
+  themeToggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+  themeIcon.textContent = "";
   if (brandLogo) {
     brandLogo.src = isLight ? "./assets/site-logo-light.svg" : "./assets/site-logo-dark.svg";
   }
