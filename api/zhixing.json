@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T04:15:27.536562+00:00",
+  "generatedAt": "2026-06-23T15:23:42.383119+00:00",
   "source": "feishu-bitable",
   "sourceType": "zhixing",
   "baseToken": "Vn7hbNMygaDrSMseVgycCCJen1e",
   "tableId": "tbllnUjzNh9UkkpR",
-  "count": 4,
+  "count": 5,
   "error": "",
   "items": [
     {
@@ -19,30 +19,30 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTFlYTQ2MWQwNGVkMTkxM2RiZjgxNzkwZDcxMzM0NzlfN2YyMmZiNzJiOTBjNjBlYjY4NDhhZjY1NDQ2YWQwYThfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgyMTg3OTc4OjE3ODIyNzQzNzhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWRiOTI0NDFjZWFjYzNjMGRmMDkzMjI1NDMyZWM3OTFfNWJhNWQ1M2Q4Y2E4MDE1ODNkNGJkYWY2ZmFkMmJkY2RfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgyMTg3OTc4OjE3ODIyNzQzNzhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGEwNTBjY2FkNGQ4M2Q5NWNjODE0OTgwM2Y3ZjJiNDFfZGJmY2ZiNDViYjg3ODgwNzAzNWUzZWEwOWViMGZmMDVfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgyMTg3OTc5OjE3ODIyNzQzNzlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGMwZmYxMzlkMzdiMWQ0ODdmZGJhNTA5Nzg5YWNiMTFfMDgzYTM5MzdlYmY2N2JlY2YxNmFhZTNmYmMzODlkMzNfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgyMTg3OTc4OjE3ODIyNzQzNzhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTk1ZGNjNTUyNGM1NGExMDg4MTViMGY1MzQxM2EwZWJfODY4NmY1MTM4NjQ0MmEzNDg1YTFjZTM4ZTg0OTY0YTlfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgyMTg3OTc4OjE3ODIyNzQzNzhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmM4YjlkOGRmODA1MzFlMjk5Yzc0YmQ5YWFiMmU5YmZfMjFmMWZjZGVmMjgyYjI5OWVlMTgxMjU0MDkxNjkzZjhfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgyMTg3OTc5OjE3ODIyNzQzNzlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTdlZDUzNjdkYjUyZjFkODQyMGQ4MzIxNjdiMDQzY2NfZGNmODdjMjI4NjAwMTk0ZThhMDg3MzFhMWJhMTNmMjRfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgyMTg3OTc5OjE3ODIyNzQzNzlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTAzN2ViNTk1NzUzNGUxMDNkN2IwYzA0YTk2MTRhNDZfNWY3ZWEzYWEwODhmODEwNzgxODU2NmI0Y2E5MWEwNDBfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgyMTg3OTc5OjE3ODIyNzQzNzlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2FiODE0M2RmOTVlZWM3ZWNmODhhNmJlNzMzMGRlNzVfMjM4YmE2YjVmYmExM2NkOWFiN2E5Zjk0MjkyMDAyZDBfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgyMTg3OTc5OjE3ODIyNzQzNzlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDMzYWEyNjNkNTM3NjI3YjM3MDM0MmMyNDFiYzA2NGRfNTU2ZTBkYzRkYmJhZjlkZDA3ZDE5NjNiNjE2OTJlODZfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgyMTg3OTc5OjE3ODIyNzQzNzlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDYzNGU2ZDI3ODQ3NGQ1YmY0ZjY4ZDhmNDYzM2FiNWVfZDcxZjQwMjEyOTUyYWJkZTczZDU4NTEwMzIwNDM1NmNfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjBjOGNmOTM1OTdmMTE4YmE0MjYxNzNiMmUwMDU2NmJfZGIxZGYyNmE1ZDFiMmQ4YTRjNzc2MTM3OTYyYmMzMDVfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDljMzM5NmQzODQ0YTc3MmNmNTVlMDY0ZjA5MDRhNjhfMmQxODIxN2M2YTc2ODlkYTc0ZGQ2NDlhYTkxZDdmMzFfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTFiNDJlOTlkYTkxNjBkNTdiMzI0MTUzZTliYzliYWNfZThmYjMzOWYzZTliZDY4Njc3MTNlMWEyZmQ1NTA1NWFfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGFhMTM4ZDRjM2VhMmUwYWQ3MmY5ZGM1ZDE5Y2NkNzBfYzgyZGU1YmFkMGU3YTNkN2U2YThmMzQ1NjE3YTg2OTVfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2FhZjE2YjM1MWNiODU2NWYyNGY1YTMxN2EwMTAzYThfMWQ5Y2VlMjhkOWFhNzlhMDNkOTNlYjIwYmRmN2NlMWNfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzM5MWY4MzhlNzJiN2FkODUzM2Q2ZjZiMTI0YjljYTlfN2QyYjQ1ODczZDQwYzM1OTUyZDhlNjU5NjlhZmM4OGZfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDIzMDkyOTlkMDIyYTQwYjc4YzZmNzA4ZDAyMDg2NTVfNmM5ZDdjNWNjNDg1MTBiNGQ1NmY4NjNlNGEzNjc1ZDFfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTk0NjUwNzQzODBhZTkyNmUxYjk0NWZlZGIxYmY1OTlfOTM4ZDg3NGExYmY4MzQ3YzIyZjYzZTBjNzdjNDA2NmRfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmZkNGJjM2U4MWM1N2E5ZjVhYWMwZGYyZjc4Y2UzMDBfZmJlM2Q4ODc1NmY2ZGUzMTEzNDI1ZDcxOTRlZDIzNzNfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgyMTg3OTgwOjE3ODIyNzQzODBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2E5ODk5ZTRmZGJjYjdlZTBlMWEyOWI4N2Y5OWQ4YzFfZDI5OGI1NzBmMmQ0MjgyNWNiYWI1NTI5MDM4MmI2MGZfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgyMTg3OTgxOjE3ODIyNzQzODFfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzhmMDFkMzFiYTVjYjEyMzI3N2ZkZmEwNTZkYzkyNzJfOGFhYzgxMWM3YjEyZjcxMDFjMWQyMzhkY2ZlZjM0NGZfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDIzYzEwMGYzMTY1MzVlNjE3ZTUxOWI2NjM2OTkxOTFfN2MzZjA4NTI4MGY5NTk5NTY0YjdmYzY2ZjU2ZDk4ZDJfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTUzY2ZmZmFiNWM2OTQ1NDMyZjM3OGIxZTIxODNiZTNfZDM0ZjZmNDEyYTllZGNlYTAwMDAwMDI5YjIzNzA0NjlfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDA2NjY2ZDYzNTU4ZjU2NGZhYTU0ZDg2MDQ0MjcwYWJfODQ3YmE2NTA5YWVkNWFiZTQ3NGE1MDI2NWY0NjE5YzBfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmYyNDllMDgxM2Q3ZTBjNDdhNTM4NzBjZTQ2YzUwN2FfZjU1ZGYzNDk0ODlkZTkxODg5MDY2YjQxMDFlZmRhOWZfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTI5ZDczODYyMTVjZDhiZWY0M2UyMmY1NDRkOGUzMDdfNDBlMWFkNWU1ZGU2ZDhlN2JjZjZhOWMwNTZhNTQ3YmZfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDlhYmI2NjNjZjQwODQwN2IwYmY1MTJiYmIzMGQwNGZfYTNiZDdjNDI3YjY4NzQ1ZmFhNzgyZDIxMjFjZTM1ZjdfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzMxYTZjZTVmYjhkMDIxN2IyODk0ZmNmMTRjZWEwY2FfMWU2ODdiZmRmMGNkNDUxYTM4YjExOTg1YzZlZTExYzBfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODRjNWMyNDgwZTliYWIwMDc4Nzk0YjE4ZjVjYWU1NmZfZTBkYzJhMWUwZWQ4MGVjZWIyNDc3MTE3MDdkNDUxZTRfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmM1MjEyMzFlNjk4OWJkMDBkNWI2Y2NiOWFjODAzY2RfNDI2YTYxOGQyN2EzMmRjNDRkNTNiM2ZhNTgwY2Y4ZThfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDFiMTg5ZmZmYTczZWFlZGM2NjAwMmMyZjc2OWFhNTBfYzk5YzFiZThmNWFjNzgwNDExMTQzZGVkYWViYmQyZjdfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgyMjI4MDQzOjE3ODIzMTQ0NDNfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDY1MDU3YzA4YTA2OTg0ZjUwOTQwZTBjMzk5NWE1ZWFfMDllOTU3ZWM2N2E4YWE5MjQ2YWUyMmRkODM1YjYxYTJfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgyMjI4MDQzOjE3ODIzMTQ0NDNfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTkwOTQxNWMzMzg1ODNjMmM2YzAxMTdhZGZlYTY0YTdfYWM5MDU1ODZhNzRlMzc2YjkyMDJiNzNiMzU0MWU2ZDZfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgyMjI4MDQzOjE3ODIzMTQ0NDNfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWMzN2I1NWViYzYxNWNlNTk2YTRiNDcxYzU3NDVkNDFfY2E5YWIwOTFmZmRlMjg3Y2UzODMyZWU3MTU0ZDUxMTZfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgyMjI4MDQzOjE3ODIzMTQ0NDNfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmE1ZDE0MjlhOTA4MjQ0M2IwMjEzMTExZWMzMzRkMTNfNzMxMzM4OTJmNDljNThmY2JkY2M4NjA2NGFiOGU2MWJfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgyMjI4MDQzOjE3ODIzMTQ0NDNfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjYzYzM0Y2M2MmFjOGVlYmJkZmIyYTEyODFmYWU2YmZfYjA5N2YzZDk3MjU3MDM1NzhmNjIzMjZjZmZhY2RkYjhfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGNmNTM1ZTcyNmFhNTg2ZjlmMDJmZmFmODk3OGRlZTJfMTdiMjI1ZTljOWE3YzE4YjVkZWNmMWE0ZDk2MjJjNDJfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjAwM2FkYzA5OGEyYTcxY2VjZmJkZTY0YjBjNDRkZmJfMDcyZTVhYjYwOTM0MjhkMDEwNTVhYmNjZGI3MWEzN2VfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MThhZjQyOGM1N2U0MzMyOGY5OWY3YWQyM2RlYmViNzFfMjQ3ZjM0NDM1ZjQ2OWQ4NzMyZDhlNzdlOTkwOTQyMmJfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTA1ZjBkMjc2ZWZiODQ5ZmZiNGE5OTMwOGM1ZDY5NjNfYzk0NDJmNjRiYTYwYTMwZWZiNmMzNjk1OGM4NzM3ZThfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjE2Y2ZkMWNkNzZlMDNlYzI3NDM1NmYwM2YwODg5ODFfYjY5NDU5ZTJlN2I3YzQ5MDg2MTM5ZTQwZWRjYzE3ZjJfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM"
       ],
       "contentBlocks": [],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTFlYTQ2MWQwNGVkMTkxM2RiZjgxNzkwZDcxMzM0NzlfN2YyMmZiNzJiOTBjNjBlYjY4NDhhZjY1NDQ2YWQwYThfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgyMTg3OTc4OjE3ODIyNzQzNzhfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzhmMDFkMzFiYTVjYjEyMzI3N2ZkZmEwNTZkYzkyNzJfOGFhYzgxMWM3YjEyZjcxMDFjMWQyMzhkY2ZlZjM0NGZfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgyMjI4MDQyOjE3ODIzMTQ0NDJfVjM"
     },
     {
       "id": "recvmzQDUI9yOJ",
@@ -50,14 +50,15 @@
       "order": 2.0,
       "title": "GitHub 通用一键更新器使用说明",
       "summary": "GitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。",
-      "body": "GitHub通用一键更新器_使用说明\nGitHub 通用一键更新器使用说明\n用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新\nimage1.png\n\n\n封面：GitHubUniversalUpdater 的核心流程示意。\n一、它解决什么问题\nGitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。\n它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。\n二、下载入口\n推荐下载：GitHubUniversalUpdater-v1.0.6.zip\nRelease 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases\nGitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater\n源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip\n当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。\n三、快速上手\n下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。\n双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。\n首次运行会在同目录生成 apps.json 配置文件。\n在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。\n点击“检查更新”，确认有新版本后点击“一键更新”。\n四、配置项怎么理解\n\n\n字段\n\n用途\n\n建议\n\nName\n\n软件名称。\n\n写成自己能识别的名字，例如 Everything、PicGo。\n\nInstallDir\n\n安装目录或主程序 exe 路径。\n\n如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。\n\nGitHubUrl\n\n对应的 GitHub 仓库地址。\n\n填写仓库主页，例如 https://github.com/owner/repository。\n\nLastInstalledTag\n\n记录当前已安装版本。\n\n首次可保持“未安装”，更新后由工具记录。\n\nPreferredAssetRegex\n\n资产筛选正则，可选。\n\n当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。\n\nUseIdm / IdmPath\n\n是否调用本机 IDM 下载。\n\n下载慢时可开启；也可以手动指定 IDMan.exe。\n五、它如何选择更新包\n通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。\n优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。\n会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。\n如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。\n六、下载与更新过程\n下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。\n如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。\n七、注意事项\n覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。\nrar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。\n工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。\n如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。\n八、适合谁使用\n它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。\n对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。\n来源\n本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater",
+      "body": "GitHub通用一键更新器_使用说明\nGitHub 通用一键更新器使用说明\n用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新\nimage1.png\n\n\n封面：GitHubUniversalUpdater 的核心流程示意。\n最新更新：更新到了1.1版本\n已经支持了安装包的静默安装，以及加强了自动识别功能\n一、它解决什么问题\nGitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。\n它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。\n比如我，我有大量的GitHub上的开源软件，通过它可以一键检查更新，不用一个一个地去GitHub上下载更新了。\nimage.png\n\n二、下载入口\n推荐下载：GitHubUniversalUpdater-v1.0.6.zip\nRelease 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases\nGitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater\n源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip\n当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。\n三、快速上手\n下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。\n双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。\n首次运行会在同目录生成 apps.json 配置文件。\n在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。\n点击“检查更新”，确认有新版本后点击“一键更新”。\n四、配置项怎么理解\n\n\n字段\n\n用途\n\n建议\n\nName\n\n软件名称。\n\n写成自己能识别的名字，例如 Everything、PicGo。\n\nInstallDir\n\n安装目录或主程序 exe 路径。\n\n如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。\n\nGitHubUrl\n\n对应的 GitHub 仓库地址。\n\n填写仓库主页，例如 https://github.com/owner/repository。\n\nLastInstalledTag\n\n记录当前已安装版本。\n\n首次可保持“未安装”，更新后由工具记录。\n\nPreferredAssetRegex\n\n资产筛选正则，可选。\n\n当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。\n\nUseIdm / IdmPath\n\n是否调用本机 IDM 下载。\n\n下载慢时可开启；也可以手动指定 IDMan.exe。\n五、它如何选择更新包\n通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。\n优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。\n会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。\n如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。\n六、下载与更新过程\n下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。\n如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。\n七、注意事项\n覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。\nrar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。\n工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。\n如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。\n八、适合谁使用\n它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。\n对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。\n来源\n本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater",
       "contentUrl": "https://my.feishu.cn/docx/RyAEd4pZjoRqMRxeyBccs0x7nGb",
       "displayMode": "网站排版",
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZThlODE5YzBhNjkyNjlmNWNjY2RiMmI3OTQ2OWJiOTNfMWJkZGY0NjU4MDQwMThlYzYxZmYxYTNiZjA4NzMyZmVfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgyMTg3OTgxOjE3ODIyNzQzODFfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTgzY2FmOGFkNWNkOTA5NWJhMzlhMGQzMTU4ODAwMjNfNjUxNzM4MTIwMGU3M2VjN2ZmMzk5NjUwY2NlZDVjMmZfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgyMTg4MDIyOjE3ODIyNzQ0MjJfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTUyOTMwNWEwZDdhN2RkNjA4OGQ1OTA1ODRiOWE4NWVfMmMxNjgxNWJjZDIwY2JkNmIyN2JmMjkxYzMxODU1Y2JfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgyMjI4MDQ1OjE3ODIzMTQ0NDVfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTMxZWViOWIyNGU1YmZlYzg0YjBjZWIwM2E2NTViYTNfYTk1ODg2ZTg2Nzg2ZDc0ZTlkMTZlZjJjMDlkNWEwZTZfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgyMjI4MDg4OjE3ODIzMTQ0ODhfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmUxZmY4MDc4MzcxZTM0NzEwYmMxOTVhYjE0ZGM1ZDVfMmQ3NThlMTIxYmRhODI4NWM4ZjU1NGEyZWNiODVkZTlfSUQ6NzY1NDUzMTIxNTA4MDYwNjkyN18xNzgyMjI4MDg4OjE3ODIzMTQ0ODhfVjM"
       ],
       "contentBlocks": [
         {
@@ -67,11 +68,20 @@
         {
           "type": "image",
           "token": "E9bzb9jn3oc6g5xo4zyc01NKnug",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTgzY2FmOGFkNWNkOTA5NWJhMzlhMGQzMTU4ODAwMjNfNjUxNzM4MTIwMGU3M2VjN2ZmMzk5NjUwY2NlZDVjMmZfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgyMTg4MDIyOjE3ODIyNzQ0MjJfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTMxZWViOWIyNGU1YmZlYzg0YjBjZWIwM2E2NTViYTNfYTk1ODg2ZTg2Nzg2ZDc0ZTlkMTZlZjJjMDlkNWEwZTZfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgyMjI4MDg4OjE3ODIzMTQ0ODhfVjM"
         },
         {
           "type": "paragraph",
           "text": "封面：GitHubUniversalUpdater 的核心流程示意。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "最新更新：更新到了1.1版本"
+        },
+        {
+          "type": "paragraph",
+          "text": "已经支持了安装包的静默安装，以及加强了自动识别功能"
         },
         {
           "type": "heading",
@@ -85,6 +95,15 @@
         {
           "type": "paragraph",
           "text": "它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。"
+        },
+        {
+          "type": "paragraph",
+          "text": "比如我，我有大量的GitHub上的开源软件，通过它可以一键检查更新，不用一个一个地去GitHub上下载更新了。"
+        },
+        {
+          "type": "image",
+          "token": "Qsbob9voXo9Fisxc3FScurfZnzg",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmUxZmY4MDc4MzcxZTM0NzEwYmMxOTVhYjE0ZGM1ZDVfMmQ3NThlMTIxYmRhODI4NWM4ZjU1NGEyZWNiODVkZTlfSUQ6NzY1NDUzMTIxNTA4MDYwNjkyN18xNzgyMjI4MDg4OjE3ODIzMTQ0ODhfVjM"
         },
         {
           "type": "heading",
@@ -272,7 +291,7 @@
           "text": "本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZThlODE5YzBhNjkyNjlmNWNjY2RiMmI3OTQ2OWJiOTNfMWJkZGY0NjU4MDQwMThlYzYxZmYxYTNiZjA4NzMyZmVfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgyMTg3OTgxOjE3ODIyNzQzODFfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTUyOTMwNWEwZDdhN2RkNjA4OGQ1OTA1ODRiOWE4NWVfMmMxNjgxNWJjZDIwY2JkNmIyN2JmMjkxYzMxODU1Y2JfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgyMjI4MDQ1OjE3ODIzMTQ0NDVfVjM"
     },
     {
       "id": "recvmOMM2EAVsS",
@@ -286,16 +305,16 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzRkNDY3ZDQ4NTlkMzFhZTE3MDE5MzY5YWYzMDI0NjVfY2YwYTE3MGM2YTEwMzQxMWIwM2VjYTQyNjE2ZTUxMmNfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTZkNDNlM2ZmYmJmMzgyMTZmOTkxZWQ5YWRlNGExMTdfY2Y4MDk5YzA3Mzg0MDk1NGNiZmMzYTU3ZWMxNjhlOTdfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmZlNjc5ZjM2NjcyNDczOGIxN2UxZDM1OWI1MTk3NWJfMGUwZGZkYWVlNzRjODVlMmVlODA1MTY5OWI0MWU2Y2VfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzE5YmQyMjQ1MzcwN2RiNDFmN2E4OGQ3MTQ2YzBjMDJfYjMzMmUyYTA5YjRmYmQ3OTA2NzRlMzViZjVmYWU3YjFfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZThjY2E5MWM1MDBhYTE3Mjc2ZTBhODgzZDMzYTU4ODJfMmQ0MDMwYjZkYjk1YWU2ODI5MzhkMjY4NjE5NmYwZWVfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmZmMjg2NzFkYjI1ZWFjNWI4ZWQyODFmYWVkNmEyOGZfMTVlNTUzNjcwMzdlYTYzYmRmMTI4OGFhMGZiMDI5NThfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjAzZGJkYjVmODhmZjZiZDI4ZTcxYTEwMzQ4YzkxNGZfNmMzNDI1MGJkMmJmZjk4MjFkMjA5MTUxMDRhMDU0NDFfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjVlMmIyY2EwNmFhMDVhYjY0OGI1YzZhYjgzNTIzMjFfNmIwZjZkZjQ4YmU2NWY0NWI0MzRlMWQwM2Y1MDdmZjRfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGE5MTQ4MjMzOGE5YjA2YWMxYzM0OGViOTg0YmE4ODJfNDA0MDVkZjllYzdhOTAyYmUwODQ3ZTczZDliOTc2ODVfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmZhYzdlY2U5ZTRmNzNkNzQxZmQ2YTY2YWNlNzgzMDJfM2JiMWJmZmNiM2VjYTA1YzFjZGY1OWEyYThkMWQzYjBfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM"
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjBkYjgyOGI3YjM2YTQ1OGM1Yzg2YTVlM2VmYTUzNDBfNGIyZDVjNDMyZTgzOTczYjQ2MzFlY2RiMjNhMDNjM2VfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjE1NzlkODRmZDI2MDIyMThjZDg4OTBmN2UwMGZiYjVfNmE4MThiZGM3MDcwY2UzNGNiZTIyZjAxNDc1OGJkYjZfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTM2ZjNjYzE2MDFiYTU2NjcxOWUxZDVmMGFhODQ2YzVfZjEwYTU1NjM2ODg4NTM4Yjk1ODQxYWQyZjM3OTVlNzlfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDJiY2ZmYjY0N2RjYjJhNjFiZTg1OTZkMDc1YzEwYTlfYmFjMGNkYjFiZTRiYTA4NTk2MWI4ZTk2NGFiNTVhYjNfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQ4NzkxMzcwMTkzZDZkNWJhZjA5ZTNiMGI0ZGEyNTVfYWJhOWIyOGNlYzUzNjI2YTc3ODU2YTc2Y2U2MTQ0YTlfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmQ4ZTkxY2E1MWE1ZjYwNjVhMmE2YjQ3NjQ4NGI3MjVfZjIyODZlZTYzYzdhY2UwOWI4MzE2MmM0MzYxZmFkZDdfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2M3MDg4YTdhOWY4NWQ0YjZkYjNmZWIwNjU4MzIzYjlfMWU0ZTdmYjBlNWI1ZDQ1NTFiZjNhNTU3MTBlMTY2ZGRfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTExYzFlOTU5YWUyODQxMmIzZGVjYWY1OGU5M2NiNjZfYmZkMmQwNmM3NWRmYTI2ZmQ4OWE3ZmM0YmQ4ZWM0MjdfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTA2MDc4YjgxNTllMGIxODVhYjgyMmEyZDBjNGM4ZGFfYWM1ZjE4MjMzYmNjYTVkYjk3MjExNTk1OWFlMDJlMTlfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWE5MjhkZTQ4N2ZlNDZkMzE2ZTA5MTAzNzMzMDM0YWNfYTc2ODcxMGYwOGQxYmNhYTYxODRkZDVkMTdlZjc0NDZfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM"
       ],
       "contentBlocks": [
         {
@@ -332,7 +351,7 @@
         {
           "type": "image",
           "token": "ARRHbg1bIogJosxmKQMcgTuJn7g",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzE5YmQyMjQ1MzcwN2RiNDFmN2E4OGQ3MTQ2YzBjMDJfYjMzMmUyYTA5YjRmYmQ3OTA2NzRlMzViZjVmYWU3YjFfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDJiY2ZmYjY0N2RjYjJhNjFiZTg1OTZkMDc1YzEwYTlfYmFjMGNkYjFiZTRiYTA4NTk2MWI4ZTk2NGFiNTVhYjNfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM"
         },
         {
           "type": "paragraph",
@@ -377,7 +396,7 @@
         {
           "type": "image",
           "token": "GpkMbSOsPoU6YJxYM8DcLWu1nac",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZThjY2E5MWM1MDBhYTE3Mjc2ZTBhODgzZDMzYTU4ODJfMmQ0MDMwYjZkYjk1YWU2ODI5MzhkMjY4NjE5NmYwZWVfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQ4NzkxMzcwMTkzZDZkNWJhZjA5ZTNiMGI0ZGEyNTVfYWJhOWIyOGNlYzUzNjI2YTc3ODU2YTc2Y2U2MTQ0YTlfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM"
         },
         {
           "type": "paragraph",
@@ -408,7 +427,7 @@
         {
           "type": "image",
           "token": "BBeXbKFtmozV07xLIuccrVeRn4C",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzRkNDY3ZDQ4NTlkMzFhZTE3MDE5MzY5YWYzMDI0NjVfY2YwYTE3MGM2YTEwMzQxMWIwM2VjYTQyNjE2ZTUxMmNfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjBkYjgyOGI3YjM2YTQ1OGM1Yzg2YTVlM2VmYTUzNDBfNGIyZDVjNDMyZTgzOTczYjQ2MzFlY2RiMjNhMDNjM2VfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM"
         },
         {
           "type": "paragraph",
@@ -439,7 +458,7 @@
         {
           "type": "image",
           "token": "JwPpbV6KHoRsZcx8uVGcuwujnw5",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTZkNDNlM2ZmYmJmMzgyMTZmOTkxZWQ5YWRlNGExMTdfY2Y4MDk5YzA3Mzg0MDk1NGNiZmMzYTU3ZWMxNjhlOTdfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjE1NzlkODRmZDI2MDIyMThjZDg4OTBmN2UwMGZiYjVfNmE4MThiZGM3MDcwY2UzNGNiZTIyZjAxNDc1OGJkYjZfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM"
         },
         {
           "type": "paragraph",
@@ -470,7 +489,7 @@
         {
           "type": "image",
           "token": "HEBUb4RCRorEg4x67cNcqiqnnsf",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmZlNjc5ZjM2NjcyNDczOGIxN2UxZDM1OWI1MTk3NWJfMGUwZGZkYWVlNzRjODVlMmVlODA1MTY5OWI0MWU2Y2VfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgyMTg4MTE5OjE3ODIyNzQ1MTlfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTM2ZjNjYzE2MDFiYTU2NjcxOWUxZDVmMGFhODQ2YzVfZjEwYTU1NjM2ODg4NTM4Yjk1ODQxYWQyZjM3OTVlNzlfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgyMjI4MTgwOjE3ODIzMTQ1ODBfVjM"
         },
         {
           "type": "paragraph",
@@ -501,7 +520,7 @@
         {
           "type": "image",
           "token": "SH7Mbqoy6oR1kBxMOB7cQwtVnVf",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmZhYzdlY2U5ZTRmNzNkNzQxZmQ2YTY2YWNlNzgzMDJfM2JiMWJmZmNiM2VjYTA1YzFjZGY1OWEyYThkMWQzYjBfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWE5MjhkZTQ4N2ZlNDZkMzE2ZTA5MTAzNzMzMDM0YWNfYTc2ODcxMGYwOGQxYmNhYTYxODRkZDVkMTdlZjc0NDZfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM"
         },
         {
           "type": "paragraph",
@@ -560,7 +579,7 @@
         {
           "type": "image",
           "token": "Oof9bTCHboJy32xmMphcZiplnwe",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmZmMjg2NzFkYjI1ZWFjNWI4ZWQyODFmYWVkNmEyOGZfMTVlNTUzNjcwMzdlYTYzYmRmMTI4OGFhMGZiMDI5NThfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmQ4ZTkxY2E1MWE1ZjYwNjVhMmE2YjQ3NjQ4NGI3MjVfZjIyODZlZTYzYzdhY2UwOWI4MzE2MmM0MzYxZmFkZDdfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM"
         },
         {
           "type": "paragraph",
@@ -591,7 +610,7 @@
         {
           "type": "image",
           "token": "H1y3bz4dCossm7xb0UYcKghenCc",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjAzZGJkYjVmODhmZjZiZDI4ZTcxYTEwMzQ4YzkxNGZfNmMzNDI1MGJkMmJmZjk4MjFkMjA5MTUxMDRhMDU0NDFfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2M3MDg4YTdhOWY4NWQ0YjZkYjNmZWIwNjU4MzIzYjlfMWU0ZTdmYjBlNWI1ZDQ1NTFiZjNhNTU3MTBlMTY2ZGRfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM"
         },
         {
           "type": "heading",
@@ -618,7 +637,7 @@
         {
           "type": "image",
           "token": "GuByb4CaGol0P4xjuwncb83bn1e",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjVlMmIyY2EwNmFhMDVhYjY0OGI1YzZhYjgzNTIzMjFfNmIwZjZkZjQ4YmU2NWY0NWI0MzRlMWQwM2Y1MDdmZjRfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTExYzFlOTU5YWUyODQxMmIzZGVjYWY1OGU5M2NiNjZfYmZkMmQwNmM3NWRmYTI2ZmQ4OWE3ZmM0YmQ4ZWM0MjdfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM"
         },
         {
           "type": "paragraph",
@@ -685,7 +704,7 @@
         {
           "type": "image",
           "token": "NPwhbdNwioeWldxpwoRcP3CRnlh",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGE5MTQ4MjMzOGE5YjA2YWMxYzM0OGViOTg0YmE4ODJfNDA0MDVkZjllYzdhOTAyYmUwODQ3ZTczZDliOTc2ODVfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgyMTg4MTIwOjE3ODIyNzQ1MjBfVjM"
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTA2MDc4YjgxNTllMGIxODVhYjgyMmEyZDBjNGM4ZGFfYWM1ZjE4MjMzYmNjYTVkYjk3MjExNTk1OWFlMDJlMTlfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgyMjI4MTgxOjE3ODIzMTQ1ODFfVjM"
         },
         {
           "type": "paragraph",
@@ -736,7 +755,7 @@
           ]
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODU3NGQ4NWZiZjFlMmQ5NTM1ZGQ1NDYxZGMwYWZkM2ZfMzUyYzQ1ZjNmMjQwNzYwODA4N2ZhY2ZlZGEwZjA0N2RfSUQ6NzY1MjM5NzYxNjY4MTU1MzA4Nl8xNzgyMTg3OTgxOjE3ODIyNzQzODFfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGU4NTUyODI3MDU0MjFhOGNiMTNhMTYxNmEyYTQzNjJfNzQ4ZDQzNDgyMzQ5NjI5NTcxNzA5ZTE2NTBkNWM5NjVfSUQ6NzY1MjM5NzYxNjY4MTU1MzA4Nl8xNzgyMjI4MDQ1OjE3ODIzMTQ0NDVfVjM"
     },
     {
       "id": "recvn0b64IQHdA",
@@ -774,7 +793,200 @@
           "text": "https://pan.quark.cn/s/935d6cb1bafd#/list/share"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjU2MzVlNzYyMzdmZGQ0OTU1NjY0YjhkYjhiYmIwOGVfOTk5MDA4YzRkNDE4ZDZhOGFlMzA2MTE1MzVlMzRmYThfSUQ6NzY1MzEyMDc5Mjc2MjM1NDYzNl8xNzgyMTg3OTgxOjE3ODIyNzQzODFfVjM"
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjdjNTdkYTc1NWVmZTJiZWJhYWQ3OTRkZmViN2RiYzJfNDU1NTkzYWJiNzIyMTEyMTAwNjgwNjg5YTY2YzNmNThfSUQ6NzY1MzEyMDc5Mjc2MjM1NDYzNl8xNzgyMjI4MDQ1OjE3ODIzMTQ0NDVfVjM"
+    },
+    {
+      "id": "recvnmWI5tQQob",
+      "sourceType": "zhixing",
+      "order": 5.0,
+      "title": "策展人和设计师的最佳资源抓取工具",
+      "summary": "一款面向策展人、设计师和内容研究者的本地媒体资源抓取工具，可集中抓取官网 Logo/Favicon、微信公众号文章图片、小红书公开素材、B 站封面与头像，并支持筛选下载、ZIP 打包、指定目录保存和 WebP 转换。",
+      "body": "策展人和设计师的最佳资源抓取工具\nMedia Asset Grabber 是一个面向策展人、设计师和内容研究者的本地媒体资源抓取工具。它把官网 Logo/Favicon、微信公众号文章图片、小红书公开素材、B 站封面和头像等资料入口收束到一个桌面工具里，让前期调研、竞品参考、视觉资料整理和案例素材归档从“到处复制保存”变成可筛选、可打包、可转换格式的工作流。\n921c3602-075c-4618-a4f5-76ba1fb79249.webp\n\n应用抓取腾讯云官网后的资源结果页：Favicon、Logo 候选、下载工具集中呈现。\n为什么它适合策展人和设计师\n策展和设计的前期工作，常常不是从创意开始，而是从大量资料搜集开始：找官网、找品牌标识、找活动视觉、找参考图片、找公众号文章配图、找小红书现场图、找视频封面。这些素材分散在不同平台，格式不统一，保存路径也容易混乱。Media Asset Grabber 的价值，正在于把这些零散入口整合成一个本地工具：输入链接或名称，先抓取，再筛选，最后按项目目录保存。\n对于策展人，它更像一个资料收集助手；对于设计师，它更像一个品牌素材与参考图提取器；对于内容运营者，它则是把网页、公众号、小红书、B 站素材整理进项目库的轻量入口。\n核心能力一览\n\n\n能力\n\n对策展/设计工作的价值\n\n官网与品牌素材\n\n抓取 favicon、页头 Logo、SVG、CSS 背景图和 og:image，适合快速整理品牌参考资料。\n\n公众号链接读取\n\n从微信公众号文章中提取封面、正文图片、可识别的视频候选和公众号头像。\n\n小红书素材采集\n\n支持粘贴小红书笔记链接或分享文案，抓取公开图片、公开视频资源和博主头像。\n\nB 站参考素材\n\n抓取视频封面和 UP 主头像，用于案例分析、灵感板或资料归档。\n\n保存与转换\n\n支持选中下载、全量下载、ZIP 打包、指定目录保存和 WebP 转换。\n\n从网站到资料库：一次完整的素材抓取流程\n1. 输入官网、文章、视频、笔记链接，或直接输入公司/产品名称。\n2. 工具联网搜索官网候选，或直接解析目标页面。\n3. 自动识别 Favicon、Logo、封面、头像、正文图片、公开视频等候选资源。\n4. 用户点击资源卡片进行筛选，也可以全选可用资源。\n5. 将结果下载、打包为 ZIP、保存到指定目录，或转换成 WebP 便于归档和网页使用。\nimage1.png\n\n主界面：输入官网、文章、视频或笔记链接，也可以输入名称搜索官网候选。\n几个典型使用场景\n1. 做品牌馆或企业展厅前，快速拿到官网 Logo 和品牌图形\n输入企业名称或官网地址后，工具会从页面头部、导航区、CSS 背景图、SVG、og:image 等位置提取候选。它不会只取一个结果，而是按资源类型和可用性列出多个候选，适合在方案阶段快速搭建品牌资料包。\n2. 做展览研究时，批量整理公众号文章里的图片\n很多项目资料、活动报道和案例图都藏在微信公众号文章里。粘贴公众号链接后，工具可以提取文章封面、正文图片、可识别的视频候选和公众号头像，适合做灵感板、案例库和传播复盘。\n3. 小红书现场图和公开素材收集\n小红书常常是查看真实空间、活动现场和用户视角的重要来源。工具支持直接粘贴小红书笔记链接或整段分享文案，提取公开返回的图片、视频候选和博主头像，方便整理为项目参考。\n4. 输出给设计和网页使用的轻量素材包\n保存目录、ZIP 打包、WebP 转换这些功能，把素材从“临时下载”推进到“项目归档”。设计师可以把筛选后的 Logo、图标、封面图统一保存到项目文件夹；网站维护时，也可以直接转换为 WebP。\n使用边界：它是资料助手，不是破解工具\n工具只抓取页面公开返回的资源，不绕过登录、权限、会员或反爬限制，也不做水印去除。这点对长期使用很重要：它的定位是提高公开资料整理效率，而不是突破平台限制。\n下载与开源信息\nGitHub 仓库：https://github.com/cuiyisan-debug/media-asset-grabber\n最新 Release：https://github.com/cuiyisan-debug/media-asset-grabber/releases/tag/v1.0.6\n开源协议：MIT License\n技术栈：React + Vite + Express + Cheerio + Got + Sharp + Electron + electron-builder\n一句话总结\nMedia Asset Grabber 不是一个单纯的 Logo 下载器，而是一个面向策展、设计和内容研究的资料抓取工作台。它把官网、公众号、小红书和视频平台上的公开素材，转化为可以筛选、保存、打包和继续使用的项目资产。",
+      "contentUrl": "https://my.feishu.cn/docx/C4VtdiGbBoEev4xQt1Lc4ZYsnMc",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2Y5ODE4NThiODM2OTg1NmQxMTIzNWYzNDhiODgxMDNfYzM4NWI3MzRiNmM4YmQzMmRjMjczM2U0MWRjNDUxOGFfSUQ6NzY1NDU3MDkyNzM5MjcyMjEwOF8xNzgyMjI4MjIyOjE3ODIzMTQ2MjJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTZhZjA3NjgxNDIzYmExYzRjYWY4YzhiNzM5NTkwZTdfOWJjZmQ5ZWY1YzgwNWRiNWViYTI2N2FmZjNkNGYxMWNfSUQ6NzY1NDU3MDc5NDMyODQxMTEyM18xNzgyMjI4MjIyOjE3ODIzMTQ2MjJfVjM"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "Media Asset Grabber 是一个面向策展人、设计师和内容研究者的本地媒体资源抓取工具。它把官网 Logo/Favicon、微信公众号文章图片、小红书公开素材、B 站封面和头像等资料入口收束到一个桌面工具里，让前期调研、竞品参考、视觉资料整理和案例素材归档从“到处复制保存”变成可筛选、可打包、可转换格式的工作流。"
+        },
+        {
+          "type": "image",
+          "token": "QMf3b9jMpo8yPwxS6Stc2Waanwf",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2Y5ODE4NThiODM2OTg1NmQxMTIzNWYzNDhiODgxMDNfYzM4NWI3MzRiNmM4YmQzMmRjMjczM2U0MWRjNDUxOGFfSUQ6NzY1NDU3MDkyNzM5MjcyMjEwOF8xNzgyMjI4MjIyOjE3ODIzMTQ2MjJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "应用抓取腾讯云官网后的资源结果页：Favicon、Logo 候选、下载工具集中呈现。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "为什么它适合策展人和设计师"
+        },
+        {
+          "type": "paragraph",
+          "text": "策展和设计的前期工作，常常不是从创意开始，而是从大量资料搜集开始：找官网、找品牌标识、找活动视觉、找参考图片、找公众号文章配图、找小红书现场图、找视频封面。这些素材分散在不同平台，格式不统一，保存路径也容易混乱。Media Asset Grabber 的价值，正在于把这些零散入口整合成一个本地工具：输入链接或名称，先抓取，再筛选，最后按项目目录保存。"
+        },
+        {
+          "type": "paragraph",
+          "text": "对于策展人，它更像一个资料收集助手；对于设计师，它更像一个品牌素材与参考图提取器；对于内容运营者，它则是把网页、公众号、小红书、B 站素材整理进项目库的轻量入口。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "核心能力一览"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "能力",
+              "对策展/设计工作的价值"
+            ],
+            [
+              "官网与品牌素材",
+              "抓取 favicon、页头 Logo、SVG、CSS 背景图和 og:image，适合快速整理品牌参考资料。"
+            ],
+            [
+              "公众号链接读取",
+              "从微信公众号文章中提取封面、正文图片、可识别的视频候选和公众号头像。"
+            ],
+            [
+              "小红书素材采集",
+              "支持粘贴小红书笔记链接或分享文案，抓取公开图片、公开视频资源和博主头像。"
+            ],
+            [
+              "B 站参考素材",
+              "抓取视频封面和 UP 主头像，用于案例分析、灵感板或资料归档。"
+            ],
+            [
+              "保存与转换",
+              "支持选中下载、全量下载、ZIP 打包、指定目录保存和 WebP 转换。"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "从网站到资料库：一次完整的素材抓取流程"
+        },
+        {
+          "type": "paragraph",
+          "text": "1. 输入官网、文章、视频、笔记链接，或直接输入公司/产品名称。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2. 工具联网搜索官网候选，或直接解析目标页面。"
+        },
+        {
+          "type": "paragraph",
+          "text": "3. 自动识别 Favicon、Logo、封面、头像、正文图片、公开视频等候选资源。"
+        },
+        {
+          "type": "paragraph",
+          "text": "4. 用户点击资源卡片进行筛选，也可以全选可用资源。"
+        },
+        {
+          "type": "paragraph",
+          "text": "5. 将结果下载、打包为 ZIP、保存到指定目录，或转换成 WebP 便于归档和网页使用。"
+        },
+        {
+          "type": "image",
+          "token": "OSM7bfcVHoUi2ZxXMvucFc9GnSv",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTZhZjA3NjgxNDIzYmExYzRjYWY4YzhiNzM5NTkwZTdfOWJjZmQ5ZWY1YzgwNWRiNWViYTI2N2FmZjNkNGYxMWNfSUQ6NzY1NDU3MDc5NDMyODQxMTEyM18xNzgyMjI4MjIyOjE3ODIzMTQ2MjJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "主界面：输入官网、文章、视频或笔记链接，也可以输入名称搜索官网候选。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "几个典型使用场景"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. 做品牌馆或企业展厅前，快速拿到官网 Logo 和品牌图形"
+        },
+        {
+          "type": "paragraph",
+          "text": "输入企业名称或官网地址后，工具会从页面头部、导航区、CSS 背景图、SVG、og:image 等位置提取候选。它不会只取一个结果，而是按资源类型和可用性列出多个候选，适合在方案阶段快速搭建品牌资料包。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. 做展览研究时，批量整理公众号文章里的图片"
+        },
+        {
+          "type": "paragraph",
+          "text": "很多项目资料、活动报道和案例图都藏在微信公众号文章里。粘贴公众号链接后，工具可以提取文章封面、正文图片、可识别的视频候选和公众号头像，适合做灵感板、案例库和传播复盘。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. 小红书现场图和公开素材收集"
+        },
+        {
+          "type": "paragraph",
+          "text": "小红书常常是查看真实空间、活动现场和用户视角的重要来源。工具支持直接粘贴小红书笔记链接或整段分享文案，提取公开返回的图片、视频候选和博主头像，方便整理为项目参考。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. 输出给设计和网页使用的轻量素材包"
+        },
+        {
+          "type": "paragraph",
+          "text": "保存目录、ZIP 打包、WebP 转换这些功能，把素材从“临时下载”推进到“项目归档”。设计师可以把筛选后的 Logo、图标、封面图统一保存到项目文件夹；网站维护时，也可以直接转换为 WebP。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "使用边界：它是资料助手，不是破解工具"
+        },
+        {
+          "type": "paragraph",
+          "text": "工具只抓取页面公开返回的资源，不绕过登录、权限、会员或反爬限制，也不做水印去除。这点对长期使用很重要：它的定位是提高公开资料整理效率，而不是突破平台限制。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "下载与开源信息"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub 仓库：https://github.com/cuiyisan-debug/media-asset-grabber"
+        },
+        {
+          "type": "paragraph",
+          "text": "最新 Release：https://github.com/cuiyisan-debug/media-asset-grabber/releases/tag/v1.0.6"
+        },
+        {
+          "type": "paragraph",
+          "text": "开源协议：MIT License"
+        },
+        {
+          "type": "paragraph",
+          "text": "技术栈：React + Vite + Express + Cheerio + Got + Sharp + Electron + electron-builder"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "一句话总结"
+        },
+        {
+          "type": "paragraph",
+          "text": "Media Asset Grabber 不是一个单纯的 Logo 下载器，而是一个面向策展、设计和内容研究的资料抓取工作台。它把官网、公众号、小红书和视频平台上的公开素材，转化为可以筛选、保存、打包和继续使用的项目资产。"
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTkyMjcxMjFkMmVhMjJkZWFiODA4NTlhYTA3Mzk4YjFfOTFlNzJjYTk0ZWU2ZmZiNzZjOTBmM2ZiZGQ3Y2EyZWRfSUQ6NzY1NDU3MDk5NjAwMjkwMDk3Ml8xNzgyMjI4MDQ0OjE3ODIzMTQ0NDRfVjM"
     }
   ]
 }
