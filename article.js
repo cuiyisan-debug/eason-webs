@@ -220,6 +220,32 @@ function articleUrl(item) {
   return `./article.html?${next.toString()}`;
 }
 
+function restartAnimatedImage(image) {
+  if (!image?.dataset?.gifSource) return;
+  const marker = `gif-replay-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  image.src = `${image.dataset.gifSource}#${marker}`;
+}
+
+function setupArticleThumbMotion(root = document) {
+  root.querySelectorAll(".article-thumb img, .related-thumb img").forEach((image) => {
+    if (image.dataset.motionReady) return;
+    image.dataset.motionReady = "true";
+    image.dataset.gifSource = image.currentSrc || image.src;
+
+    window.setTimeout(() => restartAnimatedImage(image), 4200);
+
+    const card = image.closest(".article-card, .related-card");
+    let hoverTimer = 0;
+    card?.addEventListener("mouseenter", () => {
+      restartAnimatedImage(image);
+      hoverTimer = window.setInterval(() => restartAnimatedImage(image), 4200);
+    });
+    card?.addEventListener("mouseleave", () => {
+      window.clearInterval(hoverTimer);
+    });
+  });
+}
+
 function renderMedia(urls) {
   const container = document.querySelector("[data-article-media]");
   if (!container) return;
@@ -402,13 +428,14 @@ function renderRelated(current, items) {
     .map(
       (item) => `
         <a class="related-card article-related-card ${item.cover ? "has-thumb" : "no-thumb"}" href="${escapeHtml(articleUrl(item))}">
-          ${item.cover ? `<span class="related-thumb" style="background-image:url('${escapeHtml(item.cover)}')"></span>` : ""}
+          ${item.cover ? `<span class="related-thumb"><img src="${escapeHtml(item.cover)}" alt="" loading="lazy" draggable="false" /></span>` : ""}
           <span class="related-category">${escapeHtml(sourceNames[source] || "文章")}</span>
           <strong>${escapeHtml(item.title)}</strong>
         </a>
       `
     )
     .join("");
+  setupArticleThumbMotion(container);
 }
 
 function renderArticle(article, items) {

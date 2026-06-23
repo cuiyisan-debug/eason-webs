@@ -842,6 +842,19 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.zhixing-thumb img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.article-card:hover .zhixing-thumb img,
+.article-card:focus-visible .zhixing-thumb img {
+  transform: scale(1.045);
+}
+
 .zhixing-detail {
   display: grid;
   gap: 28px;
@@ -1923,6 +1936,13 @@ h1 {
   background-position: center;
   background-size: cover;
   transition: transform 0.35s ease;
+}
+
+.related-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .related-card:hover .related-thumb {

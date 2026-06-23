@@ -29,6 +29,32 @@ function articleUrl(source, article) {
   return `./article.html?${params.toString()}`;
 }
 
+function restartAnimatedImage(image) {
+  if (!image?.dataset?.gifSource) return;
+  const marker = `gif-replay-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+  image.src = `${image.dataset.gifSource}#${marker}`;
+}
+
+function setupArticleThumbMotion(root = document) {
+  root.querySelectorAll(".article-thumb img").forEach((image) => {
+    if (image.dataset.motionReady) return;
+    image.dataset.motionReady = "true";
+    image.dataset.gifSource = image.currentSrc || image.src;
+
+    window.setTimeout(() => restartAnimatedImage(image), 4200);
+
+    const card = image.closest(".article-card");
+    let hoverTimer = 0;
+    card?.addEventListener("mouseenter", () => {
+      restartAnimatedImage(image);
+      hoverTimer = window.setInterval(() => restartAnimatedImage(image), 4200);
+    });
+    card?.addEventListener("mouseleave", () => {
+      window.clearInterval(hoverTimer);
+    });
+  });
+}
+
 function renderArticleCards(source, items) {
   if (!articleGrid) return;
   if (!items.length) {
@@ -44,7 +70,11 @@ function renderArticleCards(source, items) {
         <article class="zhixing-card article-card" data-article-href="${escapeHtml(href)}" tabindex="0">
           ${
             article.cover
-              ? `<a class="zhixing-thumb article-thumb" href="${escapeHtml(href)}" style="background-image:url('${escapeHtml(article.cover)}')" aria-label="${escapeHtml(article.title)}"></a>`
+              ? `
+                <a class="zhixing-thumb article-thumb" href="${escapeHtml(href)}" aria-label="${escapeHtml(article.title)}">
+                  <img src="${escapeHtml(article.cover)}" alt="" loading="lazy" draggable="false" />
+                </a>
+              `
               : ""
           }
           <h3><a href="${escapeHtml(href)}" title="${escapeHtml(article.title)}">${escapeHtml(article.title)}</a></h3>
@@ -52,6 +82,7 @@ function renderArticleCards(source, items) {
       `;
     })
     .join("");
+  setupArticleThumbMotion(articleGrid);
 
   articleGrid.addEventListener("click", (event) => {
     if (event.target.closest("a")) return;
