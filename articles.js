@@ -66,10 +66,12 @@ function renderArticleCards(source, items) {
   articleGrid.innerHTML = items
     .map((article) => {
       const href = articleUrl(source, article);
+      const hasCover = Boolean(article.cover);
+      const summary = article.summary || "";
       return `
-        <article class="zhixing-card article-card" data-article-href="${escapeHtml(href)}" tabindex="0">
+        <article class="zhixing-card article-card ${hasCover ? "has-thumb" : "no-thumb"}" data-article-href="${escapeHtml(href)}" tabindex="0">
           ${
-            article.cover
+            hasCover
               ? `
                 <a class="zhixing-thumb article-thumb" href="${escapeHtml(href)}" aria-label="${escapeHtml(article.title)}">
                   <img src="${escapeHtml(article.cover)}" alt="" loading="lazy" draggable="false" />
@@ -77,7 +79,11 @@ function renderArticleCards(source, items) {
               `
               : ""
           }
-          <h3><a href="${escapeHtml(href)}" title="${escapeHtml(article.title)}">${escapeHtml(article.title)}</a></h3>
+          <div class="article-card-copy">
+            <span class="article-card-kicker">${escapeHtml(articleLabels[source] || "ARTICLE")}</span>
+            <h3><a href="${escapeHtml(href)}" title="${escapeHtml(article.title)}">${escapeHtml(article.title)}</a></h3>
+            ${summary ? `<p>${escapeHtml(summary)}</p>` : ""}
+          </div>
         </article>
       `;
     })

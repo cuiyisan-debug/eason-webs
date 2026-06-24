@@ -448,7 +448,7 @@ h1 {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, 0.7));
+  background: linear-gradient(180deg, transparent 46%, rgba(0, 0, 0, 0.54));
   pointer-events: none;
 }
 
@@ -677,7 +677,7 @@ h1 {
 
 :root.light .project-body,
 :root[data-theme="light"] .project-body {
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.76) 18%);
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.6) 18%);
 }
 
 :root.light .gallery-thumb.video-thumb,
@@ -805,9 +805,64 @@ h1 {
 }
 
 .article-card {
+  position: relative;
   display: grid;
   align-content: start;
   gap: 16px;
+  overflow: hidden;
+}
+
+.article-card.has-thumb {
+  min-height: 330px;
+  padding: 0;
+  align-content: end;
+}
+
+.article-card.no-thumb {
+  min-height: 220px;
+}
+
+.article-card.has-thumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 36%, rgba(0, 0, 0, 0.24) 58%, rgba(0, 0, 0, 0.68));
+  pointer-events: none;
+}
+
+.article-card-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.article-card.has-thumb .article-card-copy {
+  align-self: end;
+  padding: 26px 22px 22px;
+  color: #fff;
+}
+
+.article-card-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.article-card p {
+  display: -webkit-box;
+  margin: 10px 0 0;
+  overflow: hidden;
+  color: var(--muted);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.65;
+}
+
+.article-card.has-thumb p {
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .article-card h3 {
@@ -821,6 +876,11 @@ h1 {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   line-height: 1.35;
+}
+
+.article-card.has-thumb h3 a {
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
 }
 
 .article-card h3 a:hover {
@@ -842,12 +902,26 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
+.article-card.has-thumb .zhixing-thumb {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  min-height: 0;
+  margin: 0;
+  border-bottom: 0;
+}
+
 .zhixing-thumb img {
   display: block;
   width: 100%;
   height: 240px;
   object-fit: cover;
   transition: transform 0.45s ease;
+}
+
+.article-card.has-thumb .zhixing-thumb img {
+  width: 100%;
+  height: 100%;
 }
 
 .article-card:hover .zhixing-thumb img,
@@ -1265,7 +1339,7 @@ h1 {
   position: absolute;
   inset: auto 0 0;
   padding: 18px;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.82) 18%);
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.66) 18%);
   color: #fff;
 }
 
