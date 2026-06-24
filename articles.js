@@ -80,7 +80,6 @@ function renderArticleCards(source, items) {
               : ""
           }
           <div class="article-card-copy">
-            <span class="article-card-kicker">${escapeHtml(articleLabels[source] || "ARTICLE")}</span>
             <h3><a href="${escapeHtml(href)}" title="${escapeHtml(article.title)}">${escapeHtml(article.title)}</a></h3>
             ${summary ? `<p>${escapeHtml(summary)}</p>` : ""}
           </div>
