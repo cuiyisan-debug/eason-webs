@@ -1,10 +1,1178 @@
 {
-  "generatedAt": "2026-06-26T00:28:13.283638+00:00",
+  "generatedAt": "2026-06-26T00:50:18.664990+00:00",
   "source": "feishu-bitable",
   "sourceType": "zhixing",
   "baseToken": "Vn7hbNMygaDrSMseVgycCCJen1e",
-  "tableId": "",
-  "count": 0,
-  "error": "netloc 'AI时代的电子毒品：当AI Agent和Vibe Coding成为每日打卡的新信仰AI时代的电子毒品：当AI Agent和Vibe Coding成为每日打卡的新信仰' contains invalid characters under NFKC normalization",
-  "items": []
+  "tableId": "tbllnUjzNh9UkkpR",
+  "count": 6,
+  "error": "",
+  "items": [
+    {
+      "id": "rec27AR9Hc85os",
+      "sourceType": "zhixing",
+      "order": 1.0,
+      "title": "策展人规范手册-常见尺寸材料标准",
+      "summary": "从门洞尺寸、展桌尺寸、LED选型到灯光布设等关键环节进行了梳理归纳，帮助设计师精准预防常见设计误区。",
+      "body": "",
+      "contentUrl": "",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2RkMWQ0YmM4MDI4MzMwZGRmZjRjNDg5MTJiOWNlY2VfNDdmYjE0NDhiMzkwMWI1YTQ0MGMwMWYzZDZiOWM1OGFfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgyNDM0ODE2OjE3ODI1MjEyMTZfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2ZiODAyMGUyNzdjYmRiYmZiY2QwYjZiNWZiYWRjYjVfZjUxYjA4MTA4NzEwMTlhOGNmNjIzZDFmZjhkNDU2YWFfSUQ6NzY1MTA4MDEwMjUyMDIxMjY5Ml8xNzgyNDM0ODE2OjE3ODI1MjEyMTZfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDk5OWIyZmYzYWJmZDY3NGYxOWNkNzEzZGY0ZTUxNDlfOWI3OGYzN2FhZWMzNjM3NDUyNmFlYWUxMzI1NmU2ZDdfSUQ6NzY1MTA4MDEwOTA2MzE2MzA5Ml8xNzgyNDM0ODE2OjE3ODI1MjEyMTZfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWY4MGQ0ODQxYmUyMjkzM2FlNDZhYzEzMWFjNDdmYTRfMTY0M2Q4NmI1YTAzZDc4YWNiMDBlOWRiN2NhZDY3MTlfSUQ6NzY1MTA4MDEwMDk2ODA0MTQzNl8xNzgyNDM0ODE2OjE3ODI1MjEyMTZfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDE0MTRhMWY3MDA0ODEzN2I0YTkwNDNlYWFiYjAwYThfYzAwYzlkMmFjNGIxMTg0NjZmOGY4YzQ3MjYxZDExMGFfSUQ6NzY1MTA4MDEwMTMwNzk2MDUxN18xNzgyNDM0ODE2OjE3ODI1MjEyMTZfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjllMDBlZDFjYzMxOTI5OGNkMzJjYjhkMTYxOTc4NGRfMmQyYzk5ODcxYWY4ODljYmFjMzNhMGIxZjZmNGZkMzNfSUQ6NzY1MTA4MDExMzA4MTEwOTQ4Ml8xNzgyNDM0ODE3OjE3ODI1MjEyMTdfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDliYTk0ODAwZGI0NzFiMmViOWIwMzJlZWVlNTA2ODJfNDkwMWZlNDAyYzNmMjFhZDIyNGE0M2UwMjFkNTBlNTFfSUQ6NzY1MTA4MDEwNDkzNTc1NDY4M18xNzgyNDM0ODE3OjE3ODI1MjEyMTdfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWEyY2IxMTRkMDU2NjA1OThhMjFkOWQ1Y2FmMDc0OGNfZGJkYmNkNDc3MTRkMDczNjdjYjM2ODk1NGRkNjViMWZfSUQ6NzY1MTA4MDExMjQxMDQ0NzA1N18xNzgyNDM0ODE3OjE3ODI1MjEyMTdfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzJkOGQ1MjQ3ZDAwNmY3MzUwNThhMTQyZjJhMjU3MzdfYzVmY2MzNjdmYmQ3YzYwZmJlM2Q3OWViNTViZmQ4YTZfSUQ6NzY1MTA4MDExNDM5NDA3NDI5MV8xNzgyNDM0ODE3OjE3ODI1MjEyMTdfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDZiNDEwNmViYzFhMWE1NGQwMzA1NTJlZjU5YjI3ODhfYzNiOWExNjkwNmUwODg4NTU0MGRiY2YxYjk1NGQ3ZmFfSUQ6NzY1MTA4MDExNDEwNDY2NzMxNF8xNzgyNDM0ODE3OjE3ODI1MjEyMTdfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzI5ODA3ZDljZDE5NWM1Y2NhMTI3MTYyM2U3MzUyNDdfZDFiODZjNDM3Y2ZmZWU2MzgxMzk1ZmEzYzU3NTExOWZfSUQ6NzY1MTA4MDExNDYyMDU2Njc2NV8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGFiMzRjYzM4MjgzOTU5NGU3NTU5ODg1ZDBkMThjMDJfOWY0ZjZmOGZhNDc4NzBjMTk4ZjQ1NWMwMDZhZWJjM2ZfSUQ6NzY1MTA4MDExMzc1MDEwMTIwNl8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDUyMDVlOTAxMDU2ODMzZDgxMTYzMjVmYjVjM2QxY2RfYzk0YWE3MzA1NjgxZGVlMTcxYjYyNTE1Y2Q1Yjk0NGFfSUQ6NzY1MTA4MDExNTI0OTY0NjUzMl8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTJkYjM0YTAwMzZjYWVmZDlmZmUyMzAwMmZlMjEzY2JfMjJlOTNmM2M5MDFlNTAyNjYzMjBkZWYyYmQ3MWFiNGNfSUQ6NzY1MTA4MDExNjY5MjQwNTIyMl8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzdkYTE3NTcwZGQ5ZDY1ODA1MTJlODM2ZjQyODY5M2JfMmZlMzViZTU3ZTcyY2FkNjAyNWI0YWVhNjY0YTIxMTlfSUQ6NzY1MTA4MDExNjQ0OTE4NDk3N18xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDk2YTE2NWQ0MzI1YWI3ZmZlMGIyMDA4NGY1ZTJiMzVfZmE2Nzc5YjVmNmJjY2E3M2M0NmE3MTE5YjllOTFlMGZfSUQ6NzY1MTA4MDExNDc4ODU1MTkwNF8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWRmNTBlYjhhYzgzMDhiY2M3NWNjMDVkY2Y2YmU3NzNfODc4YWRiMDc3YzE5Y2NjOGFhNDBjMjAyMzQ4NTY3OThfSUQ6NzY1MTA4MDExODMyODE4Mzk5M18xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTZiZjRiNzc2M2QyOTkxMTE5Mzg2NmFkMTM2YjhlY2NfYTI1ZGJmYzVhYjA2OTI5ZGUwMTdjZmM2MTgwZGVkYjBfSUQ6NzY1MTA4MDExOTQwMTg5MjgyMl8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODE5MmFhZDNiZTg5ZWM3OGNkZDBmZGQ1MjFiN2Q5NTlfYmI4MzNjOGM5OTYzMjM4Y2Q0MzU2M2Q1MTkyMTIwOWVfSUQ6NzY1MTA4MDExODk4MjQ3ODc5OF8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDQxNGUwMTQ5NjIyZmZhMWZjMjlmMWY2OGNiNjgyNWJfM2E2NTFhY2RmY2NkNzE4NjE2ZjAxNWJmOTY2ODVkYjJfSUQ6NzY1MTA4MDEyMTI2ODM0MTcxMF8xNzgyNDM0ODE4OjE3ODI1MjEyMThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTA1MjM0YjNlZTMyMjIwZjVkNjg5OTNjMGFkOWIxOTBfNGIyOTdiZmNhY2UwMmZiYzFjNjEwMDRmNjQ5ZjE5ZjdfSUQ6NzY1MTA4MDEyMTI1OTk1MzM2OV8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM"
+      ],
+      "contentBlocks": [],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2RkMWQ0YmM4MDI4MzMwZGRmZjRjNDg5MTJiOWNlY2VfNDdmYjE0NDhiMzkwMWI1YTQ0MGMwMWYzZDZiOWM1OGFfSUQ6NzY1MTA4MDEwMDA2MjEzNzMzMl8xNzgyNDM0ODE2OjE3ODI1MjEyMTZfVjM"
+    },
+    {
+      "id": "recvmzQDUI9yOJ",
+      "sourceType": "zhixing",
+      "order": 2.0,
+      "title": "GitHub 通用一键更新器使用说明",
+      "summary": "GitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。",
+      "body": "GitHub通用一键更新器_使用说明\nGitHub 通用一键更新器使用说明\n用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新\nimage1.png\n\n\n封面：GitHubUniversalUpdater 的核心流程示意。\n最新更新：更新到了1.1版本\n已经支持了安装包的静默安装，以及加强了自动识别功能\n一、它解决什么问题\nGitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。\n它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。\n比如我，我有大量的GitHub上的开源软件，通过它可以一键检查更新，不用一个一个地去GitHub上下载更新了。\nimage.png\n\n二、下载入口\n推荐下载：GitHubUniversalUpdater-v1.0.6.zip\nRelease 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases\nGitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater\n源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip\n当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。\n三、快速上手\n下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。\n双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。\n首次运行会在同目录生成 apps.json 配置文件。\n在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。\n点击“检查更新”，确认有新版本后点击“一键更新”。\n四、配置项怎么理解\n\n\n字段\n\n用途\n\n建议\n\nName\n\n软件名称。\n\n写成自己能识别的名字，例如 Everything、PicGo。\n\nInstallDir\n\n安装目录或主程序 exe 路径。\n\n如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。\n\nGitHubUrl\n\n对应的 GitHub 仓库地址。\n\n填写仓库主页，例如 https://github.com/owner/repository。\n\nLastInstalledTag\n\n记录当前已安装版本。\n\n首次可保持“未安装”，更新后由工具记录。\n\nPreferredAssetRegex\n\n资产筛选正则，可选。\n\n当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。\n\nUseIdm / IdmPath\n\n是否调用本机 IDM 下载。\n\n下载慢时可开启；也可以手动指定 IDMan.exe。\n五、它如何选择更新包\n通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。\n优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。\n会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。\n如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。\n六、下载与更新过程\n下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。\n如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。\n七、注意事项\n覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。\nrar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。\n工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。\n如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。\n八、适合谁使用\n它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。\n对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。\n来源\n本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater",
+      "contentUrl": "https://my.feishu.cn/docx/RyAEd4pZjoRqMRxeyBccs0x7nGb",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjE2MWQ1NGY1NzliZTIwNmEwZGNiYmI4MzZhZmQ0MjhfOWQ5ZDBiMDIwMDU0OTQ3NDhkYTEwNzc4N2M4MWQzYzhfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTE4MzE4ZTJmYjFlNGY4NThiOGM1OGE5MDUwMjYzYzdfODZlNTQxODUxMTczMjBmMzFjMmViNzNjZmQ3YzY4ZGNfSUQ6NzY1NDUzMTIxNTA4MDYwNjkyN18xNzgyNDM0ODYyOjE3ODI1MjEyNjJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjQ1NTFhOGQ4NTdmMGQ0NzcwMDcyODQ2MDRhZTM3ZTFfMDliODY4NmYyOTM2M2VlYWYxNGUyZGEwNTQyMGVkYWFfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgyNDM0ODYyOjE3ODI1MjEyNjJfVjM"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "用一个轻量 Windows 工具集中管理 GitHub Releases 软件更新"
+        },
+        {
+          "type": "image",
+          "token": "E9bzb9jn3oc6g5xo4zyc01NKnug",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjQ1NTFhOGQ4NTdmMGQ0NzcwMDcyODQ2MDRhZTM3ZTFfMDliODY4NmYyOTM2M2VlYWYxNGUyZGEwNTQyMGVkYWFfSUQ6NzY1MTQ0OTU5MTI3OTY1MjAxOV8xNzgyNDM0ODYyOjE3ODI1MjEyNjJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "封面：GitHubUniversalUpdater 的核心流程示意。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "最新更新：更新到了1.1版本"
+        },
+        {
+          "type": "paragraph",
+          "text": "已经支持了安装包的静默安装，以及加强了自动识别功能"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "一、它解决什么问题"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub 通用一键更新器是一款 Windows 小工具，用来管理那些通过 GitHub Releases 发布更新包的软件。它适合放在常用工具文件夹里，把多个软件的安装目录、主程序路径和 GitHub 仓库地址集中登记，之后通过“检查更新”和“一键更新”完成下载、解压、覆盖和清理。"
+        },
+        {
+          "type": "paragraph",
+          "text": "它的核心价值是减少手动打开 GitHub、找 release、判断哪个压缩包适合 Windows、下载、解压、复制覆盖的重复操作。对于经常使用开源小工具、绿色软件或自建工具集的人，这类流程尤其有用。"
+        },
+        {
+          "type": "paragraph",
+          "text": "比如我，我有大量的GitHub上的开源软件，通过它可以一键检查更新，不用一个一个地去GitHub上下载更新了。"
+        },
+        {
+          "type": "image",
+          "token": "Qsbob9voXo9Fisxc3FScurfZnzg",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTE4MzE4ZTJmYjFlNGY4NThiOGM1OGE5MDUwMjYzYzdfODZlNTQxODUxMTczMjBmMzFjMmViNzNjZmQ3YzY4ZGNfSUQ6NzY1NDUzMTIxNTA4MDYwNjkyN18xNzgyNDM0ODYyOjE3ODI1MjEyNjJfVjM"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "二、下载入口"
+        },
+        {
+          "type": "paragraph",
+          "text": "推荐下载：GitHubUniversalUpdater-v1.0.6.zip"
+        },
+        {
+          "type": "paragraph",
+          "text": "Release 页面：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/releases"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub 仓库：https://github.com/cuiyisan-debug/GitHubUniversalUpdater"
+        },
+        {
+          "type": "paragraph",
+          "text": "源码 ZIP：https://github.com/cuiyisan-debug/GitHubUniversalUpdater/archive/refs/tags/v1.0.6.zip"
+        },
+        {
+          "type": "paragraph",
+          "text": "当前确认版本：v1.0.6。GitHub Release 页面显示该版本为 Latest，发布时间为 2026-06-15。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "三、快速上手"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "下载 GitHubUniversalUpdater-v1.0.6.zip，并解压到一个固定文件夹。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "双击 GitHubUniversalUpdater.exe 运行。程序已配置为管理员运行，便于覆盖 Program Files 等受保护目录。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "首次运行会在同目录生成 apps.json 配置文件。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "在软件里填写软件名称、安装目录或主程序 exe 路径、对应的 GitHub 仓库地址。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "点击“检查更新”，确认有新版本后点击“一键更新”。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "四、配置项怎么理解"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "字段",
+              "用途",
+              "建议"
+            ],
+            [
+              "Name",
+              "软件名称。",
+              "写成自己能识别的名字，例如 Everything、PicGo。"
+            ],
+            [
+              "InstallDir",
+              "安装目录或主程序 exe 路径。",
+              "如果是绿色软件，建议填软件所在文件夹；如果工具要求精确定位，可填主程序 exe。"
+            ],
+            [
+              "GitHubUrl",
+              "对应的 GitHub 仓库地址。",
+              "填写仓库主页，例如 https://github.com/owner/repository。"
+            ],
+            [
+              "LastInstalledTag",
+              "记录当前已安装版本。",
+              "首次可保持“未安装”，更新后由工具记录。"
+            ],
+            [
+              "PreferredAssetRegex",
+              "资产筛选正则，可选。",
+              "当一个 release 有多个包时使用，例如 (?i)windows.*\\.zip$。"
+            ],
+            [
+              "UseIdm / IdmPath",
+              "是否调用本机 IDM 下载。",
+              "下载慢时可开启；也可以手动指定 IDMan.exe。"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "五、它如何选择更新包"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "通过 GitHub Releases 网页检查最新版本，不依赖 GitHub API。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "优先选择 zip、7z、rar 等压缩包资产，并倾向 Windows 相关文件。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "会读取当前 Windows 系统架构，并按资产名称打分，降低 x64 机器误选 ARM64、macOS、Linux 包的概率。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "如果仓库的 release 资产命名复杂，可以用 PreferredAssetRegex 写筛选规则。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "六、下载与更新过程"
+        },
+        {
+          "type": "paragraph",
+          "text": "下载时，工具会在 GitHub 资产链接前添加 https://gh-proxy.org/ 用于加速；同时支持多线程分段下载，服务器不支持分段时会自动回退为单线程。下载完成后，工具解压压缩包并覆盖目标安装目录，最后自动清理下载压缩包和解压临时目录。"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果本机安装了 Internet Download Manager，也可以选择调用 IDM 下载。工具会自动识别常见 IDM 安装路径，也支持手动选择 IDMan.exe。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "七、注意事项"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "覆盖 Program Files 通常需要管理员权限；工具已设置为管理员运行，但仍建议关闭正在运行的目标软件后再更新。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "rar 和 7z 解压依赖 Windows 自带 tar.exe 或 7-Zip。遇到无法解压时，先安装 7-Zip 再重试。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "工具不会备份安装目录，目的是避免占用大量磁盘空间。更新重要软件前，可以自行复制一份备份。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "如果 release 中没有压缩包，或资产命名无法识别，建议打开 release 页面手动确认，并补充 PreferredAssetRegex。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "八、适合谁使用"
+        },
+        {
+          "type": "paragraph",
+          "text": "它适合经常下载 GitHub Releases 软件的人：例如个人工具箱维护者、绿色软件使用者、需要给多台电脑同步工具版本的人，以及希望把开源小工具更新流程固定下来的人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "对普通用户来说，它的价值是把“找包、下载、解压、覆盖、清理”变成一个稳定流程；对进阶用户来说，它的价值是通过 apps.json 把多个工具的更新规则沉淀下来。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "来源"
+        },
+        {
+          "type": "paragraph",
+          "text": "本文依据 GitHub 仓库 README、使用说明、Release Notes 和 GitHub Release 页面整理。仓库地址：https://github.com/cuiyisan-debug/GitHubUniversalUpdater"
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjE2MWQ1NGY1NzliZTIwNmEwZGNiYmI4MzZhZmQ0MjhfOWQ5ZDBiMDIwMDU0OTQ3NDhkYTEwNzc4N2M4MWQzYzhfSUQ6NzY1MTQ0OTk3NDQ0MjQ2MjE2NV8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM"
+    },
+    {
+      "id": "recvmOMM2EAVsS",
+      "sourceType": "zhixing",
+      "order": 3.0,
+      "title": "Chrome浏览器插件与油猴脚本推荐",
+      "summary": "Chrome浏览器插作为功能最全、AI时代匹配度最高的浏览器，有一些相关插件，推荐如下",
+      "body": "chrome浏览器必装插件\nChrome浏览器插作为功能最全、AI时代匹配度最高的浏览器，有一些相关插件，推荐如下。\nChrome 扩展推荐\n1. Infinity 新标签页 (Pro)\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/nnnkddnnlpamobajfibfdgfnbcnkgngh\n\n主要功能\n\n新标签页美化和效率入口，聚合搜索、快捷方式和小组件。安装后首页就可以自定义常用网站，还可以新建文件夹，而且还可以自由更换壁纸。可以登录第三方账号，永久同步图标等设置。\nimage1.png\n\n\n截图：Infinity 新标签页 (Pro) 效果\n具体用法：\n适合把新标签页作为工作台，集中放常用网站和工具。\n如果喜欢极简浏览器，也可以不作为默认必装。\n2. Tampermonkey / 篡改猴\n\n\n分类\n\n脚本底座\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo\n\n主要功能\n\n浏览器增强功能的必装基座，之后就可以拓展浏览器的各种下载、自动填充等高阶玩法。用户脚本管理器，是安装油猴脚本的基础扩展。\nimage2.png\n\n截图：Tampermonkey / 篡改猴\n3. bilibili 下载助手\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://csser.top/\n\n主要功能\n\n用于辅助下载 B 站视频资源，可以下载B站任意视频。视频下面会有一个打开B站下载助手的图标，打开后就如图示，点击合并下载就可。谷歌插件商店已经不可安装，需要在网址上自行下载CRX然后拖入浏览器插件安装安装，安装时需要改打开插件的开发者模式。\nimage3.png\n\n截图：bilibili 下载助手 原始安装页\n4. 小电视空降助手\n\n\n分类\n\n媒体增强\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/eaoelafamejbnggahofapllmfhlhajdd\n\n主要功能\n\n可以自动显示B站视频的内嵌广告位置，然后观看视频时候可以手动跳动过广告。\nimage4.png\n\n截图：小电视空降助手 原始安装页\n5. 沉浸式翻译\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/bpoadfkcbjbfhfodiogcnhhhpibjhbnh\n\n主要功能\n\n非常好用的翻译插件，而且可以自己定义API进行更精准·的翻译。\nimage5.png\n\n截图：沉浸式翻译 原始安装页\n6. OneTab\n\n\n分类\n\n基础效率\n\n原始地址\n\nhttps://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall\n\n主要功能\n\n把一组标签页折叠成列表，降低内存占用，也方便临时收纳研究资料。\nimage6.png\n\n截图：OneTab 原始安装页\n具体用法：\n资料查找时打开很多标签页后，点击 OneTab 一键收纳。\n需要恢复时从 OneTab 列表逐个打开或整组恢复。\n适合把临时研究会话保存成一个轻量目录。\nTampermonkey（篡改猴）的常用插件\n（安装之后，点击获取新脚本, 去greasyfork搜索脚本）\n1. AC-baidu-重定向优化百度搜狗谷歌必应搜索_favicon_双列\n\n\n分类\n\n搜索引擎增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/14178-ac-baidu-重定向优化百度搜狗谷歌必应搜索-favicon-双列\n\n主要功能\n\n让百度等搜索引擎移除广告，而且双列排序还可以自动加载\nimage7.png\n\n\n截图：安装后搜索效果呈现\n2. 花瓣\"去\"水印和png图识别\n\n\n分类\n\n浏览增强\n\n原始地址\n\nhttps://scriptcat.org/zh-CN/script-show-page/6484\n\n主要功能\n\n1.显示花瓣真假PNG（原理：脚本通过给花瓣图片添加背景色，显示出透明PNG图片，透出背景色的即为透明PNG，非透明PNG就会被过滤掉） 2.通过自定义修改背景色，区分VIP素材和免费素材。花瓣带水印的版权素材会自动去水印，右键点击即可下载\nimage8.png\n\n3. GitHub Enhancement - High Speed Download\n\n\n分类\n\n开发效率\n\n原始地址\n\nhttps://greasyfork.org/scripts/412245\n\n主要功能\n\n为 GitHub 下载提供镜像或加速入口。GitHub上直接就会有镜像的选择，可以直接点击下载\nimage9.png\n\n截图：GitHub Enhancement - High Speed Download 加速页面\n具体用法：\n适合经常下载 Release、源码包和仓库文件的用户。\n下载重要文件时仍建议校验来源。\n4. 网页右键与复制限制解除\n\n\n分类\n\n浏览增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/528940-网页右键与复制限制解除-轻量版\n\n主要功能\n\n解除网页禁止右键、禁止复制、禁止选中文本等限制。\n5. Twitter 媒体下载\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/529453-twitter-x-media-downloader\n\n主要功能\n\n可以批量下载推特上的图片、视频等\nimage10.png\n\n截图：懒人专用多功能工具箱 原始页面\n6. 通用视频嗅探器\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts/557721-universal-video-sniffer\n\n主要功能\n\n会自动识别网页中的视频，然后可以下载\n7. 更多插件去greasyfork自行下载\n\n\n分类\n\n下载增强\n\n原始地址\n\nhttps://greasyfork.org/zh-CN/scripts\n\n主要功能\n\n网站上有非常多的篡改猴插件，比如说购物比价、自动填表儿等等",
+      "contentUrl": "https://my.feishu.cn/docx/GxgsdWQOzosgZTxllE7cBGZRnBh?from=from_copylink",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTE0Yzk5N2NiYjFjYjJkZGZkOWE2OGRkZjUwMmRiOTdfMWRiOGU0MmM2OWM5YWRiNzgwY2VkOGZmYjAwN2Q3YmZfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTBhZWU2ZDEyZWMwZDRiMWI5N2E4MGIwY2NmYWVjYTBfMzliYTQ3YTRjN2FjNDcwYTY2ZmVjMGM1ZGU5ZjIxYWRfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODAyNzJjMTMwYTBmYTkxOWQ3OTU0YWNlZDZiYjg4OTJfYTY5MzZkOGNjZWNiNjI3ZjEzYTYzNzM3NmM3ZTljYTdfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDI3ZGU2MGQyZWFlZjNlNWFhYTQ3NDYwZGUwMzliMGRfNzgwZDJkZTMwNWNjNmM1NDQzZmI5MDM4MmRlOGRhYzJfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Njg5YjllOGU4Y2IxNDZlZmE5YmYyZjYwMjkxYmFjNDBfMjY5Njg0MDIzMWMzOWQ0ODc5YmQxNDAzYTdjMDAwNjVfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWVjMGE5YmRjZTVjMzQ4N2JmZWQ1MmEwYWJjODQ1NDZfY2JkNDk4ZDY0MjI3MjNmMWE1M2U4NTQxMzJmYjJmNmFfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTBhOTJjZGQ3MTcwNTkxYTY1NTdjZDJkNDRhYzlkOGNfZTQ4YTdlMWE2OTk4MDg5MWYxZGE5MWVjMWRkMjU3ODBfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2MwMmRlNDU5NWMyMGUzM2JiYzgxOTAxNTM4MDhiNWJfNGU4OWRiNDFkYmJiODk4YWIyYmUzNTAxYjM2ZDFlNWRfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmQwZTQwOTlkNDBiMTM4MDgzN2Y2N2Y1ZGYxZDM3OTZfNjBkODg2ZjdhNmM3Y2Y0NjBmNDE4NTU4MzRjMmRkOGZfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQ2NGVkNWM4ODNhY2IwODkyZWQyNzE1Y2YzYWE1OGNfYzY3MGRlOWRjNjYwYmI0NWNmYjEwM2ZlNzA0ZDRjOTVfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "Chrome浏览器插作为功能最全、AI时代匹配度最高的浏览器，有一些相关插件，推荐如下。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Chrome 扩展推荐"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. Infinity 新标签页 (Pro)"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "基础效率"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/nnnkddnnlpamobajfibfdgfnbcnkgngh"
+            ],
+            [
+              "主要功能",
+              "新标签页美化和效率入口，聚合搜索、快捷方式和小组件。安装后首页就可以自定义常用网站，还可以新建文件夹，而且还可以自由更换壁纸。可以登录第三方账号，永久同步图标等设置。"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "ARRHbg1bIogJosxmKQMcgTuJn7g",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Njg5YjllOGU4Y2IxNDZlZmE5YmYyZjYwMjkxYmFjNDBfMjY5Njg0MDIzMWMzOWQ0ODc5YmQxNDAzYTdjMDAwNjVfSUQ6NzY1MjM5NzU3MDg2NTcxMjExMV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：Infinity 新标签页 (Pro) 效果"
+        },
+        {
+          "type": "paragraph",
+          "text": "具体用法："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "适合把新标签页作为工作台，集中放常用网站和工具。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "如果喜欢极简浏览器，也可以不作为默认必装。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. Tampermonkey / 篡改猴"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "脚本底座"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+            ],
+            [
+              "主要功能",
+              "浏览器增强功能的必装基座，之后就可以拓展浏览器的各种下载、自动填充等高阶玩法。用户脚本管理器，是安装油猴脚本的基础扩展。"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "GpkMbSOsPoU6YJxYM8DcLWu1nac",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTE0Yzk5N2NiYjFjYjJkZGZkOWE2OGRkZjUwMmRiOTdfMWRiOGU0MmM2OWM5YWRiNzgwY2VkOGZmYjAwN2Q3YmZfSUQ6NzY1MjM5NzU3MDcwMjEzNDI0Nl8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：Tampermonkey / 篡改猴"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. bilibili 下载助手"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://csser.top/"
+            ],
+            [
+              "主要功能",
+              "用于辅助下载 B 站视频资源，可以下载B站任意视频。视频下面会有一个打开B站下载助手的图标，打开后就如图示，点击合并下载就可。谷歌插件商店已经不可安装，需要在网址上自行下载CRX然后拖入浏览器插件安装安装，安装时需要改打开插件的开发者模式。"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "BBeXbKFtmozV07xLIuccrVeRn4C",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTBhZWU2ZDEyZWMwZDRiMWI5N2E4MGIwY2NmYWVjYTBfMzliYTQ3YTRjN2FjNDcwYTY2ZmVjMGM1ZGU5ZjIxYWRfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ5M18xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：bilibili 下载助手 原始安装页"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. 小电视空降助手"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "媒体增强"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/eaoelafamejbnggahofapllmfhlhajdd"
+            ],
+            [
+              "主要功能",
+              "可以自动显示B站视频的内嵌广告位置，然后观看视频时候可以手动跳动过广告。"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "JwPpbV6KHoRsZcx8uVGcuwujnw5",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODAyNzJjMTMwYTBmYTkxOWQ3OTU0YWNlZDZiYjg4OTJfYTY5MzZkOGNjZWNiNjI3ZjEzYTYzNzM3NmM3ZTljYTdfSUQ6NzY1MjM5NzU3MjkzNzU5OTk1OV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：小电视空降助手 原始安装页"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "5. 沉浸式翻译"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "基础效率"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/bpoadfkcbjbfhfodiogcnhhhpibjhbnh"
+            ],
+            [
+              "主要功能",
+              "非常好用的翻译插件，而且可以自己定义API进行更精准·的翻译。"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "HEBUb4RCRorEg4x67cNcqiqnnsf",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDI3ZGU2MGQyZWFlZjNlNWFhYTQ3NDYwZGUwMzliMGRfNzgwZDJkZTMwNWNjNmM1NDQzZmI5MDM4MmRlOGRhYzJfSUQ6NzY1MjM5NzU3MTIyNjQ4Nzc2MV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：沉浸式翻译 原始安装页"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "6. OneTab"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "基础效率"
+            ],
+            [
+              "原始地址",
+              "https://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall"
+            ],
+            [
+              "主要功能",
+              "把一组标签页折叠成列表，降低内存占用，也方便临时收纳研究资料。"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "SH7Mbqoy6oR1kBxMOB7cQwtVnVf",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTBhOTJjZGQ3MTcwNTkxYTY1NTdjZDJkNDRhYzlkOGNfZTQ4YTdlMWE2OTk4MDg5MWYxZGE5MWVjMWRkMjU3ODBfSUQ6NzY1MjM5NzU3MzI2OTAxNTUxOF8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：OneTab 原始安装页"
+        },
+        {
+          "type": "paragraph",
+          "text": "具体用法："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "资料查找时打开很多标签页后，点击 OneTab 一键收纳。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "需要恢复时从 OneTab 列表逐个打开或整组恢复。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "适合把临时研究会话保存成一个轻量目录。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "Tampermonkey（篡改猴）的常用插件"
+        },
+        {
+          "type": "paragraph",
+          "text": "（安装之后，点击获取新脚本, 去greasyfork搜索脚本）"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. AC-baidu-重定向优化百度搜狗谷歌必应搜索_favicon_双列"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "搜索引擎增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/14178-ac-baidu-重定向优化百度搜狗谷歌必应搜索-favicon-双列"
+            ],
+            [
+              "主要功能",
+              "让百度等搜索引擎移除广告，而且双列排序还可以自动加载"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "Oof9bTCHboJy32xmMphcZiplnwe",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2MwMmRlNDU5NWMyMGUzM2JiYzgxOTAxNTM4MDhiNWJfNGU4OWRiNDFkYmJiODk4YWIyYmUzNTAxYjM2ZDFlNWRfSUQ6NzY1MjM5NzU3MzQ5MTE4MjUzN18xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：安装后搜索效果呈现"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. 花瓣\"去\"水印和png图识别"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "浏览增强"
+            ],
+            [
+              "原始地址",
+              "https://scriptcat.org/zh-CN/script-show-page/6484"
+            ],
+            [
+              "主要功能",
+              "1.显示花瓣真假PNG（原理：脚本通过给花瓣图片添加背景色，显示出透明PNG图片，透出背景色的即为透明PNG，非透明PNG就会被过滤掉） 2.通过自定义修改背景色，区分VIP素材和免费素材。花瓣带水印的版权素材会自动去水印，右键点击即可下载"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "H1y3bz4dCossm7xb0UYcKghenCc",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmQwZTQwOTlkNDBiMTM4MDgzN2Y2N2Y1ZGYxZDM3OTZfNjBkODg2ZjdhNmM3Y2Y0NjBmNDE4NTU4MzRjMmRkOGZfSUQ6NzY1MjM5NzU3Mzg5ODA0NjQ0M18xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. GitHub Enhancement - High Speed Download"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "开发效率"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/scripts/412245"
+            ],
+            [
+              "主要功能",
+              "为 GitHub 下载提供镜像或加速入口。GitHub上直接就会有镜像的选择，可以直接点击下载"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "GuByb4CaGol0P4xjuwncb83bn1e",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQ2NGVkNWM4ODNhY2IwODkyZWQyNzE1Y2YzYWE1OGNfYzY3MGRlOWRjNjYwYmI0NWNmYjEwM2ZlNzA0ZDRjOTVfSUQ6NzY1MjM5NzU3MTg2ODAzNjA2NV8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：GitHub Enhancement - High Speed Download加速页面"
+        },
+        {
+          "type": "paragraph",
+          "text": "具体用法："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "适合经常下载 Release、源码包和仓库文件的用户。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "下载重要文件时仍建议校验来源。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. 网页右键与复制限制解除"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "浏览增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/528940-网页右键与复制限制解除-轻量版"
+            ],
+            [
+              "主要功能",
+              "解除网页禁止右键、禁止复制、禁止选中文本等限制。"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "5. Twitter 媒体下载"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/529453-twitter-x-media-downloader"
+            ],
+            [
+              "主要功能",
+              "可以批量下载推特上的图片、视频等"
+            ]
+          ]
+        },
+        {
+          "type": "image",
+          "token": "NPwhbdNwioeWldxpwoRcP3CRnlh",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWVjMGE5YmRjZTVjMzQ4N2JmZWQ1MmEwYWJjODQ1NDZfY2JkNDk4ZDY0MjI3MjNmMWE1M2U4NTQxMzJmYjJmNmFfSUQ6NzY1MjM5NzU3MzQwNzI5NjQ3MF8xNzgyNDM0OTUyOjE3ODI1MjEzNTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "截图：懒人专用多功能工具箱 原始页面"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "6. 通用视频嗅探器"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts/557721-universal-video-sniffer"
+            ],
+            [
+              "主要功能",
+              "会自动识别网页中的视频，然后可以下载"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "7. 更多插件去greasyfork自行下载"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "分类",
+              "下载增强"
+            ],
+            [
+              "原始地址",
+              "https://greasyfork.org/zh-CN/scripts"
+            ],
+            [
+              "主要功能",
+              "网站上有非常多的篡改猴插件，比如说购物比价、自动填表儿等等"
+            ]
+          ]
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTUwYjllODRiYTA0ZTAxZmNiYmQ2ZGUwOGQwMTJhNjNfNTBkMGM5MjY4M2I0ODYxZThmMmZkODI5NDdmMWNkZTRfSUQ6NzY1MjM5NzYxNjY4MTU1MzA4Nl8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM"
+    },
+    {
+      "id": "recvn0b64IQHdA",
+      "sourceType": "zhixing",
+      "order": 4.0,
+      "title": "Adobe全家桶最新和谐版",
+      "summary": "Adobe2026最新版的所有软件下载",
+      "body": "最新2026全家桶的百度下载链接\nhttps://pan.baidu.com/s/1cORQo8xLhChntSD0K5m7DA?pwd=memm#list/path=%2F\n提取码:  memm\n最新2026全家桶的夸克下载链接\nhttps://pan.quark.cn/s/935d6cb1bafd#/list/share",
+      "contentUrl": "https://my.feishu.cn/docx/EAEvdkNw7oxQOuxBcpJc4nZlnRg?from=from_copylink",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [],
+      "contentBlocks": [
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "最新2026全家桶的百度下载链接"
+        },
+        {
+          "type": "paragraph",
+          "text": "https://pan.baidu.com/s/1cORQo8xLhChntSD0K5m7DA?pwd=memm#list/path=%2F"
+        },
+        {
+          "type": "paragraph",
+          "text": "提取码: memm"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "最新2026全家桶的夸克下载链接"
+        },
+        {
+          "type": "paragraph",
+          "text": "https://pan.quark.cn/s/935d6cb1bafd#/list/share"
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjZiZWJmNmU2ZWJhNTkwYmFlZjdlMWY3ZDdhMTFmNGRfZGY3OTQzNTNjN2I5YjdkYzQ3NjJmNWU5NTBlNTJhMzhfSUQ6NzY1MzEyMDc5Mjc2MjM1NDYzNl8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM"
+    },
+    {
+      "id": "recvnmWI5tQQob",
+      "sourceType": "zhixing",
+      "order": 5.0,
+      "title": "策展人和设计师的最佳资源抓取工具",
+      "summary": "一款面向策展人、设计师和内容研究者的本地媒体资源抓取工具，可集中抓取官网 Logo/Favicon、微信公众号文章图片、小红书公开素材、B 站封面与头像，并支持筛选下载、ZIP 打包、指定目录保存和 WebP 转换。",
+      "body": "策展人和设计师的最佳资源抓取工具\nMedia Asset Grabber 是一个面向策展人、设计师和内容研究者的本地媒体资源抓取工具。它把官网 Logo/Favicon、微信公众号文章图片、小红书公开素材、B 站封面和头像等资料入口收束到一个桌面工具里，让前期调研、竞品参考、视觉资料整理和案例素材归档从“到处复制保存”变成可筛选、可打包、可转换格式的工作流。\n921c3602-075c-4618-a4f5-76ba1fb79249.webp\n\n应用抓取腾讯云官网后的资源结果页：Favicon、Logo 候选、下载工具集中呈现。\n为什么它适合策展人和设计师\n策展和设计的前期工作，常常不是从创意开始，而是从大量资料搜集开始：找官网、找品牌标识、找活动视觉、找参考图片、找公众号文章配图、找小红书现场图、找视频封面。这些素材分散在不同平台，格式不统一，保存路径也容易混乱。Media Asset Grabber 的价值，正在于把这些零散入口整合成一个本地工具：输入链接或名称，先抓取，再筛选，最后按项目目录保存。\n对于策展人，它更像一个资料收集助手；对于设计师，它更像一个品牌素材与参考图提取器；对于内容运营者，它则是把网页、公众号、小红书、B 站素材整理进项目库的轻量入口。\n核心能力一览\n\n\n能力\n\n对策展/设计工作的价值\n\n官网与品牌素材\n\n抓取 favicon、页头 Logo、SVG、CSS 背景图和 og:image，适合快速整理品牌参考资料。\n\n公众号链接读取\n\n从微信公众号文章中提取封面、正文图片、可识别的视频候选和公众号头像。\n\n小红书素材采集\n\n支持粘贴小红书笔记链接或分享文案，抓取公开图片、公开视频资源和博主头像。\n\nB 站参考素材\n\n抓取视频封面和 UP 主头像，用于案例分析、灵感板或资料归档。\n\n保存与转换\n\n支持选中下载、全量下载、ZIP 打包、指定目录保存和 WebP 转换。\n\n从网站到资料库：一次完整的素材抓取流程\n1. 输入官网、文章、视频、笔记链接，或直接输入公司/产品名称。\n2. 工具联网搜索官网候选，或直接解析目标页面。\n3. 自动识别 Favicon、Logo、封面、头像、正文图片、公开视频等候选资源。\n4. 用户点击资源卡片进行筛选，也可以全选可用资源。\n5. 将结果下载、打包为 ZIP、保存到指定目录，或转换成 WebP 便于归档和网页使用。\nimage1.png\n\n主界面：输入官网、文章、视频或笔记链接，也可以输入名称搜索官网候选。\n几个典型使用场景\n1. 做品牌馆或企业展厅前，快速拿到官网 Logo 和品牌图形\n输入企业名称或官网地址后，工具会从页面头部、导航区、CSS 背景图、SVG、og:image 等位置提取候选。它不会只取一个结果，而是按资源类型和可用性列出多个候选，适合在方案阶段快速搭建品牌资料包。\n2. 做展览研究时，批量整理公众号文章里的图片\n很多项目资料、活动报道和案例图都藏在微信公众号文章里。粘贴公众号链接后，工具可以提取文章封面、正文图片、可识别的视频候选和公众号头像，适合做灵感板、案例库和传播复盘。\n3. 小红书现场图和公开素材收集\n小红书常常是查看真实空间、活动现场和用户视角的重要来源。工具支持直接粘贴小红书笔记链接或整段分享文案，提取公开返回的图片、视频候选和博主头像，方便整理为项目参考。\n4. 输出给设计和网页使用的轻量素材包\n保存目录、ZIP 打包、WebP 转换这些功能，把素材从“临时下载”推进到“项目归档”。设计师可以把筛选后的 Logo、图标、封面图统一保存到项目文件夹；网站维护时，也可以直接转换为 WebP。\n使用边界：它是资料助手，不是破解工具\n工具只抓取页面公开返回的资源，不绕过登录、权限、会员或反爬限制，也不做水印去除。这点对长期使用很重要：它的定位是提高公开资料整理效率，而不是突破平台限制。\n下载与开源信息\nGitHub 仓库：https://github.com/cuiyisan-debug/media-asset-grabber\n最新 Release：https://github.com/cuiyisan-debug/media-asset-grabber/releases/tag/v1.0.6\n开源协议：MIT License\n技术栈：React + Vite + Express + Cheerio + Got + Sharp + Electron + electron-builder\n一句话总结\nMedia Asset Grabber 不是一个单纯的 Logo 下载器，而是一个面向策展、设计和内容研究的资料抓取工作台。它把官网、公众号、小红书和视频平台上的公开素材，转化为可以筛选、保存、打包和继续使用的项目资产。",
+      "contentUrl": "https://my.feishu.cn/docx/C4VtdiGbBoEev4xQt1Lc4ZYsnMc",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjU4YzllMDBhMThlMzg4ZTE3ZWQ0MzRhNTMyZjkyM2FfMjFhYTczZTdhMjJiYWE1NzI0MWUwZTg0NzMzMzQzMmVfSUQ6NzY1NDU3MDc5NDMyODQxMTEyM18xNzgyNDM0OTkyOjE3ODI1MjEzOTJfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2U3MGFmN2VmODdjYzY0ZGQxMGQwODI4MjQwYjhhYzhfN2NiMzE1Yzg2ZGY2ZTBjYTlkYjM4ZTZhNjMxZmRlMjhfSUQ6NzY1NDU3MDkyNzM5MjcyMjEwOF8xNzgyNDM0OTkyOjE3ODI1MjEzOTJfVjM"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "Media Asset Grabber 是一个面向策展人、设计师和内容研究者的本地媒体资源抓取工具。它把官网 Logo/Favicon、微信公众号文章图片、小红书公开素材、B 站封面和头像等资料入口收束到一个桌面工具里，让前期调研、竞品参考、视觉资料整理和案例素材归档从“到处复制保存”变成可筛选、可打包、可转换格式的工作流。"
+        },
+        {
+          "type": "image",
+          "token": "QMf3b9jMpo8yPwxS6Stc2Waanwf",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2U3MGFmN2VmODdjYzY0ZGQxMGQwODI4MjQwYjhhYzhfN2NiMzE1Yzg2ZGY2ZTBjYTlkYjM4ZTZhNjMxZmRlMjhfSUQ6NzY1NDU3MDkyNzM5MjcyMjEwOF8xNzgyNDM0OTkyOjE3ODI1MjEzOTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "应用抓取腾讯云官网后的资源结果页：Favicon、Logo 候选、下载工具集中呈现。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "为什么它适合策展人和设计师"
+        },
+        {
+          "type": "paragraph",
+          "text": "策展和设计的前期工作，常常不是从创意开始，而是从大量资料搜集开始：找官网、找品牌标识、找活动视觉、找参考图片、找公众号文章配图、找小红书现场图、找视频封面。这些素材分散在不同平台，格式不统一，保存路径也容易混乱。Media Asset Grabber 的价值，正在于把这些零散入口整合成一个本地工具：输入链接或名称，先抓取，再筛选，最后按项目目录保存。"
+        },
+        {
+          "type": "paragraph",
+          "text": "对于策展人，它更像一个资料收集助手；对于设计师，它更像一个品牌素材与参考图提取器；对于内容运营者，它则是把网页、公众号、小红书、B 站素材整理进项目库的轻量入口。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "核心能力一览"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "能力",
+              "对策展/设计工作的价值"
+            ],
+            [
+              "官网与品牌素材",
+              "抓取 favicon、页头 Logo、SVG、CSS 背景图和 og:image，适合快速整理品牌参考资料。"
+            ],
+            [
+              "公众号链接读取",
+              "从微信公众号文章中提取封面、正文图片、可识别的视频候选和公众号头像。"
+            ],
+            [
+              "小红书素材采集",
+              "支持粘贴小红书笔记链接或分享文案，抓取公开图片、公开视频资源和博主头像。"
+            ],
+            [
+              "B 站参考素材",
+              "抓取视频封面和 UP 主头像，用于案例分析、灵感板或资料归档。"
+            ],
+            [
+              "保存与转换",
+              "支持选中下载、全量下载、ZIP 打包、指定目录保存和 WebP 转换。"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "从网站到资料库：一次完整的素材抓取流程"
+        },
+        {
+          "type": "paragraph",
+          "text": "1. 输入官网、文章、视频、笔记链接，或直接输入公司/产品名称。"
+        },
+        {
+          "type": "paragraph",
+          "text": "2. 工具联网搜索官网候选，或直接解析目标页面。"
+        },
+        {
+          "type": "paragraph",
+          "text": "3. 自动识别 Favicon、Logo、封面、头像、正文图片、公开视频等候选资源。"
+        },
+        {
+          "type": "paragraph",
+          "text": "4. 用户点击资源卡片进行筛选，也可以全选可用资源。"
+        },
+        {
+          "type": "paragraph",
+          "text": "5. 将结果下载、打包为 ZIP、保存到指定目录，或转换成 WebP 便于归档和网页使用。"
+        },
+        {
+          "type": "image",
+          "token": "OSM7bfcVHoUi2ZxXMvucFc9GnSv",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjU4YzllMDBhMThlMzg4ZTE3ZWQ0MzRhNTMyZjkyM2FfMjFhYTczZTdhMjJiYWE1NzI0MWUwZTg0NzMzMzQzMmVfSUQ6NzY1NDU3MDc5NDMyODQxMTEyM18xNzgyNDM0OTkyOjE3ODI1MjEzOTJfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "主界面：输入官网、文章、视频或笔记链接，也可以输入名称搜索官网候选。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "几个典型使用场景"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. 做品牌馆或企业展厅前，快速拿到官网 Logo 和品牌图形"
+        },
+        {
+          "type": "paragraph",
+          "text": "输入企业名称或官网地址后，工具会从页面头部、导航区、CSS 背景图、SVG、og:image 等位置提取候选。它不会只取一个结果，而是按资源类型和可用性列出多个候选，适合在方案阶段快速搭建品牌资料包。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. 做展览研究时，批量整理公众号文章里的图片"
+        },
+        {
+          "type": "paragraph",
+          "text": "很多项目资料、活动报道和案例图都藏在微信公众号文章里。粘贴公众号链接后，工具可以提取文章封面、正文图片、可识别的视频候选和公众号头像，适合做灵感板、案例库和传播复盘。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. 小红书现场图和公开素材收集"
+        },
+        {
+          "type": "paragraph",
+          "text": "小红书常常是查看真实空间、活动现场和用户视角的重要来源。工具支持直接粘贴小红书笔记链接或整段分享文案，提取公开返回的图片、视频候选和博主头像，方便整理为项目参考。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "4. 输出给设计和网页使用的轻量素材包"
+        },
+        {
+          "type": "paragraph",
+          "text": "保存目录、ZIP 打包、WebP 转换这些功能，把素材从“临时下载”推进到“项目归档”。设计师可以把筛选后的 Logo、图标、封面图统一保存到项目文件夹；网站维护时，也可以直接转换为 WebP。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "使用边界：它是资料助手，不是破解工具"
+        },
+        {
+          "type": "paragraph",
+          "text": "工具只抓取页面公开返回的资源，不绕过登录、权限、会员或反爬限制，也不做水印去除。这点对长期使用很重要：它的定位是提高公开资料整理效率，而不是突破平台限制。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "下载与开源信息"
+        },
+        {
+          "type": "paragraph",
+          "text": "GitHub 仓库：https://github.com/cuiyisan-debug/media-asset-grabber"
+        },
+        {
+          "type": "paragraph",
+          "text": "最新 Release：https://github.com/cuiyisan-debug/media-asset-grabber/releases/tag/v1.0.6"
+        },
+        {
+          "type": "paragraph",
+          "text": "开源协议：MIT License"
+        },
+        {
+          "type": "paragraph",
+          "text": "技术栈：React + Vite + Express + Cheerio + Got + Sharp + Electron + electron-builder"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "一句话总结"
+        },
+        {
+          "type": "paragraph",
+          "text": "Media Asset Grabber 不是一个单纯的 Logo 下载器，而是一个面向策展、设计和内容研究的资料抓取工作台。它把官网、公众号、小红书和视频平台上的公开素材，转化为可以筛选、保存、打包和继续使用的项目资产。"
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmMyZmQwNmY1Mjc3MmM0YWNhYmQ2NGQ1NjY4MmUzY2RfYjYzYzM3NTJiM2Q1NzQ2ZDAwMDJhNTQ1ODlmYjNmN2NfSUQ6NzY1NDU3MDk5NjAwMjkwMDk3Ml8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM"
+    },
+    {
+      "id": "recvnzDVFkoObv",
+      "sourceType": "zhixing",
+      "order": 6.0,
+      "title": "AI时代的电子毒品：当AI Agent和Vibe Coding成为每日打卡的新信仰",
+      "summary": "“今天你刷完Token了吗？” 这句话正悄然取代“今天你吃了吗”，成为新一代数字打工人的暗号。多邻国的猫头鹰已经过时了，真正的上瘾机器，藏在那些每天自动弹出的“您的Token额度即将用完”里。",
+      "body": "“今天你刷完Token了吗？” 这句话正悄然取代“今天你吃了吗”，成为新一代数字打工人的暗号。多邻国的猫头鹰已经过时了，真正的上瘾机器，藏在那些每天自动弹出的“您的Token额度即将用完”里。\n一、从多邻国到Agent：成瘾机制的进化\n多邻国式的打卡，本质是“行为奖励”：连续签到→获得虚拟宝石→解锁皮肤。它利用了人类的损失厌恶——“断签一天，我的连胜记录就没了！”\n但AI时代的打卡，进化到了“生产力焦虑”阶段。\n当你打开Cursor、Codex或者Claude Code，输入一段提示词，看着代码如瀑布般流淌下来，那种“我是神”的快感持续不到三秒。紧接着，光标闪烁，对话框变灰，一行冰冷的字跳出来：“您的Token额度即将用完，请升级套餐。”\neeb67af1-aa4b-438c-ad2b-60ea0920a2f7.png\n\n那一刻，你体验到的不是多邻国式的“啊，我要断签了”，而是“我的大脑突然被人拔掉了电源插头“。\n二、Vibe Coding：一种新型精神依赖\n“Vibe Coding”——这个词最近在开发者圈子里火得一塌糊涂。它不是一种编程范式，而是一种精神状态：你不再需要理解每一行代码的含义，只要不断输入“再改一下样式”、“加个动画”，AI Agent就会像听话的实习生一样疯狂输出。\n这种感觉太美妙了，美妙到让人上瘾。\nimage.png\n\n就像嗑药一样，你不需要知道药物的化学式，只需要享受那个“一切尽在掌握”的幻觉。每次回车键按下，都是多巴胺的一次释放。你开始期待每一次“AI完成”的绿色进度条，就像赌徒期待老虎机的777。\n但副作用来了：一旦Token耗尽，等待刷新的那几分钟，比戒断反应还难熬。\n你盯着空白的输入框，大脑一片空白。没有AI Agent辅助，你发现自己甚至写不出一个简单的for循环。那种“我是谁？我在哪？我刚才在干嘛？”的虚无感，比任何游戏防沉迷系统都来得猛烈。\n三、Token经济学：新的稀缺资源\n在AI时代，Token成了比比特币更硬的通货。 多邻国的钻石可以用时间换，实在不行看广告也能续；\n但AI的Token是真金白银买来的，而且消耗速度惊人。\n一段500字的代码可能吃掉几千个Token，一次中等规模的代码重构就能烧掉你一天的预算。 或许未来你会养成新的习惯：每天早上第一件事不是刷牙，而是检查自己的Token余额；每写一行注释都要计算性价比；遇到复杂的bug，你会先犹豫三秒——“这个问题值不值得花掉我20个Token？”\n要不然再试试目标模式“/goal”\n这不是生产力工具，这是精神枷锁。\n四、谁在制造这场“电子毒品”？\n当然，不能全怪工具本身。DeepSeek、Claude4、GPT-5这些模型确实提升了效率，它们本身是中性的。\n但商业模式的推动力不可忽视：订阅制+按量计费+限时优惠，这套组合拳精准地击中了现代人的两个软肋——效率焦虑和沉没成本谬误。 “我已经买了Pro套餐，不用就亏了。”\n“别人都在用AI写代码、办公、做设计，我不用就会被淘汰？！”\nimage.png\n\n“就差最后一步了，再充20块钱的Token吧。” 于是，你从一个有创造力的程序员，变成了一个Token投喂员。你的工作不再是写代码，而是“喂AI Agent吃饭、等AI Agent消化、然后擦屁股”。每天打卡的不是你的技能成长，而是你的Token消耗曲线。\n五、如何自救？（或者，如何继续沉迷）\n说实话，我没法劝你戒掉。因为我自己也深陷其中（看了看自己的codex，连续打卡24天，真的是比比打游戏还积极）。\n但至少我们可以意识到：工具应该是你的拐杖，而不是你的义肢。\n试着每天留出30分钟“无AI编程时间”，找回手写代码的笨拙感；\n把Token看成一种“训练数据”，而不是“快乐水”；\n记住：多邻国打卡断了还能补签，但你的独立思考能力一旦丢失，就再也找不回来了。\n就像海报上的那句警示：“Check your token level. Protect your mind.”（检查你的Token水位，保护你的大脑）。\n写在最后\n下一次当你焦急地刷新Token时，不妨问问自己：是我们在用AI Agent，还是AI Agent在用我？\n如果答案是后者——恭喜你，你已经成功加入了“AI时代电子毒品受害者俱乐部”。\n我们的口号是：“今天你Token了吗？还没有？那你还不快去充值！”\nff75b6a3-e5da-4c0b-a8b8-431f198f6496.png",
+      "contentUrl": "https://my.feishu.cn/docx/ZVg5d1R08oSNRDxiANAcZWCHnFd?from=from_copylink",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVkZDNjNjZkMDQ1MzUwYjVkYmJiZTExMTRiN2RjNTRfMWYzZGNjYTU3NjRmNzZjYWFlNmVmMmRkN2M5OWI5MDVfSUQ6NzY1NTM2MTAxNDE5NTg4MzIyN18xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjUyZTBiZWNmMjBhZDgyNzgxNTdhODI3ODIyNWNhMDBfYmFmMDE4ZmIzYmU2MWUzZTgxNzk1M2ZhN2FkODczN2JfSUQ6NzY1NTM1NzQ4Nzg4OTAwOTg2Ml8xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTRhZDExMjY3NmUwM2UxNzY1Mjc2MmZjNTc4MmNiYzZfYzRmNjE4YjAxMzUyNDM1NTZlOGNhNjdiNjk1MjQ4MzlfSUQ6NzY1NTM2NDcwNTA4NjY1NTQ0N18xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM",
+        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGQ3ZGQ3ZWIwNGM1MzkzODU0YjIyOTEzZDIxMmZiODNfZTYyNmMxZDU3Y2RiNWI4Njc4MzM1NDY3YzExZDEwNDFfSUQ6NzY1NTM2MTMwMjEzNDcyMTUxOV8xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "“今天你刷完Token了吗？” 这句话正悄然取代“今天你吃了吗”，成为新一代数字打工人的暗号。多邻国的猫头鹰已经过时了，真正的上瘾机器，藏在那些每天自动弹出的“您的Token额度即将用完”里。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "一、从多邻国到Agent：成瘾机制的进化"
+        },
+        {
+          "type": "paragraph",
+          "text": "多邻国式的打卡，本质是“行为奖励”：连续签到→获得虚拟宝石→解锁皮肤。它利用了人类的损失厌恶——“断签一天，我的连胜记录就没了！”"
+        },
+        {
+          "type": "paragraph",
+          "text": "但AI时代的打卡，进化到了“生产力焦虑”阶段。"
+        },
+        {
+          "type": "paragraph",
+          "text": "当你打开Cursor、Codex或者Claude Code，输入一段提示词，看着代码如瀑布般流淌下来，那种“我是神”的快感持续不到三秒。紧接着，光标闪烁，对话框变灰，一行冰冷的字跳出来：“您的Token额度即将用完，请升级套餐。”"
+        },
+        {
+          "type": "image",
+          "token": "MR25b7otGoMxFtxbjSJcqIGXnkh",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGQ3ZGQ3ZWIwNGM1MzkzODU0YjIyOTEzZDIxMmZiODNfZTYyNmMxZDU3Y2RiNWI4Njc4MzM1NDY3YzExZDEwNDFfSUQ6NzY1NTM2MTMwMjEzNDcyMTUxOV8xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "那一刻，你体验到的不是多邻国式的“啊，我要断签了”，而是“我的大脑突然被人拔掉了电源插头“。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "二、Vibe Coding：一种新型精神依赖"
+        },
+        {
+          "type": "paragraph",
+          "text": "“Vibe Coding”——这个词最近在开发者圈子里火得一塌糊涂。它不是一种编程范式，而是一种精神状态：你不再需要理解每一行代码的含义，只要不断输入“再改一下样式”、“加个动画”，AI Agent就会像听话的实习生一样疯狂输出。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这种感觉太美妙了，美妙到让人上瘾。"
+        },
+        {
+          "type": "image",
+          "token": "XHYhb2MaroZTUOxIMqRcQ7sTnld",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVkZDNjNjZkMDQ1MzUwYjVkYmJiZTExMTRiN2RjNTRfMWYzZGNjYTU3NjRmNzZjYWFlNmVmMmRkN2M5OWI5MDVfSUQ6NzY1NTM2MTAxNDE5NTg4MzIyN18xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "就像嗑药一样，你不需要知道药物的化学式，只需要享受那个“一切尽在掌握”的幻觉。每次回车键按下，都是多巴胺的一次释放。你开始期待每一次“AI完成”的绿色进度条，就像赌徒期待老虎机的777。"
+        },
+        {
+          "type": "paragraph",
+          "text": "但副作用来了：一旦Token耗尽，等待刷新的那几分钟，比戒断反应还难熬。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你盯着空白的输入框，大脑一片空白。没有AI Agent辅助，你发现自己甚至写不出一个简单的for循环。那种“我是谁？我在哪？我刚才在干嘛？”的虚无感，比任何游戏防沉迷系统都来得猛烈。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "三、Token经济学：新的稀缺资源"
+        },
+        {
+          "type": "paragraph",
+          "text": "在AI时代，Token成了比比特币更硬的通货。 多邻国的钻石可以用时间换，实在不行看广告也能续；"
+        },
+        {
+          "type": "paragraph",
+          "text": "但AI的Token是真金白银买来的，而且消耗速度惊人。"
+        },
+        {
+          "type": "paragraph",
+          "text": "一段500字的代码可能吃掉几千个Token，一次中等规模的代码重构就能烧掉你一天的预算。 或许未来你会养成新的习惯：每天早上第一件事不是刷牙，而是检查自己的Token余额；每写一行注释都要计算性价比；遇到复杂的bug，你会先犹豫三秒——“这个问题值不值得花掉我20个Token？”"
+        },
+        {
+          "type": "paragraph",
+          "text": "要不然再试试目标模式“/goal”"
+        },
+        {
+          "type": "paragraph",
+          "text": "这不是生产力工具，这是精神枷锁。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "四、谁在制造这场“电子毒品”？"
+        },
+        {
+          "type": "paragraph",
+          "text": "当然，不能全怪工具本身。DeepSeek、Claude4、GPT-5这些模型确实提升了效率，它们本身是中性的。"
+        },
+        {
+          "type": "paragraph",
+          "text": "但商业模式的推动力不可忽视：订阅制+按量计费+限时优惠，这套组合拳精准地击中了现代人的两个软肋——效率焦虑和沉没成本谬误。 “我已经买了Pro套餐，不用就亏了。”"
+        },
+        {
+          "type": "paragraph",
+          "text": "“别人都在用AI写代码、办公、做设计，我不用就会被淘汰？！”"
+        },
+        {
+          "type": "image",
+          "token": "VXDjbgA0KofYCsxSGK4cKOWsn9g",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjUyZTBiZWNmMjBhZDgyNzgxNTdhODI3ODIyNWNhMDBfYmFmMDE4ZmIzYmU2MWUzZTgxNzk1M2ZhN2FkODczN2JfSUQ6NzY1NTM1NzQ4Nzg4OTAwOTg2Ml8xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM"
+        },
+        {
+          "type": "paragraph",
+          "text": "“就差最后一步了，再充20块钱的Token吧。” 于是，你从一个有创造力的程序员，变成了一个Token投喂员。你的工作不再是写代码，而是“喂AI Agent吃饭、等AI Agent消化、然后擦屁股”。每天打卡的不是你的技能成长，而是你的Token消耗曲线。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "五、如何自救？（或者，如何继续沉迷）"
+        },
+        {
+          "type": "paragraph",
+          "text": "说实话，我没法劝你戒掉。因为我自己也深陷其中（看了看自己的codex，连续打卡24天，真的是比比打游戏还积极）。"
+        },
+        {
+          "type": "paragraph",
+          "text": "但至少我们可以意识到：工具应该是你的拐杖，而不是你的义肢。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "试着每天留出30分钟“无AI编程时间”，找回手写代码的笨拙感；"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "把Token看成一种“训练数据”，而不是“快乐水”；"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "记住：多邻国打卡断了还能补签，但你的独立思考能力一旦丢失，就再也找不回来了。"
+        },
+        {
+          "type": "paragraph",
+          "text": "就像海报上的那句警示：“Check your token level. Protect your mind.”（检查你的Token水位，保护你的大脑）。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "写在最后"
+        },
+        {
+          "type": "paragraph",
+          "text": "下一次当你焦急地刷新Token时，不妨问问自己：是我们在用AI Agent，还是AI Agent在用我？"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果答案是后者——恭喜你，你已经成功加入了“AI时代电子毒品受害者俱乐部”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "我们的口号是：“今天你Token了吗？还没有？那你还不快去充值！”"
+        },
+        {
+          "type": "image",
+          "token": "ESJ5bjPMZoHiYlxftbVcqF2pn7e",
+          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTRhZDExMjY3NmUwM2UxNzY1Mjc2MmZjNTc4MmNiYzZfYzRmNjE4YjAxMzUyNDM1NTZlOGNhNjdiNjk1MjQ4MzlfSUQ6NzY1NTM2NDcwNTA4NjY1NTQ0N18xNzgyNDM1MDE4OjE3ODI1MjE0MThfVjM"
+        }
+      ],
+      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2NkN2I4YWFjNDBmOGRjZWRlMjRjNzhkMGZhMWFhMzRfNDA2NTdiYTc0OTVhMmUxNzEzYzA2YzdkODE4MTkzYmVfSUQ6NzY1NTM3MTU0NjkyMzU1MTk1NF8xNzgyNDM0ODE5OjE3ODI1MjEyMTlfVjM"
+    }
+  ]
 }
