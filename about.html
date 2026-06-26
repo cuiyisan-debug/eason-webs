@@ -101,9 +101,12 @@
         <div class="contact-panel">
           <div class="contact-socials" aria-label="社交链接">
             <a class="social-link icon-email" href="mailto:cuiyisan@163.com" aria-label="发送邮件给崔一三"></a>
-            <span class="social-link icon-wechat social-wechat" tabindex="0" aria-label="查看微信公众号二维码">
+            <span class="social-link icon-wechat social-wechat" role="button" tabindex="0" aria-label="查看微信公众号二维码" aria-expanded="false">
               <span class="wechat-popover">
-                <img src="./assets/social-icons/wechat-public-qr.jpg" alt="格物研习社公众号二维码" loading="lazy" />
+                <span class="wechat-qr" aria-label="格物研习社公众号二维码，手机端可长按保存">
+                  <img src="./assets/social-icons/wechat-public-qr.jpg" alt="格物研习社公众号二维码" loading="lazy" />
+                  <span>格物研习社</span>
+                </span>
               </span>
             </span>
             <a class="social-link icon-xiaohongshu" href="https://www.xiaohongshu.com/user/profile/623039a20000000010004080?xsec_token=YBMqgjXWtzRpWUZIrtSZRxZ1ASyMsD2q4cJYscEgL9UJY=&xsec_source=app_share&apptime=1782433557&shareRedId=ODg1MDY-RTs2NzUyOTgwNjczOTc4NT45&share_id=95ae432c090c48ba804b31692d954463&xhsshare=CopyLink" target="_blank" rel="noreferrer" aria-label="访问小红书主页"></a>
@@ -123,7 +126,7 @@
       </footer>
     </main>
 
-    <script src="./script.js?v=20260621-gewulab1"></script>
+    <script src="./script.js?v=20260626-wechatqr2"></script>
     <script src="./about.js"></script>
   </body>
 </html>

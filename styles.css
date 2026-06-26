@@ -1655,6 +1655,7 @@ h1 {
   place-items: center;
   border: 1px solid color-mix(in srgb, var(--accent) 58%, var(--line));
   border-radius: 999px;
+  font: inherit;
   color: var(--accent);
   text-decoration: none;
   cursor: pointer;
@@ -1724,6 +1725,13 @@ h1 {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.wechat-qr {
+  display: grid;
+  gap: 6px;
+  color: #111;
+  text-align: center;
+}
+
 .wechat-popover::after {
   content: "";
   position: absolute;
@@ -1744,9 +1752,21 @@ h1 {
   object-fit: contain;
 }
 
-.social-wechat:hover .wechat-popover,
-.social-wechat:focus-visible .wechat-popover {
+.wechat-popover span {
+  position: relative;
+  z-index: 1;
+  color: #111;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+
+.social-wechat.is-open .wechat-popover,
+.social-wechat:focus-visible.is-open .wechat-popover,
+.social-wechat:hover .wechat-popover {
   opacity: 1;
+  pointer-events: auto;
   transform: translate(-50%, 0);
 }
 

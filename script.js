@@ -403,6 +403,43 @@ function protectPortfolioMedia() {
   });
 }
 
+function initWechatPopovers() {
+  const triggers = document.querySelectorAll(".social-wechat");
+  if (!triggers.length) return;
+
+  const closeAll = (except) => {
+    triggers.forEach((trigger) => {
+      if (trigger === except) return;
+      trigger.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded", "false");
+    });
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const nextOpen = !trigger.classList.contains("is-open");
+      closeAll(trigger);
+      trigger.classList.toggle("is-open", nextOpen);
+      trigger.setAttribute("aria-expanded", String(nextOpen));
+    });
+
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      const nextOpen = !trigger.classList.contains("is-open");
+      closeAll(trigger);
+      trigger.classList.toggle("is-open", nextOpen);
+      trigger.setAttribute("aria-expanded", String(nextOpen));
+    });
+  });
+
+  document.addEventListener("click", () => closeAll());
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeAll();
+  });
+}
+
 if (hasPortfolioGrid) {
   const navLinks = document.querySelectorAll(".nav a");
   function setActiveNav(target) {
@@ -582,6 +619,7 @@ themeToggle.addEventListener("click", () => {
 setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
 initResponsiveHeader();
+initWechatPopovers();
 initVisitorStats();
 protectPortfolioMedia();
 scrollToCurrentHash();
