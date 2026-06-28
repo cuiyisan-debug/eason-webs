@@ -1114,12 +1114,23 @@ h1 {
   cursor: zoom-in;
 }
 
+.article-image-button--framed {
+  width: min(100%, var(--article-image-max-width, 100%));
+  aspect-ratio: var(--article-image-ratio, auto);
+  overflow: hidden;
+}
+
 .article-inline-media img {
   display: block;
   width: 100%;
   height: auto;
   border: 1px solid var(--line);
   transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.article-image-button--framed img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .article-image-button:hover img {

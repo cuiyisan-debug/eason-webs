@@ -583,6 +583,66 @@ def first_nested_dict(value: Any, target_key: str) -> dict[str, Any]:
     return {}
 
 
+def first_image_dict(value: Any) -> dict[str, Any]:
+    if isinstance(value, dict):
+        image = value.get("image")
+        if isinstance(image, dict):
+            return image
+        for item in value.values():
+            found = first_image_dict(item)
+            if found:
+                return found
+    elif isinstance(value, list):
+        for item in value:
+            found = first_image_dict(item)
+            if found:
+                return found
+    return {}
+
+
+def normalized_number(value: Any) -> float | None:
+    if isinstance(value, (int, float)) and value > 0:
+        return float(value)
+    if isinstance(value, str):
+        text = value.strip()
+        if not text:
+            return None
+        try:
+            number = float(text)
+        except ValueError:
+            return None
+        return number if number > 0 else None
+    return None
+
+
+def image_meta_from_block(block: dict[str, Any], token: str) -> dict[str, Any]:
+    image = first_image_dict(block)
+    meta: dict[str, Any] = {}
+    for source in (image, block):
+        if not isinstance(source, dict):
+            continue
+        for key in ("width", "height"):
+            if key not in meta:
+                number = normalized_number(source.get(key))
+                if number:
+                    meta[key] = round(number, 3)
+        if "align" not in meta and source.get("align") is not None:
+            meta["align"] = normalize_text(source.get("align"))
+        if "caption" not in meta:
+            caption = normalize_text(source.get("caption") or source.get("alt") or source.get("description"))
+            if caption:
+                meta["caption"] = caption
+        if "src" not in meta:
+            src = normalize_text(source.get("src") or source.get("url") or source.get("preview_url"))
+            if src and src != token:
+                meta["src"] = src
+        for crop_key in ("crop", "crop_info", "cropInfo", "image_crop", "imageCrop"):
+            crop = source.get(crop_key)
+            if isinstance(crop, dict) and "crop" not in meta:
+                meta["crop"] = crop
+    return meta
+
+
 def collect_block_text(value: Any, path: tuple[str, ...] = ()) -> list[str]:
     parts: list[str] = []
     if isinstance(value, dict):
@@ -759,7 +819,7 @@ def build_doc_content_blocks(blocks: list[dict[str, Any]], title: str) -> list[d
         if media_tokens:
             for media_token in media_tokens:
                 if media_token not in seen_media:
-                    content.append({"type": "image", "token": media_token})
+                    content.append({"type": "image", "token": media_token, **image_meta_from_block(block, media_token)})
                     seen_media.add(media_token)
             continue
         text = text_from_block(block)

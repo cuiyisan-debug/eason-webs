@@ -56,6 +56,25 @@ function isVideo(url) {
   return /\.(mp4|webm|ogg|mov)(\?|$)/i.test(String(url || ""));
 }
 
+function positiveNumber(value) {
+  const number = Number(value);
+  return Number.isFinite(number) && number > 0 ? number : 0;
+}
+
+function articleImageFrameAttributes(block) {
+  const width = positiveNumber(block?.width);
+  const height = positiveNumber(block?.height);
+  if (!width || !height) {
+    return { className: "article-image-button", style: "" };
+  }
+  const maxWidth = Math.min(Math.round(width), 1280);
+  const ratio = `${width} / ${height}`;
+  return {
+    className: "article-image-button article-image-button--framed",
+    style: ` style="--article-image-ratio:${escapeHtml(ratio)};--article-image-max-width:${maxWidth}px;"`,
+  };
+}
+
 function shouldEmbedOriginal(article) {
   const mode = String(article?.displayMode || "").trim();
   return Boolean(article?.contentUrl && (mode.includes("飞书原文") || mode.includes("嵌入")));
@@ -269,11 +288,13 @@ function renderMedia(urls) {
 
 function renderContentBlock(block, index) {
   if (!block || !block.type) return "";
-  if (block.type === "image" && block.url) {
+  const imageUrl = block.type === "image" ? block.url || block.src : "";
+  if (block.type === "image" && imageUrl) {
+    const frame = articleImageFrameAttributes(block);
     return `
       <figure class="article-inline-media">
-        <button class="article-image-button" type="button" data-article-image-url="${escapeHtml(block.url)}" aria-label="打开图片浏览">
-          <img src="${escapeHtml(block.url)}" alt="" loading="lazy" />
+        <button class="${frame.className}" type="button" data-article-image-url="${escapeHtml(imageUrl)}" aria-label="打开图片浏览"${frame.style}>
+          <img src="${escapeHtml(imageUrl)}" alt="" loading="lazy" />
         </button>
         ${block.caption ? `<figcaption>${escapeHtml(block.caption)}</figcaption>` : ""}
       </figure>
