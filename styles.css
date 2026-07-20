@@ -132,6 +132,14 @@ button {
   white-space: nowrap;
 }
 
+.brand-logo-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
 .brand-logo {
   display: block;
   width: clamp(142px, 11vw, 184px);
@@ -147,6 +155,8 @@ button {
   position: relative;
   transform: translateY(2px);
   writing-mode: horizontal-tb;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 .brand-text::before {
@@ -282,8 +292,8 @@ button {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(300px, 0.58fr) minmax(560px, 1.42fr);
-  gap: 44px;
+  grid-template-columns: minmax(360px, 0.68fr) minmax(0, 1.32fr);
+  gap: clamp(24px, 2.2vw, 36px);
   min-height: calc(100vh - 72px);
   padding: 44px 36px 32px;
   border-bottom: 1px solid var(--line);
@@ -291,6 +301,7 @@ button {
 
 .hero-copy {
   align-self: center;
+  min-width: 0;
 }
 
 .eyebrow {
@@ -317,6 +328,10 @@ h1 {
   display: grid;
   gap: 0;
   color: var(--text);
+  /* Keep four-character display lines inside the left hero column at
+     intermediate desktop widths, before the layout switches to mobile. */
+  font-size: clamp(58px, 6.25vw, 104px);
+  line-height: 0.96;
   word-break: keep-all;
   overflow-wrap: normal;
 }

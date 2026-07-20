@@ -595,6 +595,21 @@ function initResponsiveHeader() {
   );
 }
 
+function initBrandNavigation() {
+  const videoEntry = document.querySelector(".brand-logo-link");
+  const homeEntry = document.querySelector(".brand-text");
+
+  videoEntry?.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.assign("./three-portrait-journey.html#top");
+  });
+
+  homeEntry?.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.assign("./index.html#top");
+  });
+}
+
 const themeToggle = document.querySelector(".theme-toggle");
 const themeIcon = document.querySelector(".theme-icon");
 const brandLogo = document.querySelector(".brand-logo");
@@ -619,6 +634,7 @@ themeToggle.addEventListener("click", () => {
 setTheme(localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark");
 
 initResponsiveHeader();
+initBrandNavigation();
 initWechatPopovers();
 initVisitorStats();
 protectPortfolioMedia();
