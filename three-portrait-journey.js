@@ -77,7 +77,7 @@ function setupBrandNavigation() {
 
   homeEntry?.addEventListener("click", (event) => {
     event.preventDefault();
-    window.location.assign("./index.html#top");
+    window.location.assign("./home.html#top");
   });
 }
 
@@ -668,7 +668,7 @@ function renderProjectMatrix(projects) {
   matrix.innerHTML = projects
     .map(
       (project) => `
-        <a class="work-card" href="./index.html#projects">
+        <a class="work-card" href="./home.html#projects">
           <img src="${project.cover}" alt="" loading="lazy" draggable="false" />
           <span>${project.title}</span>
         </a>

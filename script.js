@@ -606,7 +606,7 @@ function initBrandNavigation() {
 
   homeEntry?.addEventListener("click", (event) => {
     event.preventDefault();
-    window.location.assign("./index.html#top");
+    window.location.assign("./home.html#top");
   });
 }
 
