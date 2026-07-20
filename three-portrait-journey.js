@@ -207,6 +207,73 @@ function setupHeroVideoIntro() {
   }, 1300);
 }
 
+function setupDeferredVideoLoading() {
+  const isMobile = window.matchMedia("(max-width: 900px), (pointer: coarse)").matches;
+  const sequence = document.querySelector("#cinematic-sequence");
+  const staged = [
+    {
+      scene: document.querySelector("#tools"),
+      video: document.querySelector(".tools-video"),
+      // Both opening scenes are sticky, so tools.offsetTop remains 0. Its
+      // actual scroll entrance is one viewport after the portrait scene.
+      trigger: () => (sequence?.offsetTop || 0) + window.innerHeight * 0.28,
+    },
+    { scene: document.querySelector("#city-data"), video: document.querySelector(".city-data-video") },
+    { scene: document.querySelector("#fourth"), video: document.querySelector(".fourth-video") },
+    { scene: document.querySelector("#fifth"), video: document.querySelector(".fifth-video") },
+  ].filter(({ scene, video }) => scene && video);
+
+  const promote = (video) => {
+    if (video.dataset.preloadReady === "true") return;
+    video.dataset.preloadReady = "true";
+    video.preload = "auto";
+    video.load();
+  };
+
+  // Desktop has enough headroom to keep the original instant transitions.
+  if (!isMobile) {
+    staged.forEach(({ video }) => promote(video));
+    return;
+  }
+
+  let nextIndex = 0;
+  let loading = false;
+  let ticking = false;
+
+  const pump = () => {
+    ticking = false;
+    if (loading || nextIndex >= staged.length) return;
+    const next = staged[nextIndex];
+    const triggerY = next.trigger ? next.trigger() : next.scene.offsetTop - window.innerHeight * 0.34;
+    if (window.scrollY < triggerY) return;
+
+    loading = true;
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      next.video.removeEventListener("loadeddata", finish);
+      loading = false;
+      nextIndex += 1;
+      window.setTimeout(pump, 80);
+    };
+    next.video.addEventListener("loadeddata", finish, { once: true });
+    promote(next.video);
+    // Some Android browsers delay loadeddata while the page is settling.
+    window.setTimeout(finish, 2400);
+  };
+
+  const schedulePump = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(pump);
+  };
+
+  window.addEventListener("scroll", schedulePump, { passive: true });
+  window.addEventListener("resize", schedulePump);
+  schedulePump();
+}
+
 function setupGlobalCursorAura() {
   const root = document.documentElement;
   const journey = document.querySelector(".journey");
@@ -364,6 +431,8 @@ function setupSceneSnap() {
     ];
   };
 
+  const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+
   const moveToAnchor = (nearest) => {
     const current = window.scrollY;
     if (Math.abs(nearest - current) < 12) return;
@@ -391,11 +460,17 @@ function setupSceneSnap() {
     settleTimer = window.setTimeout(settleToScene, 180);
   };
 
-  window.addEventListener("scroll", () => {
-    scheduleSettle();
-  }, { passive: true });
+  if (coarsePointer) {
+    // Do not fight the browser during every touchmove. Let inertial scrolling
+    // finish first, then settle once at the closest full-screen scene.
+    window.addEventListener("touchend", () => {
+      window.clearTimeout(settleTimer);
+      settleTimer = window.setTimeout(settleToScene, 320);
+    }, { passive: true });
+    return;
+  }
 
-  window.addEventListener("touchend", scheduleSettle, { passive: true });
+  window.addEventListener("scroll", scheduleSettle, { passive: true });
   window.addEventListener("wheel", (event) => {
     if (window.matchMedia("(pointer: coarse)").matches || Math.abs(event.deltaY) < 4) return;
     const anchors = getAnchors();
@@ -423,7 +498,7 @@ function setupSceneSnap() {
 
 function setupPortraitScan() {
   const portrait = document.querySelector("[data-portrait-wrap]");
-  if (!portrait) return;
+  if (!portrait || window.matchMedia("(pointer: coarse)").matches) return;
   portrait.addEventListener("pointermove", (event) => {
     const rect = portrait.getBoundingClientRect();
     const x = ((event.clientX - rect.left) / rect.width) * 100;
@@ -812,7 +887,8 @@ function setupScrollAnimation() {
 
 async function setupThree() {
   const canvas = document.querySelector("#journey-canvas");
-  if (!canvas) return;
+  const desktopEffects = window.matchMedia("(min-width: 901px) and (hover: hover) and (pointer: fine)").matches;
+  if (!canvas || !desktopEffects || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   let THREE;
   try {
     THREE = await import("https://esm.sh/three@0.160.0");
@@ -914,6 +990,7 @@ function updateThreeScene(progress) {
 
 async function boot() {
   setupHeroVideoIntro();
+  setupDeferredVideoLoading();
   setupHeaderNav();
   setupBrandNavigation();
   setupTheme();

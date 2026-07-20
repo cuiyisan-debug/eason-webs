@@ -1813,6 +1813,15 @@ a {
 }
 
 @media (max-width: 900px) {
+  .journey-canvas,
+  .global-cursor-aura {
+    display: none !important;
+  }
+
+  .journey {
+    cursor: auto;
+  }
+
   .site-header {
     height: auto;
     min-height: 60px;
