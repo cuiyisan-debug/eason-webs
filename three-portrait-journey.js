@@ -216,7 +216,9 @@ function setupDeferredVideoLoading() {
       video: document.querySelector(".tools-video"),
       // Both opening scenes are sticky, so tools.offsetTop remains 0. Its
       // actual scroll entrance is one viewport after the portrait scene.
-      trigger: () => (sequence?.offsetTop || 0) + window.innerHeight * 0.28,
+      // A touch device needs the second clip buffered while the first scene is
+      // still visible; otherwise the first scroll can arrive before decoding.
+      trigger: () => (sequence?.offsetTop || 0) + window.innerHeight * (isMobile ? -0.1 : 0.28),
     },
     { scene: document.querySelector("#city-data"), video: document.querySelector(".city-data-video") },
     { scene: document.querySelector("#fourth"), video: document.querySelector(".fourth-video") },
@@ -244,7 +246,10 @@ function setupDeferredVideoLoading() {
     ticking = false;
     if (loading || nextIndex >= staged.length) return;
     const next = staged[nextIndex];
-    const triggerY = next.trigger ? next.trigger() : next.scene.offsetTop - window.innerHeight * 0.34;
+    // Keep exactly one upcoming clip in the media buffer on touch devices.
+    // This stays serial, so it does not compete with five simultaneous downloads.
+    const preloadLead = isMobile ? 1.15 : 0.34;
+    const triggerY = next.trigger ? next.trigger() : next.scene.offsetTop - window.innerHeight * preloadLead;
     if (window.scrollY < triggerY) return;
 
     loading = true;
@@ -271,7 +276,8 @@ function setupDeferredVideoLoading() {
 
   window.addEventListener("scroll", schedulePump, { passive: true });
   window.addEventListener("resize", schedulePump);
-  schedulePump();
+  // Let the opening frame draw first, then quietly warm the next scene.
+  window.setTimeout(schedulePump, isMobile ? 750 : 0);
 }
 
 function setupGlobalCursorAura() {
