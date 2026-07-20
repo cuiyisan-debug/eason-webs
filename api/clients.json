@@ -1,10 +1,19 @@
 {
-  "generatedAt": "2026-07-20T03:52:18.493178+00:00",
+  "generatedAt": "2026-07-20T05:40:53.590836+00:00",
   "source": "feishu",
   "items": [
     {
+      "name": "中国航空运输协会",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODUyYWI1ODM0MjhmZGE5NjNhMGZhMTBlYjM2MTk1NTNfMmE3YzAyN2QxMTIxNTg1MmZkMmMzY2YwYWRkMTE5M2NfSUQ6NzY2NDQ1MzQ4NDUxOTIzMDY2Nl8xNzg0NTI1ODYwOjE3ODQ2MTIyNjBfVjM",
+      "order": 2.0,
+      "projects": [
+        "CATA航空大会"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "阿里巴巴",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjE5NWFlMTYwNzgxNTZjY2JjZDMzYjBlNjQ2OGQxMTdfMTRmOTVjYWY0MDc1YmI1NzAyY2QyYjUzOTU5MTYwNWRfSUQ6NzY1MzEyODUyNDgyNzY3NTYxOV8xNzg0NTE5NDgwOjE3ODQ2MDU4ODBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWQyY2Q1NGU3OTdkOWY3ZWJlMjBjZGM0YjhjNzMwMDlfYjQ4OTdjMDIxODgwNDViMDdjNTM5NzQ5ODQ5OGJjZmRfSUQ6NzY1MzEyODUyNDgyNzY3NTYxOV8xNzg0NTI1OTkxOjE3ODQ2MTIzOTFfVjM",
       "order": 5.0,
       "projects": [
         "阿里巴巴西溪园区文化软装"
@@ -13,7 +22,7 @@
     },
     {
       "name": "安徽自贸区",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzMxMDUxZmFmY2MwNTdiNzU5NDk0MjFkZGIzYjY3NzhfYmMzNWU4YjkzN2RkOWQ4OWRmMzdiMDk4NjkyOWFjOGVfSUQ6NzY2NDQ1NDExNTY1NzE5MDMzOF8xNzg0NTI1ODg0OjE3ODQ2MTIyODRfVjM",
       "order": 7.0,
       "projects": [
         "安徽自贸区展厅"
@@ -21,8 +30,17 @@
       "projectCount": 1
     },
     {
+      "name": "明阳集团",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWExOTg5YmIwMzQzNzg1OGZkYjcwNTE3ZDIzMGFiZGZfMTYzOGZmMWEwYmY4NjA3NmEwNjUzNjk2ZjY4OTg5NzNfSUQ6NzY2NDQ1NDgyMzI2NTc5OTExOF8xNzg0NTI2MDE0OjE3ODQ2MTI0MTRfVjM",
+      "order": 10.0,
+      "projects": [
+        "包头明阳集团陆上装备基地展厅"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "北京马拉松",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTU0ODEwNzljOGIwNmU4OWUwNmQ5MjA1YzU2YmE4OTZfZmMxYWY1NDYxY2E1NDBmMTQzNTE3Zjc4NzEzZDNkMGZfSUQ6NzY1MzA4MTMyNzU5OTkxMzkxMl8xNzg0NTE5MzY1OjE3ODQ2MDU3NjVfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODlmMzZjM2M2NWJlYjZlMDhhZmQ3NDQyOWQ2ZDZmZTlfMDhkYTBkODI2MGRkNmE4MTY4OTMyZDllNjFjYTVjODBfSUQ6NzY1MzA4MTMyNzU5OTkxMzkxMl8xNzg0NTI1ODc5OjE3ODQ2MTIyNzlfVjM",
       "order": 12.0,
       "projects": [
         "北京马拉松博览会"
@@ -30,8 +48,17 @@
       "projectCount": 1
     },
     {
+      "name": "中国北京国际文化创意产业博览会",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjM0NmExNTdjYTQ0Y2U1ZTc3ZGE4ZGFlMTVmNDBiMTBfMjYyZDMwNmZjMTA4OWI5ZGNlOTcwNDRiZTQyZWIwN2ZfSUQ6NzY2NDQ1NjA2Mjk3MTU0Njg2MF8xNzg0NTI2MDAxOjE3ODQ2MTI0MDFfVjM",
+      "order": 16.0,
+      "projects": [
+        "昌平文博会展台"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "成都传媒",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDA2ZTAyY2IxNzljMTc0YTE3ODcwYWZiYzhlZjI1ZTBfNmEyZTNjMmFmMzdlODA4NWUyNzUwMTE0YjJjOTc0NWRfSUQ6NzY1MzEyNjEzODA3NTY5NjMzN18xNzg0NTE5MzgyOjE3ODQ2MDU3ODJfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzNiNjljNzliOTQyYWZjNDAzOTY4YTY1NTIxNzM2MGNfOTcxYTllNTZmYjJmYTM5MzJmM2ZiMTRjNzgyY2M0ZDJfSUQ6NzY1MzEyNjEzODA3NTY5NjMzN18xNzg0NTI1ODk2OjE3ODQ2MTIyOTZfVjM",
       "order": 18.0,
       "projects": [
         "成都传媒集团展厅"
@@ -39,8 +66,17 @@
       "projectCount": 1
     },
     {
+      "name": "储能国际峰会",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmU4MmY3ZTM0NmMyNzYyYTU3ZTQyMjQ4MmI0ODM3MDFfNTJmYzI3NjExMTU2YzY1NzRhNGYwMDZhMTNhYzc2MTFfSUQ6NzY2NDQ1Njc0MTA2NTA2Nzc5OV8xNzg0NTI1ODYyOjE3ODQ2MTIyNjJfVjM",
+      "order": 19.0,
+      "projects": [
+        "储能国际峰会"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "达利集团",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjY1ZTVmN2E4OTJkMjM2ZTYyODJkNDM3ZTA3NDc2YmVfZDdhY2I5YzkwNTUyMmMwNTcxYjUxOWYwODNiY2U3MzdfSUQ6NzY2NDQ1ODQ1NDM3MDkyOTg2N18xNzg0NTI1ODk3OjE3ODQ2MTIyOTdfVjM",
       "order": 21.0,
       "projects": [
         "达利集团展厅"
@@ -48,8 +84,8 @@
       "projectCount": 1
     },
     {
-      "name": "信华信",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmY2NjlkMWNlMDMyMzNkOTQ4YjhjN2E4NjhkYTczZGFfODQwZWJlMjkzODQxZDk0N2FhNWEyYjZiZTg5NTQyMjdfSUQ6NzY1MzEyODg1NDIyMzA0Nzg5OF8xNzg0NTE5Mzg0OjE3ODQ2MDU3ODRfVjM",
+      "name": "信华信集团",
+      "logo": "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=YTBkZGYxNmU2NjYzMjljY2EzMGM1ZTA2N2ZjN2IxMDJfYWRkYmFlMDdlMjcyZTU4OTE0ZWQ1MTk3MTA1OGU1YzdfSUQ6NzY1MzEyODg1NDIyMzA0Nzg5OF8xNzg0NTI1ODk4OjE3ODQ2MTIyOThfVjM",
       "order": 22.0,
       "projects": [
         "大连华信解决方案展厅"
@@ -57,8 +93,17 @@
       "projectCount": 1
     },
     {
+      "name": "大连建华集团",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmJkNWUzNTFhODkzM2UwMjZmMGZlZGRlOTJkMDhkMzdfYmQ3ZWFmYzRjOTZjYThjMDdjZjVhYzFlZGE1Mjg0NTNfSUQ6NzY2NDQ1NzM0OTE0MjU4MDQ1OV8xNzg0NTI1ODk5OjE3ODQ2MTIyOTlfVjM",
+      "order": 23.0,
+      "projects": [
+        "大连建华企业展厅"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "国家电网",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTI1NGU3NzMwNjQyMzM2M2RiYWZjZTE1Y2YwZWJkZWFfOTdiMjA4N2QxZWY3YjAyZGJiZjgxNzhjYTZmNzUxYjZfSUQ6NzY1MzEyOTIzOTcwNDgxNjYxNF8xNzg0NTE5NDk1OjE3ODQ2MDU4OTVfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmY3ZGJjMjA0YjJjYWFiY2Y5ZDBmNGMyZGNjYjczMzdfZWMwOTJmOWY5MDI3ZTFlMGJhYmNhNjgzN2U5ZjJiNjJfSUQ6NzY1MzEyOTIzOTcwNDgxNjYxNF8xNzg0NTI2MDA4OjE3ODQ2MTI0MDhfVjM",
       "order": 25.0,
       "projects": [
         "大同国网展厅"
@@ -66,8 +111,8 @@
       "projectCount": 1
     },
     {
-      "name": "迪信通",
-      "logo": "https://api3-eeft-drive.feishu.cn/space/api/box/stream/download/authcode/?code=MjY1MjRlZTcxODhmNGE4MzM1M2UwZGQ0MjBlYTBlZjVfN2FhM2JhOTFiMTMxNjg1OTY2OWJjOTZjZDc4NzVkM2VfSUQ6NzY1MzEzMDcyNDY3Mjg4MzY5M18xNzg0NTE5Mzg2OjE3ODQ2MDU3ODZfVjM",
+      "name": "迪信通集团",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjM0NzkxYzU3YjdlY2NjNDRjNzBlNGRmZTNhNmNiZTBfYzU0OTg0MWQ3YWMwNGFmYmZhOTEzYTdkOGQ2MmNiMGRfSUQ6NzY1MzEzMDcyNDY3Mjg4MzY5M18xNzg0NTI1OTAwOjE3ODQ2MTIzMDBfVjM",
       "order": 28.0,
       "projects": [
         "迪信通机器人展厅"
@@ -75,8 +120,17 @@
       "projectCount": 1
     },
     {
+      "name": "东软集团",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2ExNzZkMzE1MTYzNWI4MTJkNjVjZGU5ODA2NThkYmNfZjY3OGYzMjcwNjRkM2VmOWEzMjAyM2M4Njc2MzI2MzNfSUQ6NzY2NDQ1NzUxOTcyOTA1Mjk1NV8xNzg0NTI1OTk1OjE3ODQ2MTIzOTVfVjM",
+      "order": 31.0,
+      "projects": [
+        "东软集团展台"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "服贸会",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjNjNTk1YjIwM2ZiZTRiZTQ0YWQxMDE0NThlYzdmNTdfMmQ5YjQzNTc1ZmNhZTUzMWQ2ODRmMmU3NTBkYzdjMTJfSUQ6NzY1MzA4MjQyNDA1NTQxNzgzN18xNzg0NTE5MzU3OjE3ODQ2MDU3NTdfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTc5ODM5MzhiM2I5YWIyYzM2MmQxNzYyYzc5MDMxMjRfNzk1NDY4ZDc0MDM4NDVjNGYxMDFhNDllMzQyZGI1ZmJfSUQ6NzY1MzA4MjQyNDA1NTQxNzgzN18xNzg0NTI1ODcxOjE3ODQ2MTIyNzFfVjM",
       "order": 36.0,
       "projects": [
         "服贸会（服贸小镇转型）"
@@ -84,8 +138,17 @@
       "projectCount": 1
     },
     {
+      "name": "共创草坪",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmQ0MjM3MGY0MWQxNTZlYzQzYzhhNzdkZjAzMDVjNDZfMGRiNzgzNTQ1N2ZkMTU5ODEzOTM4ZGIyOGMzYTJkYzRfSUQ6NzY2NDQ2MDA1NTU5MjQwNTk0OF8xNzg0NTI1OTI5OjE3ODQ2MTIzMjlfVjM",
+      "order": 41.0,
+      "projects": [
+        "共创草坪企业展厅"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "国家电投",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjZkZDhhYmVjY2E3MGU5NjVhOWRiZjU0Zjk4YzczYmRfODEyOWNiNmEwYmM0ZDEwYWJhMmI0ZGQyZmMxODRjNmRfSUQ6NzY1MzEzMDkwNDEyMjExNzA3MV8xNzg0NTE5NDY5OjE3ODQ2MDU4NjlfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDY3OGQyOGM0MmVkYmM1ODA4YmVlYmYyZGMxMDM2NDRfZDQ4YTg2MWMwZGVkNTYxNjUyZDc2MTk0YTc3YmFjMDJfSUQ6NzY1MzEzMDkwNDEyMjExNzA3MV8xNzg0NTI1OTc5OjE3ODQ2MTIzNzlfVjM",
       "order": 48.0,
       "projects": [
         "国家电投年度工作成果展"
@@ -94,7 +157,7 @@
     },
     {
       "name": "国家海洋局",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjY1NDgwYmJjODcwMmVlYTcxZmZhNzBiZGYwNTJiMDBfZWI4MWI5MzYzMGYzZGE4NzQ3MzhjMzYzZmFjMThlMDZfSUQ6NzY1MzEzMTExMzMyNTUxMzY2MF8xNzg0NTE5MzcyOjE3ODQ2MDU3NzJfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzEyZGVhZWNjMmE4YzMxYzFkNWNjNTNiMTVjODlkOTdfYmQzZGFjZDBkNGNlYjAyYWRjMGEwYWNlOTBjNGQ3YjhfSUQ6NzY1MzEzMTExMzMyNTUxMzY2MF8xNzg0NTI1ODg2OjE3ODQ2MTIyODZfVjM",
       "order": 50.0,
       "projects": [
         "国家海洋信息中心展厅"
@@ -103,7 +166,7 @@
     },
     {
       "name": "国际知识产权局",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2FjZjgwNjg4NWFjMjQyNTQ0ZjVjZTFjMTBkYjI2N2JfOWQ0ZDVlNjQzOWFhZWY1N2ZhYzdhYzc5MzQzYWI2OTBfSUQ6NzY2NDQ3MDQzMTEzMDQ3MTY4Nl8xNzg0NTI1ODg2OjE3ODQ2MTIyODZfVjM",
       "order": 51.0,
       "projects": [
         "国家知识产权局展厅"
@@ -112,7 +175,7 @@
     },
     {
       "name": "河北钢铁集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTlhNWM3NzFlODExYTNkZWU4OWY1YWI3OTFiYTUyYjNfMjAzYTM1ZGU1ZTUyZmZjMWMwYjRhNjdjNmFkMDVjNDVfSUQ6NzY1MzEzMTI4NjU2Mjc4NjI5MV8xNzg0NTE5NDA1OjE3ODQ2MDU4MDVfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2IyYjVkOWRmYTE4OTA2NzkxOGE1ZGFjYWJkYWViOGJfMmFiMGQyMWVmNWZjMjkwOGNkOWNmODFiN2UwZDM5YmFfSUQ6NzY1MzEzMTI4NjU2Mjc4NjI5MV8xNzg0NTI1OTE3OjE3ODQ2MTIzMTdfVjM",
       "order": 57.0,
       "projects": [
         "河北钢铁集团-张宣高科展厅"
@@ -121,7 +184,7 @@
     },
     {
       "name": "河北银行",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MThiMmE5Mjg3NTI4NzIyMDRjYzY5NGQxYzNkNzYzMmVfYmZkYTUwZmU2NTk1OWU5Y2NmOWMwZjM5NDI1NDM3Y2ZfSUQ6NzY1MzEzMTM5ODY5NzYzNDc3NF8xNzg0NTE5Mzg4OjE3ODQ2MDU3ODhfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTI5M2I4NTRjZjQxMDE5M2JmYTM1MTgzZjMwODRhODBfZjBjYzBmZjZhYWY3ZWRiYWJhOThiZDllODIxZGQ5ZjdfSUQ6NzY1MzEzMTM5ODY5NzYzNDc3NF8xNzg0NTI1OTAxOjE3ODQ2MTIzMDFfVjM",
       "order": 58.0,
       "projects": [
         "河北银行展厅"
@@ -130,7 +193,7 @@
     },
     {
       "name": "恒信德龙",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTc2ZmVkYzJmMDUzMzkyNDQ5MTQ0MzVkNTZmMThkNDJfZjI4ODU4NDBlODIxMzRkZTgwZTZkOTRlZWYyMjllYzBfSUQ6NzY1MzMwMzE5MTY5MzY1OTExMV8xNzg0NTE5NDU5OjE3ODQ2MDU4NTlfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTdlMmZlODY4Mzk1ZjZiOWMzOGM5MjExZjQzM2Y2M2FfMjM4ODg1ZmE0MWFlY2RmNjg2YmZhNDhjMWE5NDNkYTRfSUQ6NzY1MzMwMzE5MTY5MzY1OTExMV8xNzg0NTI1OTcxOjE3ODQ2MTIzNzFfVjM",
       "order": 60.0,
       "projects": [
         "恒信德龙展厅"
@@ -139,7 +202,7 @@
     },
     {
       "name": "华润集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2I0OGU1NjcwNTYyYTNkMjJhZWUxMDU2OGE2MzBkZmRfNGM5YWI0MzNkMzY2YmU2ZTQ0ZmQ2NzRhNjc3N2Q1ZjhfSUQ6NzY1MzQ0NzAwNzMwMzQ4NjQwNl8xNzg0NTE5MzkwOjE3ODQ2MDU3OTBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODQwYzQ1MDEyMDY1YzlhOWUwNDkyZTQzMjVmZjFiNmNfYjMwNTViNjYyMjI2ZjZmZTQwODlmNDhmMDM1MTAzOTVfSUQ6NzY1MzQ0NzAwNzMwMzQ4NjQwNl8xNzg0NTI1OTAzOjE3ODQ2MTIzMDNfVjM",
       "order": 63.0,
       "projects": [
         "华润集团-干杯时刻小酒馆项目"
@@ -148,7 +211,7 @@
     },
     {
       "name": "京东方",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDdhNjJlM2UzNzNiZDZiNjFmNGM1ZDYxNjJhNDZjZWVfNWVlYWVlNTYzMmUxYmY1MjIzYWUyMWI3Y2U2YjhmMDBfSUQ6NzY1MzEzMTc2MjQ4NjMxNjI0MV8xNzg0NTE5MzkxOjE3ODQ2MDU3OTFfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTcyMzg0NGE2MTczMDRmMzk3ZmYxMDcwZmEyM2MxM2FfZGRmMGJkMGI1YTBkOWRlYzI2ZTI5YzU5ZDc1ZmFmYTFfSUQ6NzY1MzEzMTc2MjQ4NjMxNjI0MV8xNzg0NTI1OTA0OjE3ODQ2MTIzMDRfVjM",
       "order": 67.0,
       "projects": [
         "京东方技术创新中心"
@@ -157,7 +220,7 @@
     },
     {
       "name": "开源基金会",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmJiMTZlNjRmOTZjNGQyMDgwYzYxMTllZWY3OTNmZjJfNjhkODg3YmZkZDlmODk4NjUyNTMzYWVjNDNmYjk5NDhfSUQ6NzY1MzMwMzMzOTMwOTUxNzc4Ml8xNzg0NTE5MzkzOjE3ODQ2MDU3OTNfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTZjZjdkMTNiZTBjODFhYmMyZjZjZWVmNmRjNGFiYjVfNzg2YTFhYjU5MWU0YWZmYTMyODIzZjFmZDliNTFiZTdfSUQ6NzY1MzMwMzMzOTMwOTUxNzc4Ml8xNzg0NTI1OTA1OjE3ODQ2MTIzMDVfVjM",
       "order": 69.0,
       "projects": [
         "开原基金文化中心"
@@ -166,7 +229,7 @@
     },
     {
       "name": "康吉森自动化技术",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjdhZDNjNTI0Nzc4YjIwODdlYmI0YTdhN2QyZDQ5NDNfZTcyNmU0M2NiMzk3ODdjMTBlYTE1ODA1OWQ2MmI1ZmZfSUQ6NzY1MzMwMzQzMzM3Nzg0NDE5OV8xNzg0NTE5NDMwOjE3ODQ2MDU4MzBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2RmOTc3N2NkNGQ2NjU5OTIyNDU0ZjlkM2RkY2RlOTBfMWMxMzA0NDFmMjQ2NzhkNjNjYjZlMDU5ZTZmZWJlZDBfSUQ6NzY1MzMwMzQzMzM3Nzg0NDE5OV8xNzg0NTI1OTQxOjE3ODQ2MTIzNDFfVjM",
       "order": 70.0,
       "projects": [
         "康吉森展厅"
@@ -175,7 +238,7 @@
     },
     {
       "name": "泸州老窖",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mzg1OWMyMjljZWY2NTBlZGVmN2E2YzdmOWJhOTdhYTRfMWI4NDZkNTNlNjg2NTdjZWNmN2YwM2JlMTkyOWQxNjlfSUQ6NzY1MzMyMTA5MTYwODIzNDk4OF8xNzg0NTE5Mzk0OjE3ODQ2MDU3OTRfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTc1MTBmNzg0YjQ1NGQxM2RjNjU1YWNiYzRkNzMwM2RfYmE2MzIwOTkwNmViMzEyZTQwZmRkZDlhMTVhOGVhODVfSUQ6NzY1MzMyMTA5MTYwODIzNDk4OF8xNzg0NTI1OTA3OjE3ODQ2MTIzMDdfVjM",
       "order": 79.0,
       "projects": [
         "泸州老窖科创公司企业展厅"
@@ -184,7 +247,7 @@
     },
     {
       "name": "蒙牛集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTIzZTM4OTI4NDJmYzFhMWM5NjY2NmE2NGJlMzVhZTBfOTk1ZWQyYTFiYWExZmUxMDc1ZTE2NzlhZDdkYjRmZThfSUQ6NzY1MzEzMTg5ODM2MDg3NjIyOV8xNzg0NTE5MzU0OjE3ODQ2MDU3NTRfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjIxMDUzNWNiMTc5MGE3MDI5YTFmODM0M2U5MGZjYjhfYzMzNjc3ZWY1ZWQ5NzA4YjhiZTc1ZDMxODg2MjM2MzVfSUQ6NzY1MzEzMTg5ODM2MDg3NjIyOV8xNzg0NTI1ODY3OjE3ODQ2MTIyNjdfVjM",
       "order": 82.0,
       "projects": [
         "蒙牛客户年会"
@@ -193,7 +256,7 @@
     },
     {
       "name": "江西齐云山食品",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTQ5YjkzMGNlOWZlYWEzOTU5NzgzZmYyOTI5MTA4ZjFfNTJlZjI1NzM3NDNhMTVkZjE1ZWNlZjBhODYwYmU2NjVfSUQ6NzY1MzMwMzgwNjYzMzIwMDg0OV8xNzg0NTE5NDY1OjE3ODQ2MDU4NjVfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjZlNzA3YzhmZjIwM2M3MTQxNmU3YzNjNWE1ZjQ0YjNfZTA3YjdkNmYzZmQ3MmViNmQ2NzYwNTBkZDcyOGI1OThfSUQ6NzY1MzMwMzgwNjYzMzIwMDg0OV8xNzg0NTI1OTc1OjE3ODQ2MTIzNzVfVjM",
       "order": 87.0,
       "projects": [
         "齐云山品牌文化馆"
@@ -202,7 +265,7 @@
     },
     {
       "name": "千寻位置",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mjg3NmM1OWJhM2ZmZTg1MTJmZjE5NGM5MjhhYzExN2FfZjk0ZjFkMmRlNGQxNWRiOGMxZDc3MWQxY2FiZjY1YzFfSUQ6NzY1MzI5OTY4MjE5Mzc3MTczNF8xNzg0NTE5NDI5OjE3ODQ2MDU4MjlfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2I5OGZkNzhhZGRkNzNkYjZkYTk4MDRkMzE4MTg1NjRfYTZlMGQyZGEyODk2YWE2MTcwYzVkYWY2YzgxMGM1YzVfSUQ6NzY1MzI5OTY4MjE5Mzc3MTczNF8xNzg0NTI1OTQwOjE3ODQ2MTIzNDBfVjM",
       "order": 88.0,
       "projects": [
         "千寻位置北京展厅"
@@ -211,7 +274,7 @@
     },
     {
       "name": "中国人民保险集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzUxNWFkOWI2NGY2ZmVmYThhNjMwNzgxMzEzNDEzOWFfMWNmN2Q2NWIxNDE2NTRmMTI3ZWQ2NmJiYzhiYWVhNTNfSUQ6NzY1MzI5OTg4NTY2NzY1MDUxMV8xNzg0NTE5NDk0OjE3ODQ2MDU4OTRfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGQ3YzFkOTFkZDhhN2Y3NWYzMGJiYThlNmJiZGY2NDVfYWUyNmQ2MmQ4YzAyYjdhNGMyZTU5MzY2NDYwNjU2YmZfSUQ6NzY1MzI5OTg4NTY2NzY1MDUxMV8xNzg0NTI2MDA3OjE3ODQ2MTI0MDdfVjM",
       "order": 90.0,
       "projects": [
         "人保1919俱乐部"
@@ -220,7 +283,7 @@
     },
     {
       "name": "三一重工",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjA5MzI2OTZlZTA1ZjYzZGY5ZDMxOTk3ODQzZWM1ZDJfOGViZGNmOWMzZTg0NmFkMzJhNDYxOWRlYjJjMTM3MzVfSUQ6NzY1MzI5OTgzNTExODE3NzQ5NF8xNzg0NTE5NTA2OjE3ODQ2MDU5MDZfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTIyMTQwMjIyMzdhODBiM2Q4ZTVkYjU2M2Q5M2IyZGZfMjUwOTRmNWE5M2EwOTA3NTQ2NWRkNTA2MDJkM2E0NGRfSUQ6NzY1MzI5OTgzNTExODE3NzQ5NF8xNzg0NTI2MDIwOjE3ODQ2MTI0MjBfVjM",
       "order": 91.0,
       "projects": [
         "三一重工企业展厅"
@@ -229,7 +292,7 @@
     },
     {
       "name": "山东临工工程机械",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzBmYTBkZDFkYjIxMzA4MTM0MzhiOWU1N2QyMjc3ZjdfOTRhYzI4MzAyY2E0ZTVhYWNkOGMxNmJhNWIxZmZkZWFfSUQ6NzY1MzMwMzgyNTc2NzQxODgwOF8xNzg0NTE5Mzk3OjE3ODQ2MDU3OTdfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDE2MzY0ZWEwZTUyOWM4ZGRhOWFmNDFjMDI5MzM2ZWRfYWRlYWYyODY2NjdmMTUzNTg1OTExYjQwY2QyZTYxZTJfSUQ6NzY1MzMwMzgyNTc2NzQxODgwOF8xNzg0NTI1OTExOjE3ODQ2MTIzMTFfVjM",
       "order": 92.0,
       "projects": [
         "山东临工客户服务中心"
@@ -238,7 +301,7 @@
     },
     {
       "name": "神州泰岳",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YmMzZWUyOGM3NGExOWEwN2E4YzEyMGI1ZjEwNGUyNTRfZjBiZTJhODczNjY5MDVmMmNmNTIzNGY3NWFhYTY1OGZfSUQ6NzY1MzI5ODg3NTY3OTM3ODM2OF8xNzg0NTE5Mzk5OjE3ODQ2MDU3OTlfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGRiNTkyMDcwYWIwNTYxNTVjYmJkYzdhNmNjNGYwYTJfMDQ0MWY5ZTg3ZWE1MWU4NzRkNzFiNzRhYzgwNzMxMzdfSUQ6NzY1MzI5ODg3NTY3OTM3ODM2OF8xNzg0NTI1OTEyOjE3ODQ2MTIzMTJfVjM",
       "order": 95.0,
       "projects": [
         "神州泰岳企业展厅"
@@ -247,7 +310,7 @@
     },
     {
       "name": "首都博物馆",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGRmNjkwN2QzYzdlN2U1Mzc3NWU1YWZhMDBiMmVhN2JfNmU3MjVlYzYwZWYxMjM5NTdlMGY0MWZjZmVjMGZjNWZfSUQ6NzY1MzI5NTk3ODU1NTkzNTk0MF8xNzg0NTE5NDQwOjE3ODQ2MDU4NDBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTMyMjNhMTNmYjdjZWRmMDgxMmExYjAwYjMzZTQxMDhfYzNhMDc0ZjVhNWEyODMyMDc5Y2JkMTAyNWYzYmRiNzBfSUQ6NzY1MzI5NTk3ODU1NTkzNTk0MF8xNzg0NTI1OTUxOjE3ODQ2MTIzNTFfVjM",
       "order": 99.0,
       "projects": [
         "首博-安第斯文明特展"
@@ -256,7 +319,7 @@
     },
     {
       "name": "首都机场",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTFiOGQ1YmIxNWMwMWM4ODkwMzMwMWIyNjZjYWM5NTVfYzU0OGMxMTBmMjU2NTg0ZGIyMDkwNGNhM2RjMDNlNjdfSUQ6NzY1MzI5NjE1ODk0ODk1MzI2OV8xNzg0NTE5NDcxOjE3ODQ2MDU4NzFfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTE5NmU2MDIyODQ1ZjM1MDY3ZmJlYTdlMmUxYTVmNzlfYTU0YmE0YjA1ODE2NjA3MWJjM2EyOGIyNDAxYTUyNTFfSUQ6NzY1MzI5NjE1ODk0ODk1MzI2OV8xNzg0NTI1OTgxOjE3ODQ2MTIzODFfVjM",
       "order": 106.0,
       "projects": [
         "首都机场运营40年主题图片展"
@@ -265,7 +328,7 @@
     },
     {
       "name": "数博会",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NThkZTgwMTdjOGNjYzIyY2NlYzdiODc4ZWNjNjg4NDRfMzFkM2RiMWE0NzE5YjRiZGRlN2JhY2FlZDZmY2U0MmRfSUQ6NzY1MzI5NjMwMzg5NTYyODc2MF8xNzg0NTE5NTA3OjE3ODQ2MDU5MDdfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTllMjBhZWE5M2Y0NTNmMzQxODkwMmUyMDIwMjM2OTdfYmNjY2I3OWQ5NzA0Yjc0ZjhjNzc5YjMxNTg3ZDcxYzVfSUQ6NzY1MzI5NjMwMzg5NTYyODc2MF8xNzg0NTI2MDIxOjE3ODQ2MTI0MjFfVjM",
       "order": 110.0,
       "projects": [
         "数博会"
@@ -274,7 +337,7 @@
     },
     {
       "name": "腾讯",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTY3OTA3MjQwYzk2ZDYyNmY3OWZlNDMwZjdjNmM3NjlfZTgxNDNjZGQyMDVmNDdjNDk4ODUwZDY3Yjk0ZGYzNGVfSUQ6NzY1MzI5NzM4OTUzNjY0NDMwNl8xNzg0NTE5NDAwOjE3ODQ2MDU4MDBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjZkYmRmMWU5ZDNmNTM3NTRjNjliMmJjYmExNTg5ZjVfYTdlMzViZDM2OTJkNzg3MTRmZjgxNWIxODAwMTNjMTRfSUQ6NzY1MzI5NzM4OTUzNjY0NDMwNl8xNzg0NTI1OTEyOjE3ODQ2MTIzMTJfVjM",
       "order": 115.0,
       "projects": [
         "腾讯滨海大厦展厅"
@@ -283,7 +346,7 @@
     },
     {
       "name": "万科集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Zjg1MjI3ZWEyNDQzMzlkMGVjYjNlYTNlODA4MWRiZGNfOTk0YzI5YmMyYmJkOTE1YzY4OTlmNmM0NDhlZTY5ZThfSUQ6NzY1MzI5Nzc5MjkyMzk3ODcwMl8xNzg0NTE5NDAxOjE3ODQ2MDU4MDFfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Yjk2YWI4NTEwY2RlNWNjNmFiZjYwNDIxYmZlNTExNWJfOTFkZGRhZWJkMGI0Y2Y2OGIzOTc2OTE2YmVkMmNjZmZfSUQ6NzY1MzI5Nzc5MjkyMzk3ODcwMl8xNzg0NTI1OTEyOjE3ODQ2MTIzMTJfVjM",
       "order": 118.0,
       "projects": [
         "万科西双版纳城市会客厅"
@@ -291,8 +354,17 @@
       "projectCount": 1
     },
     {
+      "name": "香山论坛",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTkzNjE1ZDgzODExM2E1ZmM1NTNlMDlkN2QyZGViMGNfOGZiYWRjY2I0MmRiODNjZmFmZDgzM2Y5ZjQ4M2UzMmZfSUQ6NzY2NDQ3MTEwNDE3Nzc4NjA3NF8xNzg0NTI1ODc1OjE3ODQ2MTIyNzVfVjM",
+      "order": 125.0,
+      "projects": [
+        "香山论坛"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "新华保险",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTNlZmFmNGM0NTUzM2I1NzFiOTExZDRkZmI4ODdkZDlfMzhlNjY3MzU1NGQwYTMyNmVkOWYxYzA3MzE1ZDgwM2VfSUQ6NzY1MzI5ODU1MTA2MTEyMjIzM18xNzg0NTE5NDAyOjE3ODQ2MDU4MDJfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGY2NzBlNDk4ZGIwY2JiOTE2NDY4NjhmMGEzZWI2OWRfYjAyOWFhZDc5NmJjNDIxODdhZmZiYTc0OTA2YmRhNzNfSUQ6NzY1MzI5ODU1MTA2MTEyMjIzM18xNzg0NTI1OTEzOjE3ODQ2MTIzMTNfVjM",
       "order": 126.0,
       "projects": [
         "新华保险展厅"
@@ -300,8 +372,17 @@
       "projectCount": 1
     },
     {
+      "name": "一脉阳光",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzUzZjkwYjUzODU4NjMyMWU0NTVhZjAzMDRiMTBiYjRfMjdkY2IxY2YxOWM1YjlmMGE4ZGE0MThhNzQzOTRmZDNfSUQ6NzY2NDQ3MjUxOTcxNTIyODYyNF8xNzg0NTI1OTE2OjE3ODQ2MTIzMTZfVjM",
+      "order": 132.0,
+      "projects": [
+        "一脉阳光生命健康体验馆"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "盈创回收",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTdiNWY3ODU2NzFhZjk3ZTg2ZTc5ZDc2NDk4NzI4ZWRfYzAwMzc4MDk3NWFjMThmNzFkMGY4NmM5ODAwMDY2YzZfSUQ6NzY2NDQ2OTQ2NDcwMzk3ODcyNl8xNzg0NTI1OTE3OjE3ODQ2MTIzMTdfVjM",
       "order": 135.0,
       "projects": [
         "盈创回收环保展厅"
@@ -310,7 +391,7 @@
     },
     {
       "name": "智博会",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzFkOTI3ZWQ4MmIwYTJmMjI3ODgxOTgyNDEzOGUzNzJfYzkzOTkxODU1NjFhNTI0YjI3OGMxNjYyM2M2MjQ3ZDhfSUQ6NzY1MzMwMDE3NDYyMTg3MTMwMV8xNzg0NTE5MzU5OjE3ODQ2MDU3NTlfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDNmMjE3ZDM1ODkxMDFlZTBjNDY5MDczNDFjODc1YjRfYmU5MDQ5OTA0YWE0NDUyN2QxZDFjMDU3NmExYjE2MzNfSUQ6NzY1MzMwMDE3NDYyMTg3MTMwMV8xNzg0NTI1ODczOjE3ODQ2MTIyNzNfVjM",
       "order": 142.0,
       "projects": [
         "智博会"
@@ -318,8 +399,17 @@
       "projectCount": 1
     },
     {
+      "name": "智能网联汽车大会",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzFlYjRjNzI1Y2M1ZjEzOTcxZmIyMDMwODAyZmE5MGNfNzBmOWNmOThkMWI3ODc4OGU1ZjA5MmJmYTA5ZTU0MmFfSUQ6NzY2NDQ2OTIyNDc4OTk2OTg5Nl8xNzg0NTI1ODY2OjE3ODQ2MTIyNjZfVjM",
+      "order": 144.0,
+      "projects": [
+        "智能网联汽车大会"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "中关村论坛",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2ZiNTM3YjY5NTA4Y2QwOTk2ZDA3MDNmMzIxOWIwOGVfMDc1YTQ5ZDkxOGQ1ZjgyMDMwMjU1MjQxYjg3N2YxMGRfSUQ6NzY1MzMwMDU0NzcyNjcwNzkxNV8xNzg0NTE5MzU1OjE3ODQ2MDU3NTVfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDZhYTE5NzQ4OWMyMmM4ODU0OTI1Mjc5YTU3OTZmMTFfMDFiYzcwZWRiNmMyMmQ3MmE3ZGU5ZmYyOTBkOWRmZGFfSUQ6NzY1MzMwMDU0NzcyNjcwNzkxNV8xNzg0NTI1ODY5OjE3ODQ2MTIyNjlfVjM",
       "order": 146.0,
       "projects": [
         "中关村论坛"
@@ -328,7 +418,7 @@
     },
     {
       "name": "中国电信",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmY5YzFjOTMzNjM1N2YxYmU0OGI1YzcxODg2YjQ5YzBfZjdjYmUwODBmMTYzZTc5MzZlOWY3M2NmMjkwZDNlODlfSUQ6NzY1MzMyMDg5MjQ0OTE0Nzg2OF8xNzg0NTE5MzY2OjE3ODQ2MDU3NjZfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDNlOTY2MTY5MmE4ZDcxY2U0MjY3YWRiNDJjMWE5MWZfYjM2NWY0YTgxZWIwZjUyZWYwNDcyZGQ4MzQyNzk2ZTJfSUQ6NzY1MzMyMDg5MjQ0OTE0Nzg2OF8xNzg0NTI1ODgwOjE3ODQ2MTIyODBfVjM",
       "order": 149.0,
       "projects": [
         "中国电信天翼云算力大会"
@@ -336,8 +426,17 @@
       "projectCount": 1
     },
     {
+      "name": "中国儿童中心",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjRhNTY1YWMzMTlhZDkwOTdmM2Q0NzE3ODhhODEyNDBfMjlmMTQ1YmQwMzJmOTljNjFiOGU0ODQzYTBmYjZiZTRfSUQ6NzY2NDQ3MzM5NzQ4NTEyODk5MF8xNzg0NTI1OTg1OjE3ODQ2MTIzODVfVjM",
+      "order": 150.0,
+      "projects": [
+        "中国儿童中心成就展"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "中国科技馆",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWYyNDNhZjk4YzMzN2NmMDE0YmE2ZDQxODUwYmZmN2RfMDVkOTFjOWI5OWM2ODJlZmJmZTkyMDQyOTU5MTQ0ZDNfSUQ6NzY1MzMwNDAyMTc4NTY5MzEyNl8xNzg0NTE5NDQ4OjE3ODQ2MDU4NDhfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWRhZDE1M2Y4YjVjOGEyODNiNWZjODYxMDJjMjVjNTRfMTJhZTM4NmJmODhkNGMxYzkxMzhiNTFiNGQwOWZlZWZfSUQ6NzY1MzMwNDAyMTc4NTY5MzEyNl8xNzg0NTI1OTU5OjE3ODQ2MTIzNTlfVjM",
       "order": 152.0,
       "projects": [
         "中国科技馆-无人系统科普展"
@@ -346,7 +445,7 @@
     },
     {
       "name": "中国商飞集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjQ2OTdkMmJmMGZlNjlmYTQ2NWI1ZDhkMjBmZDEwZjdfNGI1ZWUwMmI5M2JhNWEzNmM2MTU4YjY3N2MwOGU2MzBfSUQ6NzY1MzMyMDM3MjQ4OTYwNDI4Ml8xNzg0NTE5Mzc3OjE3ODQ2MDU3NzdfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWIwMTBjOTlmYjFkZjRjYjY3OTBlZGIxZGQ1NWZlNDlfNGIxMmUwNDI1M2JkYTJmNDU2YmZiYmZlNzI3MGE0ZjlfSUQ6NzY1MzMyMDM3MjQ4OTYwNDI4Ml8xNzg0NTI1ODg5OjE3ODQ2MTIyODlfVjM",
       "order": 153.0,
       "projects": [
         "中国商飞集团展厅"
@@ -355,7 +454,7 @@
     },
     {
       "name": "中国石油",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmNiMTIzYmFjNDQxOTFjYjA1Nzg2MjRmN2NkMTM1ZmJfMDg0N2UzOTYxZmNlZDIyMDQ4OWVkNDIxN2U2YjkwNDBfSUQ6NzY1MzMwMTY0NzU2OTA2MzEzMF8xNzg0NTE5Mzc4OjE3ODQ2MDU3NzhfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWNjNmM3OTIzYjgzNDllNmNiNmY4M2E4MTg2NjBhZjZfMTM5NjJlOWViYjRiZGVkMzJjNTQyMWIwNzI1ZTQ2Y2RfSUQ6NzY1MzMwMTY0NzU2OTA2MzEzMF8xNzg0NTI1ODkwOjE3ODQ2MTIyOTBfVjM",
       "order": 155.0,
       "projects": [
         "中国石油克拉玛依石油科技馆"
@@ -364,7 +463,7 @@
     },
     {
       "name": "中航工业",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVhM2QyNDU1ZWQ3NTFlZWViM2FiYTdkMDBjODJjN2ZfMDFmMzUxZjE0Y2Q5MDY1YzgyNTI1YzdlOWVhNTA1MTBfSUQ6NzY1MzMwMTYyNTkwMTA1OTI3Nl8xNzg0NTE5NDA4OjE3ODQ2MDU4MDhfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzE1Yzc4ODBlYjc2OGYxNTg1NzA3YjkwNjMyOTZkMzFfYmNjMjJkZmNlYzljNDA5ZGUwMzA4YjA2M2MxOTU5MGFfSUQ6NzY1MzMwMTYyNTkwMTA1OTI3Nl8xNzg0NTI1OTIwOjE3ODQ2MTIzMjBfVjM",
       "order": 156.0,
       "projects": [
         "中航工业-隆盛电源展厅"
@@ -373,7 +472,7 @@
     },
     {
       "name": "中铁工程股份",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTYyODFkZjM2NjM4ZTZhMDI3MWQ5YzEwN2ZhODNlZmRfY2E0ZDkyNDgzOGVjYjEwN2M5ODFmZGMzODZjMDkxOWRfSUQ6NzY1MzMwMjI1Nzg4MjMyMDA2Ml8xNzg0NTE5MzgwOjE3ODQ2MDU3ODBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mjk5NTA3NThhMGQzZTYzOTViMjg2MTFiMDY0NTY3YTVfNDgwNTM3ZWJhYWQ2OGVkZjJiZjM1ZTRiNzRiYTM2M2JfSUQ6NzY1MzMwMjI1Nzg4MjMyMDA2Ml8xNzg0NTI1ODkyOjE3ODQ2MTIyOTJfVjM",
       "order": 159.0,
       "projects": [
         "中铁集团工程局展厅"
@@ -382,7 +481,7 @@
     },
     {
       "name": "中信集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDY0ZTNhOWQxYmNmOThhNzhhYTgzMDBkMzUwYjVhYTVfYjE2ZmFhY2UwNzgyOGU4OTgyZDMwODBiZmExODlhYTRfSUQ6NzY1MzMwMTk0MzkwNTI3NTA4MF8xNzg0NTE5MzgyOjE3ODQ2MDU3ODJfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzIzMmZiZGMxNWE0NzY0ODdlY2M2YmI5N2MzMjIzM2ZfZTg1NGM5NjBiYzA3N2QxZjMyNDg0MDAyZDM3MjFiNDJfSUQ6NzY1MzMwMTk0MzkwNTI3NTA4MF8xNzg0NTI1ODk0OjE3ODQ2MTIyOTRfVjM",
       "order": 162.0,
       "projects": [
         "中信集团中国尊展厅"
@@ -391,7 +490,7 @@
     },
     {
       "name": "中冶集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDUyMTFjOTY5MDgzNjZjMTY4NDUxZDNiMTBiN2U0ZTBfNzAxNzg3YTM1NzI1NDBjZDc0MGVlNTExNThiY2IxYTNfSUQ6NzY1MzMwMjUwMDg3OTA3NjU0OV8xNzg0NTE5NDEwOjE3ODQ2MDU4MTBfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NTc5MTVmMTNiYzc4NWQ1ZTA2ZDI0OGFkYjQ1OTg3NWNfY2FlNjgyNGM4MTgwZjczNDRhNWUyMjQ2YTY2NTg2M2ZfSUQ6NzY1MzMwMjUwMDg3OTA3NjU0OV8xNzg0NTI1OTIxOjE3ODQ2MTIzMjFfVjM",
       "order": 163.0,
       "projects": [
         "中冶集团展厅"
@@ -399,8 +498,17 @@
       "projectCount": 1
     },
     {
+      "name": "众成集团",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2QxZjg0MmQwNDliODQ5YWI5M2Y1OTk5YWExYmRlNTdfMGU3NGZkMmZlNWQwNzlkZjg0MzY2YWNmYmU0ODM3NzhfSUQ6NzY2NDQ2OTk3OTkyODIzNDk2OV8xNzg0NTI1OTIyOjE3ODQ2MTIzMjJfVjM",
+      "order": 164.0,
+      "projects": [
+        "众成集团展厅"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "远洋集团",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDllZjk3YWMyOTVjZDhmYjY1ZWVjYmViNWY3NGJlY2VfNTVkOTBlMDJmN2RiNmVlM2UwMDZmMTViMGY5YWI5MTZfSUQ6NzY1MzI5ODY3NTI2MjgwMjg5MV8xNzg0NTE5NTEzOjE3ODQ2MDU5MTNfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjRjMzQ5MTBlMjk4NTA5ZGRlNTkwZmYxZmJmZWUyZmJfNzQ4NjMxNDQxYzAwMzdlYmFlNmY1MmEzYzlhYThhNzZfSUQ6NzY1MzI5ODY3NTI2MjgwMjg5MV8xNzg0NTI2MDI3OjE3ODQ2MTI0MjdfVjM",
       "order": 172.0,
       "projects": [
         "远洋梦工厂创新体验中心"
@@ -409,7 +517,7 @@
     },
     {
       "name": "唯迈医疗",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzM2ZjFkOGM1Y2JlYjE5Njc2NmZkMjgxMmVmZmFiZjRfNDQzZTdmZDNmMWUxNTEyZTNmNDIzZjBjZDMyNmU0ZDBfSUQ6NzY1MzMyMDUxMDc4MDIzMDg1NV8xNzg0NTE5NTE3OjE3ODQ2MDU5MTdfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzhjZGRlOWE0OWFhMjBhZjI0NDQxNGQ2ODY4NjU3YjVfMDQyOTFjY2E5YmVmZDVhODVjZTU0NDYwZWE3OTlmZTNfSUQ6NzY1MzMyMDUxMDc4MDIzMDg1NV8xNzg0NTI2MDMxOjE3ODQ2MTI0MzFfVjM",
       "order": 176.0,
       "projects": [
         "唯迈医疗科技展厅"
@@ -417,8 +525,17 @@
       "projectCount": 1
     },
     {
+      "name": "牧原集团",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTZjMWI4YWIxM2IzNWY3NmZiZGUxM2QwYzc2MDcwMjdfNDE1NjI0MTE1ZWEzM2FlNTM2MTM2OWZhOTk4YTdhZmNfSUQ6NzY2NDQ2ODUzNjU5NjY2MzI2Nl8xNzg0NTI2MDMyOjE3ODQ2MTI0MzJfVjM",
+      "order": 177.0,
+      "projects": [
+        "牧原集团展厅"
+      ],
+      "projectCount": 1
+    },
+    {
       "name": "北京红星股份",
-      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODYwNTI2ODk2OTkxN2Q4ZjYxODVjOTNlYzMyMWJhMjlfOTMxNjQ3YmZlMDgyM2FkNTkyYTA1ZGJkZWUxNWYwMjJfSUQ6NzY1MzEzMDQzOTg4MTQyNzkxM18xNzg0NTE5NTIyOjE3ODQ2MDU5MjJfVjM",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjgzOWI3Y2JjOGQ5ZTk5ZDU1NzMyMGIyMmRhNDFjNjNfYzYzY2U3MTZkYjcxZGJhZjkxZDk5ZTVhM2I4ZjdmZWVfSUQ6NzY1MzEzMDQzOTg4MTQyNzkxM18xNzg0NTI2MDM3OjE3ODQ2MTI0MzdfVjM",
       "order": 181.0,
       "projects": [
         "北京红星股份有限公司源升号博物馆"
@@ -427,7 +544,7 @@
     },
     {
       "name": "华夏幸福",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWUyNmViODU1ZTNiMTFmYzhiYmVhNDU2YmFjMDQ5NWJfM2EyOTk0ZGE1NGExODE4Yjk1YzQ4NTNkNGNlYjgwNzZfSUQ6NzY2NDQ2NzcxMTYxNTExMDExNl8xNzg0NTI2MDQzOjE3ODQ2MTI0NDNfVjM",
       "order": 187.0,
       "projects": [
         "华夏幸福丰台创新展示中心"
@@ -436,7 +553,7 @@
     },
     {
       "name": "国家大剧院",
-      "logo": "",
+      "logo": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTMwYTdjNTlmZjEwMmY1ZGYyNjc4NWIxYTI1NTM4MTBfN2YxNmM3MjcxOGY5OWZkMWMyZmJiMWYxNzZhYzU0MDNfSUQ6NzY2NDQ2NTcwNzAxMDQ0NDQ2N18xNzg0NTI2MDUwOjE3ODQ2MTI0NTBfVjM",
       "order": 194.0,
       "projects": [
         "国家大剧院儿童艺术中心环境改造"
