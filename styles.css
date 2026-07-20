@@ -292,7 +292,7 @@ button {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(360px, 0.68fr) minmax(0, 1.32fr);
+  grid-template-columns: minmax(520px, 0.82fr) minmax(0, 1.18fr);
   gap: clamp(24px, 2.2vw, 36px);
   min-height: calc(100vh - 72px);
   padding: 44px 36px 32px;
@@ -302,6 +302,7 @@ button {
 .hero-copy {
   align-self: center;
   min-width: 0;
+  max-width: 640px;
 }
 
 .eyebrow {

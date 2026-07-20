@@ -207,7 +207,7 @@ a {
   background: #050505;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.68s ease, visibility 0.68s step-end;
+  transition: opacity 0.28s ease, visibility 0.28s step-end;
 }
 
 .journey-loader-mark {
@@ -216,7 +216,7 @@ a {
   border: 1px solid rgba(255, 106, 0, 0.7);
   border-left-color: transparent;
   border-radius: 50%;
-  animation: journeyLoaderSpin 0.85s linear infinite;
+  animation: journeyLoaderSpin 0.64s linear infinite;
 }
 
 .is-ready .journey-loader {
@@ -1319,7 +1319,7 @@ a {
   position: absolute;
   z-index: 2;
   left: 50%;
-  bottom: clamp(44px, 6.5vh, 86px);
+  bottom: clamp(22px, 3.6vh, 52px);
   display: grid;
   gap: 14px;
   width: min(720px, calc(100vw - 48px));

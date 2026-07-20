@@ -104,8 +104,8 @@ function setupHeroVideoIntro() {
   const video = document.querySelector(".hero-video");
   const capabilityPanel = document.querySelector(".hero-right-panel--intro");
   const targetLoopSeconds = 5;
-  const minimumLoaderMs = 760;
-  const firstFrameHoldMs = 1180;
+  const minimumLoaderMs = 360;
+  const firstFrameHoldMs = 720;
   const introStartedAt = performance.now();
   let hasLeftHero = false;
   let replaying = false;
@@ -204,7 +204,7 @@ function setupHeroVideoIntro() {
   window.setTimeout(() => {
     tunePlaybackRate();
     completeIntro();
-  }, 2600);
+  }, 1300);
 }
 
 function setupGlobalCursorAura() {
@@ -339,6 +339,86 @@ function setupCinematicTransition() {
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
   update();
+}
+
+function setupSceneSnap() {
+  const sequence = document.querySelector(".cinematic-sequence");
+  const city = document.querySelector("#city-data");
+  const fourth = document.querySelector("#fourth");
+  const fifth = document.querySelector("#fifth");
+  if (!sequence || !city || !fourth || !fifth) return;
+
+  let settleTimer = 0;
+  let releaseTimer = 0;
+  let isSettling = false;
+  let wheelLocked = false;
+
+  const getAnchors = () => {
+    const firstSceneTop = sequence.offsetTop;
+    return [
+      firstSceneTop,
+      firstSceneTop + window.innerHeight,
+      city.offsetTop,
+      fourth.offsetTop,
+      fifth.offsetTop,
+    ];
+  };
+
+  const moveToAnchor = (nearest) => {
+    const current = window.scrollY;
+    if (Math.abs(nearest - current) < 12) return;
+    isSettling = true;
+    window.scrollTo({ top: nearest, behavior: "smooth" });
+    window.clearTimeout(releaseTimer);
+    releaseTimer = window.setTimeout(() => {
+      isSettling = false;
+    }, 520);
+  };
+
+  const settleToScene = () => {
+    if (isSettling || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const current = window.scrollY;
+    const anchors = getAnchors();
+    const nearest = anchors.reduce((best, target) => (
+      Math.abs(target - current) < Math.abs(best - current) ? target : best
+    ), anchors[0]);
+    moveToAnchor(nearest);
+  };
+
+  const scheduleSettle = () => {
+    if (isSettling) return;
+    window.clearTimeout(settleTimer);
+    settleTimer = window.setTimeout(settleToScene, 180);
+  };
+
+  window.addEventListener("scroll", () => {
+    scheduleSettle();
+  }, { passive: true });
+
+  window.addEventListener("touchend", scheduleSettle, { passive: true });
+  window.addEventListener("wheel", (event) => {
+    if (window.matchMedia("(pointer: coarse)").matches || Math.abs(event.deltaY) < 4) return;
+    const anchors = getAnchors();
+    const current = window.scrollY;
+    const insideJourney = current >= anchors[0] - 4 && current <= anchors.at(-1) + window.innerHeight - 4;
+    if (!insideJourney || wheelLocked || isSettling) return;
+
+    const activeIndex = anchors.reduce((index, target, currentIndex) => (
+      target <= current + window.innerHeight * 0.22 ? currentIndex : index
+    ), 0);
+    const nextIndex = clamp(activeIndex + (event.deltaY > 0 ? 1 : -1), 0, anchors.length - 1);
+    if (nextIndex === activeIndex) return;
+
+    event.preventDefault();
+    wheelLocked = true;
+    moveToAnchor(anchors[nextIndex]);
+    window.setTimeout(() => {
+      wheelLocked = false;
+    }, 620);
+  }, { passive: false });
+  window.addEventListener("resize", () => {
+    window.clearTimeout(settleTimer);
+  });
 }
 
 function setupPortraitScan() {
@@ -839,6 +919,7 @@ async function boot() {
   setupTheme();
   setupGlobalCursorAura();
   setupCinematicTransition();
+  setupSceneSnap();
   setupPortraitScan();
   setupCityDataScene();
   setupFourthVideoScene();
