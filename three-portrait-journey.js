@@ -324,6 +324,7 @@ function setupCinematicTransition() {
   if (!sequence) return;
   let toolsStarted = false;
   let toolsFinished = false;
+  let scrollTicking = false;
 
   const resetToolsReveal = () => {
     toolKeywordNodes.forEach((node) => node.classList.remove("is-visible"));
@@ -403,7 +404,16 @@ function setupCinematicTransition() {
     }
   };
 
-  window.addEventListener("scroll", update, { passive: true });
+  const scheduleUpdate = () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(() => {
+      scrollTicking = false;
+      update();
+    });
+  };
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
   window.addEventListener("resize", update);
   update();
 }
@@ -575,6 +585,7 @@ function setupCityDataScene() {
       if (!entry.isIntersecting) {
         hasExited = true;
         window.clearTimeout(startTimer);
+        video.pause();
       }
     });
   }, { threshold: [0, 0.55, 0.8] });
@@ -624,6 +635,7 @@ function setupFourthVideoScene() {
       if (!entry.isIntersecting) {
         hasExited = true;
         window.clearTimeout(startTimer);
+        video.pause();
       }
     });
   }, { threshold: [0, 0.55, 0.8] });
@@ -638,6 +650,7 @@ function setupFourthClientWall() {
   if (!scene || !video || !leftZone || !rightZone) return;
 
   const revealAtProgress = 0.53;
+  const isMobile = window.matchMedia("(max-width: 900px), (pointer: coarse)").matches;
   let wallLoaded = false;
   let loading = false;
 
@@ -659,7 +672,7 @@ function setupFourthClientWall() {
       const image = document.createElement("img");
       image.src = client.logo;
       image.alt = "";
-      image.loading = "eager";
+      image.loading = isMobile ? "lazy" : "eager";
       image.decoding = "async";
       image.addEventListener("error", () => {
         renderTextLogo();
@@ -716,14 +729,16 @@ function setupFourthClientWall() {
     }
   };
 
-  // Prepare the logo wall before it becomes visible so its image decoding does
-  // not compete with the heading reveal at the end of the video.
-  const preloadObserver = new IntersectionObserver((entries) => {
-    if (!entries.some((entry) => entry.isIntersecting)) return;
-    load();
-    preloadObserver.disconnect();
-  }, { rootMargin: "65% 0px", threshold: 0.01 });
-  preloadObserver.observe(scene);
+  // Desktop can decode the client wall before the scene. On mobile, defer it
+  // until the video is already playing to avoid competing with first render.
+  if (!isMobile) {
+    const preloadObserver = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+      load();
+      preloadObserver.disconnect();
+    }, { rootMargin: "65% 0px", threshold: 0.01 });
+    preloadObserver.observe(scene);
+  }
 
   video.addEventListener("timeupdate", () => {
     const duration = Number.isFinite(video.duration) ? video.duration : 0;
@@ -791,6 +806,7 @@ function setupFifthVideoScene() {
       if (!entry.isIntersecting) {
         hasExited = true;
         window.clearTimeout(startTimer);
+        video.pause();
       }
     });
   }, { threshold: [0, 0.55, 0.8] });
@@ -833,6 +849,7 @@ function renderProjectMatrix(projects) {
 }
 
 function setupScrollAnimation() {
+  if (window.matchMedia("(pointer: coarse)").matches) return;
   const portraitWrap = document.querySelector(".portrait-wrap");
   const portraitLeft = document.querySelector(".portrait-left");
   const portraitRight = document.querySelector(".portrait-right");

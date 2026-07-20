@@ -1064,6 +1064,16 @@ a {
   opacity: var(--ended-opacity);
 }
 
+/* A landscape tablet can be wider than the mobile breakpoint while still
+   having touch-device text metrics. Keep the readable Chinese capability
+   contour there and suppress the secondary English rail that would collide
+   with it in the lower half of the video. */
+@media (pointer: coarse) {
+  .tools-keyword-stage-en {
+    display: none;
+  }
+}
+
 
 .tools-capabilities {
   position: absolute;
@@ -1820,6 +1830,12 @@ a {
 
   .journey {
     cursor: auto;
+  }
+
+  /* Mobile uses the staged video scenes directly. Keeping every full-screen
+     scene promoted as a compositor layer wastes memory on tablets. */
+  .cinematic-sequence > .journey-scene {
+    will-change: auto;
   }
 
   .site-header {
