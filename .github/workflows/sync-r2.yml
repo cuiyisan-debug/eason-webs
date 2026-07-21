@@ -48,6 +48,7 @@ jobs:
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
           R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
           R2_MEDIA_PREFIX: ${{ vars.R2_MEDIA_PREFIX }}
+          R2_LOCAL_MEDIA_PREFIX: ${{ vars.R2_LOCAL_MEDIA_PREFIX }}
           R2_SYNC_MODE: mirror
         run: python sync_feishu_media_to_r2.py
 
@@ -55,5 +56,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add api/portfolio.json api/clients.json api/zhixing.json api/curation.json api/r2-media-manifest.json reports/*.json
+          git add api/portfolio.json api/clients.json api/zhixing.json api/curation.json api/r2-media-manifest.json reports/*.json *.html *.css *.js
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore: mirror feishu media to cloudflare r2" && git push)

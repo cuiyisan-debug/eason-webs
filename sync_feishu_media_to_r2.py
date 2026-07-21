@@ -12,6 +12,7 @@ import hashlib
 import json
 import mimetypes
 import os
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -28,7 +29,10 @@ REPORTS_DIR = ROOT / "reports"
 API_FILES = ("portfolio.json", "clients.json", "zhixing.json", "curation.json")
 MANIFEST_FILE = API_DIR / "r2-media-manifest.json"
 R2_PREFIX = os.environ.get("R2_MEDIA_PREFIX", "feishu-media").strip("/") or "feishu-media"
+R2_LOCAL_MEDIA_PREFIX = os.environ.get("R2_LOCAL_MEDIA_PREFIX", "site-media").strip("/") or "site-media"
 SYNC_MODE = os.environ.get("R2_SYNC_MODE", "mirror").strip().lower() or "mirror"
+LOCAL_MEDIA_EXTENSIONS = {".mp4", ".webm", ".mov"}
+TEXT_EXTENSIONS = {".html", ".css", ".js"}
 
 
 def require(name: str) -> str:
@@ -83,8 +87,10 @@ def load_manifest(public_base_url: str) -> dict[str, Any]:
             "schemaVersion": 1,
             "generatedAt": now_iso(),
             "r2Prefix": R2_PREFIX,
+            "r2LocalMediaPrefix": R2_LOCAL_MEDIA_PREFIX,
             "publicBaseUrl": public_base_url,
             "objects": {},
+            "localAssets": {},
         }
     try:
         data = json.loads(MANIFEST_FILE.read_text(encoding="utf-8"))
@@ -94,7 +100,9 @@ def load_manifest(public_base_url: str) -> dict[str, Any]:
         data = {}
     data.setdefault("schemaVersion", 1)
     data.setdefault("objects", {})
+    data.setdefault("localAssets", {})
     data["r2Prefix"] = R2_PREFIX
+    data["r2LocalMediaPrefix"] = R2_LOCAL_MEDIA_PREFIX
     data["publicBaseUrl"] = public_base_url
     return data
 
@@ -107,6 +115,20 @@ def is_missing_object(error: ClientError) -> bool:
     code = str(error.response.get("Error", {}).get("Code", ""))
     status = int(error.response.get("ResponseMetadata", {}).get("HTTPStatusCode", 0))
     return code in {"404", "NoSuchKey", "NotFound"} or status == 404
+
+
+def content_type_for_path(path: Path) -> str:
+    guessed, _ = mimetypes.guess_type(path.name)
+    return guessed or "application/octet-stream"
+
+
+def should_skip_text_file(path: Path) -> bool:
+    rel = path.relative_to(ROOT)
+    if rel.parts[0] in {".git", ".github", ".playwright-cli", "__pycache__", "reports", "test-results"}:
+        return True
+    if rel.parts[0] == "temp-video-previews":
+        return True
+    return path.name.startswith((".codex-", ".tmp-", "temp-"))
 
 
 def main() -> None:
@@ -129,6 +151,7 @@ def main() -> None:
     )
     manifest = load_manifest(public_base_url)
     objects: dict[str, Any] = manifest.setdefault("objects", {})
+    local_assets: dict[str, Any] = manifest.setdefault("localAssets", {})
     url_cache: dict[str, str] = {}
     manifest_dirty = False
     stats = {
@@ -139,8 +162,35 @@ def main() -> None:
         "pending": 0,
         "changedFiles": 0,
         "failed": 0,
+        "localScanned": 0,
+        "localUploaded": 0,
+        "localReused": 0,
+        "localReferenceFilesChanged": 0,
     }
     failures: list[dict[str, str]] = []
+
+    def ensure_r2_object(body: bytes, *, key: str, content_type: str) -> str:
+        nonlocal manifest_dirty
+        target = public_url(public_base_url, key)
+        try:
+            client.head_object(Bucket=bucket, Key=key)
+            stats["reused"] += 1
+        except ClientError as error:
+            if not is_missing_object(error):
+                raise
+            if SYNC_MODE == "reuse":
+                stats["pending"] += 1
+                return ""
+            client.put_object(
+                Bucket=bucket,
+                Key=key,
+                Body=body,
+                ContentType=content_type,
+                CacheControl="public, max-age=31536000, immutable",
+            )
+            stats["uploaded"] += 1
+            manifest_dirty = True
+        return target
 
     def mirror(url: str) -> str:
         nonlocal manifest_dirty
@@ -177,26 +227,10 @@ def main() -> None:
 
         content_type = response.headers.get("Content-Type", "application/octet-stream")
         key = f"{R2_PREFIX}/{digest[:2]}/{digest}{extension_for(content_type, url)}"
-        target = public_url(public_base_url, key)
-
-        try:
-            client.head_object(Bucket=bucket, Key=key)
-            stats["reused"] += 1
-        except ClientError as error:
-            if not is_missing_object(error):
-                raise
-            if SYNC_MODE == "reuse":
-                stats["pending"] += 1
-                url_cache[url] = url
-                return url
-            client.put_object(
-                Bucket=bucket,
-                Key=key,
-                Body=body,
-                ContentType=content_type.split(";", 1)[0],
-                CacheControl="public, max-age=31536000, immutable",
-            )
-            stats["uploaded"] += 1
+        target = ensure_r2_object(body, key=key, content_type=content_type.split(";", 1)[0])
+        if not target:
+            url_cache[url] = url
+            return url
 
         objects[digest] = {
             "sha256": digest,
@@ -229,6 +263,85 @@ def main() -> None:
             path.write_text(updated, encoding="utf-8")
             stats["changedFiles"] += 1
 
+    if SYNC_MODE == "mirror":
+        replacement_map: dict[str, str] = {}
+        previous_local_urls: dict[str, list[str]] = {}
+        for rel_path, entry in local_assets.items():
+            if isinstance(entry, dict) and entry.get("r2Url"):
+                previous_local_urls.setdefault(rel_path, []).append(str(entry["r2Url"]))
+
+        for path in sorted((ROOT / "assets").rglob("*")):
+            if not path.is_file() or path.suffix.lower() not in LOCAL_MEDIA_EXTENSIONS:
+                continue
+            stats["localScanned"] += 1
+            body = path.read_bytes()
+            digest = hashlib.sha256(body).hexdigest()
+            rel_path = path.relative_to(ROOT).as_posix()
+            content_type = content_type_for_path(path)
+            key = f"{R2_LOCAL_MEDIA_PREFIX}/{digest[:2]}/{digest}{path.suffix.lower()}"
+            actual_key = key
+            target = public_url(public_base_url, key)
+            existing = objects.get(digest)
+            if isinstance(existing, dict) and existing.get("r2Key"):
+                actual_key = str(existing["r2Key"])
+                target = public_url(public_base_url, actual_key)
+                stats["localReused"] += 1
+            else:
+                before_uploaded = stats["uploaded"]
+                uploaded_target = ensure_r2_object(body, key=key, content_type=content_type)
+                target = uploaded_target or target
+                if stats["uploaded"] > before_uploaded:
+                    stats["localUploaded"] += 1
+                else:
+                    stats["localReused"] += 1
+                objects[digest] = {
+                    "sha256": digest,
+                    "size": len(body),
+                    "contentType": content_type,
+                    "r2Key": key,
+                    "r2Url": target,
+                    "source": "local-asset",
+                    "createdAt": now_iso(),
+                    "lastSeenAt": now_iso(),
+                }
+                manifest_dirty = True
+
+            if local_assets.get(rel_path, {}).get("r2Url") != target:
+                local_assets[rel_path] = {
+                    "sha256": digest,
+                    "size": len(body),
+                    "contentType": content_type,
+                    "r2Key": actual_key,
+                    "r2Url": target,
+                    "updatedAt": now_iso(),
+                }
+                manifest_dirty = True
+            replacement_map[rel_path] = target
+            replacement_map[f"./{rel_path}"] = target
+            replacement_map[f"/{rel_path}"] = target
+            for old_url in previous_local_urls.get(rel_path, []):
+                replacement_map[old_url] = target
+
+        if replacement_map:
+            for path in sorted(ROOT.rglob("*")):
+                if (
+                    not path.is_file()
+                    or path.suffix.lower() not in TEXT_EXTENSIONS
+                    or should_skip_text_file(path)
+                ):
+                    continue
+                original = path.read_text(encoding="utf-8")
+                updated = original
+                for source, target in replacement_map.items():
+                    if source.startswith("http"):
+                        updated = updated.replace(source, target)
+                        continue
+                    pattern = re.compile(re.escape(source) + r"(?:\?[^\"'\s<>)]+)?")
+                    updated = pattern.sub(target, updated)
+                if updated != original:
+                    path.write_text(updated, encoding="utf-8")
+                    stats["localReferenceFilesChanged"] += 1
+
     report_path: Path | None = None
     if SYNC_MODE == "mirror" or manifest_dirty:
         manifest["generatedAt"] = now_iso()
@@ -242,6 +355,7 @@ def main() -> None:
             "bucket": bucket,
             "publicBaseUrl": public_base_url,
             "r2Prefix": R2_PREFIX,
+            "r2LocalMediaPrefix": R2_LOCAL_MEDIA_PREFIX,
             "stats": stats,
             "failures": failures,
             "manifestFile": str(MANIFEST_FILE.relative_to(ROOT)),
