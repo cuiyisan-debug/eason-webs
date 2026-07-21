@@ -114,7 +114,7 @@ def save_json(path: Path, data: Any) -> None:
 def is_missing_object(error: ClientError) -> bool:
     code = str(error.response.get("Error", {}).get("Code", ""))
     status = int(error.response.get("ResponseMetadata", {}).get("HTTPStatusCode", 0))
-    return code in {"404", "NoSuchKey", "NotFound"} or status == 404
+    return code in {"404", "403", "NoSuchKey", "NotFound", "Forbidden"} or status in {403, 404}
 
 
 def content_type_for_path(path: Path) -> str:
