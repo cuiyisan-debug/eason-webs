@@ -897,13 +897,13 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     if not document_id:
         return {}
     print(f"Fetching Feishu doc {document_id}", flush=True)
-    blocks = fetch_feishu_descendant_blocks(token, document_id, document_id)
+    flat_blocks = fetch_feishu_doc_blocks(token, document_id)
+    blocks = flat_blocks
+    if not blocks:
+        blocks = fetch_feishu_descendant_blocks(token, document_id, document_id)
     if not blocks:
         blocks = fetch_feishu_doc_block_tree(token, document_id)
-    flat_blocks = fetch_feishu_doc_blocks(token, document_id)
-    if len(blocks) <= 1:
-        blocks = flat_blocks
-    elif flat_blocks:
+    elif flat_blocks and blocks is not flat_blocks:
         seen_block_ids = {block_id(block) for block in blocks if block_id(block)}
         blocks.extend(block for block in flat_blocks if block_id(block) and block_id(block) not in seen_block_ids)
     media_tokens = collect_doc_media_tokens(blocks)
