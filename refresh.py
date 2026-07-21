@@ -896,6 +896,7 @@ def fetch_feishu_doc_content(token: str, url: str) -> dict[str, Any]:
     document_id = feishu_doc_id_from_url(url)
     if not document_id:
         return {}
+    print(f"Fetching Feishu doc {document_id}", flush=True)
     blocks = fetch_feishu_descendant_blocks(token, document_id, document_id)
     if not blocks:
         blocks = fetch_feishu_doc_block_tree(token, document_id)
@@ -965,6 +966,7 @@ def build_articles(
     token: str = "",
 ) -> list[dict[str, Any]]:
     articles: list[dict[str, Any]] = []
+    total = len(records)
     for index, record in enumerate(records, 1):
         fields = record.get("fields", {})
         title = normalize_text(first_field(fields, ZHIXING_TITLE_FIELDS))
@@ -974,6 +976,10 @@ def build_articles(
         display_mode = normalize_text(first_field(fields, ARTICLE_DISPLAY_MODE_FIELDS)) or "网站排版"
         if not title and not summary and not body and not content_url:
             continue
+        print(
+            f"[{source_type}] article {index}/{total}: {title or content_url or record.get('record_id')}",
+            flush=True,
+        )
         linked = fetch_feishu_doc_content(token, content_url) if token and content_url else {}
         if content_url and not linked.get("body"):
             fallback_linked = fetch_link_content(content_url)
@@ -1078,6 +1084,7 @@ def refresh_article_source(
         write_article_output(output_file, [], base_token=base_token, table_id="", source_type=source_type)
         return
     try:
+        print(f"Refreshing {source_type} articles", flush=True)
         table_id = choose_article_table(token, base_token, explicit_table_id)
         if not table_id:
             write_article_output(
@@ -1090,6 +1097,7 @@ def refresh_article_source(
             )
             return
         article_records = fetch_records(token, base_token=base_token, table_id=table_id)
+        print(f"Fetched {len(article_records)} {source_type} records", flush=True)
         article_tokens: list[str] = []
         for record in article_records:
             article_tokens.extend(media_from_fields(record.get("fields", {})))
@@ -1110,15 +1118,20 @@ def refresh_article_source(
 
 def main() -> None:
     require_env()
+    print("Getting Feishu access token", flush=True)
     token = access_token()
+    print("Fetching portfolio records", flush=True)
     records = fetch_records(token)
+    print(f"Fetched {len(records)} portfolio records", flush=True)
     all_tokens: list[str] = []
     for record in records:
         fields = record.get("fields", {})
         all_tokens.extend(attachment_tokens(fields.get(FIELD_IMAGES)))
         all_tokens.extend(attachment_tokens(fields.get(FIELD_COVER)))
         all_tokens.extend(attachment_tokens(fields.get(FIELD_CLIENT_LOGO)))
+    print(f"Resolving {len(all_tokens)} portfolio/client media token(s)", flush=True)
     urls = resolve_urls(token, all_tokens)
+    print("Building portfolio JSON", flush=True)
     items = build_portfolio(records, urls)
     clients = build_clients(records, urls)
     write_output(items)
