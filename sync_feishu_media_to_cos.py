@@ -24,6 +24,7 @@ from qcloud_cos.cos_exception import CosServiceError
 ROOT = Path(__file__).resolve().parent
 API_FILES = ("portfolio.json", "clients.json", "zhixing.json", "curation.json")
 COS_PREFIX = os.environ.get("COS_MEDIA_PREFIX", "feishu-media").strip("/") or "feishu-media"
+SYNC_MODE = os.environ.get("COS_SYNC_MODE", "mirror").strip().lower() or "mirror"
 
 
 def require(name: str) -> str:
@@ -69,6 +70,8 @@ def public_url(base_url: str, key: str) -> str:
 
 
 def main() -> None:
+    if SYNC_MODE not in {"mirror", "reuse"}:
+        raise SystemExit("COS_SYNC_MODE must be either 'mirror' or 'reuse'")
     secret_id = require("TENCENT_SECRET_ID")
     secret_key = require("TENCENT_SECRET_KEY")
     bucket = require("COS_BUCKET")
@@ -80,7 +83,7 @@ def main() -> None:
     client = CosS3Client(CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key))
     url_cache: dict[str, str] = {}
     content_cache: dict[str, str] = {}
-    stats = {"downloaded": 0, "uploaded": 0, "reused": 0}
+    stats = {"downloaded": 0, "uploaded": 0, "reused": 0, "pending": 0}
 
     def mirror(url: str) -> str:
         if url in url_cache:
@@ -107,6 +110,12 @@ def main() -> None:
         except CosServiceError as error:
             if error.get_status_code() != 404:
                 raise
+            if SYNC_MODE == "reuse":
+                # During scheduled Feishu refreshes, keep new media on its
+                # temporary source URL until the owner manually mirrors it.
+                stats["pending"] += 1
+                url_cache[url] = url
+                return url
             client.put_object(
                 Bucket=bucket,
                 Key=key,
@@ -141,7 +150,8 @@ def main() -> None:
     print(
         "COS media mirror complete: "
         f"{changed_files} JSON file(s), {stats['downloaded']} download(s), "
-        f"{stats['uploaded']} upload(s), {stats['reused']} existing object(s)."
+        f"{stats['uploaded']} upload(s), {stats['reused']} existing object(s), "
+        f"{stats['pending']} pending manual mirror(s)."
     )
 
 

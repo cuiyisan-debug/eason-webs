@@ -29,7 +29,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Feishu refresh dependencies
-        run: pip install requests
+        run: pip install requests cos-python-sdk-v5
 
       - name: Refresh portfolio data from Feishu
         env:
@@ -42,6 +42,18 @@ jobs:
           LARK_CURATION_BASE_TOKEN: CtqgbzQHVazUyhsSiOEcIrxfnSd
           LARK_CURATION_TABLE_ID: ${{ secrets.LARK_CURATION_TABLE_ID }}
         run: python refresh.py
+
+      - name: Reuse already mirrored Tencent COS media
+        if: ${{ secrets.TENCENT_SECRET_ID != '' && secrets.TENCENT_SECRET_KEY != '' && secrets.COS_BUCKET != '' && secrets.COS_REGION != '' }}
+        env:
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+          COS_BUCKET: ${{ secrets.COS_BUCKET }}
+          COS_REGION: ${{ secrets.COS_REGION }}
+          COS_PUBLIC_BASE_URL: ${{ secrets.COS_PUBLIC_BASE_URL }}
+          COS_MEDIA_PREFIX: ${{ vars.COS_MEDIA_PREFIX }}
+          COS_SYNC_MODE: reuse
+        run: python sync_feishu_media_to_cos.py
 
       - name: Commit and push changes
         run: |

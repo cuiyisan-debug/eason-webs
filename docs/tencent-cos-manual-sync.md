@@ -2,7 +2,7 @@
 
 ## 设计
 
-- `Auto Refresh Feishu Portfolio` 继续按原计划更新 GitHub 中的飞书数据。
+- `Auto Refresh Feishu Portfolio` 继续按原计划更新 GitHub 中的飞书数据；它只复用已经存在于 COS 的媒体，绝不上传新的媒体文件。
 - `Sync Feishu Media to Tencent COS` 只在手动触发时执行。
 - 手动工作流会选择性先刷新飞书数据，再下载 JSON 内的飞书附件链接，上传到 COS，并把 API JSON 中的媒体链接改成 COS 长期链接。
 - `refresh.py` 不作修改，COS 密钥只保存在 GitHub Actions Secrets。
@@ -39,6 +39,6 @@ COS 存储桶需允许对象公开读取，或使用已配置访问域名/CDN �
 
 ## 注意
 
-- 自动飞书刷新之后，新增附件会暂时使用飞书临时链接；在你执行一次手动 COS 工作流后，才替换为长期 COS 链接。
+- 自动飞书刷新会继续保留已经镜像过的 COS 长期链接；新增附件会暂时使用飞书临时链接，直到你执行一次手动 COS 工作流。
 - COS 对象按文件内容 SHA-256 去重，重复媒体不会反复上传或产生重复存储。
 - 视频本体和网站代码部署到 COS/CDN属于下一阶段迁移；当前方案先解决飞书附件的长期可用与国内媒体加载。

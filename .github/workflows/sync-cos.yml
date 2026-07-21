@@ -48,6 +48,7 @@ jobs:
           COS_REGION: ${{ secrets.COS_REGION }}
           COS_PUBLIC_BASE_URL: ${{ secrets.COS_PUBLIC_BASE_URL }}
           COS_MEDIA_PREFIX: ${{ vars.COS_MEDIA_PREFIX }}
+          COS_SYNC_MODE: mirror
         run: python sync_feishu_media_to_cos.py
 
       - name: Commit stable COS URLs
