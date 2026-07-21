@@ -207,10 +207,8 @@ def main() -> None:
         except Exception as exc:
             stats["failed"] += 1
             failures.append({"url": url, "error": str(exc)})
-            if SYNC_MODE == "reuse":
-                url_cache[url] = url
-                return url
-            raise
+            url_cache[url] = url
+            return url
 
         if not body:
             raise RuntimeError("Feishu returned an empty media response")
@@ -374,8 +372,8 @@ def main() -> None:
     )
     if report_path:
         print(f"Report: {report_path.relative_to(ROOT)}")
-    if failures and SYNC_MODE == "mirror":
-        raise SystemExit(1)
+    if failures:
+        print("Some Feishu media URLs could not be downloaded; see the report for details.")
 
 
 if __name__ == "__main__":
