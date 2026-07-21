@@ -23,7 +23,7 @@ from qcloud_cos.cos_exception import CosServiceError
 
 ROOT = Path(__file__).resolve().parent
 API_FILES = ("portfolio.json", "clients.json", "zhixing.json", "curation.json")
-COS_PREFIX = os.environ.get("COS_MEDIA_PREFIX", "feishu-media").strip("/")
+COS_PREFIX = os.environ.get("COS_MEDIA_PREFIX", "feishu-media").strip("/") or "feishu-media"
 
 
 def require(name: str) -> str:

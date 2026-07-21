@@ -1,20 +1,16 @@
-name: Auto Refresh Feishu Portfolio
+name: Sync Feishu Media to Tencent COS
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "api/portfolio.json"
-      - "api/clients.json"
-      - "api/zhixing.json"
-      - "api/curation.json"
-  schedule:
-    - cron: "0 */12 * * *"
   workflow_dispatch:
+    inputs:
+      refresh_feishu_first:
+        description: "Refresh Feishu data before mirroring media"
+        required: true
+        default: true
+        type: boolean
 
 jobs:
-  refresh-portfolio:
+  sync-cos:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -28,10 +24,11 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Feishu refresh dependencies
-        run: pip install requests
+      - name: Install dependencies
+        run: pip install requests cos-python-sdk-v5
 
       - name: Refresh portfolio data from Feishu
+        if: ${{ inputs.refresh_feishu_first }}
         env:
           LARK_APP_ID: ${{ secrets.LARK_APP_ID }}
           LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
@@ -43,9 +40,19 @@ jobs:
           LARK_CURATION_TABLE_ID: ${{ secrets.LARK_CURATION_TABLE_ID }}
         run: python refresh.py
 
-      - name: Commit and push changes
+      - name: Mirror Feishu attachments to Tencent COS
+        env:
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+          COS_BUCKET: ${{ secrets.COS_BUCKET }}
+          COS_REGION: ${{ secrets.COS_REGION }}
+          COS_PUBLIC_BASE_URL: ${{ secrets.COS_PUBLIC_BASE_URL }}
+          COS_MEDIA_PREFIX: ${{ vars.COS_MEDIA_PREFIX }}
+        run: python sync_feishu_media_to_cos.py
+
+      - name: Commit stable COS URLs
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add api/portfolio.json api/clients.json api/zhixing.json api/curation.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: auto refresh feishu media" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: mirror feishu media to tencent cos" && git push)

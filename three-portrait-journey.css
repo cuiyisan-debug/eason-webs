@@ -1064,15 +1064,8 @@ a {
   opacity: var(--ended-opacity);
 }
 
-/* A landscape tablet can be wider than the mobile breakpoint while still
-   having touch-device text metrics. Keep the readable Chinese capability
-   contour there and suppress the secondary English rail that would collide
-   with it in the lower half of the video. */
-@media (pointer: coarse) {
-  .tools-keyword-stage-en {
-    display: none;
-  }
-}
+/* Keep the secondary English rail available on touch devices. Its compact
+   mobile layout is defined below so the translation remains part of the scene. */
 
 
 .tools-capabilities {
@@ -2064,7 +2057,8 @@ a {
   }
 
   .city-data-node {
-    width: min(118px, 30vw);
+    width: 40vw;
+    max-width: 176px;
   }
 
   .city-data-node span {
@@ -2077,11 +2071,16 @@ a {
   }
 
   .city-data-node-service {
-    width: min(118px, 30vw);
+    width: 40vw;
+    max-width: 176px;
   }
 
   .city-data-node-service strong {
-    white-space: normal;
+    white-space: nowrap;
+  }
+
+  .city-data-node strong {
+    white-space: nowrap;
   }
 
   .city-data-node small {
@@ -2121,14 +2120,15 @@ a {
     left: calc(-1 * min(var(--line), 15vw) - 3px);
   }
 
-  .city-data-node-left { --node-x: 31% !important; }
-  .city-data-node-right { --node-x: 68% !important; }
-  .city-data-node-service { --node-y: 34% !important; }
-  .city-data-node-creative { --node-y: 57% !important; }
-  .city-data-node-management { --node-y: 72% !important; }
-  .city-data-node-experience { --node-y: 34% !important; }
-  .city-data-node-cases { --node-y: 57% !important; }
-  .city-data-node-team { display: none; }
+  /* Keep the six metrics in three symmetric rows around the city. */
+  .city-data-node-left { --node-x: 42% !important; }
+  .city-data-node-right { --node-x: 58% !important; }
+  .city-data-node-service { --node-y: 31% !important; }
+  .city-data-node-creative { --node-y: 52% !important; }
+  .city-data-node-management { --node-y: 70% !important; }
+  .city-data-node-experience { --node-y: 31% !important; }
+  .city-data-node-cases { --node-y: 52% !important; }
+  .city-data-node-team { --node-y: 70% !important; display: block; }
 
   .tools-video {
     object-position: center;
@@ -2155,8 +2155,8 @@ a {
   }
 
   .tools-keyword-stage-en {
-    top: 52%;
-    bottom: 190px;
+    top: 54%;
+    bottom: clamp(158px, 20vh, 208px);
   }
 
   .tools-keyword {
@@ -2165,7 +2165,9 @@ a {
   }
 
   .tools-keyword-stage-en .tools-keyword {
-    font-size: clamp(6px, 1.65vw, 9px);
+    --settled-opacity: 0.66;
+    --ended-opacity: 0.42;
+    font-size: clamp(7px, 1.85vw, 10px);
   }
 
   .tools-capabilities {
