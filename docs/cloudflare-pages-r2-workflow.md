@@ -48,6 +48,18 @@ Auto Refresh Feishu Portfolio
 Sync Feishu Media to Cloudflare R2
 ```
 
+如果只想先迁移 GitHub 仓库中的页面视频，把 `What to mirror` 选为：
+
+```text
+local_videos
+```
+
+并取消勾选：
+
+```text
+Refresh Feishu data before mirroring media
+```
+
 它会：
 
 ```text

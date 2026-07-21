@@ -32,6 +32,7 @@ MANIFEST_FILE = API_DIR / "r2-media-manifest.json"
 R2_PREFIX = os.environ.get("R2_MEDIA_PREFIX", "feishu-media").strip("/") or "feishu-media"
 R2_LOCAL_MEDIA_PREFIX = os.environ.get("R2_LOCAL_MEDIA_PREFIX", "site-media").strip("/") or "site-media"
 SYNC_MODE = os.environ.get("R2_SYNC_MODE", "mirror").strip().lower() or "mirror"
+SYNC_SCOPE = os.environ.get("R2_SYNC_SCOPE", "all").strip().lower() or "all"
 LOCAL_MEDIA_EXTENSIONS = {".mp4", ".webm", ".mov"}
 TEXT_EXTENSIONS = {".html", ".css", ".js"}
 
@@ -135,6 +136,8 @@ def should_skip_text_file(path: Path) -> bool:
 def main() -> None:
     if SYNC_MODE not in {"mirror", "reuse"}:
         raise SystemExit("R2_SYNC_MODE must be either 'mirror' or 'reuse'")
+    if SYNC_SCOPE not in {"all", "local_videos"}:
+        raise SystemExit("R2_SYNC_SCOPE must be either 'all' or 'local_videos'")
 
     account_id = require("CLOUDFLARE_ACCOUNT_ID")
     access_key_id = require("R2_ACCESS_KEY_ID")
@@ -255,13 +258,14 @@ def main() -> None:
             return {key: transform(item) for key, item in value.items()}
         return value
 
-    for name in API_FILES:
-        path = API_DIR / name
-        original = path.read_text(encoding="utf-8")
-        updated = json.dumps(transform(json.loads(original)), ensure_ascii=False, indent=2) + "\n"
-        if updated != original:
-            path.write_text(updated, encoding="utf-8")
-            stats["changedFiles"] += 1
+    if SYNC_SCOPE == "all":
+        for name in API_FILES:
+            path = API_DIR / name
+            original = path.read_text(encoding="utf-8")
+            updated = json.dumps(transform(json.loads(original)), ensure_ascii=False, indent=2) + "\n"
+            if updated != original:
+                path.write_text(updated, encoding="utf-8")
+                stats["changedFiles"] += 1
 
     if SYNC_MODE == "mirror":
         replacement_map: dict[str, str] = {}
@@ -352,6 +356,7 @@ def main() -> None:
         report = {
             "generatedAt": now_iso(),
             "mode": SYNC_MODE,
+            "scope": SYNC_SCOPE,
             "bucket": bucket,
             "publicBaseUrl": public_base_url,
             "r2Prefix": R2_PREFIX,

@@ -3,6 +3,14 @@ name: Sync Feishu Media to Cloudflare R2
 on:
   workflow_dispatch:
     inputs:
+      sync_scope:
+        description: "What to mirror"
+        required: true
+        default: all
+        type: choice
+        options:
+          - all
+          - local_videos
       refresh_feishu_first:
         description: "Refresh Feishu data before mirroring media"
         required: true
@@ -50,6 +58,7 @@ jobs:
           R2_MEDIA_PREFIX: ${{ vars.R2_MEDIA_PREFIX }}
           R2_LOCAL_MEDIA_PREFIX: ${{ vars.R2_LOCAL_MEDIA_PREFIX }}
           R2_SYNC_MODE: mirror
+          R2_SYNC_SCOPE: ${{ inputs.sync_scope }}
         run: python sync_feishu_media_to_r2.py
 
       - name: Commit stable R2 URLs
