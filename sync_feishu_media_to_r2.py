@@ -13,6 +13,8 @@ import json
 import mimetypes
 import os
 import re
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -33,6 +35,8 @@ R2_PREFIX = os.environ.get("R2_MEDIA_PREFIX", "feishu-media").strip("/") or "fei
 R2_LOCAL_MEDIA_PREFIX = os.environ.get("R2_LOCAL_MEDIA_PREFIX", "site-media").strip("/") or "site-media"
 SYNC_MODE = os.environ.get("R2_SYNC_MODE", "mirror").strip().lower() or "mirror"
 SYNC_SCOPE = os.environ.get("R2_SYNC_SCOPE", "all").strip().lower() or "all"
+DOWNLOAD_TIMEOUT = float(os.environ.get("R2_DOWNLOAD_TIMEOUT", "30"))
+WORKERS = max(1, int(os.environ.get("R2_SYNC_WORKERS", "6")))
 LOCAL_MEDIA_EXTENSIONS = {".mp4", ".webm", ".mov"}
 TEXT_EXTENSIONS = {".html", ".css", ".js"}
 
@@ -158,6 +162,7 @@ def main() -> None:
     objects: dict[str, Any] = manifest.setdefault("objects", {})
     local_assets: dict[str, Any] = manifest.setdefault("localAssets", {})
     url_cache: dict[str, str] = {}
+    state_lock = threading.Lock()
     manifest_dirty = False
     stats = {
         "scanned": 0,
@@ -179,12 +184,14 @@ def main() -> None:
         target = public_url(public_base_url, key)
         try:
             client.head_object(Bucket=bucket, Key=key)
-            stats["reused"] += 1
+            with state_lock:
+                stats["reused"] += 1
         except ClientError as error:
             if not is_missing_object(error):
                 raise
             if SYNC_MODE == "reuse":
-                stats["pending"] += 1
+                with state_lock:
+                    stats["pending"] += 1
                 return ""
             client.put_object(
                 Bucket=bucket,
@@ -193,61 +200,85 @@ def main() -> None:
                 ContentType=content_type,
                 CacheControl="public, max-age=31536000, immutable",
             )
-            stats["uploaded"] += 1
-            manifest_dirty = True
+            with state_lock:
+                stats["uploaded"] += 1
+                manifest_dirty = True
         return target
 
     def mirror(url: str) -> str:
         nonlocal manifest_dirty
-        stats["scanned"] += 1
-        if url in url_cache:
-            return url_cache[url]
+        with state_lock:
+            if url in url_cache:
+                return url_cache[url]
+            stats["scanned"] += 1
 
         try:
-            response = requests.get(url, timeout=90)
+            response = requests.get(url, timeout=DOWNLOAD_TIMEOUT)
             response.raise_for_status()
             body = response.content
         except Exception as exc:
-            stats["failed"] += 1
-            failures.append({"url": url, "error": str(exc)})
-            url_cache[url] = url
+            with state_lock:
+                stats["failed"] += 1
+                failures.append({"url": url, "error": str(exc)})
+                url_cache[url] = url
             return url
 
         if not body:
-            raise RuntimeError("Feishu returned an empty media response")
-        stats["downloaded"] += 1
+            with state_lock:
+                stats["failed"] += 1
+                failures.append({"url": url, "error": "Feishu returned an empty media response"})
+                url_cache[url] = url
+            return url
+        with state_lock:
+            stats["downloaded"] += 1
 
         digest = hashlib.sha256(body).hexdigest()
-        existing = objects.get(digest)
-        if isinstance(existing, dict) and existing.get("r2Key"):
-            target = public_url(public_base_url, str(existing["r2Key"]))
-            if existing.get("r2Url") != target:
-                existing["r2Url"] = target
-                manifest_dirty = True
-            stats["reused"] += 1
-            url_cache[url] = target
-            return target
+        with state_lock:
+            existing = objects.get(digest)
+            if isinstance(existing, dict) and existing.get("r2Key"):
+                target = public_url(public_base_url, str(existing["r2Key"]))
+                if existing.get("r2Url") != target:
+                    existing["r2Url"] = target
+                    manifest_dirty = True
+                stats["reused"] += 1
+                url_cache[url] = target
+                return target
 
         content_type = response.headers.get("Content-Type", "application/octet-stream")
         key = f"{R2_PREFIX}/{digest[:2]}/{digest}{extension_for(content_type, url)}"
         target = ensure_r2_object(body, key=key, content_type=content_type.split(";", 1)[0])
         if not target:
-            url_cache[url] = url
+            with state_lock:
+                url_cache[url] = url
             return url
 
-        objects[digest] = {
-            "sha256": digest,
-            "size": len(body),
-            "contentType": content_type.split(";", 1)[0],
-            "r2Key": key,
-            "r2Url": target,
-            "sourceUrlHost": urlparse(url).hostname or "",
-            "createdAt": now_iso(),
-            "lastSeenAt": now_iso(),
-        }
-        manifest_dirty = True
-        url_cache[url] = target
+        with state_lock:
+            objects[digest] = {
+                "sha256": digest,
+                "size": len(body),
+                "contentType": content_type.split(";", 1)[0],
+                "r2Key": key,
+                "r2Url": target,
+                "sourceUrlHost": urlparse(url).hostname or "",
+                "createdAt": now_iso(),
+                "lastSeenAt": now_iso(),
+            }
+            manifest_dirty = True
+            url_cache[url] = target
         return target
+
+    def collect_urls(value: Any, urls: set[str]) -> None:
+        if isinstance(value, str):
+            if is_feishu_media_url(value):
+                urls.add(value)
+            return
+        if isinstance(value, list):
+            for item in value:
+                collect_urls(item, urls)
+            return
+        if isinstance(value, dict):
+            for item in value.values():
+                collect_urls(item, urls)
 
     def transform(value: Any) -> Any:
         if isinstance(value, str):
@@ -259,10 +290,31 @@ def main() -> None:
         return value
 
     if SYNC_SCOPE == "all":
+        payloads: dict[str, Any] = {}
+        urls: set[str] = set()
         for name in API_FILES:
             path = API_DIR / name
             original = path.read_text(encoding="utf-8")
-            updated = json.dumps(transform(json.loads(original)), ensure_ascii=False, indent=2) + "\n"
+            payload = json.loads(original)
+            payloads[name] = payload
+            collect_urls(payload, urls)
+        print(
+            f"Found {len(urls)} unique Feishu media URL(s); mirroring with {WORKERS} worker(s).",
+            flush=True,
+        )
+        if urls:
+            completed = 0
+            with ThreadPoolExecutor(max_workers=WORKERS) as executor:
+                futures = [executor.submit(mirror, url) for url in sorted(urls)]
+                for future in as_completed(futures):
+                    future.result()
+                    completed += 1
+                    if completed % 25 == 0 or completed == len(futures):
+                        print(f"Mirrored {completed}/{len(futures)} Feishu media URL(s).", flush=True)
+        for name, payload in payloads.items():
+            path = API_DIR / name
+            original = path.read_text(encoding="utf-8")
+            updated = json.dumps(transform(payload), ensure_ascii=False, indent=2) + "\n"
             if updated != original:
                 path.write_text(updated, encoding="utf-8")
                 stats["changedFiles"] += 1
