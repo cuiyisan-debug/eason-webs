@@ -1,0 +1,30 @@
+name: Deploy Website to Tencent COS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-cos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install COS dependencies
+        run: pip install cos-python-sdk-v5
+
+      - name: Deploy static website to Tencent COS
+        env:
+          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
+          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
+          COS_BUCKET: ${{ secrets.COS_BUCKET }}
+          COS_REGION: ${{ secrets.COS_REGION }}
+          COS_PUBLIC_BASE_URL: ${{ secrets.COS_PUBLIC_BASE_URL }}
+          COS_SITE_PREFIX: ${{ vars.COS_SITE_PREFIX }}
+        run: python deploy_site_to_cos.py
