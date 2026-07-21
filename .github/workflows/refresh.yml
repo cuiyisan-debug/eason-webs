@@ -1,16 +1,6 @@
 name: Auto Refresh Feishu Portfolio
 
 on:
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - "api/portfolio.json"
-      - "api/clients.json"
-      - "api/zhixing.json"
-      - "api/curation.json"
-  schedule:
-    - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
@@ -29,7 +19,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Feishu refresh dependencies
-        run: pip install requests boto3 cos-python-sdk-v5
+        run: pip install requests boto3
 
       - name: Refresh portfolio data from Feishu
         env:
@@ -54,18 +44,6 @@ jobs:
           R2_MEDIA_PREFIX: ${{ vars.R2_MEDIA_PREFIX }}
           R2_SYNC_MODE: reuse
         run: python sync_feishu_media_to_r2.py
-
-      - name: Reuse already mirrored Tencent COS media
-        if: ${{ secrets.TENCENT_SECRET_ID != '' && secrets.TENCENT_SECRET_KEY != '' && secrets.COS_BUCKET != '' && secrets.COS_REGION != '' }}
-        env:
-          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
-          COS_BUCKET: ${{ secrets.COS_BUCKET }}
-          COS_REGION: ${{ secrets.COS_REGION }}
-          COS_PUBLIC_BASE_URL: ${{ secrets.COS_PUBLIC_BASE_URL }}
-          COS_MEDIA_PREFIX: ${{ vars.COS_MEDIA_PREFIX }}
-          COS_SYNC_MODE: reuse
-        run: python sync_feishu_media_to_cos.py
 
       - name: Commit and push changes
         run: |

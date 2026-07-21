@@ -32,13 +32,13 @@
 
 ### 只改文字、排序、分类
 
-继续使用：
+手动运行：
 
 ```text
 Auto Refresh Feishu Portfolio
 ```
 
-自动刷新会先从飞书重新生成 JSON，再复用已经镜像到 R2 的媒体链接。GitHub 更新后，Cloudflare Pages 会自动部署。
+这个 workflow 不再定时执行。它会先从飞书重新生成 JSON，再复用已经镜像到 R2 的媒体链接。GitHub 更新后，Cloudflare Pages 会自动部署。
 
 ### 新增或替换图片、视频、附件
 
@@ -73,6 +73,15 @@ Sync Feishu Media to Cloudflare R2
 - GitHub 仓库中的本地视频：上传到 `site-media/`，页面引用改为 R2 地址。
 
 当前公开 JSON 不保存飞书附件 token，因此脚本需要下载飞书临时链接后计算 hash；但不会重复上传已存在内容。
+
+## 触发规则
+
+- GitHub 代码更新：Cloudflare Pages 自动部署。
+- 飞书文字、排序、分类更新：手动运行 `Auto Refresh Feishu Portfolio`。
+- 飞书新增或替换图片、视频、附件：手动运行 `Sync Feishu Media to Cloudflare R2`。
+- GitHub 本地视频更新：手动运行 `Sync Feishu Media to Cloudflare R2`。
+
+R2 已经解决媒体长期链接问题，因此不需要为了飞书临时链接过期而每 12 小时刷新一次。
 
 ## 验证
 
