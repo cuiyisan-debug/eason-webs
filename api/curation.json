@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T14:37:43.809839+00:00",
+  "generatedAt": "2026-07-21T15:41:12.500850+00:00",
   "source": "feishu-bitable",
   "sourceType": "curation",
   "baseToken": "CtqgbzQHVazUyhsSiOEcIrxfnSd",
@@ -19,9 +19,9 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjViYTQzMjc1Y2NjN2YwODFkMmQ1NGQ5ZTc2Nzk0ZDJfOTViNjYwOGQ4NDAwNGUxOWNjMjU5NDI4ZWU3Y2RjY2ZfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzg0NTU3ODcyOjE3ODQ2NDQyNzJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWE2NmMyYjBkYWUwMWY1OTQxNWM4YjExYzMzMWVkZThfOTA3ODUwMjkyZjI0YThjMmM2MDBkODVmZDNkMzM5OTBfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzg0NTU3ODcyOjE3ODQ2NDQyNzJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjVkMWNmN2Y5NWUyMTg0N2NiNjM1OTMyOWNhZmQ2YzZfNTYyZjIyMjZjNTU2YzRlODM0YzcwYzVkNDAyZDEwY2RfSUQ6NzY1MTA4NTQ0ODY4ODk5NTUyMV8xNzg0NTU3ODcyOjE3ODQ2NDQyNzJfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b1/b15fd282b67c1b8586cd305fea9fb25545659a1c12035c90f13b445139bdb4a8.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/6b/6b7c575cf783fb37326efaeb1bba487c148c878b5e6e7321b7723a948a811280.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/47/476dbd05aab3e40e6bc4617bbd5e0c5c0ab5cba5e8b9c5c2455ec394609f0b50.png"
       ],
       "contentBlocks": [
         {
@@ -34,7 +34,7 @@
           "width": 457.0,
           "height": 257.0,
           "align": "1",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjViYTQzMjc1Y2NjN2YwODFkMmQ1NGQ5ZTc2Nzk0ZDJfOTViNjYwOGQ4NDAwNGUxOWNjMjU5NDI4ZWU3Y2RjY2ZfSUQ6NzY1MTA4NTQ0OTE3Mjg4MDU2NV8xNzg0NTU3ODcyOjE3ODQ2NDQyNzJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/6b/6b7c575cf783fb37326efaeb1bba487c148c878b5e6e7321b7723a948a811280.png"
         },
         {
           "type": "paragraph",
@@ -121,7 +121,7 @@
           "width": 374.0,
           "height": 585.0,
           "align": "1",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWE2NmMyYjBkYWUwMWY1OTQxNWM4YjExYzMzMWVkZThfOTA3ODUwMjkyZjI0YThjMmM2MDBkODVmZDNkMzM5OTBfSUQ6NzY1MTA4NTQ1MDQ0NjI5NDI2MV8xNzg0NTU3ODcyOjE3ODQ2NDQyNzJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/47/476dbd05aab3e40e6bc4617bbd5e0c5c0ab5cba5e8b9c5c2455ec394609f0b50.png"
         },
         {
           "type": "paragraph",
@@ -194,7 +194,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "1",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjVkMWNmN2Y5NWUyMTg0N2NiNjM1OTMyOWNhZmQ2YzZfNTYyZjIyMjZjNTU2YzRlODM0YzcwYzVkNDAyZDEwY2RfSUQ6NzY1MTA4NTQ0ODY4ODk5NTUyMV8xNzg0NTU3ODcyOjE3ODQ2NDQyNzJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b1/b15fd282b67c1b8586cd305fea9fb25545659a1c12035c90f13b445139bdb4a8.png"
         },
         {
           "type": "paragraph",
@@ -236,7 +236,7 @@
           "text": "真正好的策展，是在复杂信息中找到方向，在材料中提炼观点，在空间中组织体验，在运营中延续价值。策展的本质，不是摆放展品，而是建立一套关于人、内容、空间与时间的关系系统。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTYyZWE4MzMwYjFlNWM3ZmM5NjFlYzJiMDMyNzliMjRfZTJjYjAwYzRlZjI2YjYxMGNlODk3MjJkMTdjMGNiYjhfSUQ6NzY1NDEyNjA2ODE4OTk3MzY5N18xNzg0NTU3ODM3OjE3ODQ2NDQyMzdfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b5/b52a28b7965e97ac2beb9021d131b68821cf93e95b57407630e49c17f5c12ba3.webp"
     },
     {
       "id": "rec27AzxRcLxGQ",
@@ -250,18 +250,22 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGY3MWI0YjY3MGRkMGM2NjkzNGNmZDZhNTJjOTEwY2ZfZjhmYjExNmY4MTNkMTk3ZDVjOWMyYjk3ZmM4ZjYxNTJfSUQ6NzY1MTE0MDQ2MDQ4ODAzNTI4Nl8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODJkMDEyMjI2MmU4OWFmNWJmYWIwYjFlNzNiMmE3MDlfNjUyZDgxZTZhMGFjNWExNzc0NDc5NmUxZTBmNDNjNTdfSUQ6NzY1MTE0MDQ1ODU4ODI5NDEwNV8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDBjNjc3OGMyNDk2ZWJlNzA4NmJlNGVjOGQwOWYwZDFfM2EyODQ3ODhiMTQzYTQxZDljMDI3YmMwYWI3MjZiMTZfSUQ6NzY1MTE0MDQ2MTAzMzI5NDc4MF8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWY0MjRlNTAwMjI3ZDQwMDhlODY1M2RhNWVhYmFjMGZfYzY4MGEyZWZlMTM5NjdlOTkyNThmZjE2ZTM0MGY5ODhfSUQ6NzY1MTE0MDQ2MTA3OTMzMzg1Ml8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWE5YWI5Zjk3MzM3ZmI5MTdjOGFhMDA3ZjMxMmVmNjFfNjNmMWRjN2UxNTA1ZjBiYjU5NDc4ZmZjNDQ5ZjhmYTVfSUQ6NzY1MTE0MDQ1Nzc3ODYyOTU2NF8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NThkZThkMTgwZGFkNGM5MWVlODM0NGMzZTRjYTFiNTVfOTJlMTBkMDI5MmU3NzIwY2EzODdmMmFkZjlhNDY5YThfSUQ6NzY1MTE0MDQ1NzcxOTk3NDg3MF8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGI4ZmExYWQ2ZDllMmE4YTA5ZmE5ODFmMTg1ZTNmNDFfNGJmMGYwMjZkYTg3NjUwZmNjYWZjZDJjMzNmYTVlODNfSUQ6NzY1MTE0MDQ1ODAyMjA0NjY4N18xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzUyNWM4MWQyZDNlZDU1MmQxZGJhNjdmNTQyODZiZWFfNWRkZmJkMDlkODA4ZTAxZDRkYTgxNWE1N2IyN2M3MDdfSUQ6NzY1MTE0MDQ1OTg3NTY5OTY0OF8xNzg0NTU3OTA5OjE3ODQ2NDQzMDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjBiYjhkMjg0NGM0M2UzMDhkNTlkYWRiNTUxOTExNWNfNjFlMWFhM2ViYjNkZjZkZGQzZTY2YTNkODBkMTgyOThfSUQ6NzY1MTE0MDQ1OTIwODkwMzYzM18xNzg0NTU3OTA5OjE3ODQ2NDQzMDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjExODBjZGY2OGRiYTkzZjI0ODcwODdhMjNmMTI5ZGZfNWQ3YTJiNGYwNzI5NGFiODE2NzM2MTkzMjM0YzAwMDNfSUQ6NzY1MTE0MDQ2MTAzMzI3ODM5Nl8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1e/1ee09a6762f039699982e2c2a1cfab8bd98e2bf9a8e73f1d312719d4cdba77dc.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/22/22f63bdec4439f60abb7af1b97e041a46eb5183be6227351b099895c90d84b5b.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9a/9a8b6fa0095a385a7d4d12da40d58b748223f79483dac993e78d5ec1617a16d3.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ea/ea6c02fc21d88c234162777ea16ce957392ec1f646275e4c43f3869289c41878.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a1/a175d03e0a78145054a5ed895cfb4bf5cb1e7d9d341bfdb4ccf3eaccc57a37ed.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/91/9190b0f7c8eaf008615d7dfea3411477bb2ebe068f502a8e7b686c80c7a10cfb.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e7f9131c9cb20a692312cee8e0ea2d915f9a20e89c0b2351023fdae7aab45863.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a7/a7b0603df0c24c0537b400c686286c3c69dc0357ed4a72c46559d5e2cc0fd0d4.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b6/b654f20ed79eb224872ec33637b19b30416f5095d2febc7aac8724e8087c7d2f.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e73ad18538e39db4f250b2687873d7ab7ec0b5b4fd8cef7751a6a92543b84904.png"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "2025中关村论坛年会氛围营造_策展手记"
+        },
         {
           "type": "paragraph",
           "text": "科技向善，和谐与共"
@@ -296,7 +300,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODJkMDEyMjI2MmU4OWFmNWJmYWIwYjFlNzNiMmE3MDlfNjUyZDgxZTZhMGFjNWExNzc0NDc5NmUxZTBmNDNjNTdfSUQ6NzY1MTE0MDQ1ODU4ODI5NDEwNV8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1e/1ee09a6762f039699982e2c2a1cfab8bd98e2bf9a8e73f1d312719d4cdba77dc.png"
         },
         {
           "type": "paragraph",
@@ -321,7 +325,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDBjNjc3OGMyNDk2ZWJlNzA4NmJlNGVjOGQwOWYwZDFfM2EyODQ3ODhiMTQzYTQxZDljMDI3YmMwYWI3MjZiMTZfSUQ6NzY1MTE0MDQ2MTAzMzI5NDc4MF8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/22/22f63bdec4439f60abb7af1b97e041a46eb5183be6227351b099895c90d84b5b.png"
         },
         {
           "type": "paragraph",
@@ -337,7 +341,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWY0MjRlNTAwMjI3ZDQwMDhlODY1M2RhNWVhYmFjMGZfYzY4MGEyZWZlMTM5NjdlOTkyNThmZjE2ZTM0MGY5ODhfSUQ6NzY1MTE0MDQ2MTA3OTMzMzg1Ml8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9a/9a8b6fa0095a385a7d4d12da40d58b748223f79483dac993e78d5ec1617a16d3.png"
         },
         {
           "type": "paragraph",
@@ -358,7 +362,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWE5YWI5Zjk3MzM3ZmI5MTdjOGFhMDA3ZjMxMmVmNjFfNjNmMWRjN2UxNTA1ZjBiYjU5NDc4ZmZjNDQ5ZjhmYTVfSUQ6NzY1MTE0MDQ1Nzc3ODYyOTU2NF8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ea/ea6c02fc21d88c234162777ea16ce957392ec1f646275e4c43f3869289c41878.png"
         },
         {
           "type": "paragraph",
@@ -378,7 +382,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGY3MWI0YjY3MGRkMGM2NjkzNGNmZDZhNTJjOTEwY2ZfZjhmYjExNmY4MTNkMTk3ZDVjOWMyYjk3ZmM4ZjYxNTJfSUQ6NzY1MTE0MDQ2MDQ4ODAzNTI4Nl8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a1/a175d03e0a78145054a5ed895cfb4bf5cb1e7d9d341bfdb4ccf3eaccc57a37ed.png"
         },
         {
           "type": "paragraph",
@@ -398,7 +402,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGI4ZmExYWQ2ZDllMmE4YTA5ZmE5ODFmMTg1ZTNmNDFfNGJmMGYwMjZkYTg3NjUwZmNjYWZjZDJjMzNmYTVlODNfSUQ6NzY1MTE0MDQ1ODAyMjA0NjY4N18xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e7f9131c9cb20a692312cee8e0ea2d915f9a20e89c0b2351023fdae7aab45863.png"
         },
         {
           "type": "paragraph",
@@ -418,7 +422,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzUyNWM4MWQyZDNlZDU1MmQxZGJhNjdmNTQyODZiZWFfNWRkZmJkMDlkODA4ZTAxZDRkYTgxNWE1N2IyN2M3MDdfSUQ6NzY1MTE0MDQ1OTg3NTY5OTY0OF8xNzg0NTU3OTA5OjE3ODQ2NDQzMDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a7/a7b0603df0c24c0537b400c686286c3c69dc0357ed4a72c46559d5e2cc0fd0d4.png"
         },
         {
           "type": "paragraph",
@@ -439,7 +443,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjBiYjhkMjg0NGM0M2UzMDhkNTlkYWRiNTUxOTExNWNfNjFlMWFhM2ViYjNkZjZkZGQzZTY2YTNkODBkMTgyOThfSUQ6NzY1MTE0MDQ1OTIwODkwMzYzM18xNzg0NTU3OTA5OjE3ODQ2NDQzMDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b6/b654f20ed79eb224872ec33637b19b30416f5095d2febc7aac8724e8087c7d2f.png"
         },
         {
           "type": "paragraph",
@@ -455,7 +459,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NjExODBjZGY2OGRiYTkzZjI0ODcwODdhMjNmMTI5ZGZfNWQ3YTJiNGYwNzI5NGFiODE2NzM2MTkzMjM0YzAwMDNfSUQ6NzY1MTE0MDQ2MTAzMzI3ODM5Nl8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e73ad18538e39db4f250b2687873d7ab7ec0b5b4fd8cef7751a6a92543b84904.png"
         },
         {
           "type": "paragraph",
@@ -484,7 +488,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NThkZThkMTgwZGFkNGM5MWVlODM0NGMzZTRjYTFiNTVfOTJlMTBkMDI5MmU3NzIwY2EzODdmMmFkZjlhNDY5YThfSUQ6NzY1MTE0MDQ1NzcxOTk3NDg3MF8xNzg0NTU3OTA4OjE3ODQ2NDQzMDhfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/91/9190b0f7c8eaf008615d7dfea3411477bb2ebe068f502a8e7b686c80c7a10cfb.png"
         },
         {
           "type": "paragraph",
@@ -504,7 +508,7 @@
           "text": "我希望观众离开这场论坛时，记住的不只是某一块屏幕、某一个展项或某一次合影，而是记住一种更清晰的未来感：科技可以向善，创新可以共生，论坛也可以成为人们共同想象未来生活的公共现场。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGRmYWI0NDJiOWMxOWM3ODU0NzNlM2JhOGE4ZGMzMjlfYWU5MmQ4M2QyZTI5YTU4MjM2YjVjOWM2NjhiYjJmYjlfSUQ6NzY1NDEyOTYwNjY5Nzk2MjY4OV8xNzg0NTU3ODM3OjE3ODQ2NDQyMzdfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/80/806b3494947de2e15d45b0f1c14f40dfcbbc951148ed56f44c92dfaa7ea4c622.webp"
     },
     {
       "id": "rec27AzxRcLApi",
@@ -518,19 +522,19 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzY0ZTFhOTYxNTdmNjM3MGFlNDk2MzAxZTFmOGMxZTdfNWQ5YjQzYjkxMjViN2QzMWU1NThhNzQ0ZmQ2M2RkNzlfSUQ6NzY1MTI3NjgzNzE4MzYyMjM0MV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmM3ZWM0NmNmNmJlMTI5YzUzY2JjZjg4ODkyZTUyNTNfYTU5ODgwYjgyOTI4MzlhODFlMGVkZWYxMmI1Nzc5NWJfSUQ6NzY1MTI3NjgzNDkxNjMyMjUyNV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjkyZDE1N2JhNWMxZWFmN2NjZTJjYzMxYTAwYjk5OGZfYzc4YzI4MDg0ZTQ1NzJiMTUyYWQ3ZTljMGMzOTA4N2JfSUQ6NzY1MTI3NjgzNjQ5MTY3Njg3OV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWNlNDA4MWM0MjVhNmZhNmRmMTQ5ODJkZDdlNDY2MjRfNjA2MWI5NzNlNmU2ZGVlY2NjNWNmMWRjNDk2YWY1MjJfSUQ6NzY1MTI3NjgzNzE4MzYwNTk1N18xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjZlNWMwNjg2MzlmZWYyNWZiM2IzZmRjZjcyMmM3M2ZfMzc4MzAzMzdiMjIxNGQ2NDMzZmVmNTdkYTA3YWY3OThfSUQ6NzY1MTI3NjgzNTE0NTMwNTI4NV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2E3YmY2MjAzM2Y1N2I1MzlhZmJmODZhM2Y1OThiMTRfNjRhMDVlN2M5NDAxNWMxNmM2ZTMxNzNjMWRhYzY3NmVfSUQ6NzY1MTI3NjgzNjM3ODM5NzkzMV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGNkN2I1ODY1Nzc2NmJhMjVhZmQxMGI0YjQ4ZjY4MTFfYzFiNTUzN2U3MDA1MjkyMzg1ODhmZDk1ZTY0ZmYzMmJfSUQ6NzY1MTI3NjgzODA0MzM4OTEyNV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjJhYjhlM2U2N2NhZDgzMDYxN2I2MzVjODY1ODI0ZjVfNTIyYjkzZjFlYWYxMzY3MjcxNzE4NWFjMmI4NTdiOWFfSUQ6NzY1MTI3NjgzNjgyNzE4ODQzNl8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTljNDRhYjYyYWY0OTczZjM2NDRiMWRiMDVjYTVjYzRfNDExMTI1NzE5ZTk1NmIwYWY0ZDJiMzQyOTc3MTlkYzBfSUQ6NzY1MTI3NjgzNjQ5MTYyNzcxMF8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTc5ZDYyMjQyN2RjNGMwMjNlOGUxZmU4ZjE4NTEwMDFfNGQ3MzVmYmU0Y2MzODg1ZmQ2NTdlOTJmYWJjOTE1ZDFfSUQ6NzY1MTI3NjgzNjE0NzY0NTYyNV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWRkYmVkN2Y2ZmM3OWVmMmIxZmUwYTA0MTNhNWI0YjlfNzIzNmNmOGE1YmE4OGYzMjIxY2NiMWEyZTkxOGNiMDNfSUQ6NzY1MTI3NjgzNzg3MTUwNDU3N18xNzg0NTU3OTUwOjE3ODQ2NDQzNTBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjljNDYxZGNmZTNiMGQ5ZjM0OTliMjYxOWZkYWFjMTNfYjcyYThkYTlmZTg5MmE0MjhkZmUzNzYxZWVmY2EzZWRfSUQ6NzY1MTI3NjgzNTA4NjUxOTUxM18xNzg0NTU3OTUwOjE3ODQ2NDQzNTBfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzdmM2Q5NzQzNTBmMzc0YWNhZTY3ZmJkMTVlN2JjMjVfNThmOWYxOWU2Y2YwNGQ0MzM4Nzg3OGRiMzY1NzAwZTNfSUQ6NzY1MTI3NjgzNTc0NTEyMzU3M18xNzg0NTU3OTUwOjE3ODQ2NDQzNTBfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/58/5894229c39c9c6acdfab8a17053cce208cca171a1055cb65a591c99030b40794.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8b/8b646cf251eefb885c2ce5e82bd316965c1c4223392437019a6d9524fe899bf7.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5e/5ef123338b0498a34b8d56e6f3513e31fe7382d97cf2ba73a4bb9d4145cda82d.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/53/530ce291136c02a94b8529fbbd07dba8772eb29c789c646d3028d195afd4bc0f.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/13/132efd6d5d0aadd6387f21727026fca70902b8980a19db1ccfb3e694588e4855.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/54/54dc4a5249a89b9d9c9fec37d41d5769ea96ef395ae45b4b66e3b4bbf66db66d.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/54/5401876fb8e636fb2441c87af04f5e9661dbfcaf49f88327e8c45fc07706b066.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/db/db9d7c825662c1942b9acec07a10cb3d6e0dea5997ca774ba92bb089fa7d4ef7.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85ca1bbab107e9d87f266e40f6414b7fe855d7cd1036eb49a35a546fe4129556.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/57/57c5d156a9838b2ed76e2fd8b02f6d15fca2f7047930ae2038505a9140d29164.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/32/3295bcbda6eb1327c4179ffda288aef6047c76cf49c361c27bce09b6a27fc8a1.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/bd/bdcaeeebadf179bdac8f577223f8e501d39dce3fa64653265e9afe67c4b6fc27.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/55/553925b42c5bdc5220ff5979e8b80988a3d283a5d3eeaec6d8233847b172d326.png"
       ],
       "contentBlocks": [
         {
@@ -563,7 +567,7 @@
           "width": 450.0,
           "height": 251.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjZlNWMwNjg2MzlmZWYyNWZiM2IzZmRjZjcyMmM3M2ZfMzc4MzAzMzdiMjIxNGQ2NDMzZmVmNTdkYTA3YWY3OThfSUQ6NzY1MTI3NjgzNTE0NTMwNTI4NV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/58/5894229c39c9c6acdfab8a17053cce208cca171a1055cb65a591c99030b40794.png"
         },
         {
           "type": "paragraph",
@@ -592,7 +596,7 @@
           "width": 450.0,
           "height": 170.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzY0ZTFhOTYxNTdmNjM3MGFlNDk2MzAxZTFmOGMxZTdfNWQ5YjQzYjkxMjViN2QzMWU1NThhNzQ0ZmQ2M2RkNzlfSUQ6NzY1MTI3NjgzNzE4MzYyMjM0MV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8b/8b646cf251eefb885c2ce5e82bd316965c1c4223392437019a6d9524fe899bf7.png"
         },
         {
           "type": "paragraph",
@@ -630,7 +634,7 @@
           "width": 450.0,
           "height": 305.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmM3ZWM0NmNmNmJlMTI5YzUzY2JjZjg4ODkyZTUyNTNfYTU5ODgwYjgyOTI4MzlhODFlMGVkZWYxMmI1Nzc5NWJfSUQ6NzY1MTI3NjgzNDkxNjMyMjUyNV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5e/5ef123338b0498a34b8d56e6f3513e31fe7382d97cf2ba73a4bb9d4145cda82d.png"
         },
         {
           "type": "paragraph",
@@ -650,7 +654,7 @@
           "width": 450.0,
           "height": 275.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjkyZDE1N2JhNWMxZWFmN2NjZTJjYzMxYTAwYjk5OGZfYzc4YzI4MDg0ZTQ1NzJiMTUyYWQ3ZTljMGMzOTA4N2JfSUQ6NzY1MTI3NjgzNjQ5MTY3Njg3OV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/53/530ce291136c02a94b8529fbbd07dba8772eb29c789c646d3028d195afd4bc0f.png"
         },
         {
           "type": "paragraph",
@@ -675,7 +679,7 @@
           "width": 450.0,
           "height": 211.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWNlNDA4MWM0MjVhNmZhNmRmMTQ5ODJkZDdlNDY2MjRfNjA2MWI5NzNlNmU2ZGVlY2NjNWNmMWRjNDk2YWY1MjJfSUQ6NzY1MTI3NjgzNzE4MzYwNTk1N18xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/13/132efd6d5d0aadd6387f21727026fca70902b8980a19db1ccfb3e694588e4855.png"
         },
         {
           "type": "paragraph",
@@ -704,7 +708,7 @@
           "width": 450.0,
           "height": 158.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTc5ZDYyMjQyN2RjNGMwMjNlOGUxZmU4ZjE4NTEwMDFfNGQ3MzVmYmU0Y2MzODg1ZmQ2NTdlOTJmYWJjOTE1ZDFfSUQ6NzY1MTI3NjgzNjE0NzY0NTYyNV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/54/54dc4a5249a89b9d9c9fec37d41d5769ea96ef395ae45b4b66e3b4bbf66db66d.png"
         },
         {
           "type": "paragraph",
@@ -720,7 +724,7 @@
           "width": 450.0,
           "height": 270.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2E3YmY2MjAzM2Y1N2I1MzlhZmJmODZhM2Y1OThiMTRfNjRhMDVlN2M5NDAxNWMxNmM2ZTMxNzNjMWRhYzY3NmVfSUQ6NzY1MTI3NjgzNjM3ODM5NzkzMV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/54/5401876fb8e636fb2441c87af04f5e9661dbfcaf49f88327e8c45fc07706b066.png"
         },
         {
           "type": "paragraph",
@@ -732,7 +736,7 @@
           "width": 450.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGNkN2I1ODY1Nzc2NmJhMjVhZmQxMGI0YjQ4ZjY4MTFfYzFiNTUzN2U3MDA1MjkyMzg1ODhmZDk1ZTY0ZmYzMmJfSUQ6NzY1MTI3NjgzODA0MzM4OTEyNV8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/db/db9d7c825662c1942b9acec07a10cb3d6e0dea5997ca774ba92bb089fa7d4ef7.png"
         },
         {
           "type": "paragraph",
@@ -748,7 +752,7 @@
           "width": 450.0,
           "height": 247.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjJhYjhlM2U2N2NhZDgzMDYxN2I2MzVjODY1ODI0ZjVfNTIyYjkzZjFlYWYxMzY3MjcxNzE4NWFjMmI4NTdiOWFfSUQ6NzY1MTI3NjgzNjgyNzE4ODQzNl8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85ca1bbab107e9d87f266e40f6414b7fe855d7cd1036eb49a35a546fe4129556.png"
         },
         {
           "type": "paragraph",
@@ -773,7 +777,7 @@
           "width": 450.0,
           "height": 337.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTljNDRhYjYyYWY0OTczZjM2NDRiMWRiMDVjYTVjYzRfNDExMTI1NzE5ZTk1NmIwYWY0ZDJiMzQyOTc3MTlkYzBfSUQ6NzY1MTI3NjgzNjQ5MTYyNzcxMF8xNzg0NTU3OTQ5OjE3ODQ2NDQzNDlfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/57/57c5d156a9838b2ed76e2fd8b02f6d15fca2f7047930ae2038505a9140d29164.png"
         },
         {
           "type": "paragraph",
@@ -789,7 +793,7 @@
           "width": 450.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWRkYmVkN2Y2ZmM3OWVmMmIxZmUwYTA0MTNhNWI0YjlfNzIzNmNmOGE1YmE4OGYzMjIxY2NiMWEyZTkxOGNiMDNfSUQ6NzY1MTI3NjgzNzg3MTUwNDU3N18xNzg0NTU3OTUwOjE3ODQ2NDQzNTBfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/bd/bdcaeeebadf179bdac8f577223f8e501d39dce3fa64653265e9afe67c4b6fc27.png"
         },
         {
           "type": "paragraph",
@@ -801,7 +805,7 @@
           "width": 450.0,
           "height": 337.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjljNDYxZGNmZTNiMGQ5ZjM0OTliMjYxOWZkYWFjMTNfYjcyYThkYTlmZTg5MmE0MjhkZmUzNzYxZWVmY2EzZWRfSUQ6NzY1MTI3NjgzNTA4NjUxOTUxM18xNzg0NTU3OTUwOjE3ODQ2NDQzNTBfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/55/553925b42c5bdc5220ff5979e8b80988a3d283a5d3eeaec6d8233847b172d326.png"
         },
         {
           "type": "paragraph",
@@ -813,7 +817,7 @@
           "width": 450.0,
           "height": 337.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzdmM2Q5NzQzNTBmMzc0YWNhZTY3ZmJkMTVlN2JjMjVfNThmOWYxOWU2Y2YwNGQ0MzM4Nzg3OGRiMzY1NzAwZTNfSUQ6NzY1MTI3NjgzNTc0NTEyMzU3M18xNzg0NTU3OTUwOjE3ODQ2NDQzNTBfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/32/3295bcbda6eb1327c4179ffda288aef6047c76cf49c361c27bce09b6a27fc8a1.png"
         },
         {
           "type": "paragraph",
@@ -837,7 +841,7 @@
           "text": "我希望孩子走进这样的教室时，感受到的不是“又要上课了”，而是“我要开始探索了”。这正是自然博物馆主题教室最珍贵的意义：它让知识从书本里走出来，让自然从展柜里走出来，也让孩子的好奇心从被动等待中走出来。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTUwNGZjYWIxMWVjZjEyNzkxMjU1ZjU3MGMyYjJkNmRfM2RiMDk1MTFmMWVhOGEzNWEzN2NjOWNlMTM0ZWViOTlfSUQ6NzY1MTI3ODUyODYzODk3OTI1N18xNzg0NTU3ODM3OjE3ODQ2NDQyMzdfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4b/4baa6414e694d5c785d48c640e621e17ad20345cebea9f038a37a49a6d640047.jpg"
     },
     {
       "id": "recvmxsix5URI2",
@@ -851,14 +855,14 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODMwZjYzOWI1NTNiMTAwMzc2MjQ5ZjMwODY0N2JkNmFfZTVkYWRjYjVkZGRjYzg0ODJiNTUyNmEwMWFlNTRlZGZfSUQ6NzY1MTI5Njc3NDI3MDg2NDM0NF8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2QxNzQzMTI2N2QxMzZkOWI1NmEwYWExNzEzYWJmN2VfMzQ4ZGY2ZGMwY2M2YjdjMTM0MzRiNzFkZTlmNTM5YmNfSUQ6NzY1MTI5Njc3NjMyMTc4MDY4N18xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWEwMTdiZWY0MTg4YTEzYWZhY2ZkZDM4ODhiOWM4YTJfNzJiZTM3NTI3OGYyNjA0NzAwMTQ2MTA1NWU4YzliOTFfSUQ6NzY1MTI5Njc3NDI3MDg0Nzk2MF8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWVmNGQ2MWYyNTcwNDU2MDkyMDQ2NTljZDc2YTA3ODNfNTA1MWM2NDdiYjNkZmIzODJkN2Q0ZjRhNjIyNzg2YmFfSUQ6NzY1MTI5Njc3NDUzNTA4OTA4NF8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTYyYWJiMzM0NzU0MDlmMjNhNjUwMDM5NzEyOWQzNDlfMzcxN2JmOTcwNzhlMGRlMjU2ODQ3ZTNlMDNlNTZkYTVfSUQ6NzY1MTI5Njc3NTIwMTk2NzA4Ml8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODEwNDNkN2E0OWI1MWRmMTFkYTRiYzhjN2ZjZWVmMjJfMDIxZmU4MWYyMzg5ZDZiNmViMjM2Y2QyZTc4YmVmYTVfSUQ6NzY1MTI5Njc3MzE1MDk1MjQxNV8xNzg0NTU3OTgzOjE3ODQ2NDQzODNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzY5MDJiZTE1MmI2OTFkNDVkYmYwMWZmMjRjMzNkZGJfY2Y4MmRmZjgwMTYyM2JiNDFmYmM2OTlkZjk0Yjc5MzNfSUQ6NzY1MTI5Njc3NjM2NzkxODAyOF8xNzg0NTU3OTgzOjE3ODQ2NDQzODNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzRkMDIxYmJhNGYwYzM2ZDY1MTQzODk1MTE1YzgyNjhfMjY1NzA0ZTY1NTM0ZjI3ZGJmMjA4MWFkMzQ2N2M2ODJfSUQ6NzY1MTI5Njc3MzM2NDk0MzgzMV8xNzg0NTU3OTgzOjE3ODQ2NDQzODNfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fd/fdcede5a5d1c693bf719dcc81121e384554f5cfab0e3a68d6232ab4a60b4be8a.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/25/25ae8f4575d01c728fadd54a5ef28add81107e5ed97ab6a55fa73c8725860e88.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/82/82f7385e9571f752637bdc928424551963ca62ea3ef7b0ff944a615f8f4b673c.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/dd/dd6ed2a73b2ea3709030ed8774c72ae7ae862dce021e4324bf0c23bf7b383394.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/f2/f2ae99c8184ece6e5f2615fd3fbc224335bc0478f9ac9e54a08316d9a6b80d0e.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/56/5603213ec15d06653f55c39339b8ab9d889c428408118e97a628d2fd2e087352.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/29/2907e97f0e8bd2d49df5ac68c697503d5440b5954d4b599ce82fa2b8ab4c8e02.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0e/0ef11868dc8b499bac9137c7f64636aede62f54ae7cb1446c11a248173186523.png"
       ],
       "contentBlocks": [
         {
@@ -879,7 +883,7 @@
           "width": 457.0,
           "height": 257.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODMwZjYzOWI1NTNiMTAwMzc2MjQ5ZjMwODY0N2JkNmFfZTVkYWRjYjVkZGRjYzg0ODJiNTUyNmEwMWFlNTRlZGZfSUQ6NzY1MTI5Njc3NDI3MDg2NDM0NF8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/82/82f7385e9571f752637bdc928424551963ca62ea3ef7b0ff944a615f8f4b673c.png"
         },
         {
           "type": "paragraph",
@@ -947,7 +951,7 @@
           "width": 356.0,
           "height": 200.0,
           "align": "1",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2QxNzQzMTI2N2QxMzZkOWI1NmEwYWExNzEzYWJmN2VfMzQ4ZGY2ZGMwY2M2YjdjMTM0MzRiNzFkZTlmNTM5YmNfSUQ6NzY1MTI5Njc3NjMyMTc4MDY4N18xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fd/fdcede5a5d1c693bf719dcc81121e384554f5cfab0e3a68d6232ab4a60b4be8a.png"
         },
         {
           "type": "heading",
@@ -972,7 +976,7 @@
           "width": 457.0,
           "height": 257.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWEwMTdiZWY0MTg4YTEzYWZhY2ZkZDM4ODhiOWM4YTJfNzJiZTM3NTI3OGYyNjA0NzAwMTQ2MTA1NWU4YzliOTFfSUQ6NzY1MTI5Njc3NDI3MDg0Nzk2MF8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/25/25ae8f4575d01c728fadd54a5ef28add81107e5ed97ab6a55fa73c8725860e88.png"
         },
         {
           "type": "paragraph",
@@ -984,7 +988,7 @@
           "width": 350.0,
           "height": 197.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWVmNGQ2MWYyNTcwNDU2MDkyMDQ2NTljZDc2YTA3ODNfNTA1MWM2NDdiYjNkZmIzODJkN2Q0ZjRhNjIyNzg2YmFfSUQ6NzY1MTI5Njc3NDUzNTA4OTA4NF8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/56/5603213ec15d06653f55c39339b8ab9d889c428408118e97a628d2fd2e087352.png"
         },
         {
           "type": "heading",
@@ -1009,7 +1013,7 @@
           "width": 457.0,
           "height": 257.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTYyYWJiMzM0NzU0MDlmMjNhNjUwMDM5NzEyOWQzNDlfMzcxN2JmOTcwNzhlMGRlMjU2ODQ3ZTNlMDNlNTZkYTVfSUQ6NzY1MTI5Njc3NTIwMTk2NzA4Ml8xNzg0NTU3OTgyOjE3ODQ2NDQzODJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/29/2907e97f0e8bd2d49df5ac68c697503d5440b5954d4b599ce82fa2b8ab4c8e02.png"
         },
         {
           "type": "paragraph",
@@ -1021,7 +1025,7 @@
           "width": 342.0,
           "height": 192.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzRkMDIxYmJhNGYwYzM2ZDY1MTQzODk1MTE1YzgyNjhfMjY1NzA0ZTY1NTM0ZjI3ZGJmMjA4MWFkMzQ2N2M2ODJfSUQ6NzY1MTI5Njc3MzM2NDk0MzgzMV8xNzg0NTU3OTgzOjE3ODQ2NDQzODNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0e/0ef11868dc8b499bac9137c7f64636aede62f54ae7cb1446c11a248173186523.png"
         },
         {
           "type": "heading",
@@ -1050,7 +1054,7 @@
           "text": "好的工业旅游不是把旧设备摆出来供人怀旧，也不是把未来技术做成孤立的炫技展示，而是让观众在真实的空间里看懂一座工厂为什么重要、如何转型、又将怎样进入城市的新生活。宣钢项目的“老厂新生”，真正应该讲清楚的正是这一点。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODM3MTAyOGRlZTliOWRlZTA3YmUzNjllYzdiMmYwZDJfOTE1MzczNGIwZTVjNDYxZTY2NjQyMGY2MWVlZTI2NDZfSUQ6NzY1NDEyNjAyMzk5OTYzODcyNl8xNzg0NTU3ODM3OjE3ODQ2NDQyMzdfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5d/5d7fe9480f1b26c7e18ddc6ee2ce89d233c772f0335f98b84872c6b1ca08ff15.webp"
     },
     {
       "id": "recvmDkNrXlz5U",
@@ -1064,15 +1068,19 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzM5NDlhOWFhNGViOTQxMzMxOWY5Mzc3ZDc0MDc4YTFfZWE3YjNlMWY0OWE2ZWIwZDg5OWYxYjZjYzM0YWM4MGVfSUQ6NzY1MTY3MjIyNjEwMTY2MDY2MF8xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDM5MmI3MTM2OGEzMTIzOGI1N2Y5YWM0NTY0Mjc1NDVfMjM0N2U4ZDIwNjk4ODNmZGI5ZWQ0MDQzMzVmZDkxZWFfSUQ6NzY1MTY3MjI2Mzk4NDQ4MzI4N18xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDcxNzczNTExMDA2OWM3MDI3YmI5YThmZDQ5YmE2YzJfMTc0ZTZmN2JkMTAxYzA1YjhmYTUxMDg0ZmM3MWU3OWNfSUQ6NzY1MTY3MTg2NjkwOTY3NDQ3MF8xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmUxMDE2NGJlNzMzYWVlNWM4OTVhYzFmMzgwZDQ0YzZfYTcwNjJiZjVmNDc0ZWNkZjM4M2FmNWRlMWM3YzcyZmVfSUQ6NzY1MTY3MjAyNDY1NzUyOTg0M18xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzBiOTUxMTdlNjhhZWEwNmI4MGI2MDZmN2U5Y2IwNGRfNDZmNGQ5MjUzNzJkNTA3NjAwMTNkOTljMjE4ZWMwZDVfSUQ6NzY1MTY3MjE4Nzg2NjI4NzA1Ml8xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGZjZjBmMThhYTY3N2JlNzc4ZWRiNTY4NDNhZjY2MjFfNzFhNDNmYzFjZmUzZmZiN2ZjYWI1ZjI1NGNmMzk1NGZfSUQ6NzY1MTY3MjI5NTAwMTUyNTIyOV8xNzg0NTU4MDE2OjE3ODQ2NDQ0MTZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjQ4MDc2Y2Q1MzhkMzllMGNlMDU5MjNhMzExZGExYTdfYjllZmRiNzY1YzUxMGZlYmFlN2NhMGQzODcwOTUwMDhfSUQ6NzY1MTY3MjM0Nzc2NTY0MDE2Ml8xNzg0NTU4MDE2OjE3ODQ2NDQ0MTZfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/38/381a8dfaea133f23261a6fd4d9e9dae810de8a0e13fcce21e9a7b79ea681c503.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/19/19ca0b69c3abd37eed52bc689794ffe84c64554a386b00d5c0ebffe35f2323e0.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/28/2806eefdeb6936957b75c6b5dd4855f0a4fcd35a79e06be0bf5ab6ba3896eec0.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0e/0ea360eab9f5863fbc03acc3b9ff6c5ab425a376edc7dfe71eeab7538331a8aa.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d5/d58827975beb2dc7d74d66128c4434b24b9b548834ce00d4d71266b0dba95305.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b5/b5ec607aa04e66820dceaf61b5263a264aec96e2820fa4d28e59099712f14e10.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8a/8a5a07459af38b306fd35c680ef837acec5413aa1fc1ad062a40d3338250c2ba.png"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "唐庄白酒文化体验馆_策展手记"
+        },
         {
           "type": "paragraph",
           "text": "从赤水河畔到数字酒境"
@@ -1083,7 +1091,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDcxNzczNTExMDA2OWM3MDI3YmI5YThmZDQ5YmE2YzJfMTc0ZTZmN2JkMTAxYzA1YjhmYTUxMDg0ZmM3MWU3OWNfSUQ6NzY1MTY3MTg2NjkwOTY3NDQ3MF8xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/19/19ca0b69c3abd37eed52bc689794ffe84c64554a386b00d5c0ebffe35f2323e0.png"
         },
         {
           "type": "paragraph",
@@ -1117,7 +1125,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmUxMDE2NGJlNzMzYWVlNWM4OTVhYzFmMzgwZDQ0YzZfYTcwNjJiZjVmNDc0ZWNkZjM4M2FmNWRlMWM3YzcyZmVfSUQ6NzY1MTY3MjAyNDY1NzUyOTg0M18xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/28/2806eefdeb6936957b75c6b5dd4855f0a4fcd35a79e06be0bf5ab6ba3896eec0.png"
         },
         {
           "type": "paragraph",
@@ -1165,7 +1173,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzBiOTUxMTdlNjhhZWEwNmI4MGI2MDZmN2U5Y2IwNGRfNDZmNGQ5MjUzNzJkNTA3NjAwMTNkOTljMjE4ZWMwZDVfSUQ6NzY1MTY3MjE4Nzg2NjI4NzA1Ml8xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0e/0ea360eab9f5863fbc03acc3b9ff6c5ab425a376edc7dfe71eeab7538331a8aa.png"
         },
         {
           "type": "paragraph",
@@ -1190,7 +1198,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzM5NDlhOWFhNGViOTQxMzMxOWY5Mzc3ZDc0MDc4YTFfZWE3YjNlMWY0OWE2ZWIwZDg5OWYxYjZjYzM0YWM4MGVfSUQ6NzY1MTY3MjIyNjEwMTY2MDY2MF8xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d5/d58827975beb2dc7d74d66128c4434b24b9b548834ce00d4d71266b0dba95305.png"
         },
         {
           "type": "paragraph",
@@ -1215,7 +1223,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDM5MmI3MTM2OGEzMTIzOGI1N2Y5YWM0NTY0Mjc1NDVfMjM0N2U4ZDIwNjk4ODNmZGI5ZWQ0MDQzMzVmZDkxZWFfSUQ6NzY1MTY3MjI2Mzk4NDQ4MzI4N18xNzg0NTU4MDE1OjE3ODQ2NDQ0MTVfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/38/381a8dfaea133f23261a6fd4d9e9dae810de8a0e13fcce21e9a7b79ea681c503.png"
         },
         {
           "type": "paragraph",
@@ -1240,7 +1248,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NGZjZjBmMThhYTY3N2JlNzc4ZWRiNTY4NDNhZjY2MjFfNzFhNDNmYzFjZmUzZmZiN2ZjYWI1ZjI1NGNmMzk1NGZfSUQ6NzY1MTY3MjI5NTAwMTUyNTIyOV8xNzg0NTU4MDE2OjE3ODQ2NDQ0MTZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b5/b5ec607aa04e66820dceaf61b5263a264aec96e2820fa4d28e59099712f14e10.png"
         },
         {
           "type": "paragraph",
@@ -1265,7 +1273,7 @@
           "width": 900.0,
           "height": 506.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjQ4MDc2Y2Q1MzhkMzllMGNlMDU5MjNhMzExZGExYTdfYjllZmRiNzY1YzUxMGZlYmFlN2NhMGQzODcwOTUwMDhfSUQ6NzY1MTY3MjM0Nzc2NTY0MDE2Ml8xNzg0NTU4MDE2OjE3ODQ2NDQ0MTZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8a/8a5a07459af38b306fd35c680ef837acec5413aa1fc1ad062a40d3338250c2ba.png"
         },
         {
           "type": "paragraph",
@@ -1285,7 +1293,7 @@
           "text": "赤水河畔提供根脉，坤沙工艺提供品质，盛唐美学提供文化气度，数字艺术提供当代表达。四者叠加，才构成唐庄区别于普通企业展厅的策展价值。观众最终带走的应当不是“我看过很多屏幕”，而是“我理解了一杯酒背后的河流、时间、技艺和精神”。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTY2Y2FlZjQyNzZhMjUwNjEwYTM1NDUyZGYwY2UxYjZfNmFjMjFmNjc4NmY3MDg1ZDNhM2IwM2I1YTFkOWEyODVfSUQ6NzY1NDEyNjA0NDQ0MTExOTk0NV8xNzg0NTU3ODM3OjE3ODQ2NDQyMzdfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b6/b627da827f561b65f48357186ef905047147abb0c15207bc9fb22bf3b7306269.webp"
     },
     {
       "id": "recvmO7q0OB9Sr",
@@ -1299,18 +1307,18 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmU3ZDhkMGJkMzE2NmFiZWMyYmIwNjA5NTI0MDM0NTZfYTI0YzI2YzZjZDEzNmM0NmZkM2M1NDM2ZWQwNjM1YmNfSUQ6NzY1MjM1NTI1MjI2OTI1NTYzMF8xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTk3NzYxMWM1ZjBiYzI1OWVhZTRkNDdlOWJhNDMwYWVfMjBkMTFkMzIxNzYxZmZkNWEzZTc3MmZlNjljZGNkOGNfSUQ6NzY1MjM1NTI1MTEwNTg0NDE5NV8xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGY3OGZhZTQzYzY2ZTFjMDk5MTE4MjM5NWMzNjJmNWZfNjI2ZWZiZWY4NmY4NjZjYmE1NzFkOGFiNWI0ZDU0NWNfSUQ6NzY1MjM1NTI1MjE4MzY2NTYyM18xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTdiNmVhMTY0OTdhODJhYzJhYWU5ZDEwOTEwNmE3YTZfNTY2NjZlNzhkM2I5YmZiMDY1YzczMDFhZDA4MzQ1MDBfSUQ6NzY1MjM1NTI1MTE0Nzc4NzIyN18xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjIwOTMwYzgwZWI3YTVhMTM1OTA4YzdkNzA3ZmE3NDhfZDAxYTVjYTlkMWI0MDU4MjMxZGViOTZlMjk2ODQ0MjJfSUQ6NzY1MjM1NTI1MDg2Njk4MTgzNl8xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Yjc1OWY0NDhhMjg2YmZkODBjYWU4YjhkZTI1OTU3ZTZfOWY3ODJjMGIxMDlkOTFmMjI3MzJmMzQyY2MzYTE0ZjZfSUQ6NzY1MjM1NTI0OTUzNzMyMTkzOF8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWQzZmU2YTdiYTJjMzZlNzQ3OGJmNWQ2ZDAxNmRiZTlfMzI0YTU5YjQzMTkyMTI1YjA2YjM3NWM2MTFjNDBiNTdfSUQ6NzY1MjM1NTI1MTA0NzIzODU4OF8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzVkZmJjNzlhNDhkMzJiMGM3MmQxOGI3ZjBkNWZmM2ZfNzA5NjY0MmNmZjYwNDE4N2I0Y2YwMWFiYWQxNWQwY2VfSUQ6NzY1MjM1NTI1MjAwNzUzNzYxNF8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDMwNzhkYzE3YzcyYmVhYTRlYWI3MWE4MTc1NGRjNjJfZDhlNzliODc0NzMzYmQzMjYwMjA0NjVkZmU0OGJhN2VfSUQ6NzY1MjM1NTI1MTA0NzI1NDk3Ml8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWZjOWQ1NTFmNDg3NzQ4MzE0Zjk3YTVmMjBmNjI3NWZfOWViMTVjZTM4ZjFlNDRlNzVjZDc5NzI3N2U4N2UyZGFfSUQ6NzY1MjM1NTI1MDg3MDk5NTkyNl8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGRhYWQ5ZjkwN2Q2MzljNzJmMzAzZTVmNmMzMTc0YjhfY2Q2ODE2NjJjOTlkNjkxOTM5ZGI2YTQyZjRmMGRhMzFfSUQ6NzY1MjM1NTI1MDYxOTM4NjgzMl8xNzg0NTU4MDU0OjE3ODQ2NDQ0NTRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGZiOGQzZGVlMDRkZDcyMjJiNjI0NzUyOTg4MzY4YzNfMWE0MGRiYjU3ZDE4MWJkYmRlZjhhMzA3YjBjNjRmYmRfSUQ6NzY1MjM1NTI1MDA2NTczODcyN18xNzg0NTU4MDU0OjE3ODQ2NDQ0NTRfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85a1eae323900e548a5e36ea99cb0dce1ae4a60b93cbc52e784d68b38ab35864.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0c/0cf5ef20b2072429dd8b4df193ed4acffba1029ee3759e0cfafa024713272888.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/57/579d2552ebc206aaf27bd6ad46844114a7e1edaa712f871dce115dbbef7fb93d.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/78/78a7ada495a47175da434284fa4a163400227b870b46ff347cf4ed8ee4b4857e.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d3/d3a906d60c57077f2b46c0ea53c2f344b49fad5162f422c103559fc7fe396776.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ef/efa8e87243ddeefd473068c94aa10dd5d4bb595e7599d0200c56d3b4c0ad612c.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/56/56e029c3691bd4b40b962e5fa4b2e0efc8c5e3b448ba96d07bad86015084cd15.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/2f/2fc6967a9f55119ae9d24678731e7711733b742ec5b0a08ee1351f1cf4d568ae.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d1/d176ca596d7a566ad08f2dbe568ffc8c5d366280368c001bef4d2a532cfa0410.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/91/912148bb7ca43c0c40656708cea4fbbf610b8745ba9ba9b750c811e0a61525e7.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/73/73bf77e83aaaa8bcc073780a7a378a20186aa4f61ff1149934224b37ca8c4e1a.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4a/4a1bfdbb95f52886a999b880cef340c9de749363a91f54ec14f0b81b608a124f.png"
       ],
       "contentBlocks": [
         {
@@ -1323,7 +1331,7 @@
           "width": 196.0,
           "height": 131.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGY3OGZhZTQzYzY2ZTFjMDk5MTE4MjM5NWMzNjJmNWZfNjI2ZWZiZWY4NmY4NjZjYmE1NzFkOGFiNWI0ZDU0NWNfSUQ6NzY1MjM1NTI1MjE4MzY2NTYyM18xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d3/d3a906d60c57077f2b46c0ea53c2f344b49fad5162f422c103559fc7fe396776.jpg"
         },
         {
           "type": "paragraph",
@@ -1366,7 +1374,7 @@
           "width": 438.0,
           "height": 292.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTdiNmVhMTY0OTdhODJhYzJhYWU5ZDEwOTEwNmE3YTZfNTY2NjZlNzhkM2I5YmZiMDY1YzczMDFhZDA4MzQ1MDBfSUQ6NzY1MjM1NTI1MTE0Nzc4NzIyN18xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85a1eae323900e548a5e36ea99cb0dce1ae4a60b93cbc52e784d68b38ab35864.jpg"
         },
         {
           "type": "paragraph",
@@ -1378,7 +1386,7 @@
           "width": 338.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjIwOTMwYzgwZWI3YTVhMTM1OTA4YzdkNzA3ZmE3NDhfZDAxYTVjYTlkMWI0MDU4MjMxZGViOTZlMjk2ODQ0MjJfSUQ6NzY1MjM1NTI1MDg2Njk4MTgzNl8xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0c/0cf5ef20b2072429dd8b4df193ed4acffba1029ee3759e0cfafa024713272888.jpg"
         },
         {
           "type": "paragraph",
@@ -1390,7 +1398,7 @@
           "width": 401.0,
           "height": 253.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NmU3ZDhkMGJkMzE2NmFiZWMyYmIwNjA5NTI0MDM0NTZfYTI0YzI2YzZjZDEzNmM0NmZkM2M1NDM2ZWQwNjM1YmNfSUQ6NzY1MjM1NTI1MjI2OTI1NTYzMF8xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/57/579d2552ebc206aaf27bd6ad46844114a7e1edaa712f871dce115dbbef7fb93d.jpg"
         },
         {
           "type": "paragraph",
@@ -1415,7 +1423,7 @@
           "width": 233.0,
           "height": 155.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTk3NzYxMWM1ZjBiYzI1OWVhZTRkNDdlOWJhNDMwYWVfMjBkMTFkMzIxNzYxZmZkNWEzZTc3MmZlNjljZGNkOGNfSUQ6NzY1MjM1NTI1MTEwNTg0NDE5NV8xNzg0NTU4MDUyOjE3ODQ2NDQ0NTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/78/78a7ada495a47175da434284fa4a163400227b870b46ff347cf4ed8ee4b4857e.jpg"
         },
         {
           "type": "paragraph",
@@ -1440,7 +1448,7 @@
           "width": 299.0,
           "height": 299.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Yjc1OWY0NDhhMjg2YmZkODBjYWU4YjhkZTI1OTU3ZTZfOWY3ODJjMGIxMDlkOTFmMjI3MzJmMzQyY2MzYTE0ZjZfSUQ6NzY1MjM1NTI0OTUzNzMyMTkzOF8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/2f/2fc6967a9f55119ae9d24678731e7711733b742ec5b0a08ee1351f1cf4d568ae.jpg"
         },
         {
           "type": "paragraph",
@@ -1452,7 +1460,7 @@
           "width": 145.0,
           "height": 218.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWQzZmU2YTdiYTJjMzZlNzQ3OGJmNWQ2ZDAxNmRiZTlfMzI0YTU5YjQzMTkyMTI1YjA2YjM3NWM2MTFjNDBiNTdfSUQ6NzY1MjM1NTI1MTA0NzIzODU4OF8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d1/d176ca596d7a566ad08f2dbe568ffc8c5d366280368c001bef4d2a532cfa0410.jpg"
         },
         {
           "type": "paragraph",
@@ -1464,7 +1472,7 @@
           "width": 299.0,
           "height": 225.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzVkZmJjNzlhNDhkMzJiMGM3MmQxOGI3ZjBkNWZmM2ZfNzA5NjY0MmNmZjYwNDE4N2I0Y2YwMWFiYWQxNWQwY2VfSUQ6NzY1MjM1NTI1MjAwNzUzNzYxNF8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/91/912148bb7ca43c0c40656708cea4fbbf610b8745ba9ba9b750c811e0a61525e7.jpg"
         },
         {
           "type": "paragraph",
@@ -1489,7 +1497,7 @@
           "width": 257.0,
           "height": 299.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDMwNzhkYzE3YzcyYmVhYTRlYWI3MWE4MTc1NGRjNjJfZDhlNzliODc0NzMzYmQzMjYwMjA0NjVkZmU0OGJhN2VfSUQ6NzY1MjM1NTI1MTA0NzI1NDk3Ml8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ef/efa8e87243ddeefd473068c94aa10dd5d4bb595e7599d0200c56d3b4c0ad612c.jpg"
         },
         {
           "type": "paragraph",
@@ -1501,7 +1509,7 @@
           "width": 225.0,
           "height": 299.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MWZjOWQ1NTFmNDg3NzQ4MzE0Zjk3YTVmMjBmNjI3NWZfOWViMTVjZTM4ZjFlNDRlNzVjZDc5NzI3N2U4N2UyZGFfSUQ6NzY1MjM1NTI1MDg3MDk5NTkyNl8xNzg0NTU4MDUzOjE3ODQ2NDQ0NTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/56/56e029c3691bd4b40b962e5fa4b2e0efc8c5e3b448ba96d07bad86015084cd15.jpg"
         },
         {
           "type": "paragraph",
@@ -1513,7 +1521,7 @@
           "width": 199.0,
           "height": 299.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OGZiOGQzZGVlMDRkZDcyMjJiNjI0NzUyOTg4MzY4YzNfMWE0MGRiYjU3ZDE4MWJkYmRlZjhhMzA3YjBjNjRmYmRfSUQ6NzY1MjM1NTI1MDA2NTczODcyN18xNzg0NTU4MDU0OjE3ODQ2NDQ0NTRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/73/73bf77e83aaaa8bcc073780a7a378a20186aa4f61ff1149934224b37ca8c4e1a.jpg"
         },
         {
           "type": "paragraph",
@@ -1567,14 +1575,14 @@
           "width": 266.0,
           "height": 399.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGRhYWQ5ZjkwN2Q2MzljNzJmMzAzZTVmNmMzMTc0YjhfY2Q2ODE2NjJjOTlkNjkxOTM5ZGI2YTQyZjRmMGRhMzFfSUQ6NzY1MjM1NTI1MDYxOTM4NjgzMl8xNzg0NTU4MDU0OjE3ODQ2NDQ0NTRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4a/4a1bfdbb95f52886a999b880cef340c9de749363a91f54ec14f0b81b608a124f.png"
         },
         {
           "type": "paragraph",
           "text": "结尾的提醒：跳出时间线，先跳出那条线本身。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTVhZWU1MjY1NDZiMTA5YzQyZDgxNDY3NmRkM2ExYzlfMTg1N2Q0ZjQ4Zjc1MTE2ZTQxNDQyYmRhOWIxNTRkNzNfSUQ6NzY1MjM2NzE3OTA1MjAxMDcxMl8xNzg0NTU3ODM4OjE3ODQ2NDQyMzhfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/52/523d7fc96029ef8c3fcca8bec28f4c834953271556eadf1cb17dc1bbf36efdd4.jpg"
     },
     {
       "id": "recvnz7oZYLLx2",
@@ -1588,16 +1596,20 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWI1MDczZjQzNzNjM2ZjMDU0NDAwZTIzOGVjODMzOThfZjRmMGM3MmRlYTQzMmI2ZTU2M2ZmM2YxMDEyZjc0NzFfSUQ6NzY1NTMzODA0MTYxOTM1MjU0N18xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTU4OTg1MDU4ZjhhNjcxOTdiZjM5NjMwZmU1NWVkOTVfNGVhNGM0OGY4OTBkMzMzYjMxNmJkZDVjN2I2OGQ3OWFfSUQ6NzY1NTMzOTg0MzgxMTEzNDQyOF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTVlNTUzNTUyMjdhNmYwZTZjNDNmM2Q3MTMzNWU0MzZfYzIzMDFkOWEzZjViZWVhNmQ3NzFiMTdkNmVlZDFhOTFfSUQ6NzY1NTMzOTU0NDMxNzAzNzU0OF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjJkZGE0NjJlY2RkYzExOTJjNjg0NzZhMTZlNmE4YWRfNjMyZDlkNzQ3NTg2MWM3NDM3MjhiYzExNzY5NGIwNTNfSUQ6NzY1NTMzODA0MTczMjYzMTUzMF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDFmN2E1MGU3OWZhNmRmNjM5ODk1MzE5NzA5NWNjOGFfYjgyZWMwYjQ4NzFiN2FhMzQ3NTY4NzE0NDcyZTcxNGFfSUQ6NzY1NTMzODA0MTc4Mjg2NDg2NF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWNjZGE4Yzk0ODkyOGMzZjUyNjc5YTVjYzljMjBmNDVfZjNjMGRhYTNjMWU2YTk1NzQzOGZmZTIwZmU1ZjM4NzNfSUQ6NzY1NTMzOTg3NjM0MjIwNTY1OV8xNzg0NTU4MDkzOjE3ODQ2NDQ0OTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmMyNThjNmRmYTdlYjQ3NDJhNTUyMTQzNWRmZmI0ZmZfZTAxMzY1Y2UyN2ZlZWJhYjA2MDhkYWMwNWM4OTkzYWJfSUQ6NzY1NTM0NzQ1MTg1OTQ1NTE4OF8xNzg0NTU4MDkzOjE3ODQ2NDQ0OTNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjEyMzAxNGY0MmFlODg2NTNjY2RiNDY0Yjg1NGU1NDJfMDNlZWQ1YWU3NTRjMjY0MWZmYmVhNDc1M2U2YmYzY2FfSUQ6NzY1NTM0OTYxNTUyNjEyMDQyNl8xNzg0NTU4MDkzOjE3ODQ2NDQ0OTNfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3b/3bfceb43e5906c60fff4bdc2d801be2b0b6ac6549279d6f6b8926bb8b67992f1.webp",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b7/b70ca5569c62780d92bf5246a89e4e4b9ffe170bbc593d4c1e47ac0495eb0e10.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1b/1b09b8aeb438261afd54a9d3ae8938292e11ff3fbaea81d814f0a4acc3393e77.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3d/3d6ff5a83e7bec25c201418cdd52a8d84ecc31bc6037862e1f908eeab4b3747c.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b7/b7cf128cc2dc0b68c197b7fc2d405b4d07a4ab50fd3b3e1bc42c3ca9bcdd0ccd.webp",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/51/512fb7a9177ab0b06582ddf4822a51d72079107bc4b7aabd49edb648f12bc02a.webp",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d5/d585d2c949bc760a4d1ba376c890922a1ed8b79d7a001711a2310608954e1144.webp",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b4/b489953d576ab3378994f654cd7ec1938e9f39aa1415f6848abdbd1f1cb82226.webp"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "《我和我的祖国》电影特展策展手记：让电影宣传变成驶向年代记忆的时光列车"
+        },
         {
           "type": "paragraph",
           "text": "这不是一次常规电影物料包装，而是把影院与商场动线改造成一座可行走、可拍照、可互动的临时展厅：以新中国成立70周年为时间坐标，以“时光列车”为空间隐喻，把七个电影故事、七段时代记忆与观众的现场参与连接起来，让电影宣传从单向告知变成一次主动发生的公共记忆体验。"
@@ -1608,7 +1620,7 @@
           "width": 3767.0,
           "height": 1688.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTVlNTUzNTUyMjdhNmYwZTZjNDNmM2Q3MTMzNWU0MzZfYzIzMDFkOWEzZjViZWVhNmQ3NzFiMTdkNmVlZDFhOTFfSUQ6NzY1NTMzOTU0NDMxNzAzNzU0OF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3b/3bfceb43e5906c60fff4bdc2d801be2b0b6ac6549279d6f6b8926bb8b67992f1.webp"
         },
         {
           "type": "paragraph",
@@ -1637,7 +1649,7 @@
           "width": 447.0,
           "height": 251.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjJkZGE0NjJlY2RkYzExOTJjNjg0NzZhMTZlNmE4YWRfNjMyZDlkNzQ3NTg2MWM3NDM3MjhiYzExNzY5NGIwNTNfSUQ6NzY1NTMzODA0MTczMjYzMTUzMF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b7/b70ca5569c62780d92bf5246a89e4e4b9ffe170bbc593d4c1e47ac0495eb0e10.png"
         },
         {
           "type": "paragraph",
@@ -1666,7 +1678,7 @@
           "width": 447.0,
           "height": 251.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDFmN2E1MGU3OWZhNmRmNjM5ODk1MzE5NzA5NWNjOGFfYjgyZWMwYjQ4NzFiN2FhMzQ3NTY4NzE0NDcyZTcxNGFfSUQ6NzY1NTMzODA0MTc4Mjg2NDg2NF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1b/1b09b8aeb438261afd54a9d3ae8938292e11ff3fbaea81d814f0a4acc3393e77.png"
         },
         {
           "type": "paragraph",
@@ -1678,7 +1690,7 @@
           "width": 447.0,
           "height": 251.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZWI1MDczZjQzNzNjM2ZjMDU0NDAwZTIzOGVjODMzOThfZjRmMGM3MmRlYTQzMmI2ZTU2M2ZmM2YxMDEyZjc0NzFfSUQ6NzY1NTMzODA0MTYxOTM1MjU0N18xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3d/3d6ff5a83e7bec25c201418cdd52a8d84ecc31bc6037862e1f908eeab4b3747c.png"
         },
         {
           "type": "paragraph",
@@ -1703,7 +1715,7 @@
           "width": 3508.0,
           "height": 2224.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTU4OTg1MDU4ZjhhNjcxOTdiZjM5NjMwZmU1NWVkOTVfNGVhNGM0OGY4OTBkMzMzYjMxNmJkZDVjN2I2OGQ3OWFfSUQ6NzY1NTMzOTg0MzgxMTEzNDQyOF8xNzg0NTU4MDkyOjE3ODQ2NDQ0OTJfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b7/b7cf128cc2dc0b68c197b7fc2d405b4d07a4ab50fd3b3e1bc42c3ca9bcdd0ccd.webp"
         },
         {
           "type": "paragraph",
@@ -1715,7 +1727,7 @@
           "width": 3508.0,
           "height": 2224.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWNjZGE4Yzk0ODkyOGMzZjUyNjc5YTVjYzljMjBmNDVfZjNjMGRhYTNjMWU2YTk1NzQzOGZmZTIwZmU1ZjM4NzNfSUQ6NzY1NTMzOTg3NjM0MjIwNTY1OV8xNzg0NTU4MDkzOjE3ODQ2NDQ0OTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d5/d585d2c949bc760a4d1ba376c890922a1ed8b79d7a001711a2310608954e1144.webp"
         },
         {
           "type": "paragraph",
@@ -1736,7 +1748,7 @@
           "width": 1672.0,
           "height": 941.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmMyNThjNmRmYTdlYjQ3NDJhNTUyMTQzNWRmZmI0ZmZfZTAxMzY1Y2UyN2ZlZWJhYjA2MDhkYWMwNWM4OTkzYWJfSUQ6NzY1NTM0NzQ1MTg1OTQ1NTE4OF8xNzg0NTU4MDkzOjE3ODQ2NDQ0OTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b4/b489953d576ab3378994f654cd7ec1938e9f39aa1415f6848abdbd1f1cb82226.webp"
         },
         {
           "type": "paragraph",
@@ -1756,7 +1768,7 @@
           "width": 1672.0,
           "height": 941.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZjEyMzAxNGY0MmFlODg2NTNjY2RiNDY0Yjg1NGU1NDJfMDNlZWQ1YWU3NTRjMjY0MWZmYmVhNDc1M2U2YmYzY2FfSUQ6NzY1NTM0OTYxNTUyNjEyMDQyNl8xNzg0NTU4MDkzOjE3ODQ2NDQ0OTNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/51/512fb7a9177ab0b06582ddf4822a51d72079107bc4b7aabd49edb648f12bc02a.webp"
         },
         {
           "type": "paragraph",
@@ -1819,7 +1831,7 @@
           "text": "《我和我的祖国》主题特展的价值，不只是为一部电影增加线下热度，而是提供了一种商场互动宣传的新范式：当电影、商业空间、时代记忆和社交传播被同一条叙事线串联起来，宣传就不再只是摆放物料，而是一场可参与、可回忆、可分享的公共体验。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzU5YzdiYzYxYzc1YWZmZTVhYzJiNjc3NjI1NTg3YzdfNmI2MGVmMjJhMGZkNDI4NjIxYjljY2E3ZWY1MTRmMTdfSUQ6NzY1NTM1MDI4NTUzOTUxMTI1Ml8xNzg0NTU3ODM4OjE3ODQ2NDQyMzhfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3b/3bfceb43e5906c60fff4bdc2d801be2b0b6ac6549279d6f6b8926bb8b67992f1.webp"
     },
     {
       "id": "recvnNGpDPBadW",
@@ -1833,21 +1845,25 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTg3YTIzZTkzYzI5NzA4OTVmN2Q0MTJiOGU5NjMyZjhfZjZhMDA2YjBlOWZmYzZlODM1YjY2N2VjOTkxZmE0OGVfSUQ6NzY1NjI3NTkzNzQzMjAxMzgwMl8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTA3NTQ1ZTUwY2Q2ZjdkMDQ1MWRkNDhlOWIwMmRkNjFfY2VjNGE3ZWU4OGUzNWM1MjUwMGQxZWJkNGVmOTllZWNfSUQ6NzY1NjI2MjM2MjQwMzU1NjU0NV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDk2NjQ0MTRiZTY4Y2U0MzM3ZDNmNjNiOTI5NGJlMDVfY2VhN2YyMDIzNTc2NTdkNmFmYWUwM2JhZjY2ZTFkNjNfSUQ6NzY1NjI2MjM2MDAwODg4NzI1Ml8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTFhZjMwMGNmMDEwN2Q5YmMwNDljOWM5MDhhMzJkMTJfYTFhM2FmMTE5M2UwNTIyYjI2YmMzNmJjMGVhMWE1ZGZfSUQ6NzY1NjI2MjM2MDQ0MDgwMjU0OV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWVkM2NmMDY4MTMyYjhlNjRmN2RmNGViZDNlZWZmOGRfNzU5ODdiOTczYmRiNTU5MmM1MGE1MjFkM2ViZjE1ZDRfSUQ6NzY1NjI2MjM2MDQ3MDE0NjI1Ml8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjhmMDhkMDJiOWMxM2ZlMDNjZmJiMmNkMWMwZTZiZTJfZjc3MTU5ZjIzMzg4MDZiNjE2Y2Y0MTRlNGU5NDY2Y2ZfSUQ6NzY1NjI3MTExMjE3ODg0NjkyNF8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzI4ZWMxNGU0MjAzMzU1YmZmMzAwOGM2NzY4MzAyZGVfZjc0N2ZkNDJjNjVlNmJlNTViMzU3Njk0N2NlYjUxY2VfSUQ6NzY1NjI3NTk5NzYwOTY1OTU5OV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2YyNzQ1NTdjMDk1OGI2MDhlYzhiYjliYzViMGY2MzJfNjczZTZlZWYzMjE5YmEwY2UzMDJkNGY2NTQ4YjU3ZWNfSUQ6NzY1NjI3NjAyNzY3ODU3NTgyMV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGM5ZGMxYTZmOTc2YTdiN2YxOTZkMGM2MmVmNDAzN2FfMmFkM2RkNTU3ODRmZmEzYjJhODQ5NDYxMTUzZTc0NzlfSUQ6NzY1NjI3MTAxNjAxNjMwMTI5OV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVkMzViZmQ5ZTljOWJlMTFkZGYwMGNhNTY4ZDJmNDFfOGRhODUwNzM2MGFlMGM5NTg3ODIxMjFhZDFhNDM2MDdfSUQ6NzY1NjI3NTk1NjI4NTQ1OTM4N18xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWU5MmY3NzJmMjA3NDQyMmFjMDM2ZDhhMzMzMTMyZjhfYzU0ODhiNDY0OWRjMTYyMGM0YzlkZGI3NDliYjFhNWVfSUQ6NzY1NjI3NjEwODQ2OTE0NDgwOV8xNzg0NTU4MTM1OjE3ODQ2NDQ1MzVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDk5MGEzMzUxMWI5M2VmNWU0NjU3OWM3MTg1NTM5ZTlfYzhlMDNhOTcwZTk2NTZiMjEwNTU1MGM3ZGRhODcxNTFfSUQ6NzY1NjI3NjEzNjU0MDAxNTgzNl8xNzg0NTU4MTM1OjE3ODQ2NDQ1MzVfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzNmZWJmN2Y1MDY0OWVmMThiYThiYzlkZGM0ODkzZWNfNjcyZGY3YmYyNzhmZmFjODU1ZjM2OWExMzhjOGE1YzJfSUQ6NzY1NjI3NjA4NzIxMDc0MDY5OF8xNzg0NTU4MTM1OjE3ODQ2NDQ1MzVfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/af/afbb24553468a8acd93dab288392e925f32c49da50b434cd1f50b70dd4bd4b59.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0a/0a7698f4883f65cdf3fd130d3229ee9a21467302e4b4f332096627bb07c5aa92.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/05/057159f73a8161ee062d01c24aa7c2742c088acc9e88b96d6ab4b442e06e68d7.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e735549d636ae8bf19d9ed925381d1314ba92139e4ab0469aa22f22f288c0ec5.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ed/edbff0a1858ff8bce940f0f80ae4cbc0ddd64cfc1dae4c5ed0570cf78d485433.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b9/b901d67489fdcb460748d6d1877eb2c265834bfd750f449b8042f1fb175a666b.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5c/5cd3a3259792c7d78f7b076d504bf1c1791a2d2ee899ab481f1e5fa8bd4a2f80.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/f4/f49c1d3e8e0a77944f02352da1c034c2b31ba43479568db0bf2de30ff6c5d057.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8c/8c5b3efb4e017a8176598915ce219116c3cf3a4693464651b67f237dfb5eb2bf.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9b/9b714dbd6ed08ab9fa2ef32d4b36b99b5d961d1e7eb2b2cf3c9d013940846d48.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4a/4a90e5d59956597d13e4320229d2656cc6a3cdac37d1e3b7f204be0e3cdf8ac7.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/28/28afce3487810b3371abbebbc9aa4bdf2e7da2a56b36b3f902739de48be3e222.gif",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b7/b770c3a87e11961865c966a1b11ddd5901bc30722c034b4907bc90422e24cf84.gif"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "从萌生到共生：一座机器人展厅提前写下的具身智能叙事"
+        },
         {
           "type": "paragraph",
           "text": "回看几年前完成的迪信通机器人智能制造展厅，它真正前瞻的地方并不只是使用了机械摇臂屏、解说机器人、工业机器人、VR与沉浸影院，而是把机器人展厅的主题从“产品陈列”推进到“人和机器人的关系”：机器人如何诞生，如何与人协作，最终又如何进入人与机器共生的未来生活。"
@@ -1858,7 +1874,7 @@
           "width": 436.0,
           "height": 246.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTA3NTQ1ZTUwY2Q2ZjdkMDQ1MWRkNDhlOWIwMmRkNjFfY2VjNGE3ZWU4OGUzNWM1MjUwMGQxZWJkNGVmOTllZWNfSUQ6NzY1NjI2MjM2MjQwMzU1NjU0NV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ed/edbff0a1858ff8bce940f0f80ae4cbc0ddd64cfc1dae4c5ed0570cf78d485433.png"
         },
         {
           "type": "paragraph",
@@ -1899,8 +1915,40 @@
           "text": "序厅用多组矩阵LED和工业风语言凸显机器人的诞生。这样的空间表达很直接：红黑色调、金属结构、机械臂、流水线、屏幕数据，让观众先看到一种由工业效率驱动的机器世界。"
         },
         {
+          "type": "image",
+          "token": "Kbh9bCB0aoYq9AxC1xgcR9Jtncb",
+          "width": 430.0,
+          "height": 242.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/af/afbb24553468a8acd93dab288392e925f32c49da50b434cd1f50b70dd4bd4b59.png"
+        },
+        {
+          "type": "image",
+          "token": "Zi06bmezbonkGMxEgiacuwV9n5c",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0a/0a7698f4883f65cdf3fd130d3229ee9a21467302e4b4f332096627bb07c5aa92.gif"
+        },
+        {
           "type": "paragraph",
           "text": "序厅空间以工业风、红黑色调和矩阵LED呈现机器人的诞生语境。"
+        },
+        {
+          "type": "image",
+          "token": "XDblbk4i4owpwlxiOW7cCClFnCf",
+          "width": 1080.0,
+          "height": 608.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/05/057159f73a8161ee062d01c24aa7c2742c088acc9e88b96d6ab4b442e06e68d7.jpg"
+        },
+        {
+          "type": "image",
+          "token": "XsrrbfwsNoJkEPxJsCQcyW2fnBe",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e735549d636ae8bf19d9ed925381d1314ba92139e4ab0469aa22f22f288c0ec5.gif"
         },
         {
           "type": "paragraph",
@@ -1921,7 +1969,7 @@
           "width": 436.0,
           "height": 244.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDk2NjQ0MTRiZTY4Y2U0MzM3ZDNmNjNiOTI5NGJlMDVfY2VhN2YyMDIzNTc2NTdkNmFmYWUwM2JhZjY2ZTFkNjNfSUQ6NzY1NjI2MjM2MDAwODg4NzI1Ml8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/f4/f49c1d3e8e0a77944f02352da1c034c2b31ba43479568db0bf2de30ff6c5d057.png"
         },
         {
           "type": "paragraph",
@@ -1934,6 +1982,22 @@
         {
           "type": "paragraph",
           "text": "这套逻辑在当时很前瞻。很多展厅在讲机器人时，会默认观众只想看“酷不酷、会不会动、能不能拍照”。但这个方案把机器人放进了人的需求结构里：机器人为什么出现？它解决人的哪一层需求？它和人的关系是替代、辅助，还是共同完成？"
+        },
+        {
+          "type": "image",
+          "token": "G3T0bJyOSoqRA4xq3jVcS2Nln5d",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8c/8c5b3efb4e017a8176598915ce219116c3cf3a4693464651b67f237dfb5eb2bf.gif"
+        },
+        {
+          "type": "image",
+          "token": "IRljb7SNjo0VUCxyxDYchvUrnmh",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9b/9b714dbd6ed08ab9fa2ef32d4b36b99b5d961d1e7eb2b2cf3c9d013940846d48.gif"
         },
         {
           "type": "paragraph",
@@ -1962,7 +2026,7 @@
           "width": 385.0,
           "height": 214.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTFhZjMwMGNmMDEwN2Q5YmMwNDljOWM5MDhhMzJkMTJfYTFhM2FmMTE5M2UwNTIyYjI2YmMzNmJjMGVhMWE1ZGZfSUQ6NzY1NjI2MjM2MDQ0MDgwMjU0OV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b9/b901d67489fdcb460748d6d1877eb2c265834bfd750f449b8042f1fb175a666b.png"
         },
         {
           "type": "paragraph",
@@ -1975,6 +2039,38 @@
         {
           "type": "paragraph",
           "text": "这与今天AI和具身智能的讨论非常接近。机器人基础模型、视觉语言动作模型、人形机器人训练、仿真到现实迁移，都在让机器人从单一任务机器走向泛化行为体。问题也随之变化：我们不再只问机器人能做什么，而要问它如何进入人的空间，如何理解人的意图，如何让协作关系更可信。"
+        },
+        {
+          "type": "image",
+          "token": "SXHgb0u5BoaPzExARjScPuahn6c",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5c/5cd3a3259792c7d78f7b076d504bf1c1791a2d2ee899ab481f1e5fa8bd4a2f80.gif"
+        },
+        {
+          "type": "image",
+          "token": "KDwabQacXofjSMxnVzScDxuMnzb",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4a/4a90e5d59956597d13e4320229d2656cc6a3cdac37d1e3b7f204be0e3cdf8ac7.gif"
+        },
+        {
+          "type": "image",
+          "token": "XlGXbnDOso7h7VxvXbAcH0EenZg",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/28/28afce3487810b3371abbebbc9aa4bdf2e7da2a56b36b3f902739de48be3e222.gif"
+        },
+        {
+          "type": "image",
+          "token": "CxnobjKIQoWkwVxAQ6UcVjUnn0c",
+          "width": 400.0,
+          "height": 225.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b7/b770c3a87e11961865c966a1b11ddd5901bc30722c034b4907bc90422e24cf84.gif"
         },
         {
           "type": "paragraph",
@@ -2037,93 +2133,9 @@
         {
           "type": "paragraph",
           "text": "IFR World Robotics 2025 Service Robots：专业服务机器人、医疗机器人和消费服务机器人在2024年继续增长。"
-        },
-        {
-          "type": "paragraph",
-          "text": "从萌生到共生：一座机器人展厅提前写下的具身智能叙事"
-        },
-        {
-          "type": "image",
-          "token": "Kbh9bCB0aoYq9AxC1xgcR9Jtncb",
-          "width": 430.0,
-          "height": 242.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YWVkM2NmMDY4MTMyYjhlNjRmN2RmNGViZDNlZWZmOGRfNzU5ODdiOTczYmRiNTU5MmM1MGE1MjFkM2ViZjE1ZDRfSUQ6NzY1NjI2MjM2MDQ3MDE0NjI1Ml8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "Zi06bmezbonkGMxEgiacuwV9n5c",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTg3YTIzZTkzYzI5NzA4OTVmN2Q0MTJiOGU5NjMyZjhfZjZhMDA2YjBlOWZmYzZlODM1YjY2N2VjOTkxZmE0OGVfSUQ6NzY1NjI3NTkzNzQzMjAxMzgwMl8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "XDblbk4i4owpwlxiOW7cCClFnCf",
-          "width": 1080.0,
-          "height": 608.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGM5ZGMxYTZmOTc2YTdiN2YxOTZkMGM2MmVmNDAzN2FfMmFkM2RkNTU3ODRmZmEzYjJhODQ5NDYxMTUzZTc0NzlfSUQ6NzY1NjI3MTAxNjAxNjMwMTI5OV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "XsrrbfwsNoJkEPxJsCQcyW2fnBe",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVkMzViZmQ5ZTljOWJlMTFkZGYwMGNhNTY4ZDJmNDFfOGRhODUwNzM2MGFlMGM5NTg3ODIxMjFhZDFhNDM2MDdfSUQ6NzY1NjI3NTk1NjI4NTQ1OTM4N18xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "G3T0bJyOSoqRA4xq3jVcS2Nln5d",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjhmMDhkMDJiOWMxM2ZlMDNjZmJiMmNkMWMwZTZiZTJfZjc3MTU5ZjIzMzg4MDZiNjE2Y2Y0MTRlNGU5NDY2Y2ZfSUQ6NzY1NjI3MTExMjE3ODg0NjkyNF8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "IRljb7SNjo0VUCxyxDYchvUrnmh",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzI4ZWMxNGU0MjAzMzU1YmZmMzAwOGM2NzY4MzAyZGVfZjc0N2ZkNDJjNjVlNmJlNTViMzU3Njk0N2NlYjUxY2VfSUQ6NzY1NjI3NTk5NzYwOTY1OTU5OV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "SXHgb0u5BoaPzExARjScPuahn6c",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=M2YyNzQ1NTdjMDk1OGI2MDhlYzhiYjliYzViMGY2MzJfNjczZTZlZWYzMjE5YmEwY2UzMDJkNGY2NTQ4YjU3ZWNfSUQ6NzY1NjI3NjAyNzY3ODU3NTgyMV8xNzg0NTU4MTM0OjE3ODQ2NDQ1MzRfVjM"
-        },
-        {
-          "type": "image",
-          "token": "KDwabQacXofjSMxnVzScDxuMnzb",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzNmZWJmN2Y1MDY0OWVmMThiYThiYzlkZGM0ODkzZWNfNjcyZGY3YmYyNzhmZmFjODU1ZjM2OWExMzhjOGE1YzJfSUQ6NzY1NjI3NjA4NzIxMDc0MDY5OF8xNzg0NTU4MTM1OjE3ODQ2NDQ1MzVfVjM"
-        },
-        {
-          "type": "image",
-          "token": "XlGXbnDOso7h7VxvXbAcH0EenZg",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWU5MmY3NzJmMjA3NDQyMmFjMDM2ZDhhMzMzMTMyZjhfYzU0ODhiNDY0OWRjMTYyMGM0YzlkZGI3NDliYjFhNWVfSUQ6NzY1NjI3NjEwODQ2OTE0NDgwOV8xNzg0NTU4MTM1OjE3ODQ2NDQ1MzVfVjM"
-        },
-        {
-          "type": "image",
-          "token": "CxnobjKIQoWkwVxAQ6UcVjUnn0c",
-          "width": 400.0,
-          "height": 225.0,
-          "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDk5MGEzMzUxMWI5M2VmNWU0NjU3OWM3MTg1NTM5ZTlfYzhlMDNhOTcwZTk2NTZiMjEwNTU1MGM3ZGRhODcxNTFfSUQ6NzY1NjI3NjEzNjU0MDAxNTgzNl8xNzg0NTU4MTM1OjE3ODQ2NDQ1MzVfVjM"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzUxMDQ1MWM4OGE1ZGU2NTgyZDI5ZmVjZDA3YmNmZWZfZDI0MDE0ZjI5YjdlMzg1ZWIyOTQyMjg1NmE3ZDJiZTdfSUQ6NzY1NjI3NjI4NTExNDY5ODk2Nl8xNzg0NTU3ODM4OjE3ODQ2NDQyMzhfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e7/e735549d636ae8bf19d9ed925381d1314ba92139e4ab0469aa22f22f288c0ec5.gif"
     },
     {
       "id": "recvobZGQpxvUE",
@@ -2137,23 +2149,27 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTMwMDQyMDI4OWNjOWQ3MjgxZThhOTVmZTU2YWViZjRfZTVhMzA0ZTQxZmEzMjAyMjVkZjBlMWM5Zjk4OTljNzBfSUQ6NzY1NzgwNTIyMzI4MTU5MzI5NV8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2I0ZDRhNjY3ODM3Y2JkODIxNGI0MjBiNTk3MmU4NDFfNTk1MTdkMjM3Yzg3OTFkMWNhYzU4OWNiMDE2M2JmZWZfSUQ6NzY1NzgwNTIyNDk4MTI4NTg3NV8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTQwOTk1MTA3OWM0MmNjNzA2OTFkZmRiZDAyMmY0YmVfNmEwODJiMTZlZWI2MmUxMWEwOTRkODc2ZmFhOGU0ZTlfSUQ6NzY1NzgwNTIyMzIwNzM1NzM4OF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGQ4NjM5YTI3Nzk1ZTg5OGM4YTYyNzhjMzY2NmVkNjVfNGU3ZDYxNGI2ZWM4YWJjYTFjMTY1MThlYjNjNDQyNGNfSUQ6NzY1NzgwNTIyNzMzNjI1NjQ3MF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2Q5MmNiNWUxYjQyY2ExY2Y3ZDFmNDY3MGY2Njg2MmNfNWYxOWQ2Y2MxNmZlZTY5NWFiZGQ2MmExZWJkY2Q0YWFfSUQ6NzY1NzgwNTIyNjgyODk0MjI2OF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzU3YTAxMDcwMDQzNGRhNzNjMmZjZTM5ZWYzY2ZjYWRfMmUzMGY3YTQ2NGU2MDc4YWQ3M2JiOWEzN2YzZTdiOTFfSUQ6NzY1NzgwNTIyNTIyNzE2MDUyNF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjBhZWRkNWUzYzQ4NGY4ZWUwMDk5OTNlMzhmMDc3MzhfMGU4YmIzYzIxNDZhZGIxMmRkM2IwYjQ3Y2MzNGNhZjBfSUQ6NzY1NzgwNTIyMzIwNzM5MDE1Nl8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmFhYWRjM2Y1YTllOGI1MWIyMzIyNjYxMDY5ZjRlZTdfYTkwMzY4NTQ1MGQ5YTk4MDhiZjY1MzRiYTEyNWFkYjRfSUQ6NzY1NzgwNTIyNDQzODg2MDc1M18xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTU4NTViZDU1ZWQyYjYyM2I4ZmRkNWVhOTA5YmNjNDJfZTA0MjM5MzAwM2IxNzIxMWRlNWRjYTQ2NDQ0NmM0MzlfSUQ6NzY1NzgwNTIyMzY0MjEwNjgyOF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTg0MWJmNTM0MzNlOTAyNzY2ZGMxYjM4OGNkNTNhM2JfM2M4ZDJjMGMzOGM4MTNmMWQxNzZlMTM2OTM1Zjg4ZTFfSUQ6NzY1NzgwNTIyNzE0MzQ2NTk0M18xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mzg0MjUyZTY1ZTA1NGUxZjQxYmE1ZjYxMDZmOThiYmRfZTZhODJkYzM2NGRkYmMyZjdkMWRlODNhMTY3MWE1ZTVfSUQ6NzY1NzgwNTIyMzU0MTU5MTAxM18xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWQwZWQ3YTdiMTYyMGExMjg5ZjEwN2RkMzhkMTgzOThfYzA1ODQwYzk3YzAyYTZiOTU2ZmM0NWRhM2M5NzU5ZDNfSUQ6NzY1NzgwNTIyNTY2MzIzNzEwN18xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjcwMmQzNjY4NzUxYTI5NjUyNWE3Yjk4MDJlYjdjYzhfYmIzOWVlOTRhMmQ2NTgxYTFiMjM5NDUyOGU4OWJkY2FfSUQ6NzY1NzgwNTIyMzM0NDU0MDYyMV8xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjU3M2VhM2Q1OTRmZWI3ZDM4MjM2ZTYxMTc1ZGMzNmJfZTk2NDk0Zjk2MzM2MGIxNzYxZjQyNzM5M2JlMTg0ODZfSUQ6NzY1NzgwNTIyNTU0MTY2Nzc4NV8xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWZmZTY4NmU2ODA4NTRjYWEyNGVmYzdhZTMxZGM0ZWFfOTBhZmM0NTNjYzE4ZWJkYzhlY2JiNmRhNTRkNDc0OGFfSUQ6NzY1NzgwNTIyNTQzNjU0ODA2M18xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ee/eefaa2666269d2da587813c17fb751793039be7ed867d664579813d5d2d0c520.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/89/892fc3343d0b8116a8f61038e559314debd24fc77a980eb9ed73684731815445.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/df/df2023e7795380a7df0d4406c4a894202a74a40bf07a23a61da1674ebe1b0d23.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fe/feb42fbd63b4c8877c23f75fa086e19f501e09bce3c0e4ad0c8c365eec869755.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/bf/bf1248f3baaa56bc50e89b29cbd73cb21140efad191180b86febc1d34db17ac0.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1e/1eeb93381bef8d9042a313ecbe9fd51777adfc68ad3490b34fea9d85e427b05e.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a2/a2dbf48c5fd4d71ba71f3f600ac6d9fa201892894446b14a1685cf3f8120f0b7.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/39/391825c1d22ec628d1db9f8d41b6d8c842ad6fb73da9c3fb73d023330d96b5c5.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3a/3ace2506aa5ac073c0ea09cf03592a839314a7c50916533e08ffddeb0054bc11.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fc/fc98ad63984d27128ebb6ac9761534f4c5bb729bd9c51d47e7f5451d86f52f0d.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/42/424a0df10741e28f4229ca6a8ccace41b71e6de671ae3fc3c2838be5a9f71b0f.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8f/8f943acb85c7ca41d9d8bd8e7537951c5c679c0ac0873575d2660a06d376e141.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/7f/7fc69b358612ab19aa61b802130c7390f519280c137724e65e3acf3c6678e1ab.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/83/83a96e0232595a8e1ec93100f16ae7414a26bb538241c58c14c257df4830b049.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e9/e9cfac51b952896c8db1668d216c1f833a30a5ca30dce883df0c928e774d37d5.png"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "前往新世界_相遇酒馆家_年轻人与啤酒文化小酒馆策展手记"
+        },
         {
           "type": "paragraph",
           "text": "这不是一间只负责卖酒的小酒馆，而是一次围绕年轻人消费心理、社交方式和情绪归属展开的空间实验。方案把啤酒从产品转译为生活方式，把小酒馆从消费场所升级为“酒馆家”：一个让年轻人在城市忙碌节奏里放松、相聚、表达和重新连接的公共客厅。"
@@ -2164,7 +2180,7 @@
           "width": 413.0,
           "height": 151.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTMwMDQyMDI4OWNjOWQ3MjgxZThhOTVmZTU2YWViZjRfZTVhMzA0ZTQxZmEzMjAyMjVkZjBlMWM5Zjk4OTljNzBfSUQ6NzY1NzgwNTIyMzI4MTU5MzI5NV8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/bf/bf1248f3baaa56bc50e89b29cbd73cb21140efad191180b86febc1d34db17ac0.png"
         },
         {
           "type": "paragraph",
@@ -2193,7 +2209,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2I0ZDRhNjY3ODM3Y2JkODIxNGI0MjBiNTk3MmU4NDFfNTk1MTdkMjM3Yzg3OTFkMWNhYzU4OWNiMDE2M2JmZWZfSUQ6NzY1NzgwNTIyNDk4MTI4NTg3NV8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ee/eefaa2666269d2da587813c17fb751793039be7ed867d664579813d5d2d0c520.png"
         },
         {
           "type": "paragraph",
@@ -2205,7 +2221,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTQwOTk1MTA3OWM0MmNjNzA2OTFkZmRiZDAyMmY0YmVfNmEwODJiMTZlZWI2MmUxMWEwOTRkODc2ZmFhOGU0ZTlfSUQ6NzY1NzgwNTIyMzIwNzM1NzM4OF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/89/892fc3343d0b8116a8f61038e559314debd24fc77a980eb9ed73684731815445.png"
         },
         {
           "type": "paragraph",
@@ -2234,7 +2250,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MGQ4NjM5YTI3Nzk1ZTg5OGM4YTYyNzhjMzY2NmVkNjVfNGU3ZDYxNGI2ZWM4YWJjYTFjMTY1MThlYjNjNDQyNGNfSUQ6NzY1NzgwNTIyNzMzNjI1NjQ3MF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/df/df2023e7795380a7df0d4406c4a894202a74a40bf07a23a61da1674ebe1b0d23.png"
         },
         {
           "type": "paragraph",
@@ -2246,7 +2262,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Y2Q5MmNiNWUxYjQyY2ExY2Y3ZDFmNDY3MGY2Njg2MmNfNWYxOWQ2Y2MxNmZlZTY5NWFiZGQ2MmExZWJkY2Q0YWFfSUQ6NzY1NzgwNTIyNjgyODk0MjI2OF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fe/feb42fbd63b4c8877c23f75fa086e19f501e09bce3c0e4ad0c8c365eec869755.png"
         },
         {
           "type": "paragraph",
@@ -2275,7 +2291,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YzU3YTAxMDcwMDQzNGRhNzNjMmZjZTM5ZWYzY2ZjYWRfMmUzMGY3YTQ2NGU2MDc4YWQ3M2JiOWEzN2YzZTdiOTFfSUQ6NzY1NzgwNTIyNTIyNzE2MDUyNF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/39/391825c1d22ec628d1db9f8d41b6d8c842ad6fb73da9c3fb73d023330d96b5c5.png"
         },
         {
           "type": "paragraph",
@@ -2287,7 +2303,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjBhZWRkNWUzYzQ4NGY4ZWUwMDk5OTNlMzhmMDc3MzhfMGU4YmIzYzIxNDZhZGIxMmRkM2IwYjQ3Y2MzNGNhZjBfSUQ6NzY1NzgwNTIyMzIwNzM5MDE1Nl8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3a/3ace2506aa5ac073c0ea09cf03592a839314a7c50916533e08ffddeb0054bc11.png"
         },
         {
           "type": "paragraph",
@@ -2316,7 +2332,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmFhYWRjM2Y1YTllOGI1MWIyMzIyNjYxMDY5ZjRlZTdfYTkwMzY4NTQ1MGQ5YTk4MDhiZjY1MzRiYTEyNWFkYjRfSUQ6NzY1NzgwNTIyNDQzODg2MDc1M18xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fc/fc98ad63984d27128ebb6ac9761534f4c5bb729bd9c51d47e7f5451d86f52f0d.png"
         },
         {
           "type": "paragraph",
@@ -2328,7 +2344,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTU4NTViZDU1ZWQyYjYyM2I4ZmRkNWVhOTA5YmNjNDJfZTA0MjM5MzAwM2IxNzIxMWRlNWRjYTQ2NDQ0NmM0MzlfSUQ6NzY1NzgwNTIyMzY0MjEwNjgyOF8xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1e/1eeb93381bef8d9042a313ecbe9fd51777adfc68ad3490b34fea9d85e427b05e.png"
         },
         {
           "type": "paragraph",
@@ -2340,7 +2356,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTg0MWJmNTM0MzNlOTAyNzY2ZGMxYjM4OGNkNTNhM2JfM2M4ZDJjMGMzOGM4MTNmMWQxNzZlMTM2OTM1Zjg4ZTFfSUQ6NzY1NzgwNTIyNzE0MzQ2NTk0M18xNzg0NTU4MTc2OjE3ODQ2NDQ1NzZfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a2/a2dbf48c5fd4d71ba71f3f600ac6d9fa201892894446b14a1685cf3f8120f0b7.png"
         },
         {
           "type": "paragraph",
@@ -2352,7 +2368,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NWZmZTY4NmU2ODA4NTRjYWEyNGVmYzdhZTMxZGM0ZWFfOTBhZmM0NTNjYzE4ZWJkYzhlY2JiNmRhNTRkNDc0OGFfSUQ6NzY1NzgwNTIyNTQzNjU0ODA2M18xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/83/83a96e0232595a8e1ec93100f16ae7414a26bb538241c58c14c257df4830b049.png"
         },
         {
           "type": "paragraph",
@@ -2381,7 +2397,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mzg0MjUyZTY1ZTA1NGUxZjQxYmE1ZjYxMDZmOThiYmRfZTZhODJkYzM2NGRkYmMyZjdkMWRlODNhMTY3MWE1ZTVfSUQ6NzY1NzgwNTIyMzU0MTU5MTAxM18xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e9/e9cfac51b952896c8db1668d216c1f833a30a5ca30dce883df0c928e774d37d5.png"
         },
         {
           "type": "paragraph",
@@ -2393,7 +2409,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWQwZWQ3YTdiMTYyMGExMjg5ZjEwN2RkMzhkMTgzOThfYzA1ODQwYzk3YzAyYTZiOTU2ZmM0NWRhM2M5NzU5ZDNfSUQ6NzY1NzgwNTIyNTY2MzIzNzEwN18xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/42/424a0df10741e28f4229ca6a8ccace41b71e6de671ae3fc3c2838be5a9f71b0f.png"
         },
         {
           "type": "paragraph",
@@ -2426,7 +2442,7 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjcwMmQzNjY4NzUxYTI5NjUyNWE3Yjk4MDJlYjdjYzhfYmIzOWVlOTRhMmQ2NTgxYTFiMjM5NDUyOGU4OWJkY2FfSUQ6NzY1NzgwNTIyMzM0NDU0MDYyMV8xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8f/8f943acb85c7ca41d9d8bd8e7537951c5c679c0ac0873575d2660a06d376e141.png"
         },
         {
           "type": "paragraph",
@@ -2438,14 +2454,14 @@
           "width": 430.0,
           "height": 242.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YjU3M2VhM2Q1OTRmZWI3ZDM4MjM2ZTYxMTc1ZGMzNmJfZTk2NDk0Zjk2MzM2MGIxNzYxZjQyNzM5M2JlMTg0ODZfSUQ6NzY1NzgwNTIyNTU0MTY2Nzc4NV8xNzg0NTU4MTc3OjE3ODQ2NDQ1NzdfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/7f/7fc69b358612ab19aa61b802130c7390f519280c137724e65e3acf3c6678e1ab.png"
         },
         {
           "type": "paragraph",
           "text": "夜间氛围：自由、轻盈、可分享的空间，使酒馆成为年轻人的城市归属地。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTJjY2Q2NDFmNDEyYWE1MjVkZDgwZTZhZjU2M2I3YmNfOWYxZDI2YzQxMjMwMTk5YzNhMjA2M2E0MzE4Y2U5YWFfSUQ6NzY1OTAwMTYxMDA1OTc5NTQzNF8xNzg0NTU3ODM4OjE3ODQ2NDQyMzhfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5f/5ffa82584d72a1a972ee13bbf6821a1064d1b8fca8af8a1414fb6aa341eebb2b.webp"
     },
     {
       "id": "recvpOXyAWG42x",
@@ -2459,23 +2475,27 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODRjYzhkNTcwMzA0ZmU1MzVjMjg4OTUxY2E5MDNiOThfN2M2NzkxNTM2NWFiMTRmYmE5NDI4Mzg1NTFkMjMwNWVfSUQ6NzY2NDIyMDIxNzcxMDU0NjIxNl8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWY5YzYxZDBlMzU5M2NjYjAyNjM4MTc1NzYzMDUzNWFfZWJjZGRkYmIyMWVkMDQ0OGE0MDMwNTc1ZjEwYTFmNzVfSUQ6NzY2NDIyMDIxNTIzMTg5MjY2MV8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDJhMjYwZGM3ZmFhNjg1N2MzMjRkYWRkMjc4OWE5ZWRfMGU0NDlhZDdlMGRiMDk0NTZiNDE3YWQ3OWIwMjZiZmRfSUQ6NzY2NDIyMDIxNzcyMzExMjY1M18xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTk2YWQzNmMxMTk5NTAzYTI1MzVlODM3OTQ3ODdkNzBfNDlkMjYyNDExOTYyNDJiYTliMjE4NmI4ZDY5ZWUyYzJfSUQ6NzY2NDIyMDIxNTU4ODM3NTc5OV8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mjk2NWQ5MDEzNGIwNzU5Y2QwMzI1N2M5YmM5YzEzZTVfNDg1NTFjOGMzYmMzNTFlNTc3MTQ0MDYyODY3ZGM1MThfSUQ6NzY2NDIyMjk5MDMxNzU4NzQzMl8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTBjYjlkMTJiMjA3MTc4MWEwY2M1N2JkMmU5M2MxNGVfYTk5NWNjOGY5YzU5NWE1MTFiOTI2MTE2OTgyYmM0NWJfSUQ6NzY2NDIyMDIxNDYzMjA1ODEzOF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQ3MGJmODcyY2FjYjNkZGIxMjQwYTA0OTdjYWU3NmFfMWMwMGM0ZDNjNDA3MTkzMzQ5NTcwNzMyZDZjZWUwMTlfSUQ6NzY2NDIyMDIxNjE5NjQ2NzkxN18xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2VlZGViN2MyZWNjMWVkYTE3NGU2Y2FlODJmNjEzZDdfZjczYjJiMTg3YzQ4YjUwNzc5ODdiNTY4MWViM2JmZjJfSUQ6NzY2NDIyMDIxNjM4NTE2MjQzOV8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTRiN2U3ODRmN2JkYjhiZjVkNGUwODM3N2ZjYjgxMWJfYmU1NTIxYzBmMTMwNzdkNDZmZjg0MjJhNTdkN2Y3YTdfSUQ6NzY2NDIyMDIxNjYwNzUwOTcyMl8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGY5Y2Y0YTcxMTFlYjNiZGMwZTdmMTEzMjY1OWFjYzRfMzkzZWM5ZmQxYjgzYTgzYTA2NGNiNDNkZGFjYTRmMGRfSUQ6NzY2NDIyMDIxNTQwMzcxMTQ2MV8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmQwOGM1NzZhZjU5ZGE3MmJjMTk5ZGZlMzU2ZDNkNzRfNzUxNTlmZGRiYmM5MmQyNDg5MjE3MjE5ZWY3YWZhYzZfSUQ6NzY2NDIyMDIxNjE1MDI4MTE3OF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTZlMmEwYmUyZjI4NjVkNzMxMzNlM2EzYzY5NGIzYTNfOTZlMDdkOWE5NTIyNWViZDQ0N2E2ODg3OWIwNmEzNjZfSUQ6NzY2NDIyMDIxNDk2MzQ1NzMxMV8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmM0MWM2ZTBmZDliNTdjMjQzOTQwYzM4OGYyZmVlMDVfZWVjNjNkNzA0ZDlmMmZlYTgyZDIwMzAzN2MyYmU5ZjNfSUQ6NzY2NDIyMDIxNTY1OTY0NjE4OF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTMzYmJlMzA4NzlkNzEzZTU3MWY4ZDBhYjdjYzg1MzlfYmU4Mzg5ZWFiOWE5YjE5ODhlMmEzNmM1OGEyOWE2ZWRfSUQ6NzY2NDIyMDIxNzA4NTU0NTc2NF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTFjNjViZDhlZDM3YWRjMjJhNTJkMTM4Mzk5MGZhYzlfMzk3ODFkZThmMDEwZTM2MWI4ZTQ3NDY4Yjc0YWVmNzdfSUQ6NzY2NDIyMDIxNjE2NzA1ODY5NF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ae/aeeb6fd053510502a208d97755d87abd68366aca32362aed7d161baf0d9515c8.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1e/1e9350633fa5f718c46a6a9217a9884227e7a9d3cd71d1e7f6e93c8deb012b93.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4e/4e1626a28b991e98ba29c063b5246742f18851e16e6384a718f816aa3a3b4911.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/de/de14825c2fcf16c53dd875143579175652b2f82de771c76eca12351d365eb01d.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c1/c1de2f954e0fd63eba9452c3d2711e43e9cd3479fdba2e04d0b8a5146471fa8f.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d4/d469a37a4635970514ea25466b2c7eb75b528af627de3f5e5c92af27a592527c.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/92/926af124a4aeb8518908bec74ae557ca97830adf2501b98c2aab3de39717b44b.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9a/9a6f43c2f27b8bfaeccd9784fa0d166abdf9166c371ef7147142731a1cc0bc2c.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3e/3ec7d4778ad612f969ea9d6f0ac4e951fdad95d96b3f6b8382906e1920f5e8ae.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/2a/2a80a4ef2257536c13a8d2870ade88bcc78cbd833cdb2b75fdd499a59a2f1085.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b9/b9af420c8a24fc28232d0e8bf5c98ca2b27981c5aa1c7a24f0823e0db7829c93.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/22/22c13c9095b80d46be8272538ff32a7acd056847a14c17434704ee07fb1ff26d.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fc/fcd8a0a8a35d35fd4ab462dd5e570bcb9206addd8b46a050baeb0833c6617199.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0f/0fe5e82af1b7e8b6ec18b4b0ba57261b6955b11f4fe2eaabce29661903758199.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8a/8aaa9d158019ead9c8a0a3ceb96b5558bb31250a4ac7b025cad0efcb86b81a8f.jpg"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "在雨林与城市之间_万科西双版纳城市会客厅的共生策展"
+        },
         {
           "type": "paragraph",
           "text": "策展手记 / 从一棵枯木出发，重写人与自然、人与城市、人与建筑的关系"
@@ -2490,7 +2510,7 @@
           "width": 459.0,
           "height": 344.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTk2YWQzNmMxMTk5NTAzYTI1MzVlODM3OTQ3ODdkNzBfNDlkMjYyNDExOTYyNDJiYTliMjE4NmI4ZDY5ZWUyYzJfSUQ6NzY2NDIyMDIxNTU4ODM3NTc5OV8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c1/c1de2f954e0fd63eba9452c3d2711e43e9cd3479fdba2e04d0b8a5146471fa8f.jpg"
         },
         {
           "type": "paragraph",
@@ -2511,7 +2531,7 @@
           "width": 2400.0,
           "height": 1350.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=Mjk2NWQ5MDEzNGIwNzU5Y2QwMzI1N2M5YmM5YzEzZTVfNDg1NTFjOGMzYmMzNTFlNTc3MTQ0MDYyODY3ZGM1MThfSUQ6NzY2NDIyMjk5MDMxNzU4NzQzMl8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ae/aeeb6fd053510502a208d97755d87abd68366aca32362aed7d161baf0d9515c8.png"
         },
         {
           "type": "paragraph",
@@ -2535,7 +2555,7 @@
           "width": 459.0,
           "height": 344.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ODRjYzhkNTcwMzA0ZmU1MzVjMjg4OTUxY2E5MDNiOThfN2M2NzkxNTM2NWFiMTRmYmE5NDI4Mzg1NTFkMjMwNWVfSUQ6NzY2NDIyMDIxNzcxMDU0NjIxNl8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1e/1e9350633fa5f718c46a6a9217a9884227e7a9d3cd71d1e7f6e93c8deb012b93.jpg"
         },
         {
           "type": "paragraph",
@@ -2564,7 +2584,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OWY5YzYxZDBlMzU5M2NjYjAyNjM4MTc1NzYzMDUzNWFfZWJjZGRkYmIyMWVkMDQ0OGE0MDMwNTc1ZjEwYTFmNzVfSUQ6NzY2NDIyMDIxNTIzMTg5MjY2MV8xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/4e/4e1626a28b991e98ba29c063b5246742f18851e16e6384a718f816aa3a3b4911.jpg"
         },
         {
           "type": "paragraph",
@@ -2580,7 +2600,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MDJhMjYwZGM3ZmFhNjg1N2MzMjRkYWRkMjc4OWE5ZWRfMGU0NDlhZDdlMGRiMDk0NTZiNDE3YWQ3OWIwMjZiZmRfSUQ6NzY2NDIyMDIxNzcyMzExMjY1M18xNzg0NTU4MjMzOjE3ODQ2NDQ2MzNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/de/de14825c2fcf16c53dd875143579175652b2f82de771c76eca12351d365eb01d.jpg"
         },
         {
           "type": "paragraph",
@@ -2605,7 +2625,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzQ3MGJmODcyY2FjYjNkZGIxMjQwYTA0OTdjYWU3NmFfMWMwMGM0ZDNjNDA3MTkzMzQ5NTcwNzMyZDZjZWUwMTlfSUQ6NzY2NDIyMDIxNjE5NjQ2NzkxN18xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/2a/2a80a4ef2257536c13a8d2870ade88bcc78cbd833cdb2b75fdd499a59a2f1085.jpg"
         },
         {
           "type": "paragraph",
@@ -2617,7 +2637,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=N2VlZGViN2MyZWNjMWVkYTE3NGU2Y2FlODJmNjEzZDdfZjczYjJiMTg3YzQ4YjUwNzc5ODdiNTY4MWViM2JmZjJfSUQ6NzY2NDIyMDIxNjM4NTE2MjQzOV8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d4/d469a37a4635970514ea25466b2c7eb75b528af627de3f5e5c92af27a592527c.jpg"
         },
         {
           "type": "paragraph",
@@ -2642,7 +2662,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTRiN2U3ODRmN2JkYjhiZjVkNGUwODM3N2ZjYjgxMWJfYmU1NTIxYzBmMTMwNzdkNDZmZjg0MjJhNTdkN2Y3YTdfSUQ6NzY2NDIyMDIxNjYwNzUwOTcyMl8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/92/926af124a4aeb8518908bec74ae557ca97830adf2501b98c2aab3de39717b44b.jpg"
         },
         {
           "type": "paragraph",
@@ -2667,7 +2687,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZGY5Y2Y0YTcxMTFlYjNiZGMwZTdmMTEzMjY1OWFjYzRfMzkzZWM5ZmQxYjgzYTgzYTA2NGNiNDNkZGFjYTRmMGRfSUQ6NzY2NDIyMDIxNTQwMzcxMTQ2MV8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9a/9a6f43c2f27b8bfaeccd9784fa0d166abdf9166c371ef7147142731a1cc0bc2c.jpg"
         },
         {
           "type": "paragraph",
@@ -2679,7 +2699,7 @@
           "width": 459.0,
           "height": 344.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MTBjYjlkMTJiMjA3MTc4MWEwY2M1N2JkMmU5M2MxNGVfYTk5NWNjOGY5YzU5NWE1MTFiOTI2MTE2OTgyYmM0NWJfSUQ6NzY2NDIyMDIxNDYzMjA1ODEzOF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/3e/3ec7d4778ad612f969ea9d6f0ac4e951fdad95d96b3f6b8382906e1920f5e8ae.jpg"
         },
         {
           "type": "paragraph",
@@ -2691,7 +2711,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTFjNjViZDhlZDM3YWRjMjJhNTJkMTM4Mzk5MGZhYzlfMzk3ODFkZThmMDEwZTM2MWI4ZTQ3NDY4Yjc0YWVmNzdfSUQ6NzY2NDIyMDIxNjE2NzA1ODY5NF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8a/8aaa9d158019ead9c8a0a3ceb96b5558bb31250a4ac7b025cad0efcb86b81a8f.jpg"
         },
         {
           "type": "paragraph",
@@ -2716,7 +2736,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZmQwOGM1NzZhZjU5ZGE3MmJjMTk5ZGZlMzU2ZDNkNzRfNzUxNTlmZGRiYmM5MmQyNDg5MjE3MjE5ZWY3YWZhYzZfSUQ6NzY2NDIyMDIxNjE1MDI4MTE3OF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b9/b9af420c8a24fc28232d0e8bf5c98ca2b27981c5aa1c7a24f0823e0db7829c93.jpg"
         },
         {
           "type": "paragraph",
@@ -2728,7 +2748,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTZlMmEwYmUyZjI4NjVkNzMxMzNlM2EzYzY5NGIzYTNfOTZlMDdkOWE5NTIyNWViZDQ0N2E2ODg3OWIwNmEzNjZfSUQ6NzY2NDIyMDIxNDk2MzQ1NzMxMV8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/22/22c13c9095b80d46be8272538ff32a7acd056847a14c17434704ee07fb1ff26d.jpg"
         },
         {
           "type": "paragraph",
@@ -2740,7 +2760,7 @@
           "width": 459.0,
           "height": 258.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmM0MWM2ZTBmZDliNTdjMjQzOTQwYzM4OGYyZmVlMDVfZWVjNjNkNzA0ZDlmMmZlYTgyZDIwMzAzN2MyYmU5ZjNfSUQ6NzY2NDIyMDIxNTY1OTY0NjE4OF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/fc/fcd8a0a8a35d35fd4ab462dd5e570bcb9206addd8b46a050baeb0833c6617199.jpg"
         },
         {
           "type": "paragraph",
@@ -2752,7 +2772,7 @@
           "width": 459.0,
           "height": 344.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=OTMzYmJlMzA4NzlkNzEzZTU3MWY4ZDBhYjdjYzg1MzlfYmU4Mzg5ZWFiOWE5YjE5ODhlMmEzNmM1OGEyOWE2ZWRfSUQ6NzY2NDIyMDIxNzA4NTU0NTc2NF8xNzg0NTU4MjM0OjE3ODQ2NDQ2MzRfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0f/0fe5e82af1b7e8b6ec18b4b0ba57261b6955b11f4fe2eaabce29661903758199.jpg"
         },
         {
           "type": "paragraph",
@@ -2817,7 +2837,7 @@
           ]
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MmE5ZjdmYWIyM2NiZDdiOWJjMGJiZTlkZGMxMzE4ZDBfNmUwMTJmZmMxYjJjZTU0ZTc4ZDI3YWY0N2YxYzI1ZWVfSUQ6NzY2NDIyMDMzMDgzMDg5MjMwNF8xNzg0NTU3ODM4OjE3ODQ2NDQyMzhfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c1/c1de2f954e0fd63eba9452c3d2711e43e9cd3479fdba2e04d0b8a5146471fa8f.jpg"
     },
     {
       "id": "recvpSbbCtiTbT",
@@ -2831,14 +2851,18 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzY1NzcyMjc5OWUyNmJiZmQzMTFiMWU2NjFhMTQ0ODBfMDVkNzY4NzIyYTU0YTAxOTYyNmEyZDYxODZkMDc0NDRfSUQ6NzY2NDQxNzIzOTU5Njg0NjI4MF8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDU1ZjliYzg0NWUzODY4N2Q5NjAwYmFhMzg2YzBkZjRfZWIyOWUwMzYxZjhhMDg1MDlhNGQ3Y2IwMzQ2NWMyNDJfSUQ6NzY2NDQxNzI0MTk5MTEzODUzNF8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjM2NzQ0YTU5M2EwZDMyYzZlNjJjY2EzZWQzZGIxODBfOTA3M2M5OTNjZmJkOTBiZDlhNDlhZGE1ZWNiYTFmZDNfSUQ6NzY2NDQxNzI0MTM0MTExOTY5MF8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVjYjczMzhjYWUxNWM3ZDA1ZTY0MDg5MDcxYzBiYzRfZDlmMThiYmI0NjU0YWEwYmQzOWMwYjkxY2M0MDY2ZGZfSUQ6NzY2NDQxNzI0MDkyNTk2NTU1Ml8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTQxYWUxODgzMGZlMGM1ODAwYTc3ZDBhNDlhOTg1ZWVfMzQwZGE1ODg4YjI5YTQ4NWMyNDc0ZTBkMTQyNDk3ZGVfSUQ6NzY2NDQxNzI0Mjc5MjExOTU4N18xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM",
-        "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDM1YjlmZGI1ODE0YzAwYWU0MmMxMDVlNmJiNGY0NTZfYTYxNmQ3YzQ3MDY3NWJiMDJhOTc0NzNmMzZjYTdmNTNfSUQ6NzY2NDQxNzIzOTM0OTM0OTU3NV8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/84/8476402caac98b45d81ce35f0ca82e128871f925cfee7d3692d36eeb24c57f1b.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85f6f987ec18d7d72611d82bf7073746a2e3d549195082f4626f92818e90b487.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e2/e240bbc0d264ec1c49e9e36ce9d0e87ead1e10b104d0aa9580f1398334697f58.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c3/c31fe8e471215e02d43ffc91026e5132aa885133c2d4436c7f92e5cff5e44f09.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/84/84392959ddba8598196307d7485c1c1bf51814137a3f2916d0b7cde3aa7d21a8.jpg",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/73/7317ea929715c63e09fdad9e7c6ddd3d9f34bf12f63aa1145ff861873116936a.jpg"
       ],
       "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "重庆礼嘉智慧公园智慧生活馆_策展手记"
+        },
         {
           "type": "paragraph",
           "text": "重庆礼嘉智慧公园智慧生活馆并不是单纯展示智能设备的样板间。它更像是一段被重新组织过的近未来生活：从回家、会客、厨房、卧室，到亲子、健身、书房和绿色数据展示，观众走过的不是产品清单，而是智慧系统如何悄悄进入日常。"
@@ -2849,7 +2873,7 @@
           "width": 439.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MzY1NzcyMjc5OWUyNmJiZmQzMTFiMWU2NjFhMTQ0ODBfMDVkNzY4NzIyYTU0YTAxOTYyNmEyZDYxODZkMDc0NDRfSUQ6NzY2NDQxNzIzOTU5Njg0NjI4MF8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85f6f987ec18d7d72611d82bf7073746a2e3d549195082f4626f92818e90b487.jpg"
         },
         {
           "type": "paragraph",
@@ -2874,7 +2898,7 @@
           "width": 439.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZDU1ZjliYzg0NWUzODY4N2Q5NjAwYmFhMzg2YzBkZjRfZWIyOWUwMzYxZjhhMDg1MDlhNGQ3Y2IwMzQ2NWMyNDJfSUQ6NzY2NDQxNzI0MTk5MTEzODUzNF8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e2/e240bbc0d264ec1c49e9e36ce9d0e87ead1e10b104d0aa9580f1398334697f58.jpg"
         },
         {
           "type": "paragraph",
@@ -2899,7 +2923,7 @@
           "width": 439.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=MjM2NzQ0YTU5M2EwZDMyYzZlNjJjY2EzZWQzZGIxODBfOTA3M2M5OTNjZmJkOTBiZDlhNDlhZGE1ZWNiYTFmZDNfSUQ6NzY2NDQxNzI0MTM0MTExOTY5MF8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c3/c31fe8e471215e02d43ffc91026e5132aa885133c2d4436c7f92e5cff5e44f09.jpg"
         },
         {
           "type": "paragraph",
@@ -2911,7 +2935,7 @@
           "width": 439.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NzVjYjczMzhjYWUxNWM3ZDA1ZTY0MDg5MDcxYzBiYzRfZDlmMThiYmI0NjU0YWEwYmQzOWMwYjkxY2M0MDY2ZGZfSUQ6NzY2NDQxNzI0MDkyNTk2NTU1Ml8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/84/84392959ddba8598196307d7485c1c1bf51814137a3f2916d0b7cde3aa7d21a8.jpg"
         },
         {
           "type": "paragraph",
@@ -2936,7 +2960,7 @@
           "width": 439.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=YTQxYWUxODgzMGZlMGM1ODAwYTc3ZDBhNDlhOTg1ZWVfMzQwZGE1ODg4YjI5YTQ4NWMyNDc0ZTBkMTQyNDk3ZGVfSUQ6NzY2NDQxNzI0Mjc5MjExOTU4N18xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/84/8476402caac98b45d81ce35f0ca82e128871f925cfee7d3692d36eeb24c57f1b.jpg"
         },
         {
           "type": "paragraph",
@@ -2961,7 +2985,7 @@
           "width": 439.0,
           "height": 243.0,
           "align": "2",
-          "url": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=NDM1YjlmZGI1ODE0YzAwYWU0MmMxMDVlNmJiNGY0NTZfYTYxNmQ3YzQ3MDY3NWJiMDJhOTc0NzNmMzZjYTdmNTNfSUQ6NzY2NDQxNzIzOTM0OTM0OTU3NV8xNzg0NTU4MjYzOjE3ODQ2NDQ2NjNfVjM"
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/73/7317ea929715c63e09fdad9e7c6ddd3d9f34bf12f63aa1145ff861873116936a.jpg"
         },
         {
           "type": "paragraph",
@@ -3015,7 +3039,7 @@
           "text": "真正的智慧，不是把生活变得更复杂，而是把复杂系统藏在背后，让人更自然、更安心、更绿色地生活。"
         }
       ],
-      "cover": "https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/authcode/?code=ZTY5NGMzOGZiMDdkOGIxMGE0NmNiMjkyODg1NzY0NzVfOWIwMzdkMTUxMThmOGM5YjczMjgyNGI4ODk4MWVmMTVfSUQ6NzY2NDQxNzI3MjkyOTA2MTgyNF8xNzg0NTU3ODM5OjE3ODQ2NDQyMzlfVjM"
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/85/85f6f987ec18d7d72611d82bf7073746a2e3d549195082f4626f92818e90b487.jpg"
     }
   ]
 }
