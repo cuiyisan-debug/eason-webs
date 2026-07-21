@@ -2197,6 +2197,98 @@ a {
   }
 }
 
+@media (orientation: landscape) and (max-height: 700px) and (max-width: 1180px) {
+  .tools-keyword-stage-cn {
+    top: 70px;
+    height: 43vh;
+  }
+
+  .tools-keyword-stage-en {
+    top: 55%;
+    bottom: 112px;
+  }
+
+  .tools-keyword {
+    font-size: clamp(9px, 1.25vw, 12px);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .tools-keyword-stage-en .tools-keyword {
+    --city-offset: clamp(88px, 13vw, 148px);
+    font-size: clamp(6px, 0.88vw, 8px);
+    line-height: 1;
+    opacity: 0;
+  }
+
+  .tools-keyword-stage-en .tools-keyword-left.is-visible {
+    transform: translate(calc(-100% - var(--city-offset)), -50%);
+  }
+
+  .tools-keyword-stage-en .tools-keyword-right.is-visible {
+    transform: translate(var(--city-offset), -50%);
+  }
+
+  .tools-capabilities {
+    bottom: 24px;
+  }
+
+  .tools-capability span {
+    font-size: clamp(42px, 6vw, 62px);
+  }
+
+  .tools-capability small {
+    font-size: clamp(13px, 1.7vw, 18px);
+  }
+
+  .city-data-heading {
+    bottom: 10px;
+  }
+
+  .city-data-node-management {
+    --node-x: 31% !important;
+    width: min(250px, 24vw);
+  }
+
+  .city-data-node-management small {
+    font-size: 10px;
+    line-height: 1.45;
+    word-break: keep-all;
+    overflow-wrap: normal;
+  }
+
+  .fourth-client-wall {
+    inset: 124px 10px 92px;
+  }
+
+  .fourth-client-zone {
+    gap: 7px;
+  }
+
+  .fourth-client-logo {
+    width: clamp(76px, 8vw, 104px);
+    min-height: 42px;
+    grid-template-rows: 25px auto;
+    gap: 3px;
+    margin-right: clamp(16px, 1.7vw, 28px);
+  }
+
+  .fourth-client-logo img {
+    max-width: 76px;
+    max-height: 25px;
+  }
+
+  .fourth-client-logo small,
+  .fourth-client-logo.is-text-only strong {
+    font-size: 8px;
+    line-height: 1.05;
+  }
+
+  .fourth-client-logo.is-text-only {
+    grid-template-rows: 25px auto;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
