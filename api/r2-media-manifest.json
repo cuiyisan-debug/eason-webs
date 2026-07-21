@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-21T14:38:13.561289+00:00",
+  "r2Prefix": "feishu-media",
+  "r2LocalMediaPrefix": "site-media",
+  "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
+  "objects": {
+    "ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926": {
+      "sha256": "ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926",
+      "size": 1809892,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/ae/ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/ae/ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:03.582495+00:00",
+      "lastSeenAt": "2026-07-21T14:38:03.582512+00:00"
+    },
+    "dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2": {
+      "sha256": "dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2",
+      "size": 1025753,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:04.361185+00:00",
+      "lastSeenAt": "2026-07-21T14:38:04.361201+00:00"
+    },
+    "5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f": {
+      "sha256": "5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f",
+      "size": 1279829,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/5f/5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/5f/5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:05.195522+00:00",
+      "lastSeenAt": "2026-07-21T14:38:05.195539+00:00"
+    },
+    "aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c": {
+      "sha256": "aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c",
+      "size": 718917,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:06.179629+00:00",
+      "lastSeenAt": "2026-07-21T14:38:06.179646+00:00"
+    },
+    "8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2": {
+      "sha256": "8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2",
+      "size": 2228983,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/81/8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/81/8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:07.097102+00:00",
+      "lastSeenAt": "2026-07-21T14:38:07.097117+00:00"
+    },
+    "88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8": {
+      "sha256": "88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8",
+      "size": 1241595,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:08.027919+00:00",
+      "lastSeenAt": "2026-07-21T14:38:08.027934+00:00"
+    },
+    "492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211": {
+      "sha256": "492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211",
+      "size": 5627960,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/49/492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/49/492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:09.349209+00:00",
+      "lastSeenAt": "2026-07-21T14:38:09.349225+00:00"
+    },
+    "8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62": {
+      "sha256": "8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62",
+      "size": 1485093,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:10.221590+00:00",
+      "lastSeenAt": "2026-07-21T14:38:10.221604+00:00"
+    },
+    "61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b": {
+      "sha256": "61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b",
+      "size": 3097483,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/61/61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/61/61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:11.226917+00:00",
+      "lastSeenAt": "2026-07-21T14:38:11.226932+00:00"
+    },
+    "70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23": {
+      "sha256": "70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23",
+      "size": 903630,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-07-21T14:38:13.543364+00:00",
+      "lastSeenAt": "2026-07-21T14:38:13.543379+00:00"
+    }
+  },
+  "localAssets": {
+    "assets/journey-city-data-bg.mp4": {
+      "sha256": "ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926",
+      "size": 1809892,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/ae/ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/ae/ae22d479344e469b9081b44ec29a49569dde79f7f4cc0b1a968ad0d3aa4ab926.mp4",
+      "updatedAt": "2026-07-21T14:38:03.582518+00:00"
+    },
+    "assets/journey-city-data-mobile.mp4": {
+      "sha256": "dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2",
+      "size": 1025753,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "updatedAt": "2026-07-21T14:38:04.361207+00:00"
+    },
+    "assets/journey-fifth-bg.mp4": {
+      "sha256": "5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f",
+      "size": 1279829,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/5f/5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/5f/5fe63952d05291ca7fea43fe5df39ff22b9b407ece115f050eaac700b6bd252f.mp4",
+      "updatedAt": "2026-07-21T14:38:05.195545+00:00"
+    },
+    "assets/journey-fifth-mobile.mp4": {
+      "sha256": "aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c",
+      "size": 718917,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "updatedAt": "2026-07-21T14:38:06.179651+00:00"
+    },
+    "assets/journey-fourth-bg.mp4": {
+      "sha256": "8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2",
+      "size": 2228983,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/81/8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/81/8132bef1320db2c793e82fabf685433614c5bc18e983f77e34051641d6be5dc2.mp4",
+      "updatedAt": "2026-07-21T14:38:07.097124+00:00"
+    },
+    "assets/journey-fourth-mobile.mp4": {
+      "sha256": "88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8",
+      "size": 1241595,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "updatedAt": "2026-07-21T14:38:08.027941+00:00"
+    },
+    "assets/journey-hero-bg.mp4": {
+      "sha256": "492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211",
+      "size": 5627960,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/49/492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/49/492be223e761fe7331075b7a42efa73306efa78d09b118b3dce7a3bac1a94211.mp4",
+      "updatedAt": "2026-07-21T14:38:09.349230+00:00"
+    },
+    "assets/journey-hero-mobile.mp4": {
+      "sha256": "8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62",
+      "size": 1485093,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "updatedAt": "2026-07-21T14:38:10.221608+00:00"
+    },
+    "assets/journey-tools-bg.mp4": {
+      "sha256": "61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b",
+      "size": 3097483,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/61/61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/61/61423e0246d49cad5928bd75d1a9ac96654819bc7afb359473719a637d6c298b.mp4",
+      "updatedAt": "2026-07-21T14:38:11.226937+00:00"
+    },
+    "assets/journey-tools-mobile.mp4": {
+      "sha256": "70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23",
+      "size": 903630,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "updatedAt": "2026-07-21T14:38:13.543384+00:00"
+    }
+  },
+  "mode": "mirror"
+}
