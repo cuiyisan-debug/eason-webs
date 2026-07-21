@@ -336,12 +336,13 @@ def main() -> None:
                     continue
                 original = path.read_text(encoding="utf-8")
                 updated = original
-                for source, target in replacement_map.items():
+                for source, target in sorted(replacement_map.items(), key=lambda item: len(item[0]), reverse=True):
                     if source.startswith("http"):
                         updated = updated.replace(source, target)
                         continue
                     pattern = re.compile(re.escape(source) + r"(?:\?[^\"'\s<>)]+)?")
                     updated = pattern.sub(target, updated)
+                updated = updated.replace("./http://", "http://").replace("./https://", "https://")
                 if updated != original:
                     path.write_text(updated, encoding="utf-8")
                     stats["localReferenceFilesChanged"] += 1
