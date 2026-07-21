@@ -29,7 +29,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install Feishu refresh dependencies
-        run: pip install requests cos-python-sdk-v5
+        run: pip install requests boto3 cos-python-sdk-v5
 
       - name: Refresh portfolio data from Feishu
         env:
@@ -42,6 +42,18 @@ jobs:
           LARK_CURATION_BASE_TOKEN: CtqgbzQHVazUyhsSiOEcIrxfnSd
           LARK_CURATION_TABLE_ID: ${{ secrets.LARK_CURATION_TABLE_ID }}
         run: python refresh.py
+
+      - name: Reuse already mirrored Cloudflare R2 media
+        if: ${{ secrets.CLOUDFLARE_ACCOUNT_ID != '' && secrets.R2_ACCESS_KEY_ID != '' && secrets.R2_SECRET_ACCESS_KEY != '' && secrets.R2_BUCKET != '' && secrets.R2_PUBLIC_BASE_URL != '' }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+          R2_MEDIA_PREFIX: ${{ vars.R2_MEDIA_PREFIX }}
+          R2_SYNC_MODE: reuse
+        run: python sync_feishu_media_to_r2.py
 
       - name: Reuse already mirrored Tencent COS media
         if: ${{ secrets.TENCENT_SECRET_ID != '' && secrets.TENCENT_SECRET_KEY != '' && secrets.COS_BUCKET != '' && secrets.COS_REGION != '' }}
