@@ -34,7 +34,6 @@ jobs:
         run: python refresh.py
 
       - name: Reuse already mirrored Cloudflare R2 media
-        if: ${{ secrets.CLOUDFLARE_ACCOUNT_ID != '' && secrets.R2_ACCESS_KEY_ID != '' && secrets.R2_SECRET_ACCESS_KEY != '' && secrets.R2_BUCKET != '' && secrets.R2_PUBLIC_BASE_URL != '' }}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -43,7 +42,12 @@ jobs:
           R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
           R2_MEDIA_PREFIX: ${{ vars.R2_MEDIA_PREFIX }}
           R2_SYNC_MODE: reuse
-        run: python sync_feishu_media_to_r2.py
+        run: |
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ] || [ -z "$R2_ACCESS_KEY_ID" ] || [ -z "$R2_SECRET_ACCESS_KEY" ] || [ -z "$R2_BUCKET" ] || [ -z "$R2_PUBLIC_BASE_URL" ]; then
+            echo "Skipping R2 media reuse because Cloudflare R2 secrets are incomplete."
+            exit 0
+          fi
+          python sync_feishu_media_to_r2.py
 
       - name: Commit and push changes
         run: |
