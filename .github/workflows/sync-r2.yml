@@ -16,6 +16,15 @@ on:
         required: true
         default: true
         type: boolean
+      cleanup_mode:
+        description: "R2 orphan cleanup"
+        required: true
+        default: report
+        type: choice
+        options:
+          - report
+          - delete
+          - off
 
 jobs:
   sync-r2:
@@ -61,6 +70,7 @@ jobs:
           R2_LOCAL_MEDIA_PREFIX: ${{ vars.R2_LOCAL_MEDIA_PREFIX }}
           R2_SYNC_MODE: mirror
           R2_SYNC_SCOPE: ${{ inputs.sync_scope }}
+          R2_CLEANUP_MODE: ${{ inputs.cleanup_mode }}
         run: python sync_feishu_media_to_r2.py
 
       - name: Commit stable R2 URLs

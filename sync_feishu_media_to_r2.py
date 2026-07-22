@@ -18,7 +18,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import unquote, urlparse
 
 import boto3
 import requests
@@ -35,6 +35,7 @@ R2_PREFIX = os.environ.get("R2_MEDIA_PREFIX", "feishu-media").strip("/") or "fei
 R2_LOCAL_MEDIA_PREFIX = os.environ.get("R2_LOCAL_MEDIA_PREFIX", "site-media").strip("/") or "site-media"
 SYNC_MODE = os.environ.get("R2_SYNC_MODE", "mirror").strip().lower() or "mirror"
 SYNC_SCOPE = os.environ.get("R2_SYNC_SCOPE", "all").strip().lower() or "all"
+R2_CLEANUP_MODE = os.environ.get("R2_CLEANUP_MODE", "report").strip().lower() or "report"
 DOWNLOAD_TIMEOUT = float(os.environ.get("R2_DOWNLOAD_TIMEOUT", "30"))
 WORKERS = max(1, int(os.environ.get("R2_SYNC_WORKERS", "6")))
 LOCAL_MEDIA_EXTENSIONS = {".mp4", ".webm", ".mov"}
@@ -137,11 +138,59 @@ def should_skip_text_file(path: Path) -> bool:
     return path.name.startswith((".codex-", ".tmp-", "temp-"))
 
 
+def r2_key_from_url(value: str, public_base_url: str) -> str:
+    base = public_base_url.rstrip("/") + "/"
+    if not value.startswith(base):
+        return ""
+    key = value[len(base) :].split("?", 1)[0].split("#", 1)[0]
+    return unquote(key).strip("/")
+
+
+def collect_used_r2_keys_from_value(value: Any, public_base_url: str, keys: set[str]) -> None:
+    if isinstance(value, str):
+        key = r2_key_from_url(value, public_base_url)
+        if key:
+            keys.add(key)
+        return
+    if isinstance(value, list):
+        for item in value:
+            collect_used_r2_keys_from_value(item, public_base_url, keys)
+        return
+    if isinstance(value, dict):
+        for item in value.values():
+            collect_used_r2_keys_from_value(item, public_base_url, keys)
+
+
+def collect_used_r2_keys(public_base_url: str) -> set[str]:
+    keys: set[str] = set()
+    for name in API_FILES:
+        path = API_DIR / name
+        if path.exists():
+            collect_used_r2_keys_from_value(json.loads(path.read_text(encoding="utf-8")), public_base_url, keys)
+
+    base_pattern = re.escape(public_base_url.rstrip("/") + "/")
+    url_pattern = re.compile(base_pattern + r"[^\"'\s<>)]+")
+    for path in sorted(ROOT.rglob("*")):
+        if (
+            not path.is_file()
+            or path.suffix.lower() not in TEXT_EXTENSIONS
+            or should_skip_text_file(path)
+        ):
+            continue
+        for match in url_pattern.finditer(path.read_text(encoding="utf-8")):
+            key = r2_key_from_url(match.group(0), public_base_url)
+            if key:
+                keys.add(key)
+    return keys
+
+
 def main() -> None:
     if SYNC_MODE not in {"mirror", "reuse"}:
         raise SystemExit("R2_SYNC_MODE must be either 'mirror' or 'reuse'")
     if SYNC_SCOPE not in {"all", "local_videos"}:
         raise SystemExit("R2_SYNC_SCOPE must be either 'all' or 'local_videos'")
+    if R2_CLEANUP_MODE not in {"off", "report", "delete"}:
+        raise SystemExit("R2_CLEANUP_MODE must be one of: off, report, delete")
 
     account_id = require("CLOUDFLARE_ACCOUNT_ID")
     access_key_id = require("R2_ACCESS_KEY_ID")
@@ -176,8 +225,14 @@ def main() -> None:
         "localUploaded": 0,
         "localReused": 0,
         "localReferenceFilesChanged": 0,
+        "orphanObjects": 0,
+        "orphanLocalAssets": 0,
+        "orphanUniqueKeys": 0,
+        "orphanDeleted": 0,
+        "orphanDeleteFailed": 0,
     }
     failures: list[dict[str, str]] = []
+    cleanup_failures: list[dict[str, str]] = []
 
     def ensure_r2_object(body: bytes, *, key: str, content_type: str) -> str:
         nonlocal manifest_dirty
@@ -399,10 +454,95 @@ def main() -> None:
                     path.write_text(updated, encoding="utf-8")
                     stats["localReferenceFilesChanged"] += 1
 
+    cleanup_report_path: Path | None = None
+    if R2_CLEANUP_MODE != "off":
+        used_keys = collect_used_r2_keys(public_base_url)
+        orphan_objects: list[dict[str, str]] = []
+        orphan_local_assets: list[dict[str, str]] = []
+        orphan_keys: set[str] = set()
+
+        for digest, entry in objects.items():
+            if not isinstance(entry, dict):
+                continue
+            key = str(entry.get("r2Key") or "")
+            if key and key not in used_keys:
+                orphan_keys.add(key)
+                orphan_objects.append(
+                    {
+                        "sha256": str(entry.get("sha256") or digest),
+                        "r2Key": key,
+                        "r2Url": public_url(public_base_url, key),
+                        "contentType": str(entry.get("contentType") or ""),
+                        "source": str(entry.get("source") or entry.get("sourceUrlHost") or ""),
+                    }
+                )
+
+        for rel_path, entry in local_assets.items():
+            if not isinstance(entry, dict):
+                continue
+            key = str(entry.get("r2Key") or "")
+            if key and key not in used_keys:
+                orphan_keys.add(key)
+                orphan_local_assets.append(
+                    {
+                        "path": str(rel_path),
+                        "r2Key": key,
+                        "r2Url": public_url(public_base_url, key),
+                        "contentType": str(entry.get("contentType") or ""),
+                    }
+                )
+
+        stats["orphanObjects"] = len(orphan_objects)
+        stats["orphanLocalAssets"] = len(orphan_local_assets)
+        stats["orphanUniqueKeys"] = len(orphan_keys)
+
+        if R2_CLEANUP_MODE == "delete" and orphan_keys:
+            deleted_keys: set[str] = set()
+            for key in sorted(orphan_keys):
+                try:
+                    client.delete_object(Bucket=bucket, Key=key)
+                    deleted_keys.add(key)
+                    stats["orphanDeleted"] += 1
+                except ClientError as error:
+                    if is_missing_object(error):
+                        deleted_keys.add(key)
+                        stats["orphanDeleted"] += 1
+                        continue
+                    stats["orphanDeleteFailed"] += 1
+                    cleanup_failures.append({"r2Key": key, "error": str(error)})
+
+            if deleted_keys:
+                for digest, entry in list(objects.items()):
+                    if isinstance(entry, dict) and str(entry.get("r2Key") or "") in deleted_keys:
+                        del objects[digest]
+                        manifest_dirty = True
+                for rel_path, entry in list(local_assets.items()):
+                    if isinstance(entry, dict) and str(entry.get("r2Key") or "") in deleted_keys:
+                        del local_assets[rel_path]
+                        manifest_dirty = True
+
+        REPORTS_DIR.mkdir(exist_ok=True)
+        cleanup_report = {
+            "generatedAt": now_iso(),
+            "mode": R2_CLEANUP_MODE,
+            "bucket": bucket,
+            "publicBaseUrl": public_base_url,
+            "usedKeyCount": len(used_keys),
+            "orphanUniqueKeyCount": len(orphan_keys),
+            "deletedCount": stats["orphanDeleted"],
+            "deleteFailedCount": stats["orphanDeleteFailed"],
+            "orphanObjects": orphan_objects,
+            "orphanLocalAssets": orphan_local_assets,
+            "failures": cleanup_failures,
+        }
+        cleanup_report_path = REPORTS_DIR / f"r2-orphans-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.json"
+        save_json(cleanup_report_path, cleanup_report)
+
     report_path: Path | None = None
     if SYNC_MODE == "mirror" or manifest_dirty:
         manifest["generatedAt"] = now_iso()
         manifest["mode"] = SYNC_MODE
+        manifest["cleanupMode"] = R2_CLEANUP_MODE
         save_json(MANIFEST_FILE, manifest)
 
         REPORTS_DIR.mkdir(exist_ok=True)
@@ -416,6 +556,8 @@ def main() -> None:
             "r2LocalMediaPrefix": R2_LOCAL_MEDIA_PREFIX,
             "stats": stats,
             "failures": failures,
+            "cleanupFailures": cleanup_failures,
+            "cleanupReport": str(cleanup_report_path.relative_to(ROOT)) if cleanup_report_path else "",
             "manifestFile": str(MANIFEST_FILE.relative_to(ROOT)),
             "apiFiles": list(API_FILES),
         }
@@ -426,10 +568,13 @@ def main() -> None:
         "R2 media mirror complete: "
         f"{stats['changedFiles']} JSON file(s), {stats['downloaded']} download(s), "
         f"{stats['uploaded']} upload(s), {stats['reused']} reused object(s), "
-        f"{stats['pending']} pending manual mirror(s), {stats['failed']} failure(s)."
+        f"{stats['pending']} pending manual mirror(s), {stats['failed']} failure(s), "
+        f"{stats['orphanUniqueKeys']} orphan R2 object(s) found, {stats['orphanDeleted']} deleted."
     )
     if report_path:
         print(f"Report: {report_path.relative_to(ROOT)}")
+    if cleanup_report_path:
+        print(f"Cleanup report: {cleanup_report_path.relative_to(ROOT)}")
     if failures:
         print("Some Feishu media URLs could not be downloaded; see the report for details.")
 

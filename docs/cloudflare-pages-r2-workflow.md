@@ -72,9 +72,23 @@ Refresh Feishu data before mirroring media
 生成 api/r2-media-manifest.json
 把 api/*.json 中的飞书临时链接替换成 R2 长期链接
 把页面中的本地视频引用替换成 R2 长期链接
+扫描当前网站仍在引用的 R2 文件
+生成已不再引用的 R2 孤儿文件报告
 提交回 GitHub
 触发 Cloudflare Pages 自动部署
 ```
+
+### 清理飞书已删除内容对应的 R2 文件
+
+`Sync Feishu Media to Cloudflare R2` 里有 `R2 orphan cleanup` 选项：
+
+| 选项 | 含义 |
+| --- | --- |
+| `report` | 默认值。只生成 `reports/r2-orphans-YYYY-MM-DD.json`，不删除 R2 文件。 |
+| `delete` | 同步后删除当前网站已经不再引用的 R2 文件，并从 manifest 移除。 |
+| `off` | 不做孤儿文件检测。 |
+
+建议日常先使用 `report`。确认报告中的文件确实来自飞书已删除内容后，再手动重跑一次并选择 `delete`。
 
 ## 增量规则
 
@@ -82,6 +96,7 @@ Refresh Feishu data before mirroring media
 - 内容新增：上传到 `feishu-media/`。
 - 内容变更：生成新的 SHA-256 和新的 R2 对象。
 - 飞书删除：新 JSON 不再引用；R2 旧文件暂时保留，避免误删缓存或历史引用。
+- R2 孤儿文件：默认只写报告；选择 `delete` 后才真正删除。
 - GitHub 仓库中的本地视频：上传到 `site-media/`，页面引用改为 R2 地址。
 
 当前公开 JSON 不保存飞书附件 token，因此脚本需要下载飞书临时链接后计算 hash；但不会重复上传已存在内容。
@@ -105,3 +120,4 @@ R2 已经解决媒体长期链接问题，因此不需要为了飞书临时链�
 - 媒体链接变成 `https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/...`。
 - 本地视频链接变成 `https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/...`。
 - GitHub Actions 日志中 `failed` 为 0。
+- 如果启用默认清理报告，检查 `reports/r2-orphans-YYYY-MM-DD.json`。
