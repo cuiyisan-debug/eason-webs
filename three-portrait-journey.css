@@ -1625,8 +1625,12 @@ a {
 
 .city-data-separator {
   display: inline-block;
-  margin: 0 0.28em;
-  letter-spacing: 0;
+  width: 0.4em;
+  height: 0.4em;
+  margin: 0 0.44em;
+  border-radius: 50%;
+  background: currentColor;
+  vertical-align: 0.08em;
 }
 
 .city-data-heading h2 {
