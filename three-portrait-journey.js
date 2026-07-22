@@ -426,10 +426,12 @@ function setupCinematicTransition() {
 
 function setupSceneSnap() {
   const sequence = document.querySelector(".cinematic-sequence");
+  const portrait = document.querySelector("#portrait");
+  const tools = document.querySelector("#tools");
   const city = document.querySelector("#city-data");
   const fourth = document.querySelector("#fourth");
   const fifth = document.querySelector("#fifth");
-  if (!sequence || !city || !fourth || !fifth) return;
+  if (!sequence || !portrait || !tools || !city || !fourth || !fifth) return;
 
   let settleTimer = 0;
   let releaseTimer = 0;
@@ -437,10 +439,14 @@ function setupSceneSnap() {
   let wheelLocked = false;
 
   const getAnchors = () => {
+    // Do not infer scene positions from the viewport. Mobile browser chrome can
+    // change window.innerHeight mid-gesture, while the scenes use stable svh.
+    // The second scene is sticky, so its visible position is not its scroll
+    // anchor; its start is exactly one rendered portrait-scene tall.
     const firstSceneTop = sequence.offsetTop;
     return [
       firstSceneTop,
-      firstSceneTop + window.innerHeight,
+      firstSceneTop + portrait.offsetHeight,
       city.offsetTop,
       fourth.offsetTop,
       fifth.offsetTop,
@@ -451,7 +457,7 @@ function setupSceneSnap() {
 
   const moveToAnchor = (nearest) => {
     const current = window.scrollY;
-    if (Math.abs(nearest - current) < 12) return;
+    if (Math.abs(nearest - current) < 24) return;
     isSettling = true;
     window.scrollTo({ top: nearest, behavior: "smooth" });
     window.clearTimeout(releaseTimer);
@@ -477,12 +483,22 @@ function setupSceneSnap() {
   };
 
   if (coarsePointer) {
-    // Do not fight the browser during every touchmove. Let inertial scrolling
-    // finish first, then settle once at the closest full-screen scene.
-    window.addEventListener("touchend", () => {
+    // Inertia continues after touchend. Wait for the final scroll event (or
+    // scrollend where available) before making one small correction.
+    const scheduleTouchSettle = (delay = 160) => {
+      if (isSettling) return;
       window.clearTimeout(settleTimer);
-      settleTimer = window.setTimeout(settleToScene, 320);
-    }, { passive: true });
+      settleTimer = window.setTimeout(settleToScene, delay);
+    };
+
+    window.addEventListener("scroll", () => scheduleTouchSettle(), { passive: true });
+    window.addEventListener("touchend", () => scheduleTouchSettle(220), { passive: true });
+    if ("onscrollend" in window) {
+      window.addEventListener("scrollend", settleToScene, { passive: true });
+    }
+    window.addEventListener("resize", () => {
+      window.clearTimeout(settleTimer);
+    });
     return;
   }
 

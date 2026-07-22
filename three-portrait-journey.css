@@ -1614,8 +1614,19 @@ a {
   text-transform: uppercase;
 }
 
+.city-data-heading p,
 .city-data-node span {
   font-size: clamp(12px, 0.9vw, 15px);
+}
+
+.city-data-heading p {
+  white-space: nowrap;
+}
+
+.city-data-separator {
+  display: inline-block;
+  margin: 0 0.28em;
+  letter-spacing: 0;
 }
 
 .city-data-heading h2 {
@@ -1624,7 +1635,7 @@ a {
   line-height: 1;
 }
 
-.city-data-heading span,
+.city-data-heading > span,
 .city-data-node small {
   display: block;
   color: rgba(245, 243, 238, 0.64);
@@ -2109,15 +2120,22 @@ a {
 
   .city-data-node-left::before,
   .city-data-node-right::before {
-    width: min(var(--line), 15vw);
+    width: min(var(--line), 8vw);
   }
 
   .city-data-node-left::after {
-    right: calc(-1 * min(var(--line), 15vw) - 3px);
+    right: calc(-1 * min(var(--line), 8vw) - 3px);
   }
 
   .city-data-node-right::after {
-    left: calc(-1 * min(var(--line), 15vw) - 3px);
+    left: calc(-1 * min(var(--line), 8vw) - 3px);
+  }
+
+  /* On a narrow screen, paired endpoints meet at the same visual center.
+     Keep the rails, but remove the redundant dots to avoid a crowded cluster. */
+  .city-data-node-left::after,
+  .city-data-node-right::after {
+    display: none;
   }
 
   /* Keep the six metrics in three symmetric rows around the city. */
