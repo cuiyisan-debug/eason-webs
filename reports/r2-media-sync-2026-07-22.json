@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-07-22T02:09:10.794578+00:00",
+  "mode": "mirror",
+  "scope": "all",
+  "bucket": "mycys-media",
+  "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
+  "r2Prefix": "feishu-media",
+  "r2LocalMediaPrefix": "site-media",
+  "stats": {
+    "scanned": 0,
+    "downloaded": 0,
+    "uploaded": 0,
+    "reused": 0,
+    "pending": 0,
+    "changedFiles": 0,
+    "failed": 0,
+    "localScanned": 10,
+    "localUploaded": 0,
+    "localReused": 10,
+    "localReferenceFilesChanged": 0,
+    "orphanObjects": 0,
+    "orphanLocalAssets": 0,
+    "orphanUniqueKeys": 0,
+    "orphanDeleted": 0,
+    "orphanDeleteFailed": 0
+  },
+  "failures": [],
+  "cleanupFailures": [],
+  "cleanupReport": "reports/r2-orphans-2026-07-22.json",
+  "manifestFile": "api/r2-media-manifest.json",
+  "apiFiles": [
+    "portfolio.json",
+    "clients.json",
+    "zhixing.json",
+    "curation.json"
+  ]
+}
