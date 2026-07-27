@@ -329,14 +329,41 @@ function scrollToCurrentHash() {
 
 window.scrollToCurrentHash = scrollToCurrentHash;
 
+const VISITOR_COUNTER_ENDPOINT = (() => {
+  const configured = window.VISITOR_STATS_ENDPOINT || document.documentElement.dataset.visitorStatsEndpoint;
+  if (configured) return configured;
+  if (window.location.hostname === "mycys.top" || window.location.hostname === "www.mycys.top") {
+    return "/api/visitor-stats";
+  }
+  if (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") {
+    return "http://127.0.0.1:8799/api/visitor-stats";
+  }
+  return "https://mycys.top/api/visitor-stats";
+})();
+
+function getVisitorClientId() {
+  const key = "mycys-visitor-id";
+  try {
+    const existing = window.localStorage.getItem(key);
+    if (existing) return existing;
+    const generated =
+      window.crypto?.randomUUID?.() ||
+      `visitor-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
+    window.localStorage.setItem(key, generated);
+    return generated;
+  } catch {
+    return "";
+  }
+}
+
 function initVisitorStats() {
   if (document.querySelector(".visitor-stats")) return;
   const stats = document.createElement("div");
   stats.className = "visitor-stats";
   stats.setAttribute("aria-label", "浏览统计");
   stats.innerHTML = `
-    <span id="busuanzi_container_site_pv">浏览 <strong id="busuanzi_value_site_pv">--</strong> 次</span>
-    <span id="busuanzi_container_site_uv">访客 <strong id="busuanzi_value_site_uv">--</strong> 人</span>
+    <span>浏览 <strong data-visitor-pv>--</strong> 次</span>
+    <span>访客 <strong data-visitor-uv>--</strong> 人</span>
   `;
   stats.querySelectorAll("span").forEach((item) => {
     item.style.display = "inline-flex";
@@ -347,26 +374,37 @@ function initVisitorStats() {
   } else {
     document.querySelector("main")?.insertAdjacentElement("beforeend", stats);
   }
-  if (!document.querySelector('script[data-visitor-counter="busuanzi"]')) {
-    const counterScript = document.createElement("script");
-    counterScript.async = true;
-    counterScript.defer = true;
-    counterScript.dataset.visitorCounter = "busuanzi";
-    counterScript.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
-    document.body.appendChild(counterScript);
-  }
-  window.setTimeout(sanitizeVisitorStats, 2600);
-  window.setTimeout(sanitizeVisitorStats, 5200);
+  loadVisitorStats();
 }
 
-function sanitizeVisitorStats() {
-  const pv = document.querySelector("#busuanzi_value_site_pv");
-  const uv = document.querySelector("#busuanzi_value_site_uv");
-  if (!pv || !uv) return;
-  const pvValue = Number(String(pv.textContent || "").replace(/\D/g, ""));
-  const uvValue = Number(String(uv.textContent || "").replace(/\D/g, ""));
-  if (!Number.isFinite(pvValue) || !Number.isFinite(uvValue)) return;
-  if (pvValue > 1000000 || uvValue > 1000000 || uvValue > pvValue) {
+async function loadVisitorStats() {
+  const stats = document.querySelector(".visitor-stats");
+  const pv = document.querySelector("[data-visitor-pv]");
+  const uv = document.querySelector("[data-visitor-uv]");
+  if (!stats || !pv || !uv) return;
+
+  try {
+    const response = await fetch(VISITOR_COUNTER_ENDPOINT, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        clientId: getVisitorClientId(),
+        path: `${window.location.pathname}${window.location.search}`,
+        referrer: document.referrer,
+      }),
+      cache: "no-store",
+      keepalive: true,
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload = await response.json();
+    const pvValue = Number(payload?.site?.pv);
+    const uvValue = Number(payload?.site?.uv);
+    if (!Number.isFinite(pvValue) || !Number.isFinite(uvValue) || uvValue > pvValue) {
+      throw new Error("Invalid visitor stats");
+    }
+    pv.textContent = pvValue.toLocaleString("zh-CN");
+    uv.textContent = uvValue.toLocaleString("zh-CN");
+  } catch {
     const stats = document.querySelector(".visitor-stats");
     if (stats) {
       stats.innerHTML = `<span>\u8bbf\u5ba2\u7edf\u8ba1\u6682\u4e0d\u53ef\u7528</span>`;

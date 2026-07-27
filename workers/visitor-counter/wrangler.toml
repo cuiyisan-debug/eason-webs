@@ -1,0 +1,20 @@
+name = "mycys-visitor-counter"
+main = "src/index.js"
+compatibility_date = "2026-07-20"
+
+routes = [
+  { pattern = "mycys.top/api/visitor-stats*", zone_name = "mycys.top" },
+  { pattern = "www.mycys.top/api/visitor-stats*", zone_name = "mycys.top" }
+]
+
+[vars]
+VISITOR_ALLOWED_ORIGINS = "https://mycys.top,https://www.mycys.top,https://eason-webs.pages.dev,http://127.0.0.1:8088,http://localhost:8088"
+VISITOR_STORE_FULL_IP = "true"
+
+[[durable_objects.bindings]]
+name = "VISITOR_COUNTER"
+class_name = "VisitorCounter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VisitorCounter"]
