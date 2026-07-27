@@ -25,6 +25,14 @@ https://mycys.top/api/visitor-stats
 https://mycys.top/api/visitor-stats/admin
 ```
 
+后台查看页面：
+
+```text
+https://mycys.top/visitor-admin.html
+```
+
+这个页面不会保存密钥到源码。管理员在浏览器里输入 `VISITOR_ADMIN_TOKEN` 后，页面用 `Authorization: Bearer ...` 调用后台查询接口。
+
 ## GitHub Secrets
 
 部署 Worker 需要在 GitHub Actions Secrets 中配置：
@@ -70,6 +78,18 @@ npx --yes wrangler@latest secret put VISITOR_IP_HASH_SALT --config workers/visit
 ```
 
 ## 后台查询
+
+### 网页后台
+
+打开：
+
+```text
+https://mycys.top/visitor-admin.html
+```
+
+输入 `VISITOR_ADMIN_TOKEN` 后可以查看累计 PV/UV、新系统增量、访问路径、来源、国家、IP、IP Hash、User-Agent 和访问时间，并支持分页与 CSV 导出。
+
+### PowerShell 查询
 
 请求示例。`limit` 单次最多 200 条，返回的 `nextBefore` 可用于继续查询更早记录：
 

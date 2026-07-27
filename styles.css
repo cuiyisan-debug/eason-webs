@@ -1848,6 +1848,220 @@ h1 {
   letter-spacing: 0.02em;
 }
 
+.visitor-admin-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, rgba(255, 106, 0, 0.08), transparent 32%),
+    var(--bg);
+}
+
+.visitor-admin-shell {
+  display: grid;
+  gap: 18px;
+  min-height: 100vh;
+  padding: clamp(20px, 3vw, 42px);
+}
+
+.visitor-admin-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.visitor-admin-hero h1 {
+  margin: 0;
+  font-size: clamp(44px, 7vw, 96px);
+  line-height: 0.95;
+}
+
+.visitor-admin-hero p:last-child {
+  max-width: 620px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.admin-home-link,
+.admin-login-actions button,
+.admin-toolbar-actions button,
+.admin-pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 76%, transparent);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.admin-login-panel,
+.admin-dashboard {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 84%, transparent);
+}
+
+.admin-login-panel[hidden],
+.admin-dashboard[hidden] {
+  display: none !important;
+}
+
+.admin-login-panel {
+  display: grid;
+  gap: 14px;
+  max-width: 640px;
+  padding: 24px;
+}
+
+.admin-login-panel label,
+.admin-toolbar label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-login-panel input[type="password"],
+.admin-toolbar select {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  padding: 0 12px;
+}
+
+.admin-login-actions,
+.admin-toolbar,
+.admin-toolbar-group,
+.admin-toolbar-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.admin-check {
+  display: inline-flex !important;
+  grid-template-columns: none !important;
+  align-items: center;
+  gap: 8px !important;
+  color: var(--muted);
+}
+
+.admin-login-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.admin-login-panel p[data-tone="error"] {
+  color: #ff7b7b;
+}
+
+.admin-login-panel p[data-tone="success"] {
+  color: #80d49a;
+}
+
+.admin-dashboard {
+  display: grid;
+  gap: 0;
+  overflow: hidden;
+}
+
+.admin-toolbar {
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+}
+
+.admin-metrics article {
+  min-height: 120px;
+  padding: 18px;
+  border-right: 1px solid var(--line);
+}
+
+.admin-metrics article:last-child {
+  border-right: 0;
+}
+
+.admin-metrics span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-metrics strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--text);
+  font-size: clamp(34px, 4vw, 58px);
+  line-height: 1;
+}
+
+.admin-table-wrap {
+  overflow: auto;
+}
+
+.admin-table {
+  width: 100%;
+  min-width: 1180px;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.admin-table th,
+.admin-table td {
+  max-width: 320px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.admin-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--panel);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.admin-table td:first-child,
+.admin-table td:nth-child(5),
+.admin-table td:nth-child(6) {
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.admin-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.admin-pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .wechat-card {
   display: grid;
   gap: 8px;
@@ -2788,6 +3002,37 @@ h1 {
     padding: 0;
     font-size: 11px;
     letter-spacing: 0.02em;
+  }
+
+  .visitor-admin-shell {
+    padding: 18px;
+  }
+
+  .visitor-admin-hero,
+  .admin-toolbar,
+  .admin-pagination {
+    display: grid;
+    align-items: start;
+  }
+
+  .visitor-admin-hero h1 {
+    font-size: clamp(46px, 18vw, 72px);
+  }
+
+  .admin-login-panel {
+    padding: 18px;
+  }
+
+  .admin-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-metrics article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .admin-metrics article {
+    min-height: 100px;
   }
 
   .dialog-media {

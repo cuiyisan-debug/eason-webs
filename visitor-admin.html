@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>访问后台 | 格物研习社</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="visitor-admin-page">
+    <main class="visitor-admin-shell">
+      <section class="visitor-admin-hero">
+        <div>
+          <p class="eyebrow">VISITOR OBSERVATORY</p>
+          <h1>访问后台</h1>
+          <p>查看 Cloudflare Worker 记录的访问统计、来源路径与最近访问明细。</p>
+        </div>
+        <a class="admin-home-link" href="./home.html#top">返回首页</a>
+      </section>
+
+      <form class="admin-login-panel" data-admin-login>
+        <label>
+          管理 Token
+          <input type="password" data-admin-token autocomplete="current-password" placeholder="输入 VISITOR_ADMIN_TOKEN" />
+        </label>
+        <div class="admin-login-actions">
+          <button type="button" data-admin-load>进入后台</button>
+          <label class="admin-check">
+            <input type="checkbox" data-admin-remember />
+            本次浏览器会话记住
+          </label>
+        </div>
+        <p data-admin-message>Token 只保存在当前浏览器，不会写入网站源码。</p>
+      </form>
+
+      <section class="admin-dashboard" data-admin-dashboard hidden>
+        <div class="admin-toolbar">
+          <div class="admin-toolbar-group">
+            <label>
+              单页数量
+              <select data-admin-limit>
+                <option value="50">50</option>
+                <option value="100" selected>100</option>
+                <option value="200">200</option>
+              </select>
+            </label>
+            <label class="admin-check">
+              <input type="checkbox" data-admin-reveal />
+              显示明文 IP
+            </label>
+          </div>
+          <div class="admin-toolbar-actions">
+            <button type="button" data-admin-refresh>刷新</button>
+            <button type="button" data-admin-export>导出 CSV</button>
+            <button type="button" data-admin-logout>退出</button>
+          </div>
+        </div>
+
+        <div class="admin-metrics" aria-label="访问统计">
+          <article>
+            <span>累计 PV</span>
+            <strong data-admin-pv>--</strong>
+          </article>
+          <article>
+            <span>累计 UV</span>
+            <strong data-admin-uv>--</strong>
+          </article>
+          <article>
+            <span>新系统 PV</span>
+            <strong data-admin-raw-pv>--</strong>
+          </article>
+          <article>
+            <span>新系统 UV</span>
+            <strong data-admin-raw-uv>--</strong>
+          </article>
+        </div>
+
+        <div class="admin-table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>时间</th>
+                <th>页面</th>
+                <th>来源</th>
+                <th>国家</th>
+                <th>IP</th>
+                <th>IP Hash</th>
+                <th>User-Agent</th>
+              </tr>
+            </thead>
+            <tbody data-admin-rows>
+              <tr>
+                <td colspan="7">等待查询</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="admin-pagination">
+          <button type="button" data-admin-more disabled>加载更早记录</button>
+          <span data-admin-page-info>--</span>
+        </div>
+      </section>
+    </main>
+
+    <script src="./visitor-admin.js"></script>
+  </body>
+</html>
