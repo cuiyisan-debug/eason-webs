@@ -10,6 +10,8 @@ routes = [
 [vars]
 VISITOR_ALLOWED_ORIGINS = "https://mycys.top,https://www.mycys.top,https://eason-webs.pages.dev,http://127.0.0.1:8088,http://localhost:8088"
 VISITOR_STORE_FULL_IP = "true"
+VISITOR_SITE_PV_OFFSET = "1132"
+VISITOR_SITE_UV_OFFSET = "811"
 
 [[durable_objects.bindings]]
 name = "VISITOR_COUNTER"

@@ -66,6 +66,20 @@ function todayKey(now = new Date()) {
   return now.toISOString().slice(0, 10);
 }
 
+function numberFromEnv(value) {
+  const parsed = Number(value);
+  return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : 0;
+}
+
+function publicSiteStats(stats, env) {
+  const pvOffset = numberFromEnv(env.VISITOR_SITE_PV_OFFSET);
+  const uvOffset = numberFromEnv(env.VISITOR_SITE_UV_OFFSET);
+  return {
+    pv: Number(stats.pv || 0) + pvOffset,
+    uv: Number(stats.uv || 0) + uvOffset,
+  };
+}
+
 async function readPayload(request) {
   if (request.method === "GET") {
     const url = new URL(request.url);
@@ -172,10 +186,7 @@ export class VisitorCounter {
 
     return json({
       ok: true,
-      site: {
-        pv: stats.pv,
-        uv: stats.uv,
-      },
+      site: publicSiteStats(stats, this.env),
       today: {
         pv: daily.pv,
         uv: daily.uv,
@@ -209,7 +220,12 @@ export class VisitorCounter {
 
     return json({
       ok: true,
-      site: stats,
+      site: publicSiteStats(stats, this.env),
+      rawSite: stats,
+      offsets: {
+        pv: numberFromEnv(this.env.VISITOR_SITE_PV_OFFSET),
+        uv: numberFromEnv(this.env.VISITOR_SITE_UV_OFFSET),
+      },
       visits,
       nextBefore: cursor > 1 ? cursor : null,
     });
