@@ -1,0 +1,4 @@
+interface:
+  display_name: "飞书+GitHub+Cloudflare 个人网站开发全流程"
+  short_description: "用飞书维护内容、GitHub Actions 同步数据、Cloudflare Pages/R2 发布个人网站。"
+  default_prompt: "按飞书+GitHub+Cloudflare 个人网站开发全流程，检查或维护这个网站的内容同步、媒体镜像、部署和验证。"
