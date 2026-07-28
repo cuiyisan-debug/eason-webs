@@ -387,7 +387,8 @@ function setupCinematicTransition() {
     sequence.style.setProperty("--portrait-scale", String(1 - blend * 0.012));
     sequence.style.setProperty("--portrait-y", `${Math.round(-blend * 8)}px`);
     sequence.style.setProperty("--tools-opacity", String(blend));
-    sequence.style.setProperty("--tools-scale", String(1.01 - blend * 0.01));
+    const isNarrow = window.matchMedia("(max-width: 900px)").matches;
+    sequence.style.setProperty("--tools-scale", String(isNarrow ? 1 : 1.01 - blend * 0.01));
     sequence.style.setProperty("--tools-y", `${Math.round((1 - blend) * 8)}px`);
     sequence.classList.toggle("is-tools-active", toolsActive);
 
