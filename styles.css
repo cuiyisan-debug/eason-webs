@@ -2474,11 +2474,6 @@ h1 {
 
 .about-points div {
   padding: 22px 26px 20px 0;
-  border-right: 1px solid var(--line);
-}
-
-.about-points div:last-child {
-  border-right: 0;
 }
 
 .about-points strong {
