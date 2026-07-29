@@ -440,9 +440,19 @@ a {
   --tools-opacity: 0;
   --tools-scale: 1.04;
   --tools-y: 36px;
+  --city-opacity: 0;
+  --city-scale: 1.01;
+  --city-y: 24px;
+  --fourth-opacity: 0;
+  --fourth-scale: 1.01;
+  --fourth-y: 24px;
+  --fifth-opacity: 0;
+  --fifth-scale: 1.01;
+  --fifth-y: 24px;
   position: relative;
   z-index: 3;
-  height: 210svh;
+  height: 510svh;
+  background: #000;
 }
 
 .cinematic-sequence > .journey-scene {
@@ -1263,30 +1273,54 @@ a {
   position: relative;
   display: block;
   min-height: 100svh;
+  margin-top: -100svh;
   padding: 0;
   overflow: hidden;
   isolation: isolate;
   background: #030405;
+  opacity: var(--city-opacity);
+  pointer-events: none;
+  transform: translateY(var(--city-y)) scale(var(--city-scale));
+  transform-origin: 50% 52%;
+  transition: none;
 }
 
 .scene-fourth {
   position: relative;
   display: block;
   min-height: 100svh;
+  margin-top: -100svh;
   padding: 0;
   overflow: hidden;
   isolation: isolate;
   background: #030405;
+  opacity: var(--fourth-opacity);
+  pointer-events: none;
+  transform: translateY(var(--fourth-y)) scale(var(--fourth-scale));
+  transform-origin: 50% 52%;
+  transition: none;
 }
 
 .scene-fifth {
   position: relative;
   display: block;
   min-height: 100svh;
+  margin-top: -100svh;
   padding: 0;
   overflow: hidden;
   isolation: isolate;
   background: #030405;
+  opacity: var(--fifth-opacity);
+  pointer-events: none;
+  transform: translateY(var(--fifth-y)) scale(var(--fifth-scale));
+  transform-origin: 50% 52%;
+  transition: none;
+}
+
+.cinematic-sequence.is-city-active .scene-city-data,
+.cinematic-sequence.is-fourth-active .scene-fourth,
+.cinematic-sequence.is-fifth-active .scene-fifth {
+  pointer-events: auto;
 }
 
 .fourth-video,
@@ -1416,7 +1450,7 @@ a {
   column-gap: clamp(260px, 36vw, 620px);
   pointer-events: none;
   opacity: 0;
-  transition: opacity 1.1s ease 0.3s;
+  transition: opacity 0.08s linear;
 }
 
 .scene-fourth.is-clients-ready .fourth-client-wall {
@@ -1457,6 +1491,8 @@ a {
 
 .scene-fourth.is-clients-ready .fourth-client-heading {
   animation: fourthClientHeadingIn 0.86s cubic-bezier(.22, 1, .36, 1) 0.2s both;
+  opacity: 0.94;
+  transition: opacity 0.08s linear;
 }
 
 .fourth-client-zone {
@@ -1601,7 +1637,7 @@ a {
   text-align: center;
   opacity: 0;
   transform: translate(-50%, 12px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.05s linear, transform 0.6s ease;
 }
 
 .city-data-heading p,
@@ -1741,6 +1777,7 @@ a {
 }
 
 .city-data-heading.is-visible {
+  opacity: 1;
   transform: translate(-50%, 0);
 }
 

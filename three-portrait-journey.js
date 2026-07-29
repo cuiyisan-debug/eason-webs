@@ -322,15 +322,25 @@ function setupCinematicTransition() {
   const sequence = document.querySelector(".cinematic-sequence");
   const heroVideo = document.querySelector(".hero-video");
   const toolsVideo = document.querySelector(".tools-video");
+  const cityVideo = document.querySelector(".city-data-video");
+  const fourthVideo = document.querySelector(".fourth-video");
+  const fifthVideo = document.querySelector(".fifth-video");
   const toolKeywordNodes = Array.from(document.querySelectorAll(".tools-keyword"));
   const leftToolKeywordNodes = Array.from(document.querySelectorAll(".tools-keyword-left"));
   const rightToolKeywordNodes = Array.from(document.querySelectorAll(".tools-keyword-right"));
   const toolCapabilities = document.querySelector(".tools-capabilities");
   const toolsScene = document.querySelector(".scene-tools");
+  const cityScene = document.querySelector(".scene-city-data");
+  const fourthScene = document.querySelector(".scene-fourth");
+  const fifthScene = document.querySelector(".scene-fifth");
   if (!sequence) return;
   let toolsStarted = false;
   let toolsFinished = false;
   let scrollTicking = false;
+  let currentCinematicProgress = 0;
+  const timelineEnd = 0.86;
+  const playedVideos = new WeakSet();
+  const pendingVideoSeeks = new WeakSet();
 
   const resetToolsReveal = () => {
     toolKeywordNodes.forEach((node) => node.classList.remove("is-visible"));
@@ -375,31 +385,153 @@ function setupCinematicTransition() {
     resetToolsReveal();
   }
 
+  const sceneMix = (progress, enterStart, enterEnd, exitStart, exitEnd) => {
+    const enter = smoothstep(enterStart, enterEnd, progress);
+    const exit = smoothstep(exitStart, exitEnd, progress);
+    return clamp(enter * (1 - exit), 0, 1);
+  };
+
+  const prepareVideo = (video, progress, prepareStart, resetBefore) => {
+    if (!video) return;
+    const startAt = 0;
+    if (progress < resetBefore) {
+      playedVideos.delete(video);
+      pendingVideoSeeks.delete(video);
+      video.pause();
+      if (video.readyState > 0 && Math.abs(video.currentTime - startAt) > 0.04) video.currentTime = startAt;
+      return;
+    }
+    if (progress >= prepareStart && video.preload !== "auto") {
+      video.preload = "auto";
+      video.load();
+    }
+  };
+
+  const playSceneVideo = (video, progress, sceneStart, sceneEnd, resetBefore) => {
+    if (!video) return;
+    const startAt = 0;
+    const inRange = progress >= sceneStart && progress <= sceneEnd;
+    if (progress < resetBefore) {
+      playedVideos.delete(video);
+      pendingVideoSeeks.delete(video);
+      video.pause();
+      if (video.readyState > 0 && Math.abs(video.currentTime - startAt) > 0.04) video.currentTime = startAt;
+      return;
+    }
+    // Preserve the final decoded frame after a scene exits. Seeking back to
+    // zero here can briefly expose the prior video's first frame while the
+    // browser is still compositing the crossfade to the next scene.
+    if (progress > sceneEnd) {
+      video.pause();
+      return;
+    }
+    if (!inRange) {
+      if (progress < sceneStart) {
+        playedVideos.delete(video);
+        pendingVideoSeeks.delete(video);
+        if (video.readyState > 0 && Math.abs(video.currentTime - startAt) > 0.04) video.currentTime = startAt;
+      }
+      video.pause();
+      return;
+    }
+    if (playedVideos.has(video)) {
+      if (video.ended) return;
+      if (video.paused) {
+        const resumePromise = video.play();
+        if (resumePromise && typeof resumePromise.catch === "function") resumePromise.catch(() => {});
+      }
+      return;
+    }
+    if (pendingVideoSeeks.has(video)) return;
+    const startPlayback = () => {
+      if (currentCinematicProgress < sceneStart || currentCinematicProgress > sceneEnd) {
+        pendingVideoSeeks.delete(video);
+        playedVideos.delete(video);
+        video.pause();
+        return;
+      }
+      pendingVideoSeeks.delete(video);
+      playedVideos.add(video);
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {
+          playedVideos.delete(video);
+        });
+      }
+    };
+    if (startAt > 0 && Math.abs(video.currentTime - startAt) > 0.04) {
+      pendingVideoSeeks.add(video);
+      video.pause();
+      video.currentTime = startAt;
+      video.addEventListener("seeked", startPlayback, { once: true });
+      return;
+    }
+    startPlayback();
+  };
+
   const update = () => {
     const rect = sequence.getBoundingClientRect();
     const scrollable = Math.max(rect.height - window.innerHeight, 1);
-    const progress = clamp(-rect.top / scrollable, 0, 1);
-    const blend = smoothstep(0.56, 0.78, progress);
-    const toolsActive = blend > 0.52;
+    // The last scene reaches its completed state exactly when the document
+    // reaches the end of this sequence, leaving no inert scroll tail.
+    const rawProgress = clamp(-rect.top / scrollable, 0, 1);
+    const progress = rawProgress * timelineEnd;
+    currentCinematicProgress = progress;
+    const toolsBlend = sceneMix(progress, 0.11, 0.22, 0.31, 0.42);
+    const cityBlend = sceneMix(progress, 0.31, 0.42, 0.51, 0.62);
+    const fourthBlend = sceneMix(progress, 0.51, 0.62, 0.70, 0.82);
+    const fifthBlend = smoothstep(0.74, timelineEnd, progress);
+    const portraitOut = smoothstep(0.11, 0.22, progress);
+    const toolsActive = toolsBlend > 0.2;
+    const cityActive = cityBlend > 0.015;
+    const fourthActive = fourthBlend > 0.015;
+    const fifthActive = fifthBlend > 0.015;
+    const isNarrow = window.matchMedia("(max-width: 900px)").matches;
+    const enteringScale = isNarrow ? 1 : 1.01;
 
     sequence.style.setProperty("--cinematic-progress", progress.toFixed(4));
-    sequence.style.setProperty("--portrait-opacity", String(clamp(1 - blend, 0, 1)));
-    sequence.style.setProperty("--portrait-scale", String(1 - blend * 0.012));
-    sequence.style.setProperty("--portrait-y", `${Math.round(-blend * 8)}px`);
-    sequence.style.setProperty("--tools-opacity", String(blend));
-    const isNarrow = window.matchMedia("(max-width: 900px)").matches;
-    sequence.style.setProperty("--tools-scale", String(isNarrow ? 1 : 1.01 - blend * 0.01));
-    sequence.style.setProperty("--tools-y", `${Math.round((1 - blend) * 8)}px`);
+    sequence.style.setProperty("--portrait-opacity", String(clamp(1 - portraitOut, 0, 1)));
+    sequence.style.setProperty("--portrait-scale", String(1 - portraitOut * 0.012));
+    sequence.style.setProperty("--portrait-y", `${Math.round(-portraitOut * 8)}px`);
+    sequence.style.setProperty("--tools-opacity", String(toolsBlend));
+    sequence.style.setProperty("--tools-scale", String(isNarrow ? 1 : 1.01 - toolsBlend * 0.01));
+    sequence.style.setProperty("--tools-y", `${Math.round((1 - toolsBlend) * 8)}px`);
+    sequence.style.setProperty("--city-opacity", String(cityBlend));
+    sequence.style.setProperty("--city-scale", String(enteringScale - cityBlend * (enteringScale - 1)));
+    sequence.style.setProperty("--city-y", `${Math.round((1 - cityBlend) * 8)}px`);
+    sequence.style.setProperty("--fourth-opacity", String(fourthBlend));
+    sequence.style.setProperty("--fourth-scale", String(enteringScale - fourthBlend * (enteringScale - 1)));
+    sequence.style.setProperty("--fourth-y", `${Math.round((1 - fourthBlend) * 8)}px`);
+    sequence.style.setProperty("--fifth-opacity", String(fifthBlend));
+    sequence.style.setProperty("--fifth-scale", String(enteringScale - fifthBlend * (enteringScale - 1)));
+    sequence.style.setProperty("--fifth-y", `${Math.round((1 - fifthBlend) * 8)}px`);
     sequence.classList.toggle("is-tools-active", toolsActive);
+    sequence.classList.toggle("is-city-active", cityActive);
+    sequence.classList.toggle("is-fourth-active", fourthActive);
+    sequence.classList.toggle("is-fifth-active", fifthActive);
 
-    if (toolsVideo && progress < 0.48) {
+    if (toolsVideo && progress < 0.08) {
       toolsStarted = false;
       toolsFinished = false;
       resetToolsReveal();
       if (!toolsVideo.paused) toolsVideo.pause();
       if (toolsVideo.readyState > 0 && toolsVideo.currentTime > 0.02) toolsVideo.currentTime = 0;
     }
-    if (toolsVideo && progress >= 0.52 && !toolsStarted && !toolsFinished) {
+    if (toolsVideo && progress > 0.42 && !toolsVideo.paused) {
+      toolsVideo.pause();
+    }
+    if (progress < 0.29) {
+      cityScene?.classList.remove("is-data-ready");
+      cityScene?.querySelector(".city-data-heading")?.classList.remove("is-visible");
+      cityScene?.querySelectorAll(".city-data-node").forEach((node) => node.classList.remove("is-visible"));
+    }
+    if (progress < 0.49) {
+      fourthScene?.classList.remove("is-clients-ready");
+    }
+    if (progress < 0.69) {
+      fifthScene?.classList.remove("is-fifth-complete");
+    }
+    if (toolsVideo && progress >= 0.14 && progress <= 0.39 && !toolsStarted && !toolsFinished) {
       toolsStarted = true;
       if (toolsVideo.readyState > 0) toolsVideo.currentTime = 0;
       const playPromise = toolsVideo.play();
@@ -409,6 +541,12 @@ function setupCinematicTransition() {
         });
       }
     }
+    prepareVideo(cityVideo, progress, 0.22, 0.19);
+    prepareVideo(fourthVideo, progress, 0.51, 0.46);
+    prepareVideo(fifthVideo, progress, 0.74, 0.69);
+    playSceneVideo(cityVideo, progress, 0.31, 0.62, 0.19);
+    playSceneVideo(fourthVideo, progress, 0.51, 0.82, 0.46);
+    playSceneVideo(fifthVideo, progress, 0.74, timelineEnd, 0.69);
   };
 
   const scheduleUpdate = () => {
@@ -437,21 +575,16 @@ function setupSceneSnap() {
   let settleTimer = 0;
   let releaseTimer = 0;
   let isSettling = false;
-  let wheelLocked = false;
+  const timelineEnd = 0.86;
 
   const getAnchors = () => {
-    // Do not infer scene positions from the viewport. Mobile browser chrome can
-    // change window.innerHeight mid-gesture, while the scenes use stable svh.
-    // The second scene is sticky, so its visible position is not its scroll
-    // anchor; its start is exactly one rendered portrait-scene tall.
     const firstSceneTop = sequence.offsetTop;
-    return [
-      firstSceneTop,
-      firstSceneTop + portrait.offsetHeight,
-      city.offsetTop,
-      fourth.offsetTop,
-      fifth.offsetTop,
-    ];
+    const scrollable = Math.max(sequence.offsetHeight - window.innerHeight, portrait.offsetHeight);
+    // All five video pages now live on one sticky cinematic stage. The anchors
+    // target the fully visible part of each blended scene rather than DOM offsets.
+    return [0, 0.245, 0.445, 0.645, timelineEnd].map(
+      (progress) => firstSceneTop + scrollable * (progress / timelineEnd),
+    );
   };
 
   const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
@@ -464,7 +597,7 @@ function setupSceneSnap() {
     window.clearTimeout(releaseTimer);
     releaseTimer = window.setTimeout(() => {
       isSettling = false;
-    }, 520);
+    }, 720);
   };
 
   const settleToScene = () => {
@@ -474,6 +607,9 @@ function setupSceneSnap() {
     const nearest = anchors.reduce((best, target) => (
       Math.abs(target - current) < Math.abs(best - current) ? target : best
     ), anchors[0]);
+    // Do not turn a normal scroll into a programmatic page jump. Only tidy up
+    // a resting position that is already close to the intended full-screen stop.
+    if (Math.abs(nearest - current) > window.innerHeight * 0.14) return;
     moveToAnchor(nearest);
   };
 
@@ -486,14 +622,14 @@ function setupSceneSnap() {
   if (coarsePointer) {
     // Inertia continues after touchend. Wait for the final scroll event (or
     // scrollend where available) before making one small correction.
-    const scheduleTouchSettle = (delay = 160) => {
+    const scheduleTouchSettle = (delay = 260) => {
       if (isSettling) return;
       window.clearTimeout(settleTimer);
       settleTimer = window.setTimeout(settleToScene, delay);
     };
 
     window.addEventListener("scroll", () => scheduleTouchSettle(), { passive: true });
-    window.addEventListener("touchend", () => scheduleTouchSettle(220), { passive: true });
+    window.addEventListener("touchend", () => scheduleTouchSettle(300), { passive: true });
     if ("onscrollend" in window) {
       window.addEventListener("scrollend", settleToScene, { passive: true });
     }
@@ -503,27 +639,41 @@ function setupSceneSnap() {
     return;
   }
 
-  window.addEventListener("scroll", scheduleSettle, { passive: true });
+  // Desktop mouse wheels advance the cinematic sequence one completed scene
+  // at a time. This keeps adjacent videos from ever sharing a half-scrolled
+  // frame, while touch devices retain their lighter inertial correction above.
   window.addEventListener("wheel", (event) => {
-    if (window.matchMedia("(pointer: coarse)").matches || Math.abs(event.deltaY) < 4) return;
+    if (event.deltaY === 0) return;
     const anchors = getAnchors();
     const current = window.scrollY;
-    const insideJourney = current >= anchors[0] - 4 && current <= anchors.at(-1) + window.innerHeight - 4;
-    if (!insideJourney || wheelLocked || isSettling) return;
+    const firstAnchor = anchors[0];
+    const lastAnchor = anchors[anchors.length - 1];
 
-    const activeIndex = anchors.reduce((index, target, currentIndex) => (
-      target <= current + window.innerHeight * 0.22 ? currentIndex : index
-    ), 0);
-    const nextIndex = clamp(activeIndex + (event.deltaY > 0 ? 1 : -1), 0, anchors.length - 1);
-    if (nextIndex === activeIndex) return;
+    if (current < firstAnchor - 4 || current > lastAnchor + 4) return;
+    if (isSettling) {
+      event.preventDefault();
+      return;
+    }
 
+    const goingDown = event.deltaY > 0;
+    const target = goingDown
+      ? anchors.find((anchor) => anchor > current + 24)
+      : [...anchors].reverse().find((anchor) => anchor < current - 24);
+
+    if (target == null) return;
     event.preventDefault();
-    wheelLocked = true;
-    moveToAnchor(anchors[nextIndex]);
-    window.setTimeout(() => {
-      wheelLocked = false;
-    }, 620);
+    moveToAnchor(target);
   }, { passive: false });
+
+  if ("onscrollend" in window) {
+    window.addEventListener("scrollend", () => {
+      if (isSettling) {
+        window.clearTimeout(releaseTimer);
+        isSettling = false;
+      }
+    }, { passive: true });
+  }
+
   window.addEventListener("resize", () => {
     window.clearTimeout(settleTimer);
   });
@@ -590,6 +740,8 @@ function setupCityDataScene() {
     video.pause();
   });
 
+  if (scene.closest(".cinematic-sequence")) return;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.intersectionRatio > 0.55) {
@@ -639,6 +791,8 @@ function setupFourthVideoScene() {
     completed = true;
     video.pause();
   });
+
+  if (scene.closest(".cinematic-sequence")) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -810,6 +964,8 @@ function setupFifthVideoScene() {
     if (!Number.isFinite(video.duration) || video.duration <= 0) return;
     if (video.currentTime / video.duration >= 0.992) revealReturnHome();
   });
+
+  if (scene.closest(".cinematic-sequence")) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
