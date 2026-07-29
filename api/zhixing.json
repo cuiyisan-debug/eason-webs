@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-22T07:45:44.658735+00:00",
+  "generatedAt": "2026-07-29T04:31:32.089770+00:00",
   "source": "feishu-bitable",
   "sourceType": "zhixing",
   "baseToken": "Vn7hbNMygaDrSMseVgycCCJen1e",
   "tableId": "tbllnUjzNh9UkkpR",
-  "count": 6,
+  "count": 7,
   "error": "",
   "items": [
     {
@@ -315,11 +315,11 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/eb/ebc9fb28eb218a6f56706316d119d40b346c81f70b349cee509d38f592df7bc2.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/2c/2c75a06346199d6346dc38c53698d3525d6f089e99d9f88326e150e2f09c4498.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/76/768993b12a03138a93565000bda6eff7b561fd831ddeef043c8ec68cded8c814.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/68/68d34732a01fb6b8d11eadb656c0643d89b7961e3751d694701820afe61758fe.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/18/18e67470283fdb14d91d0dd83862d379d3f33efb41b313102a757fbfbb874595.png",
-        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/eb/ebc9fb28eb218a6f56706316d119d40b346c81f70b349cee509d38f592df7bc2.png",
-        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/2c/2c75a06346199d6346dc38c53698d3525d6f089e99d9f88326e150e2f09c4498.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/af/af3d9e7658a8126cc88e88c26a6d6ac4634b16525d50eda4177118ca2c29676a.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e1/e1ec481dd1ebb032755a691b5e6f603665a84da0db7988b707b3edd68430a2a8.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d8/d8f180f5e7345dea882c00c37961ee9c2b7f32b118e3a30f5c42d63065bc7be0.png",
@@ -1054,10 +1054,10 @@
       "linkedTitle": "",
       "linkedError": "",
       "media": [
-        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0a/0a3fbb5924ab26cdbae57a3ca925a95a83b33ab5a6db9c1b72b3bb3d0433becc.png",
-        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c8/c8de5e1d2c852408d7238e51c71ab07ccc1d8794e08a0826a5285795812db9c6.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/df/dfb604c747b9536990572444d055e7cd40ca53ad6104c556942ade80b3cbf0d7.png",
-        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c9/c92b73fa0c01645c839cc8d10c4b0a8b8b31c72d413cd1dc0a84a1a4924f9ac5.png"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c9/c92b73fa0c01645c839cc8d10c4b0a8b8b31c72d413cd1dc0a84a1a4924f9ac5.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0a/0a3fbb5924ab26cdbae57a3ca925a95a83b33ab5a6db9c1b72b3bb3d0433becc.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c8/c8de5e1d2c852408d7238e51c71ab07ccc1d8794e08a0826a5285795812db9c6.png"
       ],
       "contentBlocks": [
         {
@@ -1239,6 +1239,808 @@
         }
       ],
       "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/f7/f780a2b3f5813447a9af32c41547b57845155693e1e270c302e5f95016cb4143.png"
+    },
+    {
+      "id": "recvqEt5ci9vpS",
+      "sourceType": "zhixing",
+      "order": 7.0,
+      "title": "用飞书零代码建立个人网站：小白也能完成的完整建站流程",
+      "summary": "很多人想做个人网站，往往卡在第一步：不会代码、没有服务器、不懂数据库，也不想每修改一段文字就找开发者。",
+      "body": "用飞书维护内容，用 GitHub 自动更新，用 Cloudflare 发布网站。以 mycys.top（https://mycys.top） 为例，带你从零搭建一个可长期维护的个人网站。\nimage1.png\n\n图 1：格物研习社首页。网站可以同时呈现个人品牌、导航和视觉风格。\n很多人想做个人网站，往往卡在第一步：不会代码、没有服务器、不懂数据库，也不想每修改一段文字就找开发者。\n但如果你的日常内容本来就写在飞书里，事情可以简单很多。\n这篇文章会带你搭一套「飞书内容后台 + GitHub 自动化 + Cloudflare 网站发布」的系统。完成后，你可以继续在飞书里维护项目、文章、图片和附件；网站则通过同步程序自动更新。\n本文以我的个人网站 mycys.top（https://mycys.top） 为例。它不是一个一次性设计稿，而是一套持续生长的内容系统：主页展示个人品牌，项目页按类别管理案例，知行栏目持续发布文章和工具方法。\nimage2.png\n\n图 2：项目库按分类筛选，卡片自动展示封面、摘要、标签和年份。\n先看结果：这套系统最终能做什么\n建好之后，你会得到一个属于自己的网址，例如 yourname.com。访客看到的是独立网站；你自己维护内容时，主要还是在飞书工作。\n它适合以下场景：\n个人作品集：设计、策展、摄影、建筑、咨询、项目案例。\n文章站：行业观察、方法论、项目复盘、知识笔记。\n个人品牌主页：介绍自己、展示能力、沉淀案例、留下联系方式。\n小型内容资料库：把长期积累的内容整理成可检索的网站。\n如果你需要的是商城、会员支付、实时聊天或复杂的多人业务系统，这不是最适合的方案。但对于内容展示和个人品牌，它足够稳定，也更容易长期维护。\n一、先理解四个工具各自负责什么\n13-full-site-pipeline-labeled.png\n\n流程图：从飞书内容后台到个人网站上线的完整链路。\n先不要急着注册账号。把下面这张分工表看懂，后面每一步都会轻松很多。\n\n\n工具\n\n它负责什么\n\n你平时会不会经常用\n\n飞书\n\n写文章、管理项目、上传图片、维护标签与排序\n\n会，这是你的内容后台\n\nGitHub\n\n保存网站代码、保存同步记录、运行自动化\n\n偶尔，主要是查看状态\n\nCloudflare Pages\n\n把网站部署到公网\n\n很少，只在首次发布时配置\n\nCloudflare R2\n\n长期保存网站图片、附件和视频\n\n很少，由同步程序自动上传\n\n域名\n\n让访客通过自己的网址访问网站\n\n首次绑定时操作\n\n二、开始前要准备什么\n第一次搭建前，准备好下面四个账号即可。\n飞书账号：用于创建多维表格、云文档和自建应用。\nGitHub 账号：用于保存网站代码与运行自动化。\nCloudflare 账号：用于部署网站和保存媒体文件。\n一个域名：可选，但建议准备。没有域名也能先用 pages.dev 测试地址。\n此外，你需要准备一批真实内容：至少 3 个项目或 3 篇文章、每个项目一张封面图、一个头像或品牌标识。先用真实内容测试，比用一堆“示例项目”更容易发现问题。\n提醒：不需要先买服务器。这个方案是静态网站，不需要自己维护 Nginx、数据库或操作系统。\n三、第一步：在飞书设计内容后台\n08-feishu-content-system-labeled.png\n\n图 4：内容从飞书文档、项目卡片和媒体素材汇集成内容后台，再流向个人网站。AI 生成示意图。\n1. 先建一个“项目表”\n每一行代表一个项目或作品。第一次不要追求字段很全，下面这 10 个字段足够开始。\n\n\n字段名\n\n字段类型建议\n\n作用\n\n项目标题\n\n文本\n\n页面标题\n\n分类\n\n单选\n\n用于项目筛选，例如策展、品牌空间、文博展陈\n\n简介\n\n长文本\n\n首页项目卡片摘要\n\n年份\n\n文本或数字\n\n用于展示和筛选\n\n标签\n\n多选\n\n形成项目专题\n\n封面\n\n附件\n\n项目卡片主图\n\n图片\n\n附件\n\n项目详情页图库\n\n视频链接\n\nURL\n\n可填写 B 站或视频地址\n\n是否精选\n\n复选框\n\n决定是否展示在首页重点位置\n\n排序\n\n数字\n\n控制显示先后\n\n飞书表格要解决的是“内容可管理”，不是“把网页排版做出来”。网页怎样展示，由后面的前端模板决定。\n2. 再建一个“文章表”\n文章表负责管理文章入口，不建议把全文塞进一个多维表格单元格。\n建议字段是：文章标题、摘要、分类、封面、发布日期、排序，以及 正文飞书文档链接。\n真正的长文继续写在飞书云文档中。这样你可以正常使用标题、图片、列表、表格和附件，写作体验不需要迁就网站后台。\nimage3.png\n\n图 3：知行栏目将持续更新的文章与工具方法集中展示。\n3. 云文档要按“网页可读”方式写\n为了让同步效果更稳定，建议每篇云文档遵守三个小习惯：\n用飞书的“标题 1、标题 2”样式写小标题，不要只靠加粗和放大字号。\n图片下方写一行图注，方便网页保留图片说明。\n宽表格要控制列数，手机端阅读时会被放进可左右滑动的容器。\n这样，文档同步到网站后，层级、图片和表格会更清晰。\n四、第二步：创建飞书自建应用，并完成授权\n09-feishu-permission-gates-labeled.png\n\n图 5：自建应用、机器人、维护群和共享文件构成连续的权限链路。AI 生成示意图。\n网站要自动读取飞书内容，需要创建一个飞书自建应用。你可以把它理解成同步程序的“工作证”。\n在飞书开放平台中创建应用后，需要申请读取多维表格、云文档和附件所需的 API 权限。具体权限名称会随飞书开放平台更新，以当前官方文档为准。\n新手最容易遇到的情况是：已经拿到了 App ID 和 App Secret，但同步程序仍然读不到文档。\n通常是少了下面某一层授权：\n自建应用申请了所需 API 权限。\n应用启用了机器人能力。\n把机器人加入一个内容维护群。\n把目标文件夹、多维表格和云文档共享给这个群。\n可以把它理解成：有工作证还不够，还要被拉进办公室，并且办公室里的资料柜要对你开放。\n安全规则一定要记住： App Secret 只能保存到本机安全配置、GitHub Secrets 或 Cloudflare Secrets。不要把它写进网页代码、飞书公开文档、截图、文章或 GitHub 仓库。\n五、第三步：搭建网站模板，不要把内容写死在页面里\n这一步可以自己开发，也可以让开发者或 AI 编程工具完成。\n无论使用哪种方式，都要坚持一个原则：页面结构和内容数据分开。\n正确的关系是：\n网站模板：负责颜色、版式、项目卡片和文章详情页\n数据文件：负责标题、摘要、分类、图片、视频和正文\n同步程序会把飞书内容生成类似 api/portfolio.json、api/articles.json 的数据文件，网页读取这些数据后自动渲染项目和文章。\n这样以后新增第 20 个、第 100 个项目时，不需要再改网页代码，只需在飞书新增一条内容。\n建议至少准备这些页面：\n首页：个人介绍、精选项目、联系方式。\n项目列表页：分类筛选与项目卡片。\n项目详情页：图文介绍、标签、视频或附件。\n文章列表页：文章封面、摘要、分类。\n文章详情页：完整解析飞书云文档。\n六、第四步：把飞书图片“搬家”到 R2\n10-media-migration-labeled.png\n\n图 6：将飞书临时附件经由同步程序迁移到长期媒体仓库，网站读取稳定地址。AI 生成示意图。\n这是整套流程里最容易被忽略、却最影响长期稳定性的步骤。\n飞书附件的下载地址通常会过期。如果网页直接使用飞书临时图片链接，常见结果就是：文章还在，几天后图片变成空白。\nR2 是对象存储，可以理解为专门给网站放图片、PDF 和视频文件的仓库。同步时应记录文件哈希或更新时间，下一次只上传新增或变化的文件，而不是每次全部重复上传。\n首次测试时可以使用 R2 提供的开发地址；正式网站建议为媒体绑定自己的子域名，例如 media.yourname.com。Cloudflare 官方也明确说明，r2.dev 属于开发用途，生产环境更适合使用自定义域名。查看 R2 官方说明（https://developers.cloudflare.com/r2/buckets/public-buckets/）\n七、第五步：把代码和密钥放到正确的位置\n把网站代码放进 GitHub 仓库后，需要设置自动化流程。\n这里有两类内容，必须严格分开：\n\n\n可以提交到 GitHub 的内容\n\n绝不能提交到 GitHub 的内容\n\n网页代码、同步脚本、字段说明、公开示例配置\n\n飞书 App Secret、R2 密钥、GitHub Token、真实用户数据\n\n敏感信息应该放在 GitHub 仓库的 Secrets 中。常见的变量名可以这样设计：\nFEISHU_APP_ID\nFEISHU_APP_SECRET\nR2_ACCESS_KEY_ID\nR2_SECRET_ACCESS_KEY\nR2_BUCKET\nR2_ENDPOINT\n这里展示的是变量名，不是密钥内容。真实值只在 GitHub 的 Secrets 设置页填写一次，之后同步脚本会自动读取。\n自动化任务建议先做“手动触发”：你在 GitHub Actions 页面点击一次运行，确认数据、图片和网站都正确后，再考虑定时同步或按需同步。\n八、第六步：用 Cloudflare Pages 发布网站\n11-automated-release-labeled.png\n\n图 7：代码与内容更新经过自动化构建、云端部署和域名解析，最终变成可访问的网站。AI 生成示意图。\n打开 Cloudflare 后台，进入 Workers & Pages，选择创建 Pages 项目，然后连接 GitHub 仓库。\n第一次需要设置三项：\n选择 GitHub 中的网站仓库。\n填写构建命令和发布目录；纯 HTML 网站通常不需要构建命令。\n点击部署，获得一个 xxx.pages.dev 的测试网址。\n之后的逻辑会很简单：GitHub 仓库有新提交，Cloudflare Pages 就会自动构建和部署。你还可以在 Cloudflare 后台查看当前生产版本对应哪个提交。 查看 Cloudflare Pages 官方文档（https://developers.cloudflare.com/pages/get-started/git-integration/）\n先使用 pages.dev 地址测试，等项目、文章、图片都正常后，再绑定自己的域名。\n九、第七步：绑定域名和 HTTPS\n把域名添加到 Cloudflare 后，按提示修改域名服务商的 DNS 服务器，或按你的域名管理方式添加相应解析记录。\n然后在 Cloudflare Pages 项目中添加自定义域名，例如：\nyourname.com\nwww.yourname.com\nCloudflare 会自动处理 HTTPS 证书。等待 DNS 生效后，访问你的域名，确认浏览器地址栏显示安全锁标志即可。\n没有域名也完全可以先完成前六步。等网站内容和视觉稳定后再购买域名，通常更省心。\n十、上线前，必须做一次完整检查\n不要只看自动化显示“成功”。请逐项打开实际网站检查：\n首页、项目页和文章页是否都能打开。\n手机端项目卡片有没有错位。\n飞书文章的标题、图片、列表、表格、附件是否正确解析。\n图片是否来自 R2 或自己的媒体域名，而不是飞书临时下载链接。\n项目没有封面或没有视频时，页面是否能正常降级显示。\n新增一篇飞书文章后，手动跑一次同步，网站是否真的出现新内容。\n网站源码、公开 JSON 和浏览器控制台中是否没有密钥、本机路径或敏感信息。\n建议第一次上线时邀请一位朋友用手机打开。他能否在 10 秒内看懂“你是谁、做什么、有什么作品”，比你自己反复看电脑页面更有参考价值。\n十一、以后怎么更新：你只需要维护飞书\n整套系统搭好后，日常操作应该回归简单。\n新增一个项目\n在飞书项目表新建一行。\n填标题、分类、简介、封面和图片。\n需要展示在首页就勾选“是否精选”。\n运行同步任务。\n打开网站确认更新。\n新增一篇文章\n在飞书云文档写文章。\n在文章表填标题、摘要、封面和正文文档链接。\n运行同步任务。\n在网站文章列表中检查封面和正文。\n你不需要每次为了改一段文字而找代码文件，也不用手动把同一篇文章复制到多个网页里。\n结语：把网站做成长期资产，而不是一次性作品\n个人网站最重要的不是“第一次上线多酷”，而是以后你愿不愿意持续更新。\n飞书让内容维护足够轻；GitHub 让每次变化可追溯；Cloudflare 让网站和媒体稳定运行。三者组合起来，才让个人网站从一次性展示页，变成可以不断积累的内容资产。\n从今天开始，你不必先学会所有代码。先整理出 3 个项目、3 篇文章，搭建第一版内容后台，然后让网站随着你的工作一起慢慢长出来。\n文中案例与参考\n运行案例：mycys.top（https://mycys.top）\n通用开发 Skill：feishu-personal-website-development（https://github.com/cuiyisan-debug/feishu-personal-website-development）\nCloudflare Pages：Git 集成官方文档（https://developers.cloudflare.com/pages/get-started/git-integration/）\nCloudflare R2：公共媒体官方文档（https://developers.cloudflare.com/r2/buckets/public-buckets/）\n发布提示： 本文中的 3 张截图为 mycys.top 的公开页面结构示意。发布时请保留图注；不要在任何截图或正文中展示真实 App Secret、R2 密钥、GitHub Token 或飞书后台数据。",
+      "contentUrl": "https://my.feishu.cn/docx/BGbWd7Y8mosFzlxOYK4cUiiWntb",
+      "displayMode": "网站排版",
+      "linkedTitle": "",
+      "linkedError": "",
+      "media": [
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ae/aec7c675275ce4fa28eb6de33b0db7cc8f372af8b6f767c93fd79c8a37146831.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/53/536266ff95bff25d5eaddd6121ab60bfd171ad0012bc57a381b235e147a7972e.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9c/9c8f534e88ca28cc712aa346485ced915932d4c314f4f24131fe86ba872423ee.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/74/748d950fd6d1ddae776352f94e9af0a56e1087b6636ddc32ed0015bc89ceae01.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/99/99ec5be37515e7d5aa02ad674f84244ebfa922a409c11253b13ca046fedb1007.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9a/9a64b0399342101bc540a81a59742349ad3545d0d376616d37a87e615946e693.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b4/b41922ad6f69db4e437a9dd2d90292b64d2174dc247f6718f79378a9943553c3.png",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0b/0bc70498652ea17a5e2b52ab7774ac5b65e929dd594b9e82a68e03c95821d32f.png"
+      ],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "用飞书维护内容，用 GitHub 自动更新，用 Cloudflare 发布网站。以 mycys.top（https://mycys.top） 为例，带你从零搭建一个可长期维护的个人网站。"
+        },
+        {
+          "type": "image",
+          "token": "DkT6b4aiLoVuQExPkczc16TenFg",
+          "width": 442.0,
+          "height": 197.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/74/748d950fd6d1ddae776352f94e9af0a56e1087b6636ddc32ed0015bc89ceae01.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 1：格物研习社首页。网站可以同时呈现个人品牌、导航和视觉风格。"
+        },
+        {
+          "type": "paragraph",
+          "text": "很多人想做个人网站，往往卡在第一步：不会代码、没有服务器、不懂数据库，也不想每修改一段文字就找开发者。"
+        },
+        {
+          "type": "paragraph",
+          "text": "但如果你的日常内容本来就写在飞书里，事情可以简单很多。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这篇文章会带你搭一套「飞书内容后台 + GitHub 自动化 + Cloudflare 网站发布」的系统。完成后，你可以继续在飞书里维护项目、文章、图片和附件；网站则通过同步程序自动更新。"
+        },
+        {
+          "type": "paragraph",
+          "text": "本文以我的个人网站 mycys.top（https://mycys.top） 为例。它不是一个一次性设计稿，而是一套持续生长的内容系统：主页展示个人品牌，项目页按类别管理案例，知行栏目持续发布文章和工具方法。"
+        },
+        {
+          "type": "image",
+          "token": "HtzsbheX2oVTpJxZScucEHg8nIe",
+          "width": 442.0,
+          "height": 197.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/99/99ec5be37515e7d5aa02ad674f84244ebfa922a409c11253b13ca046fedb1007.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 2：项目库按分类筛选，卡片自动展示封面、摘要、标签和年份。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "先看结果：这套系统最终能做什么"
+        },
+        {
+          "type": "paragraph",
+          "text": "建好之后，你会得到一个属于自己的网址，例如 yourname.com。访客看到的是独立网站；你自己维护内容时，主要还是在飞书工作。"
+        },
+        {
+          "type": "paragraph",
+          "text": "它适合以下场景："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "个人作品集：设计、策展、摄影、建筑、咨询、项目案例。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "文章站：行业观察、方法论、项目复盘、知识笔记。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "个人品牌主页：介绍自己、展示能力、沉淀案例、留下联系方式。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "小型内容资料库：把长期积累的内容整理成可检索的网站。"
+        },
+        {
+          "type": "paragraph",
+          "text": "如果你需要的是商城、会员支付、实时聊天或复杂的多人业务系统，这不是最适合的方案。但对于内容展示和个人品牌，它足够稳定，也更容易长期维护。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "一、先理解四个工具各自负责什么"
+        },
+        {
+          "type": "image",
+          "token": "FcvwbJkMUoaZiyxWiyqcbqLonsb",
+          "width": 1823.0,
+          "height": 906.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ae/aec7c675275ce4fa28eb6de33b0db7cc8f372af8b6f767c93fd79c8a37146831.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "流程图：从飞书内容后台到个人网站上线的完整链路。"
+        },
+        {
+          "type": "paragraph",
+          "text": "先不要急着注册账号。把下面这张分工表看懂，后面每一步都会轻松很多。"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "工具",
+              "它负责什么",
+              "你平时会不会经常用"
+            ],
+            [
+              "飞书",
+              "写文章、管理项目、上传图片、维护标签与排序",
+              "会，这是你的内容后台"
+            ],
+            [
+              "GitHub",
+              "保存网站代码、保存同步记录、运行自动化",
+              "偶尔，主要是查看状态"
+            ],
+            [
+              "Cloudflare Pages",
+              "把网站部署到公网",
+              "很少，只在首次发布时配置"
+            ],
+            [
+              "Cloudflare R2",
+              "长期保存网站图片、附件和视频",
+              "很少，由同步程序自动上传"
+            ],
+            [
+              "域名",
+              "让访客通过自己的网址访问网站",
+              "首次绑定时操作"
+            ]
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "二、开始前要准备什么"
+        },
+        {
+          "type": "paragraph",
+          "text": "第一次搭建前，准备好下面四个账号即可。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "飞书账号：用于创建多维表格、云文档和自建应用。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "GitHub 账号：用于保存网站代码与运行自动化。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "Cloudflare 账号：用于部署网站和保存媒体文件。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "一个域名：可选，但建议准备。没有域名也能先用 pages.dev 测试地址。"
+        },
+        {
+          "type": "paragraph",
+          "text": "此外，你需要准备一批真实内容：至少 3 个项目或 3 篇文章、每个项目一张封面图、一个头像或品牌标识。先用真实内容测试，比用一堆“示例项目”更容易发现问题。"
+        },
+        {
+          "type": "paragraph",
+          "text": "提醒：不需要先买服务器。这个方案是静态网站，不需要自己维护 Nginx、数据库或操作系统。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "三、第一步：在飞书设计内容后台"
+        },
+        {
+          "type": "image",
+          "token": "MPsSbJ1dFo7Bmhxe6JTcijB9nVd",
+          "width": 1737.0,
+          "height": 906.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/53/536266ff95bff25d5eaddd6121ab60bfd171ad0012bc57a381b235e147a7972e.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 4：内容从飞书文档、项目卡片和媒体素材汇集成内容后台，再流向个人网站。AI 生成示意图。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "1. 先建一个“项目表”"
+        },
+        {
+          "type": "paragraph",
+          "text": "每一行代表一个项目或作品。第一次不要追求字段很全，下面这 10 个字段足够开始。"
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "字段名",
+              "字段类型建议",
+              "作用"
+            ],
+            [
+              "项目标题",
+              "文本",
+              "页面标题"
+            ],
+            [
+              "分类",
+              "单选",
+              "用于项目筛选，例如策展、品牌空间、文博展陈"
+            ],
+            [
+              "简介",
+              "长文本",
+              "首页项目卡片摘要"
+            ],
+            [
+              "年份",
+              "文本或数字",
+              "用于展示和筛选"
+            ],
+            [
+              "标签",
+              "多选",
+              "形成项目专题"
+            ],
+            [
+              "封面",
+              "附件",
+              "项目卡片主图"
+            ],
+            [
+              "图片",
+              "附件",
+              "项目详情页图库"
+            ],
+            [
+              "视频链接",
+              "URL",
+              "可填写 B 站或视频地址"
+            ],
+            [
+              "是否精选",
+              "复选框",
+              "决定是否展示在首页重点位置"
+            ],
+            [
+              "排序",
+              "数字",
+              "控制显示先后"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "飞书表格要解决的是“内容可管理”，不是“把网页排版做出来”。网页怎样展示，由后面的前端模板决定。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "2. 再建一个“文章表”"
+        },
+        {
+          "type": "paragraph",
+          "text": "文章表负责管理文章入口，不建议把全文塞进一个多维表格单元格。"
+        },
+        {
+          "type": "paragraph",
+          "text": "建议字段是：文章标题、摘要、分类、封面、发布日期、排序，以及 正文飞书文档链接。"
+        },
+        {
+          "type": "paragraph",
+          "text": "真正的长文继续写在飞书云文档中。这样你可以正常使用标题、图片、列表、表格和附件，写作体验不需要迁就网站后台。"
+        },
+        {
+          "type": "image",
+          "token": "B8zjbc47CoJ9a2xWupec5D5un1e",
+          "width": 442.0,
+          "height": 210.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9c/9c8f534e88ca28cc712aa346485ced915932d4c314f4f24131fe86ba872423ee.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 3：知行栏目将持续更新的文章与工具方法集中展示。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "3. 云文档要按“网页可读”方式写"
+        },
+        {
+          "type": "paragraph",
+          "text": "为了让同步效果更稳定，建议每篇云文档遵守三个小习惯："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "用飞书的“标题 1、标题 2”样式写小标题，不要只靠加粗和放大字号。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "图片下方写一行图注，方便网页保留图片说明。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "宽表格要控制列数，手机端阅读时会被放进可左右滑动的容器。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这样，文档同步到网站后，层级、图片和表格会更清晰。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "四、第二步：创建飞书自建应用，并完成授权"
+        },
+        {
+          "type": "image",
+          "token": "L6SWbK8GIojwvFxrjGWcDLCQnQf",
+          "width": 1774.0,
+          "height": 887.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/0b/0bc70498652ea17a5e2b52ab7774ac5b65e929dd594b9e82a68e03c95821d32f.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 5：自建应用、机器人、维护群和共享文件构成连续的权限链路。AI 生成示意图。"
+        },
+        {
+          "type": "paragraph",
+          "text": "网站要自动读取飞书内容，需要创建一个飞书自建应用。你可以把它理解成同步程序的“工作证”。"
+        },
+        {
+          "type": "paragraph",
+          "text": "在飞书开放平台中创建应用后，需要申请读取多维表格、云文档和附件所需的 API 权限。具体权限名称会随飞书开放平台更新，以当前官方文档为准。"
+        },
+        {
+          "type": "paragraph",
+          "text": "新手最容易遇到的情况是：已经拿到了 App ID 和 App Secret，但同步程序仍然读不到文档。"
+        },
+        {
+          "type": "paragraph",
+          "text": "通常是少了下面某一层授权："
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "自建应用申请了所需 API 权限。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "应用启用了机器人能力。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "把机器人加入一个内容维护群。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "把目标文件夹、多维表格和云文档共享给这个群。"
+        },
+        {
+          "type": "paragraph",
+          "text": "可以把它理解成：有工作证还不够，还要被拉进办公室，并且办公室里的资料柜要对你开放。"
+        },
+        {
+          "type": "paragraph",
+          "text": "安全规则一定要记住： App Secret 只能保存到本机安全配置、GitHub Secrets 或 Cloudflare Secrets。不要把它写进网页代码、飞书公开文档、截图、文章或 GitHub 仓库。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "五、第三步：搭建网站模板，不要把内容写死在页面里"
+        },
+        {
+          "type": "paragraph",
+          "text": "这一步可以自己开发，也可以让开发者或 AI 编程工具完成。"
+        },
+        {
+          "type": "paragraph",
+          "text": "无论使用哪种方式，都要坚持一个原则：页面结构和内容数据分开。"
+        },
+        {
+          "type": "paragraph",
+          "text": "正确的关系是："
+        },
+        {
+          "type": "paragraph",
+          "text": "网站模板：负责颜色、版式、项目卡片和文章详情页"
+        },
+        {
+          "type": "paragraph",
+          "text": "数据文件：负责标题、摘要、分类、图片、视频和正文"
+        },
+        {
+          "type": "paragraph",
+          "text": "同步程序会把飞书内容生成类似 api/portfolio.json、api/articles.json 的数据文件，网页读取这些数据后自动渲染项目和文章。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这样以后新增第 20 个、第 100 个项目时，不需要再改网页代码，只需在飞书新增一条内容。"
+        },
+        {
+          "type": "paragraph",
+          "text": "建议至少准备这些页面："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "首页：个人介绍、精选项目、联系方式。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "项目列表页：分类筛选与项目卡片。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "项目详情页：图文介绍、标签、视频或附件。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "文章列表页：文章封面、摘要、分类。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "文章详情页：完整解析飞书云文档。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "六、第四步：把飞书图片“搬家”到 R2"
+        },
+        {
+          "type": "image",
+          "token": "LpY5bcG59o9bYsxZ62hcnWjpnob",
+          "width": 1693.0,
+          "height": 929.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/9a/9a64b0399342101bc540a81a59742349ad3545d0d376616d37a87e615946e693.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 6：将飞书临时附件经由同步程序迁移到长期媒体仓库，网站读取稳定地址。AI 生成示意图。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这是整套流程里最容易被忽略、却最影响长期稳定性的步骤。"
+        },
+        {
+          "type": "paragraph",
+          "text": "飞书附件的下载地址通常会过期。如果网页直接使用飞书临时图片链接，常见结果就是：文章还在，几天后图片变成空白。"
+        },
+        {
+          "type": "paragraph",
+          "text": "R2 是对象存储，可以理解为专门给网站放图片、PDF 和视频文件的仓库。同步时应记录文件哈希或更新时间，下一次只上传新增或变化的文件，而不是每次全部重复上传。"
+        },
+        {
+          "type": "paragraph",
+          "text": "首次测试时可以使用 R2 提供的开发地址；正式网站建议为媒体绑定自己的子域名，例如 media.yourname.com。Cloudflare 官方也明确说明，r2.dev 属于开发用途，生产环境更适合使用自定义域名。查看 R2 官方说明（https://developers.cloudflare.com/r2/buckets/public-buckets/）"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "七、第五步：把代码和密钥放到正确的位置"
+        },
+        {
+          "type": "paragraph",
+          "text": "把网站代码放进 GitHub 仓库后，需要设置自动化流程。"
+        },
+        {
+          "type": "paragraph",
+          "text": "这里有两类内容，必须严格分开："
+        },
+        {
+          "type": "table",
+          "rows": [
+            [
+              "可以提交到 GitHub 的内容",
+              "绝不能提交到 GitHub 的内容"
+            ],
+            [
+              "网页代码、同步脚本、字段说明、公开示例配置",
+              "飞书 App Secret、R2 密钥、GitHub Token、真实用户数据"
+            ]
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "敏感信息应该放在 GitHub 仓库的 Secrets 中。常见的变量名可以这样设计："
+        },
+        {
+          "type": "paragraph",
+          "text": "FEISHU_APP_ID"
+        },
+        {
+          "type": "paragraph",
+          "text": "FEISHU_APP_SECRET"
+        },
+        {
+          "type": "paragraph",
+          "text": "R2_ACCESS_KEY_ID"
+        },
+        {
+          "type": "paragraph",
+          "text": "R2_SECRET_ACCESS_KEY"
+        },
+        {
+          "type": "paragraph",
+          "text": "R2_BUCKET"
+        },
+        {
+          "type": "paragraph",
+          "text": "R2_ENDPOINT"
+        },
+        {
+          "type": "paragraph",
+          "text": "这里展示的是变量名，不是密钥内容。真实值只在 GitHub 的 Secrets 设置页填写一次，之后同步脚本会自动读取。"
+        },
+        {
+          "type": "paragraph",
+          "text": "自动化任务建议先做“手动触发”：你在 GitHub Actions 页面点击一次运行，确认数据、图片和网站都正确后，再考虑定时同步或按需同步。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "八、第六步：用 Cloudflare Pages 发布网站"
+        },
+        {
+          "type": "image",
+          "token": "FyyPbZAehoO8SXxo7XScqfz2nGd",
+          "width": 1693.0,
+          "height": 929.0,
+          "align": "2",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b4/b41922ad6f69db4e437a9dd2d90292b64d2174dc247f6718f79378a9943553c3.png"
+        },
+        {
+          "type": "paragraph",
+          "text": "图 7：代码与内容更新经过自动化构建、云端部署和域名解析，最终变成可访问的网站。AI 生成示意图。"
+        },
+        {
+          "type": "paragraph",
+          "text": "打开 Cloudflare 后台，进入 Workers & Pages，选择创建 Pages 项目，然后连接 GitHub 仓库。"
+        },
+        {
+          "type": "paragraph",
+          "text": "第一次需要设置三项："
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "选择 GitHub 中的网站仓库。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "填写构建命令和发布目录；纯 HTML 网站通常不需要构建命令。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "点击部署，获得一个 xxx.pages.dev 的测试网址。"
+        },
+        {
+          "type": "paragraph",
+          "text": "之后的逻辑会很简单：GitHub 仓库有新提交，Cloudflare Pages 就会自动构建和部署。你还可以在 Cloudflare 后台查看当前生产版本对应哪个提交。 查看 Cloudflare Pages 官方文档（https://developers.cloudflare.com/pages/get-started/git-integration/）"
+        },
+        {
+          "type": "paragraph",
+          "text": "先使用 pages.dev 地址测试，等项目、文章、图片都正常后，再绑定自己的域名。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "九、第七步：绑定域名和 HTTPS"
+        },
+        {
+          "type": "paragraph",
+          "text": "把域名添加到 Cloudflare 后，按提示修改域名服务商的 DNS 服务器，或按你的域名管理方式添加相应解析记录。"
+        },
+        {
+          "type": "paragraph",
+          "text": "然后在 Cloudflare Pages 项目中添加自定义域名，例如："
+        },
+        {
+          "type": "paragraph",
+          "text": "yourname.com"
+        },
+        {
+          "type": "paragraph",
+          "text": "www.yourname.com"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cloudflare 会自动处理 HTTPS 证书。等待 DNS 生效后，访问你的域名，确认浏览器地址栏显示安全锁标志即可。"
+        },
+        {
+          "type": "paragraph",
+          "text": "没有域名也完全可以先完成前六步。等网站内容和视觉稳定后再购买域名，通常更省心。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "十、上线前，必须做一次完整检查"
+        },
+        {
+          "type": "paragraph",
+          "text": "不要只看自动化显示“成功”。请逐项打开实际网站检查："
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "首页、项目页和文章页是否都能打开。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "手机端项目卡片有没有错位。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "飞书文章的标题、图片、列表、表格、附件是否正确解析。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "图片是否来自 R2 或自己的媒体域名，而不是飞书临时下载链接。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "项目没有封面或没有视频时，页面是否能正常降级显示。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "新增一篇飞书文章后，手动跑一次同步，网站是否真的出现新内容。"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "网站源码、公开 JSON 和浏览器控制台中是否没有密钥、本机路径或敏感信息。"
+        },
+        {
+          "type": "paragraph",
+          "text": "建议第一次上线时邀请一位朋友用手机打开。他能否在 10 秒内看懂“你是谁、做什么、有什么作品”，比你自己反复看电脑页面更有参考价值。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "十一、以后怎么更新：你只需要维护飞书"
+        },
+        {
+          "type": "paragraph",
+          "text": "整套系统搭好后，日常操作应该回归简单。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "新增一个项目"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "在飞书项目表新建一行。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "填标题、分类、简介、封面和图片。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "需要展示在首页就勾选“是否精选”。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "运行同步任务。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "打开网站确认更新。"
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "新增一篇文章"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "在飞书云文档写文章。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "在文章表填标题、摘要、封面和正文文档链接。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "运行同步任务。"
+        },
+        {
+          "type": "list_item",
+          "style": "ordered",
+          "text": "在网站文章列表中检查封面和正文。"
+        },
+        {
+          "type": "paragraph",
+          "text": "你不需要每次为了改一段文字而找代码文件，也不用手动把同一篇文章复制到多个网页里。"
+        },
+        {
+          "type": "heading",
+          "level": 1,
+          "text": "结语：把网站做成长期资产，而不是一次性作品"
+        },
+        {
+          "type": "paragraph",
+          "text": "个人网站最重要的不是“第一次上线多酷”，而是以后你愿不愿意持续更新。"
+        },
+        {
+          "type": "paragraph",
+          "text": "飞书让内容维护足够轻；GitHub 让每次变化可追溯；Cloudflare 让网站和媒体稳定运行。三者组合起来，才让个人网站从一次性展示页，变成可以不断积累的内容资产。"
+        },
+        {
+          "type": "paragraph",
+          "text": "从今天开始，你不必先学会所有代码。先整理出 3 个项目、3 篇文章，搭建第一版内容后台，然后让网站随着你的工作一起慢慢长出来。"
+        },
+        {
+          "type": "paragraph",
+          "text": "文中案例与参考"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "运行案例：mycys.top（https://mycys.top）"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "通用开发 Skill：feishu-personal-website-development（https://github.com/cuiyisan-debug/feishu-personal-website-development）"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "Cloudflare Pages：Git 集成官方文档（https://developers.cloudflare.com/pages/get-started/git-integration/）"
+        },
+        {
+          "type": "list_item",
+          "style": "bullet",
+          "text": "Cloudflare R2：公共媒体官方文档（https://developers.cloudflare.com/r2/buckets/public-buckets/）"
+        },
+        {
+          "type": "paragraph",
+          "text": "发布提示： 本文中的 3 张截图为 mycys.top 的公开页面结构示意。发布时请保留图注；不要在任何截图或正文中展示真实 App Secret、R2 密钥、GitHub Token 或飞书后台数据。"
+        }
+      ],
+      "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1d/1d15ef13d0df63064912af2a275b10236a64c379f739c8dcbd41b31441e0c1d0.png"
     }
   ]
 }
