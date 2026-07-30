@@ -278,12 +278,29 @@ a {
 
 .nav-toggle {
   display: none;
+  position: relative;
   width: 38px;
   height: 38px;
   border: 0;
   background: transparent;
   color: var(--text);
   cursor: pointer;
+}
+
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+  opacity: 0;
+  transform-origin: center;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .nav-toggle span {
@@ -305,6 +322,20 @@ a {
 
 .site-header.nav-open .nav-toggle span:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
+}
+
+.site-header.nav-open .nav-toggle span {
+  opacity: 0;
+}
+
+.site-header.nav-open .nav-toggle::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.site-header.nav-open .nav-toggle::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .brand {
