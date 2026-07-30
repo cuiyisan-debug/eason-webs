@@ -1190,6 +1190,10 @@ h1 {
   text-align: left;
 }
 
+.article-table td {
+  font-weight: 400;
+}
+
 .article-table th {
   color: var(--text);
   font-weight: 700;
