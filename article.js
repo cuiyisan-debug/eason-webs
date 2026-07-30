@@ -56,22 +56,12 @@ function isVideo(url) {
   return /\.(mp4|webm|ogg|mov)(\?|$)/i.test(String(url || ""));
 }
 
-function positiveNumber(value) {
-  const number = Number(value);
-  return Number.isFinite(number) && number > 0 ? number : 0;
-}
-
 function articleImageFrameAttributes(block) {
-  const width = positiveNumber(block?.width);
-  const height = positiveNumber(block?.height);
-  if (!width || !height) {
-    return { className: "article-image-button", style: "" };
-  }
-  const maxWidth = Math.min(Math.round(width), 1280);
-  const ratio = `${width} / ${height}`;
+  // Feishu's editor dimensions can differ from the source file's display ratio.
+  // Preserve the image itself instead of defining a cropped frame from those values.
   return {
-    className: "article-image-button article-image-button--framed",
-    style: ` style="--article-image-ratio:${escapeHtml(ratio)};--article-image-max-width:${maxWidth}px;"`,
+    className: "article-image-button",
+    style: "",
   };
 }
 

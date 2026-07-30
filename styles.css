@@ -1134,9 +1134,9 @@ h1 {
 }
 
 .article-image-button--framed {
-  width: min(100%, var(--article-image-max-width, 100%));
-  aspect-ratio: var(--article-image-ratio, auto);
-  overflow: hidden;
+  width: 100%;
+  aspect-ratio: auto;
+  overflow: visible;
 }
 
 .article-inline-media img {
@@ -1148,8 +1148,8 @@ h1 {
 }
 
 .article-image-button--framed img {
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .article-image-button:hover img {
@@ -1218,12 +1218,6 @@ h1 {
 
 .article-list li + li {
   margin-top: 6px;
-}
-
-.article-table tr:first-child td {
-  color: var(--text);
-  font-weight: 700;
-  background: color-mix(in srgb, var(--panel-2) 76%, transparent);
 }
 
 .article-source-embed {
