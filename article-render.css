@@ -1,0 +1,18 @@
+/* Keep Feishu article media consistent, including visitors with an older main stylesheet cached. */
+.article-inline-media,
+.article-inline-media .article-image-button,
+.article-inline-media .article-image-button--framed {
+  width: 100% !important;
+  max-width: none !important;
+  aspect-ratio: auto !important;
+  overflow: visible !important;
+}
+
+.article-inline-media img,
+.article-inline-media .article-image-button--framed img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
