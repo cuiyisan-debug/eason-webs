@@ -9,11 +9,11 @@ const fallbackModules = [
 function renderModules(modules) {
   const index = document.querySelector("#module-index");
   const list = document.querySelector("#module-list");
-  index.innerHTML = modules.map((item) => `<a href="#${item.slug}"><strong>${item.number}</strong>${item.title}</a>`).join("");
+  index.innerHTML = modules.map((item) => `<a href="./${item.slug}.html"><strong>${item.number}</strong>${item.title}</a>`).join("");
   list.innerHTML = modules.map((item) => `
     <article class="module" id="${item.slug}">
       <div class="module-number">${item.number}</div>
-      <h3>${item.title}</h3>
+      <h3><a href="./${item.slug}.html">${item.title}</a></h3>
       <p>${item.description}</p>
       <span class="module-tag">${item.tag}</span>
     </article>`).join("");
