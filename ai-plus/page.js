@@ -15,14 +15,8 @@ async function getModules() {
   } catch { return defaultModules; }
 }
 
-function renderTopNav(modules) {
-  const target = document.querySelector(".top-nav");
-  if (target) target.innerHTML = modules.map((item) => `<a href="./${item.slug}.html">${item.title}</a>`).join("");
-}
-
 async function renderPage() {
   const modules = await getModules();
-  renderTopNav(modules);
   const slug = document.body.dataset.section;
   const item = modules.find((entry) => entry.slug === slug) || modules[0];
   document.title = `${item.title}｜AI+ 展览设计训练营`;
