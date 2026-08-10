@@ -19,6 +19,8 @@ async function renderPage() {
   const modules = await getModules();
   const slug = document.body.dataset.section;
   const item = modules.find((entry) => entry.slug === slug) || modules[0];
+  const rail = document.querySelector("[data-section-rail]");
+  if (rail) rail.innerHTML = modules.map((entry) => `<a href="./${entry.slug}.html"${entry.slug === slug ? ' aria-current="page"' : ""}><strong>${entry.number}</strong><span>${entry.title}</span></a>`).join("");
   document.title = `${item.title}｜AI+ 展览设计训练营`;
   document.querySelector("[data-number]").textContent = item.number;
   document.querySelector("[data-title]").textContent = item.title;
