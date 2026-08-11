@@ -61,3 +61,28 @@
   });
   resetReveal(chapters[active]);
 })();
+
+(() => {
+  const root = document.querySelector(".code-disclaimer");
+  if (!root) return;
+
+  const reveal = () => {
+    root.classList.remove("is-visible");
+    void root.offsetWidth;
+    root.classList.add("is-visible");
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    reveal();
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) reveal();
+      else root.classList.remove("is-visible");
+    });
+  }, { threshold: 0.55 });
+
+  observer.observe(root);
+})();

@@ -21,13 +21,19 @@ async function renderPage() {
   const item = modules.find((entry) => entry.slug === slug) || modules[0];
   const rail = document.querySelector("[data-section-rail]");
   if (rail) rail.innerHTML = modules.map((entry) => `<a href="./${entry.slug}.html"${entry.slug === slug ? ' aria-current="page"' : ""}><strong>${entry.number}</strong><span>${entry.title}</span></a>`).join("");
-  document.title = `${item.title}｜AI+ 展览设计训练营`;
-  document.querySelector("[data-number]").textContent = item.number;
-  document.querySelector("[data-title]").textContent = item.title;
-  document.querySelector("[data-tag]").textContent = item.tag;
-  document.querySelector("[data-description]").textContent = item.description;
-  document.querySelector("[data-question]").textContent = item.question;
-  document.querySelector("[data-points]").innerHTML = (item.points || []).map((point, index) => `<li><b>0${index + 1}</b>${point}</li>`).join("");
+  if (!document.title) document.title = `${item.title}｜AI+ 展览设计训练营`;
+  const number = document.querySelector("[data-number]");
+  const title = document.querySelector("[data-title]");
+  const tag = document.querySelector("[data-tag]");
+  const description = document.querySelector("[data-description]");
+  const question = document.querySelector("[data-question]");
+  const points = document.querySelector("[data-points]");
+  if (number) number.textContent = item.number;
+  if (title) title.textContent = item.title;
+  if (tag) tag.textContent = item.tag;
+  if (description) description.textContent = item.description;
+  if (question) question.textContent = item.question;
+  if (points) points.innerHTML = (item.points || []).map((point, index) => `<li><b>0${index + 1}</b>${point}</li>`).join("");
 }
 
 renderPage();

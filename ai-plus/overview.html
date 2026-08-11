@@ -1,1 +1,223 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="./styles.css?v=ai-archive-02" /></head><body data-section="overview" class="subpage"><header class="ai-site-header" data-ai-shell></header><main class="section-page"><aside class="section-rail"><p>AI+ ARCHIVE<br />TRAINING INDEX</p><nav data-section-rail aria-label="专题索引"></nav><small>GEWU LAB<br />EXHIBITION DESIGN</small></aside><div class="section-content"><p class="section-kicker" data-tag></p><div class="section-hero"><b data-number></b><h1 data-title></h1><p data-description></p></div><section class="section-question"><small>本页问题 / QUESTION</small><h2 data-question></h2></section><section class="section-points"><p>本页要点 / NOTES</p><ol data-points></ol></section><a class="next-home" href="./home.html">← 返回 AI+ 首页</a></div></main><script src="./shell.js?v=ai-menu-03"></script><script src="./page.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 概述｜AI++</title>
+    <meta
+      name="description"
+      content="AI++：梳理 AI 发展脉络，讲清大模型、Token、Skill 等核心名词，并建立对话、图像、视频、办公等 AI 工具分类认知体系。"
+    />
+    <link rel="stylesheet" href="./styles.css?v=ai-overview-module-01" />
+  </head>
+  <body data-section="overview" class="subpage">
+    <header class="ai-site-header" data-ai-shell></header>
+    <main class="section-page">
+      <aside class="section-rail">
+        <p>AI+ ARCHIVE<br />TRAINING INDEX</p>
+        <nav data-section-rail aria-label="专题索引"></nav>
+        <small>GEWU LAB<br />EXHIBITION DESIGN</small>
+      </aside>
+      <div class="section-content">
+        <div id="ai-plus-content" class="ai-plus-content">
+          <section class="ai-plus-module-hero" id="top">
+            <div class="ai-plus-module-copy">
+              <p class="ai-plus-module-kicker">AI++ 基础介绍</p>
+              <h1>把 AI 从热词讲成一张可用的地图</h1>
+              <p>
+                这页用于快速建立 AI 基础认知：先看 AI 为什么从“会算”走到“会对话、会创作、会调用工具”，再把大模型、Token、上下文、Skill、Agent
+                等名词讲清楚，最后按对话、图像、视频、办公、代码和自动化建立工具分类体系。
+              </p>
+              <div class="ai-plus-module-actions">
+                <a class="ai-plus-module-button" href="#timeline">开始梳理</a>
+                <a class="ai-plus-module-button secondary" href="#tools">看工具分类</a>
+              </div>
+            </div>
+            <div class="ai-plus-module-lab" aria-label="AI 信息流可视化">
+              <canvas id="ai-field"></canvas>
+              <div class="ai-plus-module-caption">
+                <span>数据进入模型，被切成 Token 与向量表示。</span>
+                <span>模型在上下文窗口里预测、推理、组合答案。</span>
+                <span>Skill 与工具把能力接到真实工作流程。</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="map">
+            <div class="ai-plus-module-head">
+              <h2>先建立一张总地图</h2>
+              <p>
+                今天常说的 AI，不只是一个聊天框。更准确地说，它是一套由模型、数据、界面、工具调用和工作流组成的能力系统。理解它，先分清“脑”“记忆”“手”和“流程”。
+              </p>
+            </div>
+            <div class="ai-plus-module-map">
+              <div class="ai-plus-module-panel ai-plus-module-stack">
+                <div><strong>模型</strong><p>负责理解、生成和推理。大模型像一个通用能力底座，本身不等于完整产品。</p></div>
+                <div><strong>上下文</strong><p>负责把当前任务、资料、规则和对话历史交给模型。上下文越清楚，输出越稳定。</p></div>
+                <div><strong>工具</strong><p>负责执行动作，例如搜索、读文件、写代码、生成图片、操作表格、调用外部 API。</p></div>
+                <div><strong>Skill</strong><p>负责沉淀可复用方法，把提示词、规范、素材、脚本和工具流程封装成“可重复使用的工作能力”。</p></div>
+              </div>
+              <div class="ai-plus-module-panel ai-plus-module-pipeline">
+                <article><span>Input</span><h3>问题与资料</h3><p>用户给出目标、约束、素材和口径，决定模型要“往哪里想”。</p></article>
+                <article><span>Token</span><h3>拆分与编码</h3><p>文字会被拆成模型可处理的片段。Token 数影响上下文容量、速度和费用。</p></article>
+                <article><span>Model</span><h3>预测与推理</h3><p>模型根据训练中学到的规律与当前上下文，逐步生成下一个最合适的内容。</p></article>
+                <article><span>Workflow</span><h3>交付与迭代</h3><p>把输出变成文档、图片、视频、代码或自动化动作，并通过反馈继续修正。</p></article>
+              </div>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="timeline">
+            <div class="ai-plus-module-head">
+              <h2>AI 发展脉络：四次关键转向</h2>
+              <p>AI 的主线不是“突然冒出来一个聊天机器人”，而是从规则系统，到统计学习，到深度学习，再到大模型与多模态工作流的连续演进。</p>
+            </div>
+            <div class="ai-plus-module-timeline">
+              <article><time>1950s</time><div><h3>概念诞生：让机器表现出智能</h3><p>1956 年达特茅斯暑期研究项目让“人工智能”成为一个正式研究方向。早期 AI 更相信符号、逻辑、规则和搜索。</p></div></article>
+              <article><time>1980s</time><div><h3>从规则到学习：机器开始从数据中归纳</h3><p>专家系统证明规则能解决窄领域问题，也暴露维护成本。神经网络与反向传播重新受到关注，AI 的重心开始转向“从样本中学习”。</p></div></article>
+              <article><time>2012</time><div><h3>深度学习爆发：数据、算力、算法汇合</h3><p>AlexNet 在大规模图像识别上取得突破，让 GPU 训练深度神经网络成为主流路径，视觉、语音、翻译等任务进入快速进步期。</p></div></article>
+              <article><time>2017</time><div><h3>Transformer：注意力机制成为通用底座</h3><p>Transformer 用注意力机制替代传统循环结构，更适合并行训练与扩展，随后成为多数大语言模型和多模态模型的重要架构基础。</p></div></article>
+              <article><time>2020-2022</time><div><h3>生成式 AI 普及：会写、会画、会对话</h3><p>GPT-3 展示大规模语言模型的少样本能力，扩散模型推动高质量图像生成，ChatGPT 让“自然语言作为操作界面”进入大众视野。</p></div></article>
+              <article><time>2023-2026</time><div><h3>从模型到工作流：多模态、工具调用、智能体</h3><p>AI 不再只输出文本，而是能读图、生成图像和视频、调用工具、处理文件、辅助办公与编程。竞争焦点从“谁更会回答”扩展到“谁更能完成任务”。</p></div></article>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="terms">
+            <div class="ai-plus-module-head">
+              <h2>核心名词：用人话讲清楚</h2>
+              <p>这些词经常混在一起。讲解时建议按“模型怎么读、怎么想、怎么动手、怎么沉淀”这条线说，听众最容易接住。</p>
+            </div>
+            <div class="ai-plus-module-glossary">
+              <article><h3>大模型 LLM</h3><p>用海量文本、代码和多种数据训练出的通用模型。它不是数据库，而是学会了语言、知识和任务模式之间的统计关系。</p><small>模型越强，不代表越懂你的具体场景；场景信息要靠上下文、资料库或工具补进去。</small></article>
+              <article><h3>Token</h3><p>模型处理文本的基本单位，可以是一个字、一个词的一部分、标点或空格。中文通常不能简单按“字数”估算。</p><small>输入和输出都会消耗 Token，长文档、长对话和多轮修改都会占用上下文空间。</small></article>
+              <article><h3>上下文窗口</h3><p>模型一次能“看见”的信息范围，包括系统规则、用户问题、历史对话、文件片段和工具返回结果。</p><small>上下文不是长期记忆。窗口外的信息如果没有被重新放进来，模型就无法可靠使用。</small></article>
+              <article><h3>Prompt</h3><p>不是魔法咒语，而是任务说明。好 Prompt 应该交代目标、角色、输入材料、限制、输出格式和判断标准。</p><small>提示词工程的本质，是把“你脑子里的隐含要求”显性化。</small></article>
+              <article><h3>RAG</h3><p>检索增强生成。先从资料库里找相关内容，再把内容交给模型回答，用来降低胡编和补充专有知识。</p><small>RAG 的上限很依赖资料质量、切分方式、检索准确率和引用校验。</small></article>
+              <article><h3>Embedding</h3><p>把文本、图片等内容转换成向量，让机器能比较“语义距离”。常用于搜索、聚类、推荐和知识库检索。</p><small>Embedding 不是摘要，而是一种方便机器比较相似度的表示方式。</small></article>
+              <article><h3>Fine-tuning</h3><p>在已有模型基础上继续训练，让模型更贴近某种格式、语气或专业任务。</p><small>很多场景先用提示词、资料库、模板和工作流就够了，不必一上来微调。</small></article>
+              <article><h3>Agent</h3><p>能围绕目标拆步骤、调用工具、观察结果并继续推进的 AI 应用形态。它强调“完成任务”，不只是“给答案”。</p><small>Agent 的关键不是人格化，而是计划、工具、状态、权限和边界。</small></article>
+              <article><h3>Skill</h3><p>可复用的工作能力包，通常包含说明、规范、示例、素材、脚本或工具连接。它让 AI 按一套稳定流程做事。</p><small>Skill 是把经验产品化。比如“生成策划 PPT”“整理飞书文章”“压缩图片”都可以做成 Skill。</small></article>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="tools">
+            <div class="ai-plus-module-head">
+              <h2>AI 工具分类认知体系</h2>
+              <p>不要按品牌背工具名，要按“输入是什么、输出是什么、改变了哪段工作流”来分。下面的代表工具会变化，但分类方法能长期复用。</p>
+            </div>
+            <div class="ai-plus-module-filters" aria-label="工具分类筛选">
+              <button class="is-active" type="button" data-filter="all">全部</button>
+              <button type="button" data-filter="talk">对话研究</button>
+              <button type="button" data-filter="image">图像设计</button>
+              <button type="button" data-filter="video">视频音频</button>
+              <button type="button" data-filter="office">办公知识</button>
+              <button type="button" data-filter="code">代码数据</button>
+              <button type="button" data-filter="agent">自动化</button>
+            </div>
+            <div class="ai-plus-module-tools">
+              <article data-kind="talk"><h3>对话与研究 <span>Conversation</span></h3><p>用自然语言完成问答、梳理、翻译、改写、头脑风暴、资料摘要和方案推演。</p><ul><li>代表：ChatGPT、Claude、Gemini、Perplexity 等。</li><li>适合：先把问题想清楚，再形成提纲、观点、清单和判断。</li><li>注意：涉及事实、政策、价格、新闻时要看来源和日期。</li></ul></article>
+              <article data-kind="image"><h3>图像与设计 <span>Image</span></h3><p>从文字、参考图或草图生成视觉方案，也能扩图、改图、抠图、统一风格。</p><ul><li>代表：Midjourney、Adobe Firefly、ChatGPT 图像、Stable Diffusion 生态等。</li><li>适合：概念氛围、视觉提案、封面、海报、分镜参考。</li><li>注意：商用授权、人物肖像、品牌素材和生成痕迹要核对。</li></ul></article>
+              <article data-kind="video"><h3>视频与音频 <span>Video</span></h3><p>生成短视频、分镜预演、口播、配音、音乐、字幕和快速剪辑版本。</p><ul><li>代表：Sora、Veo、Runway、可灵、剪映 AI、ElevenLabs 等。</li><li>适合：创意预演、短视频素材、活动视觉、旁白音频。</li><li>注意：时长、连续性、镜头可控性和版权边界仍要人工把关。</li></ul></article>
+              <article data-kind="office"><h3>办公与知识 <span>Office</span></h3><p>围绕文档、表格、PPT、会议、邮件和知识库，提高组织、总结和交付效率。</p><ul><li>代表：Microsoft 365 Copilot、Google Workspace Gemini、Notion AI、Gamma 等。</li><li>适合：纪要、周报、合同摘要、PPT 初稿、表格分析。</li><li>注意：企业数据权限、引用来源和最终版本责任。</li></ul></article>
+              <article data-kind="code"><h3>代码与数据 <span>Code</span></h3><p>辅助写代码、读仓库、查 Bug、生成脚本、分析数据、搭建小工具和验证结果。</p><ul><li>代表：Codex、Cursor、GitHub Copilot、Claude Code、数据分析助手等。</li><li>适合：把重复劳动自动化，或把想法快速做成可运行原型。</li><li>注意：必须测试，敏感密钥不能交给不可信环境。</li></ul></article>
+              <article data-kind="agent"><h3>智能体与自动化 <span>Agent</span></h3><p>让 AI 按目标拆任务，连接浏览器、文件、日历、数据库、邮件和内部系统执行动作。</p><ul><li>代表：OpenAI Agents SDK、Dify、n8n、Zapier、企业内部 Agent 平台等。</li><li>适合：跨系统流程、客服、线索处理、内容生产流水线。</li><li>注意：权限、审批、日志、回滚和异常处理比模型本身更关键。</li></ul></article>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="playbook">
+            <div class="ai-plus-module-head">
+              <h2>讲解与学习路径</h2>
+              <p>面向初学者，最有效的顺序不是先背模型名，而是先建立判断：一个 AI 工具到底替代了哪一步、增强了哪一步、必须人工审核哪一步。</p>
+            </div>
+            <div class="ai-plus-module-playbook">
+              <article><span>1</span><h3>先问任务</h3><p>我要解决的是搜索、写作、设计、剪辑、办公、代码，还是跨系统执行？任务不同，工具完全不同。</p></article>
+              <article><span>2</span><h3>再看输入</h3><p>输入是文字、图片、音频、视频、表格、网页，还是公司内部资料？输入决定模型和工作流。</p></article>
+              <article><span>3</span><h3>明确输出</h3><p>输出是草稿、成品、决策建议、代码、表格，还是自动执行结果？越接近成品，审核责任越重。</p></article>
+              <article><span>4</span><h3>沉淀 Skill</h3><p>把稳定流程写成模板：目标、资料、步骤、输出格式、检查清单。下一次就不是重新摸索，而是复用能力。</p></article>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </main>
+    <script src="./shell.js?v=ai-menu-05"></script>
+    <script src="./page.js?v=ai-overview-guard-01"></script>
+    <script>
+      (() => {
+        const canvas = document.querySelector("#ai-field");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const colors = ["#e85d2a", "#177e7a", "#f4c95d", "#c84b6b", "#7fb069"];
+        let width = 0;
+        let height = 0;
+        let particles = [];
+
+        function resize() {
+          const rect = canvas.getBoundingClientRect();
+          const ratio = Math.min(window.devicePixelRatio || 1, 2);
+          width = Math.max(1, Math.floor(rect.width * ratio));
+          height = Math.max(1, Math.floor(rect.height * ratio));
+          canvas.width = width;
+          canvas.height = height;
+          particles = Array.from({ length: Math.min(90, Math.floor(rect.width / 8)) }, (_, index) => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * ratio * 0.62,
+            vy: (Math.random() - 0.5) * ratio * 0.62,
+            r: (1.6 + Math.random() * 3.6) * ratio,
+            color: colors[index % colors.length],
+          }));
+        }
+
+        function tick() {
+          ctx.clearRect(0, 0, width, height);
+          ctx.fillStyle = "rgba(16, 21, 19, 0.28)";
+          ctx.fillRect(0, 0, width, height);
+          for (let i = 0; i < particles.length; i += 1) {
+            const a = particles[i];
+            a.x += a.vx;
+            a.y += a.vy;
+            if (a.x < 0 || a.x > width) a.vx *= -1;
+            if (a.y < 0 || a.y > height) a.vy *= -1;
+            for (let j = i + 1; j < particles.length; j += 1) {
+              const b = particles[j];
+              const distance = Math.hypot(a.x - b.x, a.y - b.y);
+              if (distance < width * 0.16) {
+                ctx.globalAlpha = 1 - distance / (width * 0.16);
+                ctx.strokeStyle = "rgba(255,255,255,0.22)";
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(a.x, a.y);
+                ctx.lineTo(b.x, b.y);
+                ctx.stroke();
+              }
+            }
+          }
+          ctx.globalAlpha = 1;
+          particles.forEach((particle) => {
+            ctx.fillStyle = particle.color;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.r, 0, Math.PI * 2);
+            ctx.fill();
+          });
+          requestAnimationFrame(tick);
+        }
+
+        document.querySelectorAll(".ai-plus-module-filters button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const target = button.dataset.filter;
+            document.querySelectorAll(".ai-plus-module-filters button").forEach((node) => {
+              node.classList.toggle("is-active", node === button);
+            });
+            document.querySelectorAll(".ai-plus-module-tools article").forEach((card) => {
+              card.classList.toggle("is-hidden", target !== "all" && card.dataset.kind !== target);
+            });
+          });
+        });
+
+        window.addEventListener("resize", resize);
+        resize();
+        tick();
+      })();
+    </script>
+  </body>
+</html>
