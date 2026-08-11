@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T04:35:19.974043+00:00",
+  "generatedAt": "2026-08-11T03:13:40.631167+00:00",
   "r2Prefix": "feishu-media",
   "r2LocalMediaPrefix": "site-media",
   "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
@@ -11414,6 +11414,16 @@
       "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
       "createdAt": "2026-07-29T04:35:15.683718+00:00",
       "lastSeenAt": "2026-07-29T04:35:15.683730+00:00"
+    },
+    "26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1": {
+      "sha256": "26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1",
+      "size": 4271640,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/26/26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/26/26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-08-11T03:13:40.578231+00:00",
+      "lastSeenAt": "2026-08-11T03:13:40.578253+00:00"
     }
   },
   "localAssets": {
@@ -11496,6 +11506,14 @@
       "r2Key": "site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
       "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
       "updatedAt": "2026-07-21T14:38:13.543384+00:00"
+    },
+    "assets/ai-plus-imitation-game-intro.mp4": {
+      "sha256": "26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1",
+      "size": 4271640,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/26/26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/26/26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1.mp4",
+      "updatedAt": "2026-08-11T03:13:40.578259+00:00"
     }
   },
   "mode": "mirror",
