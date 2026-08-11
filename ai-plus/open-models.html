@@ -1,1 +1,133 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="./styles.css?v=ai-archive-02" /></head><body data-section="open-models" class="subpage"><header class="ai-site-header" data-ai-shell></header><main class="section-page"><aside class="section-rail"><p>AI+ ARCHIVE<br />TRAINING INDEX</p><nav data-section-rail aria-label="专题索引"></nav><small>GEWU LAB<br />EXHIBITION DESIGN</small></aside><div class="section-content"><p class="section-kicker" data-tag></p><div class="section-hero"><b data-number></b><h1 data-title></h1><p data-description></p></div><section class="section-question"><small>本页问题 / QUESTION</small><h2 data-question></h2></section><section class="section-points"><p>本页要点 / NOTES</p><ol data-points></ol></section></div></main><script src="./shell.js?v=ai-menu-03"></script><script src="./page.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>开源模型｜AI++</title>
+    <meta name="description" content="AI++：介绍开源大模型发展迭代、常见开源模型、ComfyUI 与无限画布创作范式。" />
+    <link rel="stylesheet" href="./styles.css?v=ai-subpage-module-02" />
+  </head>
+  <body data-section="open-models" class="subpage">
+    <header class="ai-site-header" data-ai-shell></header>
+    <main class="section-page">
+      <div class="section-content">
+        <div id="open-models-content" class="ai-plus-content">
+          <section class="ai-plus-module-hero" id="top">
+            <div class="ai-plus-module-copy">
+              <p class="ai-plus-module-kicker">OPEN SOURCE / COMFYUI</p>
+              <h1>模型不只是下载，更是创作基础设施</h1>
+              <p>从开源权重、节点工作流到在线无限画布，开源模型真正改变的是“怎么组织创作”。这页不追求模型名单，而是帮助你围绕 ComfyUI 做出可复用、可迭代的选型。</p>
+              <div class="ai-plus-module-actions">
+                <a class="ai-plus-module-button" href="#evolution">发展迭代</a>
+                <a class="ai-plus-module-button secondary" href="#canvas">无限画布</a>
+              </div>
+            </div>
+            <div class="ai-plus-module-lab ai-plus-module-lab--models" aria-label="开源模型工作流示意">
+              <div class="ai-plus-module-caption">
+                <span>模型负责生成能力。</span>
+                <span>节点负责组合与控制。</span>
+                <span>画布负责长期迭代与复用。</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="evolution">
+            <div class="ai-plus-module-head">
+              <h2>开源大模型发展迭代</h2>
+              <p>理解迭代重点，比背版本号更重要：模型从“能生成”走向“可控制、可组合、可部署”。</p>
+            </div>
+            <div class="ai-plus-module-pipeline">
+              <article><span>01 / 基础能力</span><h3>开放权重</h3><p>模型权重和推理代码可获得，个人可以下载、测试和部署，硬件门槛开始下降。</p></article>
+              <article><span>02 / 工作流化</span><h3>节点组合</h3><p>ComfyUI 把采样器、模型、LoRA、ControlNet、放大与输出拆成可连接节点。</p></article>
+              <article><span>03 / 多模态化</span><h3>图像与视频</h3><p>文本、图像、视频、音频和修复模型进入同一套工作流，创作开始跨媒介流动。</p></article>
+              <article><span>04 / 可持续迭代</span><h3>可复用资产</h3><p>工作流、提示词、参考图和模型配置被保存下来，形成自己的本地创作资产库。</p></article>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="models">
+            <div class="ai-plus-module-head">
+              <h2>常见开源大模型</h2>
+              <p>以下模型都可以放入 ComfyUI 生态理解：先按任务选模态，再看显存、速度、许可和控制能力。</p>
+            </div>
+            <div class="ai-plus-module-tools ai-plus-resource-grid">
+              <article>
+                <h3>Qwen <span>文本 / 视觉 / 代码</span></h3>
+                <p>通用能力覆盖面广，适合提示词改写、视觉理解、工作流辅助和本地知识处理。</p>
+                <ul><li>适合：需要中文理解、代码与多模态协同的任务。</li><li>选型：按参数规模、量化格式和显存预算选择，不要只看模型名。</li></ul>
+                <div class="ai-plus-resource-links compact"><a href="https://github.com/QwenLM/Qwen" target="_blank" rel="noopener"><strong>Qwen 官方仓库</strong><small>查看模型与项目入口</small></a></div>
+              </article>
+              <article>
+                <h3>Z-Image-Turbo <span>快速生图</span></h3>
+                <p>面向快速文本生图的轻量方案，适合在 ComfyUI 里测试构图、风格和批量出图。</p>
+                <ul><li>适合：希望低步骤、快反馈地迭代视觉方案。</li><li>选型：先确认显存、采样节点和模型许可，再比较细节与速度。</li></ul>
+                <div class="ai-plus-resource-links compact"><a href="https://huggingface.co/h4tef/Z-Image-Turbo" target="_blank" rel="noopener"><strong>模型页面</strong><small>查看下载与说明</small></a></div>
+              </article>
+              <article>
+                <h3>LTX-2.3 <span>视频 / 音频</span></h3>
+                <p>LTX 系列面向音视频生成与编辑，适合把镜头、运动和声音纳入 ComfyUI 视频工作流。</p>
+                <ul><li>适合：短视频概念、镜头预演、首尾帧和动态片段实验。</li><li>选型：重点比较分辨率、时长、显存和音视频同步能力。</li></ul>
+                <div class="ai-plus-resource-links compact"><a href="https://github.com/Lightricks/LTX-Video" target="_blank" rel="noopener"><strong>LTX 官方仓库</strong><small>查看视频模型入口</small></a></div>
+              </article>
+              <article>
+                <h3>MiniMax <span>音视频 / 多模态</span></h3>
+                <p>适合关注视频、语音和多模态应用的开发者，用作线上能力与本地工作流的对照组。</p>
+                <ul><li>适合：需要比较模型能力、API 与开源生态边界的场景。</li><li>选型：先区分开放权重、开放代码和 API 服务，不要混为“免费开源”。</li></ul>
+                <div class="ai-plus-resource-links compact"><a href="https://github.com/MiniMax-AI" target="_blank" rel="noopener"><strong>MiniMax 官方组织</strong><small>查看相关项目</small></a></div>
+              </article>
+              <article>
+                <h3>SeedVR2 <span>视频修复</span></h3>
+                <p>面向视频恢复与增强，适合放在生成工作流的后处理环节，而不是当作主生成模型。</p>
+                <ul><li>适合：提升视频清晰度、细节和连续帧观感。</li><li>选型：把它放在生成、插帧或放大之后，观察速度和画面稳定性。</li></ul>
+                <div class="ai-plus-resource-links compact"><a href="https://github.com/IceClear/SeedVR2" target="_blank" rel="noopener"><strong>SeedVR2 官方仓库</strong><small>查看视频恢复项目</small></a></div>
+              </article>
+              <article>
+                <h3>ComfyUI <span>工作流中枢</span></h3>
+                <p>它不是模型，而是把模型、节点、参数和输出组织起来的可视化工作流环境。</p>
+                <ul><li>适合：想复用流程、拆分步骤、精确控制输入输出的人。</li><li>选型：先学会读工作流，再决定安装哪些模型和自定义节点。</li></ul>
+                <div class="ai-plus-resource-links compact"><a href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener"><strong>ComfyUI 官方仓库</strong><small>查看安装与生态</small></a></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="canvas">
+            <div class="ai-plus-module-head">
+              <h2>无限画布：空间化创作范式</h2>
+              <p>在 ComfyUI 的延展之下，无限画布把模型能力从“单张输出”变成可以平铺、回看、分支和持续迭代的空间。</p>
+            </div>
+            <div class="ai-plus-module-map">
+              <div class="ai-plus-module-panel ai-plus-module-stack">
+                <div><strong>平铺</strong><p>把多张候选图、镜头或文案放在同一空间比较。</p></div>
+                <div><strong>连接</strong><p>从一张参考图继续生成变体，保留上下文与方向。</p></div>
+                <div><strong>分支</strong><p>一个想法可以向风格、构图、角色和叙事多个方向展开。</p></div>
+                <div><strong>回溯</strong><p>保留每次迭代，知道哪一步带来了变化。</p></div>
+              </div>
+              <div class="ai-plus-module-panel ai-plus-module-pipeline">
+                <article><span>01</span><h3>收集参考</h3><p>把素材、关键词、风格图和限制条件先放进画布。</p></article>
+                <article><span>02</span><h3>局部生成</h3><p>围绕一个区域或一个想法生成变体，而不是每次从零开始。</p></article>
+                <article><span>03</span><h3>平铺比较</h3><p>把候选方案放在同一视野内看方向、质量和可延展性。</p></article>
+                <article><span>04</span><h3>继续迭代</h3><p>选择可用分支继续深入，并把过程沉淀为可复用工作流。</p></article>
+              </div>
+            </div>
+            <div class="ai-plus-module-tools ai-plus-resource-grid ai-plus-module-section-note">
+              <article>
+                <h3>线上画布入口 <span>Canvas</span></h3>
+                <p>线上平台适合快速试验和协作；本地 ComfyUI 适合深度控制与保存工作流。两者可以互补。</p>
+                <div class="ai-plus-resource-links">
+                  <a href="https://www.krea.ai/canvas" target="_blank" rel="noopener"><strong>Krea Canvas</strong><small>在线生成、参考与画布式探索。</small></a>
+                  <a href="https://leonardo.ai/canvas" target="_blank" rel="noopener"><strong>Leonardo Canvas</strong><small>围绕图像编辑与扩展进行迭代。</small></a>
+                  <a href="https://github.com/comfyanonymous/ComfyUI" target="_blank" rel="noopener"><strong>ComfyUI</strong><small>将在线灵感转成本地可复用工作流。</small></a>
+                </div>
+              </article>
+              <article>
+                <h3>使用边界 <span>Check</span></h3>
+                <p>使用任何在线平台前，先确认素材是否会被上传、是否用于训练，以及商用授权边界。</p>
+                <ul><li>公司项目素材尽量避免上传到不明平台。</li><li>商用视觉要保留来源、模型、授权和人工修改记录。</li><li>本地工作流可以降低数据外流风险，但需要维护模型与插件版本。</li></ul>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="./shell.js?v=ai-menu-05"></script>
+  </body>
+</html>

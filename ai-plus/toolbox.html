@@ -1,1 +1,128 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="./styles.css?v=ai-archive-02" /></head><body data-section="toolbox" class="subpage"><header class="ai-site-header" data-ai-shell></header><main class="section-page"><aside class="section-rail"><p>AI+ ARCHIVE<br />TRAINING INDEX</p><nav data-section-rail aria-label="专题索引"></nav><small>GEWU LAB<br />EXHIBITION DESIGN</small></aside><div class="section-content"><p class="section-kicker" data-tag></p><div class="section-hero"><b data-number></b><h1 data-title></h1><p data-description></p></div><section class="section-question"><small>本页问题 / QUESTION</small><h2 data-question></h2></section><section class="section-points"><p>本页要点 / NOTES</p><ol data-points></ol></section></div></main><script src="./shell.js?v=ai-menu-03"></script><script src="./page.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 工具箱｜AI++</title>
+    <meta name="description" content="AI++：精选常用 AI 网站、效率工具与优质 UP 主资源，建立自己的 AI 资源情报站。" />
+    <link rel="stylesheet" href="./styles.css?v=ai-subpage-module-02" />
+  </head>
+  <body data-section="toolbox" class="subpage">
+    <header class="ai-site-header" data-ai-shell></header>
+    <main class="section-page">
+      <div class="section-content">
+        <div id="ai-toolbox-content" class="ai-plus-content">
+          <section class="ai-plus-module-hero" id="top">
+            <div class="ai-plus-module-copy">
+              <p class="ai-plus-module-kicker">AI++ / TOOLBOX</p>
+              <h1>把收藏夹变成 AI 资源情报站</h1>
+              <p>精选常用 AI 网站、效率工具与优质 UP 主资源。关键不是收藏一堆链接，而是建立自己的资源判断系统：想用时有，用时选得对。</p>
+              <div class="ai-plus-module-actions">
+                <a class="ai-plus-module-button" href="#categories">按类别查找</a>
+                <a class="ai-plus-module-button secondary" href="#method">建立情报站</a>
+              </div>
+            </div>
+            <div class="ai-plus-module-lab ai-plus-module-lab--toolbox" aria-label="AI 工具箱示意">
+              <div class="ai-plus-module-caption">
+                <span>发现工具：导航站与新品榜单。</span>
+                <span>学习工具：教程、课程与中文 UP 主。</span>
+                <span>使用工具：桌面软件、API 与自动化入口。</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="categories">
+            <div class="ai-plus-module-head">
+              <h2>五类入口，按任务找资源</h2>
+              <p>先判断你要找的是“发现、学习、跟进、使用还是开发”，再进入对应类别，减少无效试错。</p>
+            </div>
+            <div class="ai-plus-module-filters" aria-label="AI 工具箱分类筛选">
+              <button class="is-active" type="button" data-filter="all">全部</button>
+              <button type="button" data-filter="nav">综合导航站</button>
+              <button type="button" data-filter="tutorial">教程类</button>
+              <button type="button" data-filter="bilibili">B站 UP 推荐</button>
+              <button type="button" data-filter="software">软件与小众工具</button>
+              <button type="button" data-filter="api">API 推荐</button>
+            </div>
+            <div class="ai-plus-module-tools ai-plus-resource-grid">
+              <article data-kind="nav">
+                <h3>AI 综合导航站 <span>Find</span></h3>
+                <p>快速发现新工具、按任务检索替代方案，适合作为找工具的第一入口。</p>
+                <div class="ai-plus-resource-links">
+                  <a href="https://ai-bot.cn/" target="_blank" rel="noopener noreferrer"><strong>AI 工具集</strong><small>中文 AI 工具导航，适合按场景查找。</small></a>
+                  <a href="https://top.aibase.com/" target="_blank" rel="noopener noreferrer"><strong>AIBase 产品库</strong><small>跟踪国内外 AI 产品与新品。</small></a>
+                  <a href="https://theresanaiforthat.com/" target="_blank" rel="noopener noreferrer"><strong>There&apos;s An AI For That</strong><small>查海外小众产品和用例关键词。</small></a>
+                </div>
+              </article>
+              <article data-kind="tutorial">
+                <h3>教程类 <span>Learn</span></h3>
+                <p>系统学习概念、提示词、开源模型和应用开发，建立可迁移的基础。</p>
+                <div class="ai-plus-resource-links">
+                  <a href="https://academy.openai.com/" target="_blank" rel="noopener noreferrer"><strong>OpenAI Academy</strong><small>AI 基础、ChatGPT 使用与应用入门。</small></a>
+                  <a href="https://www.deeplearning.ai/courses/" target="_blank" rel="noopener noreferrer"><strong>DeepLearning.AI Courses</strong><small>生成式 AI 与模型应用课程库。</small></a>
+                  <a href="https://huggingface.co/learn" target="_blank" rel="noopener noreferrer"><strong>Hugging Face Learn</strong><small>开源模型、Agent、扩散与多模态实践。</small></a>
+                </div>
+              </article>
+              <article data-kind="bilibili">
+                <h3>B站 UP 推荐 <span>Watch</span></h3>
+                <p>跟踪中文 AI 圈的产品测评、提示词、Agent 实战和通俗教程。</p>
+                <div class="ai-plus-resource-links">
+                  <a href="https://space.bilibili.com/1741797/" target="_blank" rel="noopener noreferrer"><strong>歸藏的AI工具箱</strong><small>AI 产品、工具资讯与工作流。</small></a>
+                  <a href="https://space.bilibili.com/589397373/" target="_blank" rel="noopener noreferrer"><strong>宝玉xp</strong><small>AI 编程、Agent 与产品实践。</small></a>
+                  <a href="https://space.bilibili.com/1567748478/" target="_blank" rel="noopener noreferrer"><strong>跟李沐学AI</strong><small>深度学习、论文精读和模型基础。</small></a>
+                  <a href="https://space.bilibili.com/2161614/" target="_blank" rel="noopener noreferrer"><strong>AI研究室-帆哥</strong><small>AI 应用实践和工具案例。</small></a>
+                </div>
+              </article>
+              <article data-kind="software">
+                <h3>软件与小众工具 <span>Use</span></h3>
+                <p>把 AI 接进真实工作流：桌面客户端、本地模型、知识库和自动化。</p>
+                <div class="ai-plus-resource-links">
+                  <a href="https://cherryai.com/" target="_blank" rel="noopener noreferrer"><strong>Cherry Studio</strong><small>多模型桌面客户端与知识库。</small></a>
+                  <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer"><strong>Ollama</strong><small>在本机运行开源模型。</small></a>
+                  <a href="https://dify.ai/" target="_blank" rel="noopener noreferrer"><strong>Dify</strong><small>构建 Agent、RAG 和 AI 应用。</small></a>
+                  <a href="https://n8n.io/" target="_blank" rel="noopener noreferrer"><strong>n8n</strong><small>将 AI 接入表格、邮件和业务系统。</small></a>
+                </div>
+              </article>
+              <article data-kind="api">
+                <h3>API 推荐 <span>Build</span></h3>
+                <p>开发 AI 功能、自动化脚本和小工具；先比较能力、价格、上下文与稳定性。</p>
+                <div class="ai-plus-resource-links">
+                  <a href="https://platform.openai.com/docs" target="_blank" rel="noopener noreferrer"><strong>OpenAI API</strong><small>通用多模态与 Agent 能力。</small></a>
+                  <a href="https://platform.claude.com/docs" target="_blank" rel="noopener noreferrer"><strong>Claude API</strong><small>长文本、写作、代码理解与知识任务。</small></a>
+                  <a href="https://ai.google.dev/gemini-api/docs" target="_blank" rel="noopener noreferrer"><strong>Gemini API</strong><small>文本、图像、视频与多模态开发。</small></a>
+                  <a href="https://api-docs.deepseek.com/" target="_blank" rel="noopener noreferrer"><strong>DeepSeek API</strong><small>中文开发者常用的 API 入口。</small></a>
+                  <a href="https://openrouter.ai/docs/quickstart" target="_blank" rel="noopener noreferrer"><strong>OpenRouter</strong><small>一个接口对接多模型，便于比较成本。</small></a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="ai-plus-module-section" id="method">
+            <div class="ai-plus-module-head">
+              <h2>资源情报站的整理方法</h2>
+              <p>工具会过期，整理方法不会。把资源按任务、稳定性、价格和使用频率分层，才不会被新品列表牵着跑。</p>
+            </div>
+            <div class="ai-plus-module-playbook">
+              <article><span>1</span><h3>按任务归档</h3><p>写作、设计、视频、办公、代码、自动化分开收集，避免一个收藏夹装所有东西。</p></article>
+              <article><span>2</span><h3>标注使用条件</h3><p>记录是否免费、是否需科学访问、是否可商用、是否支持中文和团队协作。</p></article>
+              <article><span>3</span><h3>保留替代项</h3><p>同一任务至少保留一个主力工具和一个备用工具，防止涨价、限流或下线。</p></article>
+              <article><span>4</span><h3>定期清理</h3><p>每月删除不用的链接，把真实用过的案例、提示词和评价补回资源库。</p></article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="./shell.js?v=ai-menu-05"></script>
+    <script>
+      (() => {
+        document.querySelectorAll(".ai-plus-module-filters button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const target = button.dataset.filter;
+            document.querySelectorAll(".ai-plus-module-filters button").forEach((node) => node.classList.toggle("is-active", node === button));
+            document.querySelectorAll(".ai-plus-module-tools article").forEach((card) => card.classList.toggle("is-hidden", target !== "all" && card.dataset.kind !== target));
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

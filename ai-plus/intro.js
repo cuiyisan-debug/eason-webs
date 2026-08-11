@@ -65,11 +65,27 @@
 (() => {
   const root = document.querySelector(".code-disclaimer");
   if (!root) return;
+  const lines = Array.from(root.querySelectorAll(".code-disclaimer-copy p, .code-disclaimer-copy small"));
+  let timers = [];
+
+  const reset = () => {
+    timers.forEach((timer) => window.clearTimeout(timer));
+    timers = [];
+    root.classList.remove("is-visible");
+    lines.forEach((line) => line.classList.remove("is-revealed"));
+  };
 
   const reveal = () => {
-    root.classList.remove("is-visible");
+    reset();
     void root.offsetWidth;
-    root.classList.add("is-visible");
+    requestAnimationFrame(() => {
+      root.classList.add("is-visible");
+      lines.forEach((line, index) => {
+        timers.push(window.setTimeout(() => {
+          line.classList.add("is-revealed");
+        }, 220 + index * 720));
+      });
+    });
   };
 
   if (!("IntersectionObserver" in window)) {
@@ -77,12 +93,19 @@
     return;
   }
 
+  let active = false;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) reveal();
-      else root.classList.remove("is-visible");
+      const settledInView = entry.isIntersecting && entry.intersectionRatio >= 0.92;
+      if (settledInView && !active) {
+        active = true;
+        reveal();
+      } else if (!settledInView && active) {
+        active = false;
+        reset();
+      }
     });
-  }, { threshold: 0.55 });
+  }, { threshold: [0, 0.35, 0.65, 0.92, 1] });
 
   observer.observe(root);
 })();
