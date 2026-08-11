@@ -30,6 +30,27 @@ function renderAiShell() {
     host.classList.remove("ai-nav-open");
     toggle?.setAttribute("aria-expanded", "false");
   });
+
+  const scrollHost = document.querySelector(".intro-sequence");
+  const scrollTarget = scrollHost || window;
+  const readScrollY = () => scrollHost ? scrollHost.scrollTop : window.scrollY;
+  let lastY = readScrollY();
+  let ticking = false;
+  scrollTarget.addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      const currentY = readScrollY();
+      const delta = currentY - lastY;
+      if (host.classList.contains("ai-nav-open") || currentY < 12 || delta < -6) {
+        host.classList.remove("ai-header-hidden");
+      } else if (currentY > host.offsetHeight + 28 && delta > 6) {
+        host.classList.add("ai-header-hidden");
+      }
+      lastY = currentY;
+      ticking = false;
+    });
+  }, { passive: true });
 }
 
 renderAiShell();
