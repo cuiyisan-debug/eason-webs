@@ -1,7 +1,7 @@
 const aiSections = [
   ["overview", "AI 概述"],
   ["office", "日常增效"],
-  ["open-models", "开源模型应用"],
+  ["open-models", "开源模型"],
   ["agents", "Agent 智能体"],
   ["toolbox", "AI 工具箱"],
 ];
