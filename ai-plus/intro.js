@@ -35,6 +35,8 @@
   buttons.forEach((button, index) => button.addEventListener("click", () => setActive(index)));
   root.addEventListener("wheel", (event) => {
     if (Math.abs(event.deltaY) < Math.abs(event.deltaX) || Math.abs(event.deltaY) < 8) return;
+    const hasHidden = revealItems(chapters[active]).some((item) => item.classList.contains("is-hidden"));
+    if (active === buttons.length - 1 && event.deltaY > 0 && !hasHidden) return;
     event.preventDefault();
     const now = Date.now();
     if (now - lastMove < 520) return;

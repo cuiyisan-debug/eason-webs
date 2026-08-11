@@ -31,20 +31,24 @@ function renderAiShell() {
     toggle?.setAttribute("aria-expanded", "false");
   });
 
-  const scrollHost = document.querySelector(".intro-sequence");
+  const isAiIntro = document.body.classList.contains("ai-intro");
+  const scrollHost = isAiIntro ? null : document.querySelector(".intro-sequence");
   const scrollTarget = scrollHost || window;
   const readScrollY = () => scrollHost ? scrollHost.scrollTop : window.scrollY;
   let lastY = readScrollY();
   let ticking = false;
+  if (isAiIntro) host.classList.add("ai-header-hidden");
   scrollTarget.addEventListener("scroll", () => {
     if (ticking) return;
     ticking = true;
     window.requestAnimationFrame(() => {
       const currentY = readScrollY();
       const delta = currentY - lastY;
-      if (host.classList.contains("ai-nav-open") || currentY < 12 || delta < -6) {
+      if (host.classList.contains("ai-nav-open") || delta < -6 || (!isAiIntro && currentY < 12)) {
         host.classList.remove("ai-header-hidden");
       } else if (currentY > host.offsetHeight + 28 && delta > 6) {
+        host.classList.add("ai-header-hidden");
+      } else if (isAiIntro && currentY < 12) {
         host.classList.add("ai-header-hidden");
       }
       lastY = currentY;

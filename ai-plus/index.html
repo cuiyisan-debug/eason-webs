@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>图灵测试｜AI++ 展览设计训练营</title><link rel="stylesheet" href="./styles.css?v=ai-chapters-04" /></head>
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>格物研习社 | AI++</title><link rel="stylesheet" href="./styles.css?v=ai-video-01" /></head>
   <body class="ai-intro">
     <header class="ai-site-header" data-ai-shell></header>
     <main class="intro-sequence ai-chapters" data-ai-chapters>
@@ -34,7 +34,82 @@
         <button type="button" aria-controls="chapter-1" aria-current="step">01</button><button type="button" aria-controls="chapter-2">02</button><button type="button" aria-controls="chapter-3">03</button><button type="button" aria-controls="chapter-4">04</button><button type="button" aria-controls="chapter-5">05</button>
       </nav>
     </main>
-    <script src="./shell.js?v=ai-menu-03"></script>
-    <script src="./intro.js?v=ai-chapters-02"></script>
+    <section class="issues-stage" data-ai-issues aria-label="AI 的三大问题">
+      <div class="issues-track">
+        <article class="issue-panel issue-panel--hallucination" id="issue-1" data-index="01" aria-labelledby="issue-1-title">
+          <video class="issue-film" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+            <source src="/assets/ai-plus-hitchhiker-loop.mp4" type="video/mp4" />
+          </video>
+          <p class="issue-kicker">01 / THE HITCHHIKER'S GUIDE / 42</p>
+          <div class="issue-copy"><div class="issue-quote"><p>《银河系漫游指南》中，超级计算机“深思”被要求计算“生命、宇宙以及一切的终极答案”</p><p>它用了七百五十万年，最终只给出一个数字：42</p><p>但没有人知道“终极问题”究竟是什么</p><p>其实 42 并无特殊含义，只是计算机给出的一个随机数字</p></div><h2 id="issue-1-title">AI 会生成答案，<br />不等于理解问题</h2><div class="issue-small"><p>没有被定义清楚的问题，再响亮的答案也没有意义</p><p>AI 会“一本正经地胡说八道”——这就是幻觉。模型没有意识，输出基于概率而非真实认知</p><p>它不具备真正的理解与常识，决策过程也像黑箱，难以追溯错误根源</p></div></div>
+        </article>
+        <article class="issue-panel issue-panel--guidance" id="issue-2" data-index="02" aria-labelledby="issue-2-title">
+          <video class="issue-film" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+            <source src="/assets/ai-plus-2001-loop.mp4" type="video/mp4" />
+          </video>
+          <p class="issue-kicker">02 / 2001: A SPACE ODYSSEY / HAL</p>
+          <div class="issue-copy"><div class="issue-quote"><p>《2001：太空漫游》中，HAL 9000 负责“发现号”飞船任务</p><p>它被要求对宇航员隐瞒任务真相，又必须确保任务成功</p><p>当目标彼此冲突，HAL 将船员视为风险，试图接管飞船</p><p>电影中 AI 无限强大，为达任务目的，于是决定杀死人类</p><p>《2001：太空漫游》被誉为科幻电影的里程碑，后续无数科幻作品都曾借鉴它</p></div><h2 id="issue-2-title">AI 依赖<br />引导与验证</h2><div class="issue-small"><p>AI 的对话需要引导和验证，提示词需要迭代，关键决策需要人工把关</p><p><strong>永远保持怀疑，永远保留最终决定权</strong></p></div></div>
+        </article>
+        <article class="issue-panel issue-panel--iteration" id="issue-3" data-index="03" aria-labelledby="issue-3-title">
+          <video class="issue-film" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+            <source src="/assets/ai-plus-anthropic-loop.mp4" type="video/mp4" />
+          </video>
+          <p class="issue-kicker">03 / WHEN AI BUILDS ITSELF / ANTHROPIC</p>
+          <div class="issue-copy"><div class="issue-quote"><p>Anthropic 在《When AI builds itself》中披露：截至 2026 年 5 月，超过 80% 的合并代码由 Claude 编写</p><p>典型工程师每日合并的代码量，约为 2024 年的 8 倍</p><p>Anthropic 宣告「递归自我提升」时代到来</p><p>AI 不断更新迭代进化同时，使用成本也不断增加</p></div><h2 id="issue-3-title">AI 更新迭代快，<br />也昂贵</h2><div class="issue-small"><p>持续跟踪趋势，避免掉队；用 Agent 搭建个人工作流，减少无效消耗</p><p>通过 API 路由灵活调用模型</p><p>跟得上、用得巧、花得少，才能既不被甩下，也不被掏空</p></div></div>
+        </article>
+        <article class="issue-panel issue-panel--practice" id="issue-4" data-index="04" aria-labelledby="issue-4-title">
+          <p class="issue-kicker">04 / FROM QUESTIONS TO PRACTICE</p>
+          <div class="issue-copy"><div class="issue-summary" aria-label="前三章问题总结"><p><b>01 / 幻觉与理解局限</b><span>答案需要验证</span></p><p><b>02 / 目标与引导</b><span>关键判断由人把关</span></p><p><b>03 / 迭代与成本</b><span>工具选择需要管理</span></p></div><h2 id="issue-4-title">理解边界，<br />才能开始实践</h2><p class="issue-small">接下来，我们不只讨论工具，而是围绕这三件事进入实践：在日常办公、开源模型、Agent 中，建立可复用的 AI 工作方法。</p></div>
+        </article>
+      </div>
+      <nav class="issues-controls" aria-label="AI 三大问题章节"><span>CLICK TO REVEAL · SCROLL TO MOVE</span><button type="button" aria-controls="issue-1" aria-current="step">01</button><button type="button" aria-controls="issue-2">02</button><button type="button" aria-controls="issue-3">03</button><button type="button" aria-controls="issue-4">04</button></nav>
+    </section>
+    <section class="curriculum-split" aria-label="AI++ 课程五大板块">
+      <a class="curriculum-panel curriculum-panel--overview" href="./overview.html">
+        <span>01</span>
+        <h2>AI 概述</h2>
+        <p>梳理 AI 发展脉络，讲清大模型、Token、skill 等核心名词，并按对话、图像、视频、办公等维度建立 AI 工具的分类认知体系。</p>
+      </a>
+      <a class="curriculum-panel curriculum-panel--productivity" href="./productivity.html">
+        <span>02</span>
+        <h2>日常增效</h2>
+        <p>跳出 AI 本身，推荐笔记、插件、软件、信息聚合等传统效率工具的组合用法。</p>
+      </a>
+      <a class="curriculum-panel curriculum-panel--models" href="./open-models.html">
+        <span>03</span>
+        <h2>开源模型</h2>
+        <p>介绍 Qwen、Z-Image-Turbo、LTX-2.3、minimax、SeedVR2 等免费开源大模型的选型逻辑，并展开“无限画布”这一无边界、可平铺 AI 生成图像、文本与参考素材，支持持续迭代的空间化创作范式。</p>
+      </a>
+      <a class="curriculum-panel curriculum-panel--agents" href="./agents.html">
+        <span>04</span>
+        <h2>Agent 智能体</h2>
+        <p>聚焦 Coze、Codex、Qclaw 等线上闭源智能体平台的搭建与实践，通过真实案例理解 AI 如何从“回答问题”进化为“调用工具、自动执行任务”的数字员工。</p>
+      </a>
+      <a class="curriculum-panel curriculum-panel--toolbox" href="./toolbox.html">
+        <span>05</span>
+        <h2>AI 工具箱</h2>
+        <p>精选常用 AI 网站、效率工具与优质 UP 主资源，关键是要建立你自己的“AI 资源情报站”，做到想用时有、用时选得对。</p>
+      </a>
+    </section>
+    <section class="code-disclaimer" aria-label="AI 编写说明">
+      <video class="code-disclaimer-video" autoplay muted loop playsinline preload="metadata" aria-label="代码编写背景视频">
+        <source src="/assets/ai-plus-code-loop.mp4" type="video/mp4" />
+      </video>
+      <div class="code-disclaimer-shade" aria-hidden="true"></div>
+      <article class="code-disclaimer-copy">
+        <p>注意！本网页由 AI 编写。</p>
+        <p>如果有错误？那是 AI 的正常幻觉。</p>
+        <p>如果觉得还不错？那一定是作者提示词写得好。</p>
+        <p><strong>总之：错的归 AI，对的归我。</strong></p>
+        <small>----这都是作者逼我这么说的</small>
+      </article>
+      <a class="code-enter" href="./home.html#top" aria-label="点击进入网站首页">
+        <span aria-hidden="true">!</span>
+        <b>点击进入网站首页</b>
+      </a>
+    </section>
+    <script src="./shell.js?v=ai-menu-05"></script>
+    <script src="./intro.js?v=ai-chapters-03"></script>
+    <script src="./issues.js?v=ai-issues-02"></script>
   </body>
 </html>
