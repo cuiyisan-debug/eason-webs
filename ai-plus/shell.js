@@ -14,7 +14,7 @@ function renderAiShell() {
     <button class="ai-nav-toggle" type="button" aria-label="打开 AI+ 导航" aria-expanded="false" aria-controls="ai-site-nav"><span></span><span></span><span></span></button>
     <div class="ai-brand">
       <a class="ai-brand-logo" href="./index.html#top" aria-label="返回 AI+ 片头"><img src="../assets/site-logo-dark.svg" alt="格物研习社" /></a>
-      <a class="ai-brand-text" href="./home.html#top" aria-label="返回 AI+ 首页"><strong>AI+ 展览设计训练营</strong></a>
+      <a class="ai-brand-text" href="./home.html#top" aria-label="返回 AI++ 首页"><strong>AI++</strong></a>
     </div>
     <nav class="ai-site-nav" id="ai-site-nav" aria-label="AI+ 二级页面导航">
       ${aiSections.map(([slug, title]) => `<a href="./${slug}.html"${slug === current ? ' aria-current="page"' : ""}>${title}</a>`).join("")}
