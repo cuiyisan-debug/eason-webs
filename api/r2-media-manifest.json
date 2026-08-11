@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T08:33:23.153771+00:00",
+  "generatedAt": "2026-08-11T09:57:03.388280+00:00",
   "r2Prefix": "feishu-media",
   "r2LocalMediaPrefix": "site-media",
   "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
@@ -11424,6 +11424,46 @@
       "source": "local-asset",
       "createdAt": "2026-08-11T03:13:40.578231+00:00",
       "lastSeenAt": "2026-08-11T03:13:40.578253+00:00"
+    },
+    "b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516": {
+      "sha256": "b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516",
+      "size": 1712127,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/b6/b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/b6/b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-08-11T09:56:57.814130+00:00",
+      "lastSeenAt": "2026-08-11T09:56:57.814147+00:00"
+    },
+    "4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2": {
+      "sha256": "4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2",
+      "size": 3708297,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/4e/4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/4e/4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-08-11T09:56:59.383435+00:00",
+      "lastSeenAt": "2026-08-11T09:56:59.383452+00:00"
+    },
+    "49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad": {
+      "sha256": "49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad",
+      "size": 7247171,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/49/49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/49/49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-08-11T09:57:00.378785+00:00",
+      "lastSeenAt": "2026-08-11T09:57:00.378803+00:00"
+    },
+    "76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85": {
+      "sha256": "76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85",
+      "size": 7514723,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/76/76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/76/76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-08-11T09:57:03.327996+00:00",
+      "lastSeenAt": "2026-08-11T09:57:03.328015+00:00"
     }
   },
   "localAssets": {
@@ -11514,6 +11554,38 @@
       "r2Key": "site-media/26/26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1.mp4",
       "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/26/26b534c6d3d7be57a860e4730feb4bc485ee7154e0a5f04c9d41194168add6d1.mp4",
       "updatedAt": "2026-08-11T03:13:40.578259+00:00"
+    },
+    "assets/ai-plus-2001-loop.mp4": {
+      "sha256": "b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516",
+      "size": 1712127,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/b6/b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/b6/b69f3a3eb38b594e1bce77c6a3e56c888b8e234b6dd7eeb206acd3c5d7504516.mp4",
+      "updatedAt": "2026-08-11T09:56:57.814153+00:00"
+    },
+    "assets/ai-plus-anthropic-loop.mp4": {
+      "sha256": "4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2",
+      "size": 3708297,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/4e/4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/4e/4e16a94ff27a21652440a65712f23e58591b5cf49c0c9bf551896c5617a641b2.mp4",
+      "updatedAt": "2026-08-11T09:56:59.383457+00:00"
+    },
+    "assets/ai-plus-code-loop.mp4": {
+      "sha256": "49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad",
+      "size": 7247171,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/49/49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/49/49df0a23eede2fd07bce3996ca070321d8d2c4f42611777c76c2ffad8e67f2ad.mp4",
+      "updatedAt": "2026-08-11T09:57:00.378808+00:00"
+    },
+    "assets/ai-plus-hitchhiker-loop.mp4": {
+      "sha256": "76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85",
+      "size": 7514723,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/76/76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/76/76ce982777d02368d2c0d799a03d063ac7c3455b666b6d34785c337442d3cf85.mp4",
+      "updatedAt": "2026-08-11T09:57:03.328022+00:00"
     }
   },
   "mode": "mirror",
