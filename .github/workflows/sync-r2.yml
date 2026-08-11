@@ -78,4 +78,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add api/portfolio.json api/clients.json api/zhixing.json api/curation.json api/r2-media-manifest.json reports/*.json *.html *.css *.js
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: mirror feishu media to cloudflare r2" && git push)
+          git add ai-plus/*.html ai-plus/*.css ai-plus/*.js
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "chore: mirror feishu media to cloudflare r2"
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi
