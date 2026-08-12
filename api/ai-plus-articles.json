@@ -1020,8 +1020,8 @@
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/f3/f35755895e3865c08ef6a6d1396b479bf8a2e33a1bb2b62c39e0573ee879b47e.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/7c/7c80ed5628870fae1890eb2d77a70fbac2b13b560be72b0e8edd43f2fdd54fac.png",
         "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/6b/6b7808cc898522062a111581f1540865590b7eebb7816a5dcfa412d21854b7cf.png",
-        "assets/ai-plus-ltx-single.mp4",
-        "assets/ai-plus-ltx-two-shot.mp4"
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/6f/6ff551d6836754e60b3a263f4e522b7c5073616ddab555ef4eda88069173627c.mp4",
+        "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/ba/baae72c6543e5bda61c563bb07e801c1646e3d7ecac8189d04cc7591435d4c95.mp4"
       ],
       "contentBlocks": [
         {
@@ -1146,7 +1146,7 @@
         },
         {
           "type": "video",
-          "url": "assets/ai-plus-ltx-single.mp4",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/6f/6ff551d6836754e60b3a263f4e522b7c5073616ddab555ef4eda88069173627c.mp4",
           "text": "LTX-2.3 单图生成视频测试"
         },
         {
@@ -1155,7 +1155,7 @@
         },
         {
           "type": "video",
-          "url": "assets/ai-plus-ltx-two-shot.mp4",
+          "url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/ba/baae72c6543e5bda61c563bb07e801c1646e3d7ecac8189d04cc7591435d4c95.mp4",
           "text": "LTX-2.3 双图生成视频测试"
         },
         {

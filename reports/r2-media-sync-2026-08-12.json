@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T04:45:06.194918+00:00",
+  "generatedAt": "2026-08-12T04:49:56.612020+00:00",
   "mode": "mirror",
   "scope": "local_videos",
   "bucket": "mycys-media",
@@ -17,10 +17,10 @@
     "localScanned": 18,
     "localUploaded": 0,
     "localReused": 18,
-    "localReferenceFilesChanged": 0,
-    "orphanObjects": 8,
-    "orphanLocalAssets": 7,
-    "orphanUniqueKeys": 8,
+    "localReferenceFilesChanged": 2,
+    "orphanObjects": 0,
+    "orphanLocalAssets": 0,
+    "orphanUniqueKeys": 0,
     "orphanDeleted": 0,
     "orphanDeleteFailed": 0
   },
