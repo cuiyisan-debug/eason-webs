@@ -73,8 +73,10 @@
   function renderCaseCard(item) {
     const href = `./article.html?id=${encodeURIComponent(item.key || item.id)}&from=${encodeURIComponent(item.pagePath?.split("/").pop() || "open-models.html")}`;
     const cover = item.cover ? ` style="--case-cover: url('${escapeHtml(item.cover)}')"` : "";
+    const inlineClass = item.pageKey === "office" ? " ai-plus-case-card--compact ai-plus-case-card--inline" : "";
+    const kind = item.pageKey === "office" ? ` data-kind="${officeKind(item.section)}"` : "";
     return `
-      <a class="ai-plus-case-card" href="${escapeHtml(href)}" data-ai-plus-article-link>
+      <a class="ai-plus-case-card${inlineClass}"${kind} href="${escapeHtml(href)}" data-ai-plus-article-link>
         <span class="ai-plus-case-thumb${item.cover ? " has-cover" : ""}"${cover} aria-hidden="true">
           <span class="case-node node-1"></span>
           <span class="case-node node-2"></span>
@@ -88,6 +90,14 @@
           ${item.body ? `<span>${escapeHtml(item.body)}</span>` : ""}
         </span>
       </a>`;
+  }
+
+  function officeKind(section = "") {
+    if (section.includes("日常软件")) return "daily";
+    if (section.includes("浏览器")) return "browser";
+    if (section.includes("正版")) return "licensed";
+    if (section.includes("习惯")) return "habit";
+    return "article";
   }
 
   function renderCard(item) {

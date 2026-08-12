@@ -310,6 +310,11 @@ html:has(body.ai-intro) { scroll-snap-type: y mandatory; }
 .ai-plus-case-card--compact .ai-plus-case-copy { gap: 10px; padding: 22px; }
 .ai-plus-case-card--compact .ai-plus-case-copy strong { font-size: clamp(24px,3vw,38px); }
 .ai-plus-case-card--compact .ai-plus-case-copy span { font-size: 14px; }
+.ai-plus-module-tools > .ai-plus-case-card { grid-column: 1 / -1; }
+.ai-plus-case-card--inline { width: 100%; min-height: 172px; }
+.ai-plus-case-card--inline::after { background: linear-gradient(90deg, rgba(0,0,0,.1), rgba(0,0,0,.34)); }
+.ai-plus-case-card--inline .ai-plus-case-copy strong { max-width: 520px; }
+.ai-plus-module-tools article .ai-plus-inline-case { margin: 16px 0 4px; }
 .ai-plus-article-page .section-content { max-width: 1120px; }
 .ai-plus-article-shell { padding: clamp(56px,8vw,110px) 0; }
 .ai-plus-article-shell > h1 { max-width: 920px; margin: 0 0 22px; font: 900 clamp(42px,7vw,88px)/.98 var(--body); letter-spacing: -.05em; }

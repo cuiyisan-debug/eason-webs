@@ -503,6 +503,32 @@
       "cover": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/18/18e67470283fdb14d91d0dd83862d379d3f33efb41b313102a757fbfbb874595.png"
     },
     {
+      "id": "office.daily.article.001",
+      "key": "office.daily.article.001",
+      "pageKey": "office",
+      "pageName": "日常增效",
+      "pagePath": "ai-plus/office.html",
+      "section": "日常软件推荐",
+      "title": "日常软件应用实例",
+      "summary": "以飞书云文档沉淀日常软件的组合、选择逻辑和真实使用记录。",
+      "body": "这是一篇日常软件推荐板块的飞书云文档文章。当前页面已建立文章入口，后续同步飞书后会自动渲染文档正文、图片、视频与首图封面。",
+      "contentUrl": "https://my.feishu.cn/docx/YPkVdnU0Ho4WbixlQNwcbslvnad",
+      "sourceRecordId": "",
+      "linkedError": "",
+      "media": [],
+      "contentBlocks": [
+        {
+          "type": "paragraph",
+          "text": "这是一篇日常软件推荐板块的飞书云文档文章。"
+        },
+        {
+          "type": "paragraph",
+          "text": "当前页面已建立文章入口，后续同步飞书后会自动渲染文档正文、图片、视频与首图封面。"
+        }
+      ],
+      "cover": ""
+    },
+    {
       "id": "open-models.case.001",
       "key": "open-models.case.001",
       "pageKey": "open-models",

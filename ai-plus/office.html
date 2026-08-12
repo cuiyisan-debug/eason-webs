@@ -63,29 +63,39 @@
                   <a href="https://learn.microsoft.com/zh-cn/windows/powertoys/" target="_blank" rel="noopener"><strong>Microsoft PowerToys</strong><small>批量重命名、窗口布局、快捷启动等系统增强工具。</small></a>
                 </div>
               </article>
+              <a class="ai-plus-case-card ai-plus-case-card--compact ai-plus-case-card--inline" data-kind="daily" href="./article.html?id=office.daily.article.001&from=office.html" data-ai-plus-article-link>
+                <span class="ai-plus-case-thumb" aria-hidden="true">
+                  <span class="case-node node-1"></span>
+                  <span class="case-node node-2"></span>
+                  <span class="case-frame frame-1"></span>
+                </span>
+                <span class="ai-plus-case-copy">
+                  <small>FEISHU DOC / DAILY</small>
+                  <strong>日常软件应用实例</strong>
+                  <span>以飞书云文档沉淀日常软件的组合、选择逻辑和真实使用记录。</span>
+                </span>
+              </a>
               <article data-kind="browser">
                 <h3>浏览器及插件推荐 <span>Web</span></h3>
                 <p>浏览器是信息入口，插件只解决明确问题：保存、阅读、翻译、专注和安全。</p>
-                <div class="ai-plus-case-grid ai-plus-inline-case">
-                  <a class="ai-plus-case-card ai-plus-case-card--compact" href="./article.html?id=office.browser.article.001&from=office.html" data-ai-plus-article-link>
-                    <span class="ai-plus-case-thumb" aria-hidden="true">
-                      <span class="case-node node-1"></span>
-                      <span class="case-node node-2"></span>
-                      <span class="case-frame frame-1"></span>
-                    </span>
-                    <span class="ai-plus-case-copy">
-                      <small>FEISHU DOC / BROWSER</small>
-                      <strong>浏览器及插件应用实例</strong>
-                      <span>以飞书云文档方式沉淀插件选择、浏览器工作流和真实使用记录。</span>
-                    </span>
-                  </a>
-                </div>
                 <div class="ai-plus-resource-links">
                   <a href="https://www.google.com/chrome/" target="_blank" rel="noopener"><strong>Chrome</strong><small>扩展生态成熟，适合作为主力工作浏览器。</small></a>
                   <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener"><strong>Chrome Web Store</strong><small>从官方商店安装扩展，先看权限与开发者信息。</small></a>
                   <a href="https://raindrop.io/" target="_blank" rel="noopener"><strong>Raindrop.io</strong><small>把网页收藏按主题沉淀，减少“收藏后失踪”。</small></a>
                 </div>
               </article>
+              <a class="ai-plus-case-card ai-plus-case-card--compact ai-plus-case-card--inline" data-kind="browser" href="./article.html?id=office.browser.article.001&from=office.html" data-ai-plus-article-link>
+                <span class="ai-plus-case-thumb" aria-hidden="true">
+                  <span class="case-node node-1"></span>
+                  <span class="case-node node-2"></span>
+                  <span class="case-frame frame-1"></span>
+                </span>
+                <span class="ai-plus-case-copy">
+                  <small>FEISHU DOC / BROWSER</small>
+                  <strong>浏览器及插件应用实例</strong>
+                  <span>以飞书云文档方式沉淀插件选择、浏览器工作流和真实使用记录。</span>
+                </span>
+              </a>
               <article data-kind="licensed">
                 <h3>正版软件推荐 <span>Trust</span></h3>
                 <p>涉及工作成果、账号和长期协作时，优先选择正版授权，换取更新、支持与安全边界。</p>
@@ -129,12 +139,12 @@
           button.addEventListener("click", () => {
             const target = button.dataset.filter;
             document.querySelectorAll(".ai-plus-module-filters button").forEach((node) => node.classList.toggle("is-active", node === button));
-            document.querySelectorAll(".ai-plus-module-tools article").forEach((card) => card.classList.toggle("is-hidden", target !== "all" && card.dataset.kind !== target));
+            document.querySelectorAll(".ai-plus-module-tools article, .ai-plus-module-tools > .ai-plus-case-card[data-kind]").forEach((card) => card.classList.toggle("is-hidden", target !== "all" && card.dataset.kind !== target));
           });
         });
     })();
   </script>
-    <script src="./content-renderer.js?v=ai-plus-feishu-02"></script>
+    <script src="./content-renderer.js?v=ai-plus-feishu-03"></script>
     <script src="./article-links.js?v=ai-plus-article-01"></script>
   </body>
 </html>
