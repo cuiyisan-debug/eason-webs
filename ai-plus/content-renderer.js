@@ -22,6 +22,16 @@
     return map;
   }, new Map());
 
+  const sectionId = (section = "") => {
+    const map = {
+      "发展迭代": "evolution",
+      "常见开源大模型": "models",
+      "无限画布": "canvas",
+      "应用实例": "cases",
+    };
+    return map[section] || "";
+  };
+
   function renderHero(records) {
     const hero = records.find((item) => item.moduleType === "hero") || records[0];
     const captions = records.filter((item) => item.moduleType === "caption").slice(0, 3);
@@ -43,12 +53,33 @@
     const intro = records.find((item) => item.moduleType === "section");
     const items = records.filter((item) => item.moduleType !== "section" && item.moduleType !== "hero" && item.moduleType !== "caption");
     if (!intro && !items.length) return "";
-    const cards = items.map(renderCard).join("");
+    const isCaseSection = items.some((item) => item.moduleType === "case");
+    const cards = items.map(isCaseSection ? renderCaseCard : renderCard).join("");
+    const id = sectionId(section);
     return `
-      <section class="ai-plus-module-section">
+      <section class="ai-plus-module-section"${id ? ` id="${escapeHtml(id)}"` : ""}>
         ${intro ? `<div class="ai-plus-module-head"><h2>${escapeHtml(intro.title)}</h2>${intro.body ? `<p>${escapeHtml(intro.body)}</p>` : ""}</div>` : `<div class="ai-plus-module-head"><h2>${escapeHtml(section)}</h2></div>`}
-        ${cards ? `<div class="ai-plus-module-tools ai-plus-resource-grid">${cards}</div>` : ""}
+        ${cards ? `<div class="${isCaseSection ? "ai-plus-case-grid" : "ai-plus-module-tools ai-plus-resource-grid"}">${cards}</div>` : ""}
       </section>`;
+  }
+
+  function renderCaseCard(item) {
+    const href = item.linkUrl || "#";
+    return `
+      <a class="ai-plus-case-card" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">
+        <span class="ai-plus-case-thumb" aria-hidden="true">
+          <span class="case-node node-1"></span>
+          <span class="case-node node-2"></span>
+          <span class="case-node node-3"></span>
+          <span class="case-frame frame-1"></span>
+          <span class="case-frame frame-2"></span>
+        </span>
+        <span class="ai-plus-case-copy">
+          ${item.tag ? `<small>${escapeHtml(item.tag)}</small>` : ""}
+          <strong>${escapeHtml(item.title)}</strong>
+          ${item.body ? `<span>${escapeHtml(item.body)}</span>` : ""}
+        </span>
+      </a>`;
   }
 
   function renderCard(item) {
