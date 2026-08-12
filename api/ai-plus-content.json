@@ -1,6 +1,6 @@
 {
   "source": "feishu-bitable",
-  "generatedAt": "2026-08-12T03:32:31.851755+00:00",
+  "generatedAt": "2026-08-12T04:01:21.197386+00:00",
   "pages": {
     "overview": {
       "name": "AI 概述",
@@ -498,7 +498,7 @@
         },
         {
           "id": "office-daily-article-001",
-          "recordId": "",
+          "recordId": "recvs3geyvIfux",
           "pageKey": "office",
           "pageName": "日常增效",
           "pagePath": "ai-plus/office.html",
@@ -933,12 +933,12 @@
           "moduleType": "card",
           "section": "常见开源大模型",
           "order": 24,
-          "title": "ComfyUI",
-          "tag": "工作流中枢",
-          "body": "它不是模型，而是把模型、节点、参数和输出组织起来的可视化工作流环境。",
+          "title": "‌Wan2.2‌",
+          "tag": "图像/视频",
+          "body": "阿里巴巴于2025年7月28日开源的视频生成模型。此次共开源文生视频(Wan2.2-T2V-A14B)、图生视频(Wan2.2-I2V-A14B)和统一视频生成(Wan2.2-TI2V-5B)三款模型。",
           "note": "先学会读工作流，再决定安装哪些模型和自定义节点。",
-          "linkTitle": "ComfyUI 官方仓库",
-          "linkUrl": "https://github.com/comfyanonymous/ComfyUI",
+          "linkTitle": "阿里巴巴",
+          "linkUrl": "https://tongyi.aliyun.com/wan/generate",
           "cover": "",
           "key": "models.comfyui",
           "enabled": true,
