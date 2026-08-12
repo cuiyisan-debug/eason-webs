@@ -1,6 +1,6 @@
 {
   "source": "feishu-bitable",
-  "generatedAt": "2026-08-12T02:54:11.334260+00:00",
+  "generatedAt": "2026-08-12T03:32:31.851755+00:00",
   "pages": {
     "overview": {
       "name": "AI 概述",
@@ -23,10 +23,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.hero",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-002",
@@ -43,10 +43,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.caption.1",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-003",
@@ -63,10 +63,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.caption.2",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-004",
@@ -83,10 +83,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.caption.3",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-005",
@@ -103,10 +103,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.map",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-006",
@@ -123,10 +123,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.map.model",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-007",
@@ -143,10 +143,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.map.context",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-008",
@@ -163,10 +163,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.map.tools",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-009",
@@ -183,10 +183,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.map.skill",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-010",
@@ -203,10 +203,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.timeline",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-011",
@@ -223,10 +223,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.timeline.1950",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-012",
@@ -243,10 +243,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.timeline.2012",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-013",
@@ -263,10 +263,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.timeline.workflow",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-014",
@@ -283,10 +283,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.terms",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-015",
@@ -303,10 +303,10 @@
           "note": "模型越强，不代表越懂你的具体场景；场景信息要靠上下文、资料库或工具补进去。",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.term.llm",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-016",
@@ -323,10 +323,10 @@
           "note": "输入和输出都会消耗 Token，长文档、长对话和多轮修改都会占用上下文空间。",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.term.token",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-017",
@@ -343,10 +343,10 @@
           "note": "Agent 的关键不是人格化，而是计划、工具、状态、权限和边界。",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.term.agent",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 概述-018",
@@ -363,10 +363,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "overview.tools",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         }
       ]
     },
@@ -391,10 +391,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "office.hero",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-002",
@@ -411,10 +411,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "office.categories",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-003",
@@ -431,10 +431,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "office.daily",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-004",
@@ -451,10 +451,10 @@
           "note": "",
           "linkTitle": "Obsidian",
           "linkUrl": "https://obsidian.md/download",
+          "cover": "",
           "key": "office.daily.obsidian",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-005",
@@ -471,10 +471,10 @@
           "note": "",
           "linkTitle": "Everything",
           "linkUrl": "https://www.voidtools.com/",
+          "cover": "",
           "key": "office.daily.everything",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-006",
@@ -491,10 +491,30 @@
           "note": "",
           "linkTitle": "Microsoft PowerToys",
           "linkUrl": "https://learn.microsoft.com/zh-cn/windows/powertoys/",
+          "cover": "",
           "key": "office.daily.powertoys",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
+        },
+        {
+          "id": "office-browser-article-001",
+          "recordId": "recvs38o30CaDf",
+          "pageKey": "office",
+          "pageName": "日常增效",
+          "pagePath": "ai-plus/office.html",
+          "moduleType": "case",
+          "section": "浏览器及插件推荐",
+          "order": 20,
+          "title": "浏览器及插件应用实例",
+          "tag": "FEISHU DOC / BROWSER",
+          "body": "以飞书云文档方式沉淀插件选择、浏览器工作流和真实使用记录。",
+          "note": "独立飞书云文档文章卡；封面留空时由文档首图自动兜底。",
+          "linkTitle": "打开飞书文章",
+          "linkUrl": "https://my.feishu.cn/docx/GxgsdWQOzosgZTxllE7cBGZRnBh",
+          "cover": "",
+          "key": "office.browser.article.001",
+          "enabled": true,
+          "remark": "日常增效 / 浏览器及插件下新增飞书文章卡。"
         },
         {
           "id": "日常增效-007",
@@ -511,29 +531,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "office.browser",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
-        },
-        {
-          "id": "office-browser-article-001",
-          "moduleType": "case",
-          "section": "浏览器及插件推荐",
-          "order": 20,
-          "title": "浏览器及插件应用实例",
-          "tag": "FEISHU DOC / BROWSER",
-          "body": "以飞书云文档方式沉淀插件选择、浏览器工作流和真实使用记录。",
-          "note": "独立飞书云文档文章卡；封面留空时由文档首图自动兜底。",
-          "linkTitle": "打开飞书文章",
-          "linkUrl": "https://my.feishu.cn/docx/GxgsdWQOzosgZTxllE7cBGZRnBh",
-          "key": "office.browser.article.001",
-          "cover": "",
-          "remark": "日常增效 / 浏览器及插件下新增飞书文章卡。",
-          "pageKey": "office",
-          "pageName": "日常增效",
-          "pagePath": "ai-plus/office.html",
-          "enabled": true
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-008",
@@ -550,10 +551,10 @@
           "note": "",
           "linkTitle": "Chrome",
           "linkUrl": "https://www.google.com/chrome/",
+          "cover": "",
           "key": "office.browser.chrome",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-009",
@@ -570,10 +571,10 @@
           "note": "",
           "linkTitle": "Chrome Web Store",
           "linkUrl": "https://chromewebstore.google.com/",
+          "cover": "",
           "key": "office.browser.store",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-010",
@@ -590,10 +591,10 @@
           "note": "",
           "linkTitle": "Raindrop.io",
           "linkUrl": "https://raindrop.io/",
+          "cover": "",
           "key": "office.browser.raindrop",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-011",
@@ -610,10 +611,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "office.licensed",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-012",
@@ -630,10 +631,10 @@
           "note": "",
           "linkTitle": "Microsoft 365",
           "linkUrl": "https://www.microsoft.com/microsoft-365",
+          "cover": "",
           "key": "office.licensed.microsoft365",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-013",
@@ -650,10 +651,10 @@
           "note": "",
           "linkTitle": "Adobe Creative Cloud",
           "linkUrl": "https://www.adobe.com/creativecloud.html",
+          "cover": "",
           "key": "office.licensed.adobe",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-014",
@@ -670,10 +671,10 @@
           "note": "",
           "linkTitle": "1Password",
           "linkUrl": "https://www.1password.com/",
+          "cover": "",
           "key": "office.licensed.1password",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "日常增效-015",
@@ -690,10 +691,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "office.habit",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         }
       ]
     },
@@ -718,10 +719,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.hero",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-002",
@@ -738,10 +739,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.evolution",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-003",
@@ -758,10 +759,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.evolution.weights",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-004",
@@ -778,10 +779,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.evolution.nodes",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-005",
@@ -798,10 +799,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.evolution.multimodal",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-006",
@@ -818,10 +819,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.evolution.assets",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-007",
@@ -838,10 +839,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.list",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-008",
@@ -858,10 +859,10 @@
           "note": "适合中文理解、代码与多模态协同的任务；按参数规模、量化格式和显存预算选择。",
           "linkTitle": "Qwen 官方仓库",
           "linkUrl": "https://github.com/QwenLM/Qwen",
+          "cover": "",
           "key": "models.qwen",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-009",
@@ -878,10 +879,10 @@
           "note": "适合低步骤、快反馈地迭代视觉方案；先确认显存、采样节点和模型许可。",
           "linkTitle": "模型页面",
           "linkUrl": "https://huggingface.co/h4tef/Z-Image-Turbo",
+          "cover": "",
           "key": "models.zimage",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-010",
@@ -898,10 +899,10 @@
           "note": "重点比较分辨率、时长、显存和音视频同步能力。",
           "linkTitle": "LTX 官方仓库",
           "linkUrl": "https://github.com/Lightricks/LTX-Video",
+          "cover": "",
           "key": "models.ltx",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "开源模型-011",
@@ -918,10 +919,10 @@
           "note": "先学会读工作流，再决定安装哪些模型和自定义节点。",
           "linkTitle": "ComfyUI 官方仓库",
           "linkUrl": "https://github.com/comfyanonymous/ComfyUI",
+          "cover": "",
           "key": "models.comfyui",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "open-models-cases-section",
@@ -938,10 +939,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "open-models.cases.section",
           "enabled": true,
-          "remark": "应用实例移动到无限画布之前。",
-          "cover": ""
+          "remark": "应用实例移动到无限画布之前。"
         },
         {
           "id": "open-models-case-001",
@@ -958,10 +959,10 @@
           "note": "应用实例板块用于沉淀真实创作过程：模型选择、节点工作流、输入输出、迭代记录与最终效果。",
           "linkTitle": "打开飞书案例文档",
           "linkUrl": "https://my.feishu.cn/docx/PGTrdaKiOoTffix5anpcLclzndd",
+          "cover": "",
           "key": "open-models.case.001",
           "enabled": true,
-          "remark": "应用实例入口；封面留空时由文档首图自动兜底。",
-          "cover": ""
+          "remark": "应用实例入口；封面留空时由文档首图自动兜底。"
         },
         {
           "id": "开源模型-012",
@@ -978,10 +979,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "models.canvas",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         }
       ]
     },
@@ -1006,10 +1007,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.hero",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-002",
@@ -1026,10 +1027,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.evolution",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-003",
@@ -1046,10 +1047,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.chat",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-004",
@@ -1066,10 +1067,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.tool",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-005",
@@ -1086,10 +1087,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.loop",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-006",
@@ -1106,10 +1107,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.worker",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-007",
@@ -1126,10 +1127,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.platforms",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-008",
@@ -1146,10 +1147,10 @@
           "note": "适合内容生产、客服、数据整理、社媒机器人。上线前检查数据权限和第三方插件边界。",
           "linkTitle": "进入扣子平台",
           "linkUrl": "https://www.coze.cn/overview",
+          "cover": "",
           "key": "agents.coze",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-009",
@@ -1166,10 +1167,10 @@
           "note": "适合网页、脚本、测试、重构、文档和自动化。明确文件范围、命令权限和验收标准。",
           "linkTitle": "Codex 开发者入口",
           "linkUrl": "https://developers.openai.com/codex",
+          "cover": "",
           "key": "agents.codex",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-010",
@@ -1186,10 +1187,10 @@
           "note": "适合个人电脑操作、消息处理、日常自动化。注意本地权限、隐私数据和误操作风险。",
           "linkTitle": "查看 QClaw 入口",
           "linkUrl": "https://qclawd.com/en/",
+          "cover": "",
           "key": "agents.qclaw",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "Agent 智能体-011",
@@ -1206,10 +1207,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "agents.case",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         }
       ]
     },
@@ -1234,10 +1235,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.hero",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-002",
@@ -1254,10 +1255,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.categories",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-003",
@@ -1274,10 +1275,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.nav",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-004",
@@ -1294,10 +1295,10 @@
           "note": "",
           "linkTitle": "AI 工具集",
           "linkUrl": "https://ai-bot.cn/",
+          "cover": "",
           "key": "toolbox.nav.aibot",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-005",
@@ -1314,10 +1315,10 @@
           "note": "",
           "linkTitle": "AIBase 产品库",
           "linkUrl": "https://top.aibase.com/",
+          "cover": "",
           "key": "toolbox.nav.aibase",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-006",
@@ -1334,10 +1335,10 @@
           "note": "",
           "linkTitle": "There's An AI For That",
           "linkUrl": "https://theresanaiforthat.com/",
+          "cover": "",
           "key": "toolbox.nav.taaft",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-007",
@@ -1354,10 +1355,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.tutorial",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-008",
@@ -1374,10 +1375,10 @@
           "note": "",
           "linkTitle": "OpenAI Academy",
           "linkUrl": "https://academy.openai.com/",
+          "cover": "",
           "key": "toolbox.tutorial.openai",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-009",
@@ -1394,10 +1395,10 @@
           "note": "",
           "linkTitle": "DeepLearning.AI Courses",
           "linkUrl": "https://www.deeplearning.ai/courses/",
+          "cover": "",
           "key": "toolbox.tutorial.deeplearning",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-010",
@@ -1414,10 +1415,10 @@
           "note": "",
           "linkTitle": "Hugging Face Learn",
           "linkUrl": "https://huggingface.co/learn",
+          "cover": "",
           "key": "toolbox.tutorial.hf",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-011",
@@ -1434,10 +1435,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.bilibili",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-012",
@@ -1454,10 +1455,10 @@
           "note": "",
           "linkTitle": "歸藏的AI工具箱",
           "linkUrl": "https://space.bilibili.com/1741797/",
+          "cover": "",
           "key": "toolbox.bilibili.guizang",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-013",
@@ -1474,48 +1475,50 @@
           "note": "",
           "linkTitle": "宝玉xp",
           "linkUrl": "https://space.bilibili.com/589397373/",
+          "cover": "",
           "key": "toolbox.bilibili.baoyu",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "toolbox-bilibili-limu",
+          "recordId": "recvs38lmdRn4x",
+          "pageKey": "toolbox",
+          "pageName": "AI 工具箱",
+          "pagePath": "ai-plus/toolbox.html",
           "moduleType": "link",
           "section": "B站 UP 推荐",
           "order": 33,
           "title": "跟李沐学AI",
+          "tag": "",
           "body": "深度学习、论文精读和模型基础。",
+          "note": "",
           "linkTitle": "跟李沐学AI",
           "linkUrl": "https://space.bilibili.com/1567748478/",
-          "key": "toolbox.bilibili.limu",
-          "note": "",
-          "tag": "",
           "cover": "",
-          "remark": "补齐 AI++ 工具箱 B站 UP 推荐。",
-          "pageKey": "toolbox",
-          "pageName": "AI 工具箱",
-          "pagePath": "ai-plus/toolbox.html",
-          "enabled": true
+          "key": "toolbox.bilibili.limu",
+          "enabled": true,
+          "remark": "补齐 AI++ 工具箱 B站 UP 推荐。"
         },
         {
           "id": "toolbox-bilibili-fange",
+          "recordId": "recvs38mzrvzbl",
+          "pageKey": "toolbox",
+          "pageName": "AI 工具箱",
+          "pagePath": "ai-plus/toolbox.html",
           "moduleType": "link",
           "section": "B站 UP 推荐",
           "order": 34,
           "title": "AI研究室-帆哥",
+          "tag": "",
           "body": "AI 应用实践和工具案例。",
+          "note": "",
           "linkTitle": "AI研究室-帆哥",
           "linkUrl": "https://space.bilibili.com/2161614/",
-          "key": "toolbox.bilibili.fange",
-          "note": "",
-          "tag": "",
           "cover": "",
-          "remark": "补齐 AI++ 工具箱 B站 UP 推荐。",
-          "pageKey": "toolbox",
-          "pageName": "AI 工具箱",
-          "pagePath": "ai-plus/toolbox.html",
-          "enabled": true
+          "key": "toolbox.bilibili.fange",
+          "enabled": true,
+          "remark": "补齐 AI++ 工具箱 B站 UP 推荐。"
         },
         {
           "id": "AI 工具箱-014",
@@ -1532,10 +1535,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.software",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-015",
@@ -1552,10 +1555,10 @@
           "note": "",
           "linkTitle": "Cherry Studio",
           "linkUrl": "https://cherryai.com/",
+          "cover": "",
           "key": "toolbox.software.cherry",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-016",
@@ -1572,10 +1575,10 @@
           "note": "",
           "linkTitle": "Ollama",
           "linkUrl": "https://ollama.com/",
+          "cover": "",
           "key": "toolbox.software.ollama",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-017",
@@ -1592,10 +1595,10 @@
           "note": "",
           "linkTitle": "Dify",
           "linkUrl": "https://dify.ai/",
+          "cover": "",
           "key": "toolbox.software.dify",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-018",
@@ -1612,10 +1615,10 @@
           "note": "",
           "linkTitle": "",
           "linkUrl": "",
+          "cover": "",
           "key": "toolbox.api",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-019",
@@ -1632,10 +1635,10 @@
           "note": "",
           "linkTitle": "OpenAI API",
           "linkUrl": "https://platform.openai.com/docs",
+          "cover": "",
           "key": "toolbox.api.openai",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-020",
@@ -1652,10 +1655,10 @@
           "note": "",
           "linkTitle": "Claude API",
           "linkUrl": "https://platform.claude.com/docs",
+          "cover": "",
           "key": "toolbox.api.claude",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         },
         {
           "id": "AI 工具箱-021",
@@ -1672,10 +1675,10 @@
           "note": "",
           "linkTitle": "OpenRouter",
           "linkUrl": "https://openrouter.ai/docs/quickstart",
+          "cover": "",
           "key": "toolbox.api.openrouter",
           "enabled": true,
-          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。",
-          "cover": ""
+          "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
         }
       ]
     }
