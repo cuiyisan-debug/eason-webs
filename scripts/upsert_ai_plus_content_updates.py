@@ -112,6 +112,25 @@ UPDATES: dict[str, list[dict[str, Any]]] = {
                 "备注": "日常增效 / 浏览器及插件下独立飞书文章卡。",
             },
         },
+        {
+            "key": "office.habit.article.001",
+            "fields": {
+                "内容ID": "office-habit-article-001",
+                "模块类型": "case",
+                "所属板块": "工作习惯建议",
+                "排序": "44",
+                "标题": "工作习惯应用实例",
+                "副标题/标签": "FEISHU DOC / HABIT",
+                "正文": "以飞书云文档沉淀日常工作习惯、任务推进节奏和可复用流程。",
+                "小字/说明": "独立飞书云文档文章卡；封面留空时由文档首图自动兜底。",
+                "链接标题": "打开飞书文章",
+                "链接URL": "https://my.feishu.cn/docx/GGr3d9UQso5eY8xXsOYc8DOznuh",
+                "封面": "",
+                "数据键": "office.habit.article.001",
+                "是否启用": "是",
+                "备注": "日常增效 / 工作习惯建议下新增飞书文章卡。",
+            },
+        },
     ],
     "open-models": [
         {

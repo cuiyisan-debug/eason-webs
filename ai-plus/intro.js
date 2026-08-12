@@ -77,6 +77,12 @@
     lines.forEach((line) => line.classList.remove("is-revealed"));
   };
 
+  const isSettledInView = () => {
+    const rect = root.getBoundingClientRect();
+    const visible = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+    return visible / Math.max(1, rect.height) >= 0.72;
+  };
+
   const reveal = () => {
     reset();
     const token = playToken;
@@ -113,4 +119,12 @@
   }, { threshold: [0, 0.35, 0.72, 0.92, 1] });
 
   observer.observe(root);
+
+  window.addEventListener("pageshow", () => {
+    reset();
+    if (isSettledInView()) reveal();
+  });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && isSettledInView()) reveal();
+  });
 })();

@@ -45,14 +45,20 @@
       const response = await fetch("../api/ai-plus-articles.json", { cache: "no-store" });
       if (!response.ok) return;
       const data = await response.json();
-      const covers = new Map((data.articles || []).map((item) => [item.id || item.key, item.cover || ""]));
+      const articles = new Map((data.articles || []).map((item) => [item.id || item.key, item]));
       cards.forEach((card) => {
         const id = articleIdFromHref(card.getAttribute("href") || "");
-        const cover = covers.get(id);
+        const article = articles.get(id);
+        const cover = article?.cover || "";
         const thumb = card.querySelector(".ai-plus-case-thumb");
-        if (!cover || !thumb) return;
-        thumb.classList.add("has-cover");
-        thumb.style.setProperty("--case-cover", `url("${cover}")`);
+        if (cover && thumb) {
+          thumb.classList.add("has-cover");
+          thumb.style.setProperty("--case-cover", `url("${cover}")`);
+        }
+        const title = card.querySelector(".ai-plus-case-copy strong");
+        if (article?.title && title) title.textContent = article.title;
+        const summary = card.querySelector(".ai-plus-case-copy span");
+        if (article?.summary && summary) summary.textContent = article.summary;
       });
     } catch {
       // Keep the designed placeholder thumbnail when article JSON is unavailable.

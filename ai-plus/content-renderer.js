@@ -143,8 +143,17 @@
       const response = await fetch(`../api/ai-plus-articles.json?v=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) return records;
       const data = await response.json();
-      const coverById = new Map((data.articles || []).map((item) => [item.id || item.key, item.cover || ""]));
-      return records.map((item) => item.cover ? item : { ...item, cover: coverById.get(item.key || item.id) || "" });
+      const articlesById = new Map((data.articles || []).map((item) => [item.id || item.key, item]));
+      return records.map((item) => {
+        const article = articlesById.get(item.key || item.id);
+        if (!article) return item;
+        return {
+          ...item,
+          cover: item.cover || article.cover || "",
+          title: article.title || item.title,
+          body: article.summary || item.body,
+        };
+      });
     } catch {
       return records;
     }

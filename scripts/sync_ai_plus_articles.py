@@ -24,6 +24,21 @@ import refresh
 CONTENT_PATH = ROOT / "api" / "ai-plus-content.json"
 OUTPUT_PATH = ROOT / "api" / "ai-plus-articles.json"
 
+MANUAL_ARTICLE_VIDEOS: dict[str, list[dict[str, str]]] = {
+    "open-models.case.001": [
+        {
+            "filename": "LTX23-20260521165107_00001_.mp4",
+            "url": "assets/ai-plus-ltx-single.mp4",
+            "text": "LTX-2.3 单图生成视频测试",
+        },
+        {
+            "filename": "LTX23-20260526151852_00001_.mp4",
+            "url": "assets/ai-plus-ltx-two-shot.mp4",
+            "text": "LTX-2.3 双图生成视频测试",
+        },
+    ],
+}
+
 
 def looks_like_feishu_docx(url: str) -> bool:
     return "my.feishu.cn/docx/" in str(url) or "feishu.cn/docx/" in str(url)
@@ -59,6 +74,41 @@ def media_block_references(body: str, media_urls: list[str]) -> list[dict[str, A
             referenced.append({"type": "video", "url": url, "text": filename})
             seen.add(filename)
     return referenced
+
+
+def inject_manual_videos(article_key: str, body: str, content_blocks: list[dict[str, Any]], media: list[str]) -> None:
+    """Render known local videos when Feishu exposes only attachment filenames.
+
+    Feishu docx can sometimes return video attachments as plain filename text
+    instead of media blocks. The files still need to be rendered in the article,
+    so we insert stable local asset references; the R2 mirror workflow replaces
+    them with Cloudflare URLs after upload.
+    """
+
+    videos = MANUAL_ARTICLE_VIDEOS.get(article_key, [])
+    if not videos:
+        return
+    lowered_body = body.lower()
+    existing_urls = {str(block.get("url") or "") for block in content_blocks if isinstance(block, dict)}
+    existing_urls.update(str(item) for item in media)
+    for item in videos:
+        filename = item["filename"]
+        filename_lower = filename.lower()
+        if filename_lower not in lowered_body:
+            continue
+        url = item["url"]
+        if url in existing_urls:
+            continue
+        inserted = False
+        for index, block in enumerate(list(content_blocks)):
+            if filename_lower in str(block.get("text") or "").lower():
+                content_blocks.insert(index + 1, {"type": "video", "url": url, "text": item.get("text") or filename})
+                inserted = True
+                break
+        if not inserted:
+            content_blocks.append({"type": "video", "url": url, "text": item.get("text") or filename})
+        media.append(url)
+        existing_urls.add(url)
 
 
 def content_records() -> list[dict[str, Any]]:
@@ -98,6 +148,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
                 block["url"] = resolved
                 if resolved and is_video_url(resolved):
                     block["type"] = "video"
+    article_key = str(record.get("key") or record.get("id") or "")
     if not content_blocks and body:
         content_blocks = [{"type": "paragraph", "text": paragraph} for paragraph in body.splitlines() if paragraph.strip()]
     else:
@@ -105,6 +156,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
         for block in media_block_references(body, media):
             if block["url"] not in existing_urls:
                 content_blocks.append(block)
+    inject_manual_videos(article_key, body, content_blocks, media)
     return {
         "id": record.get("key") or record.get("id"),
         "key": record.get("key") or record.get("id"),
