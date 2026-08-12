@@ -26,12 +26,12 @@ jobs:
 
       - name: Commit content JSON
         run: |
-          if git diff --quiet -- api/ai-plus-content.json; then
+          git add api/ai-plus-content.json
+          if git diff --cached --quiet -- api/ai-plus-content.json; then
             echo "No AI++ content changes."
-          else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add api/ai-plus-content.json
-            git commit -m "sync AI plus Feishu content"
-            git push
+            exit 0
           fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "sync AI plus Feishu content"
+          git push
