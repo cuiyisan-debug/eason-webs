@@ -1,6 +1,6 @@
 {
   "source": "feishu-bitable",
-  "generatedAt": "2026-08-12T02:26:16.244837+00:00",
+  "generatedAt": "2026-08-12T02:46:48.335719+00:00",
   "pages": {
     "overview": {
       "name": "AI 概述",
@@ -912,7 +912,7 @@
           "body": "从飞书云文档读取案例内容，后续可继续补充缩略图、步骤记录和模型配置。",
           "note": "应用实例板块用于沉淀真实创作过程：模型选择、节点工作流、输入输出、迭代记录与最终效果。",
           "linkTitle": "打开飞书案例文档",
-          "linkUrl": "https://my.feishu.cn/docx/EPrWdPee9oziP8xiRHscFKsLnuf",
+          "linkUrl": "https://my.feishu.cn/docx/PGTrdaKiOoTffix5anpcLclzndd",
           "key": "open-models.case.001",
           "enabled": true,
           "remark": "AI++ 开源模型页面应用实例入口"
