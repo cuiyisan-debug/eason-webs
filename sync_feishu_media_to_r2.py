@@ -39,7 +39,7 @@ R2_CLEANUP_MODE = os.environ.get("R2_CLEANUP_MODE", "report").strip().lower() or
 DOWNLOAD_TIMEOUT = float(os.environ.get("R2_DOWNLOAD_TIMEOUT", "30"))
 WORKERS = max(1, int(os.environ.get("R2_SYNC_WORKERS", "6")))
 LOCAL_MEDIA_EXTENSIONS = {".mp4", ".webm", ".mov"}
-TEXT_EXTENSIONS = {".html", ".css", ".js"}
+TEXT_EXTENSIONS = {".html", ".css", ".js", ".json"}
 
 
 def require(name: str) -> str:
