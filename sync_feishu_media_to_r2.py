@@ -29,7 +29,7 @@ from botocore.exceptions import ClientError
 ROOT = Path(__file__).resolve().parent
 API_DIR = ROOT / "api"
 REPORTS_DIR = ROOT / "reports"
-API_FILES = ("portfolio.json", "clients.json", "zhixing.json", "curation.json")
+API_FILES = ("portfolio.json", "clients.json", "zhixing.json", "curation.json", "ai-plus-articles.json")
 MANIFEST_FILE = API_DIR / "r2-media-manifest.json"
 R2_PREFIX = os.environ.get("R2_MEDIA_PREFIX", "feishu-media").strip("/") or "feishu-media"
 R2_LOCAL_MEDIA_PREFIX = os.environ.get("R2_LOCAL_MEDIA_PREFIX", "site-media").strip("/") or "site-media"

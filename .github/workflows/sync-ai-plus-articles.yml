@@ -12,11 +12,12 @@ jobs:
     env:
       LARK_APP_ID: ${{ secrets.LARK_APP_ID }}
       LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
-      LARK_R2_ACCOUNT_ID: ${{ secrets.LARK_R2_ACCOUNT_ID }}
-      LARK_R2_ACCESS_KEY_ID: ${{ secrets.LARK_R2_ACCESS_KEY_ID }}
-      LARK_R2_SECRET_ACCESS_KEY: ${{ secrets.LARK_R2_SECRET_ACCESS_KEY }}
-      LARK_R2_BUCKET: ${{ secrets.LARK_R2_BUCKET }}
-      LARK_R2_PUBLIC_BASE_URL: ${{ secrets.LARK_R2_PUBLIC_BASE_URL }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+      R2_MEDIA_PREFIX: ${{ vars.R2_MEDIA_PREFIX }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,10 +33,13 @@ jobs:
       - name: Sync AI++ Feishu articles
         run: python scripts/sync_ai_plus_articles.py
 
+      - name: Mirror AI++ article media to Cloudflare R2
+        run: python sync_feishu_media_to_r2.py
+
       - name: Commit AI++ article JSON
         run: |
-          git add api/ai-plus-content.json api/ai-plus-articles.json
-          if git diff --cached --quiet -- api/ai-plus-content.json api/ai-plus-articles.json; then
+          git add api/ai-plus-content.json api/ai-plus-articles.json api/r2-media-manifest.json reports/*.json
+          if git diff --cached --quiet -- api/ai-plus-content.json api/ai-plus-articles.json api/r2-media-manifest.json reports; then
             echo "No AI++ article changes."
             exit 0
           fi
