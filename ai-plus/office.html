@@ -11,7 +11,7 @@
     <header class="ai-site-header" data-ai-shell></header>
     <main class="section-page">
       <div class="section-content">
-        <div id="daily-efficiency-content" class="ai-plus-content">
+        <div id="daily-efficiency-content" class="ai-plus-content" data-ai-plus-content>
           <section class="ai-plus-module-hero" id="top">
             <div class="ai-plus-module-copy">
               <p class="ai-plus-module-kicker">WORKFLOW / DAILY EFFICIENCY</p>
@@ -108,7 +108,8 @@
             document.querySelectorAll(".ai-plus-module-tools article").forEach((card) => card.classList.toggle("is-hidden", target !== "all" && card.dataset.kind !== target));
           });
         });
-      })();
-    </script>
+    })();
+  </script>
+    <script src="./content-renderer.js?v=ai-plus-feishu-01"></script>
   </body>
 </html>

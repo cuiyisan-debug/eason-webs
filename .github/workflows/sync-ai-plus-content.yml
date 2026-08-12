@@ -1,0 +1,37 @@
+name: Sync AI Plus Content
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      LARK_APP_ID: ${{ secrets.LARK_APP_ID }}
+      LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync AI++ Bitables
+        run: python scripts/sync_ai_plus_content.py
+
+      - name: Commit content JSON
+        run: |
+          if git diff --quiet -- api/ai-plus-content.json; then
+            echo "No AI++ content changes."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add api/ai-plus-content.json
+            git commit -m "sync AI plus Feishu content"
+            git push
+          fi
