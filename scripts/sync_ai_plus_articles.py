@@ -28,6 +28,10 @@ def looks_like_feishu_docx(url: str) -> bool:
     return "my.feishu.cn/docx/" in str(url) or "feishu.cn/docx/" in str(url)
 
 
+def is_video_url(url: str) -> bool:
+    return str(url).lower().split("?", 1)[0].endswith((".mp4", ".webm", ".ogg", ".mov"))
+
+
 def content_records() -> list[dict[str, Any]]:
     if not CONTENT_PATH.exists():
         return []
@@ -62,7 +66,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
                 image_token = str(block.get("token") or "")
                 resolved = doc_urls.get(image_token, "")
                 block["url"] = resolved
-                if resolved and refresh.is_video(resolved):
+                if resolved and is_video_url(resolved):
                     block["type"] = "video"
     if not content_blocks and body:
         content_blocks = [{"type": "paragraph", "text": paragraph} for paragraph in body.splitlines() if paragraph.strip()]
@@ -81,7 +85,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
         "linkedError": linked.get("error", ""),
         "media": media,
         "contentBlocks": content_blocks,
-        "cover": next((item for item in media if not refresh.is_video(item)), media[0] if media else ""),
+        "cover": next((item for item in media if not is_video_url(item)), media[0] if media else ""),
     }
 
 
