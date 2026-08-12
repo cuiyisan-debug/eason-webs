@@ -14,6 +14,10 @@
 
   const isVideoUrl = (url = "") => /\.(mp4|webm|ogg|mov)(\?|#|$)/i.test(url);
   const isImageUrl = (url = "") => /\.(png|jpe?g|webp|gif|avif|svg)(\?|#|$)/i.test(url);
+  const extractMediaUrl = (text = "") => {
+    const match = String(text).match(/https?:\/\/[^\s<>"']+|BV[a-zA-Z0-9]+/);
+    return match ? match[0] : "";
+  };
   const bilibiliBv = (url = "") => {
     const match = String(url).match(/BV[a-zA-Z0-9]+/);
     return match ? match[0] : "";
@@ -56,7 +60,15 @@
       const rows = block.rows.map((row) => `<tr>${(row || []).map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`).join("");
       return `<div class="ai-plus-article-table-wrap"><table>${rows}</table></div>`;
     }
-    return text ? `<p>${escapeHtml(text)}</p>` : "";
+    if (text) {
+      const mediaUrl = extractMediaUrl(text);
+      if (mediaUrl && (isVideoUrl(mediaUrl) || isImageUrl(mediaUrl) || bilibiliBv(mediaUrl))) {
+        const cleaned = text.replace(mediaUrl, "").trim();
+        return `${cleaned ? `<p>${escapeHtml(cleaned)}</p>` : ""}${renderRichMedia(mediaUrl, cleaned || block.caption || "")}`;
+      }
+      return `<p>${escapeHtml(text)}</p>`;
+    }
+    return "";
   }
 
   function compactListItems(html) {
@@ -72,9 +84,13 @@
     const blocks = Array.isArray(article.contentBlocks) ? article.contentBlocks : [];
     const media = Array.isArray(article.media) ? article.media : [];
     const bodyHtml = blocks.length ? compactListItems(blocks.map(renderBlock).join("")) : `<p>${escapeHtml(article.body || article.summary || "")}</p>`;
-    const mediaHtml = media.map((url, index) => renderRichMedia(url, index === 0 ? article.title : "")).join("");
+    const blockUrls = new Set(blocks.map((block) => block?.url || block?.link || "").filter(Boolean));
+    const mediaHtml = media
+      .filter((url) => !blockUrls.has(url))
+      .map((url, index) => renderRichMedia(url, index === 0 ? article.title : ""))
+      .join("");
     const sourceHtml = article.contentUrl ? `<p class="ai-plus-article-source"><a href="${escapeHtml(article.contentUrl)}" target="_blank" rel="noopener noreferrer">打开飞书原文 →</a></p>` : "";
-    body.innerHTML = mediaHtml + bodyHtml + sourceHtml;
+    body.innerHTML = bodyHtml + mediaHtml + sourceHtml;
   }
 
   function bindReturn() {
@@ -100,7 +116,7 @@
       const response = await fetch(`../api/ai-plus-articles.json?v=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
-      const article = data.articles?.find((item) => item.id === articleId || item.key === articleId) || data.articles?.[0];
+      const article = data.articles?.find((item) => item.id === articleId || item.key === articleId) || (!articleId ? data.articles?.[0] : null);
       if (!article) throw new Error("article not found");
       renderArticle(article);
     } catch (error) {

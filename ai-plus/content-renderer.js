@@ -53,8 +53,8 @@
     const intro = records.find((item) => item.moduleType === "section");
     const items = records.filter((item) => item.moduleType !== "section" && item.moduleType !== "hero" && item.moduleType !== "caption");
     if (!intro && !items.length) return "";
-    const isCaseSection = items.some((item) => item.moduleType === "case");
-    const cards = items.map(isCaseSection ? renderCaseCard : renderCard).join("");
+    const isCaseSection = items.length > 0 && items.every((item) => item.moduleType === "case" || item.moduleType === "article" || (item.linkUrl || "").includes("feishu.cn/docx/"));
+    const cards = items.map(renderSmartCard).join("");
     const id = sectionId(section);
     return `
       <section class="ai-plus-module-section"${id ? ` id="${escapeHtml(id)}"` : ""}>
@@ -63,11 +63,19 @@
       </section>`;
   }
 
+  function renderSmartCard(item) {
+    if (item.moduleType === "case" || item.moduleType === "article" || (item.linkUrl || "").includes("feishu.cn/docx/")) {
+      return renderCaseCard(item);
+    }
+    return renderCard(item);
+  }
+
   function renderCaseCard(item) {
     const href = `./article.html?id=${encodeURIComponent(item.key || item.id)}&from=${encodeURIComponent(item.pagePath?.split("/").pop() || "open-models.html")}`;
+    const cover = item.cover ? ` style="--case-cover: url('${escapeHtml(item.cover)}')"` : "";
     return `
       <a class="ai-plus-case-card" href="${escapeHtml(href)}" data-ai-plus-article-link>
-        <span class="ai-plus-case-thumb" aria-hidden="true">
+        <span class="ai-plus-case-thumb${item.cover ? " has-cover" : ""}"${cover} aria-hidden="true">
           <span class="case-node node-1"></span>
           <span class="case-node node-2"></span>
           <span class="case-node node-3"></span>
@@ -106,7 +114,7 @@
       const data = await response.json();
       const page = data.pages?.[pageKey];
       if (!page?.records?.length) return;
-      const records = page.records;
+      const records = await mergeArticleCovers(page.records);
       const heroHtml = renderHero(records);
       const sections = Array.from(groupBy(records.filter((item) => !["hero", "caption"].includes(item.moduleType))).entries());
       const sectionHtml = sections.map(([section, items]) => renderSection(section, items)).join("");
@@ -115,6 +123,20 @@
       document.dispatchEvent(new CustomEvent("ai-plus-content-rendered", { detail: { pageKey, count: records.length } }));
     } catch (error) {
       console.warn("[AI++] Feishu content JSON unavailable, static fallback is kept.", error);
+    }
+  }
+
+  async function mergeArticleCovers(records) {
+    const needsCover = records.some((item) => (item.moduleType === "case" || item.moduleType === "article" || (item.linkUrl || "").includes("feishu.cn/docx/")) && !item.cover);
+    if (!needsCover) return records;
+    try {
+      const response = await fetch(`../api/ai-plus-articles.json?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) return records;
+      const data = await response.json();
+      const coverById = new Map((data.articles || []).map((item) => [item.id || item.key, item.cover || ""]));
+      return records.map((item) => item.cover ? item : { ...item, cover: coverById.get(item.key || item.id) || "" });
+    } catch {
+      return records;
     }
   }
 

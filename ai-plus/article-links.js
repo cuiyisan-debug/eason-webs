@@ -29,6 +29,36 @@
     sessionStorage.setItem(storageKey, JSON.stringify(payload));
   }
 
+  function articleIdFromHref(href) {
+    try {
+      const url = new URL(href, window.location.href);
+      return url.searchParams.get("id") || "";
+    } catch {
+      return "";
+    }
+  }
+
+  async function hydrateArticleCardCovers() {
+    const cards = Array.from(document.querySelectorAll("a[data-ai-plus-article-link], a[href*='article.html?id=']"));
+    if (!cards.length) return;
+    try {
+      const response = await fetch("../api/ai-plus-articles.json", { cache: "no-store" });
+      if (!response.ok) return;
+      const data = await response.json();
+      const covers = new Map((data.articles || []).map((item) => [item.id || item.key, item.cover || ""]));
+      cards.forEach((card) => {
+        const id = articleIdFromHref(card.getAttribute("href") || "");
+        const cover = covers.get(id);
+        const thumb = card.querySelector(".ai-plus-case-thumb");
+        if (!cover || !thumb) return;
+        thumb.classList.add("has-cover");
+        thumb.style.setProperty("--case-cover", `url("${cover}")`);
+      });
+    } catch {
+      // Keep the designed placeholder thumbnail when article JSON is unavailable.
+    }
+  }
+
   document.addEventListener("click", (event) => {
     const anchor = event.target.closest("a[data-ai-plus-article-link], a[href*='article.html']");
     if (!anchor) return;
@@ -36,4 +66,5 @@
   });
 
   restoreScroll();
+  hydrateArticleCardCovers();
 })();

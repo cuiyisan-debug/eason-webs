@@ -67,8 +67,10 @@
   if (!root) return;
   const lines = Array.from(root.querySelectorAll(".code-disclaimer-copy p, .code-disclaimer-copy small"));
   let timers = [];
+  let playToken = 0;
 
   const reset = () => {
+    playToken += 1;
     timers.forEach((timer) => window.clearTimeout(timer));
     timers = [];
     root.classList.remove("is-visible");
@@ -77,11 +79,14 @@
 
   const reveal = () => {
     reset();
+    const token = playToken;
     void root.offsetWidth;
     requestAnimationFrame(() => {
+      if (token !== playToken) return;
       root.classList.add("is-visible");
       lines.forEach((line, index) => {
         timers.push(window.setTimeout(() => {
+          if (token !== playToken) return;
           line.classList.add("is-revealed");
         }, 220 + index * 720));
       });
@@ -96,7 +101,7 @@
   let active = false;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const settledInView = entry.isIntersecting && entry.intersectionRatio >= 0.92;
+      const settledInView = entry.isIntersecting && entry.intersectionRatio >= 0.72;
       if (settledInView && !active) {
         active = true;
         reveal();
@@ -105,7 +110,7 @@
         reset();
       }
     });
-  }, { threshold: [0, 0.35, 0.65, 0.92, 1] });
+  }, { threshold: [0, 0.35, 0.72, 0.92, 1] });
 
   observer.observe(root);
 })();

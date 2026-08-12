@@ -178,6 +178,7 @@ def normalize_record(page: dict, record: dict) -> dict:
         "note": text_value(fields.get("小字/说明")),
         "linkTitle": text_value(fields.get("链接标题")),
         "linkUrl": text_value(fields.get("链接URL")),
+        "cover": text_value(fields.get("封面") or fields.get("封面URL") or fields.get("封面图")),
         "key": text_value(fields.get("数据键")),
         "enabled": enabled_value(fields.get("是否启用")),
         "remark": text_value(fields.get("备注")),

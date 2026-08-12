@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -32,6 +33,34 @@ def is_video_url(url: str) -> bool:
     return str(url).lower().split("?", 1)[0].endswith((".mp4", ".webm", ".ogg", ".mov"))
 
 
+def media_filename(url: str) -> str:
+    return str(url).split("?", 1)[0].rstrip("/").rsplit("/", 1)[-1].lower()
+
+
+def media_block_references(body: str, media_urls: list[str]) -> list[dict[str, Any]]:
+    """Add a safe fallback when a Feishu doc references uploaded video files as text.
+
+    Some Feishu docx exports surface attachment filenames in paragraph text while
+    the corresponding download URLs are only available in mediaTokens. If a media
+    URL is a video and its filename appears in the body, render it as a video
+    block near the end rather than losing it completely.
+    """
+
+    lowered_body = body.lower()
+    referenced: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for url in media_urls:
+        if not is_video_url(url):
+            continue
+        filename = media_filename(url)
+        if not filename or filename in seen:
+            continue
+        if filename in lowered_body or re.search(re.escape(filename.replace("_", " ")), lowered_body):
+            referenced.append({"type": "video", "url": url, "text": filename})
+            seen.add(filename)
+    return referenced
+
+
 def content_records() -> list[dict[str, Any]]:
     if not CONTENT_PATH.exists():
         return []
@@ -49,6 +78,7 @@ def content_records() -> list[dict[str, Any]]:
 def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
     title = str(record.get("title") or "AI++ 文章").strip()
     url = str(record.get("linkUrl") or "").strip()
+    record_cover = str(record.get("cover") or "").strip()
     linked = refresh.fetch_feishu_doc_content(token, url) if url else {}
     body = str(linked.get("body") or record.get("body") or "").strip()
     raw_blocks = linked.get("rawBlocks") if isinstance(linked.get("rawBlocks"), list) else []
@@ -70,6 +100,11 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
                     block["type"] = "video"
     if not content_blocks and body:
         content_blocks = [{"type": "paragraph", "text": paragraph} for paragraph in body.splitlines() if paragraph.strip()]
+    else:
+        existing_urls = {str(block.get("url") or "") for block in content_blocks if isinstance(block, dict)}
+        for block in media_block_references(body, media):
+            if block["url"] not in existing_urls:
+                content_blocks.append(block)
     return {
         "id": record.get("key") or record.get("id"),
         "key": record.get("key") or record.get("id"),
@@ -85,7 +120,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
         "linkedError": linked.get("error", ""),
         "media": media,
         "contentBlocks": content_blocks,
-        "cover": next((item for item in media if not is_video_url(item)), media[0] if media else ""),
+        "cover": record_cover or next((item for item in media if not is_video_url(item)), media[0] if media else ""),
     }
 
 
