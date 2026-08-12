@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T03:32:50.091871+00:00",
+  "generatedAt": "2026-08-12T03:43:54.210188+00:00",
   "r2Prefix": "feishu-media",
   "r2LocalMediaPrefix": "site-media",
   "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
@@ -11554,6 +11554,16 @@
       "source": "local-asset",
       "createdAt": "2026-08-12T03:28:48.240417+00:00",
       "lastSeenAt": "2026-08-12T03:28:48.240433+00:00"
+    },
+    "2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0": {
+      "sha256": "2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0",
+      "size": 2218298,
+      "contentType": "video/mp4",
+      "r2Key": "site-media/25/2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/25/2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0.mp4",
+      "source": "local-asset",
+      "createdAt": "2026-08-12T03:43:54.144001+00:00",
+      "lastSeenAt": "2026-08-12T03:43:54.144015+00:00"
     }
   },
   "localAssets": {
@@ -11678,12 +11688,12 @@
       "updatedAt": "2026-08-11T09:57:03.328022+00:00"
     },
     "assets/ai-plus-huawei-closing.mp4": {
-      "sha256": "be4d4ede0668aee773c283502518d0b725efa567952902f258272c105bc37216",
-      "size": 10108451,
+      "sha256": "2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0",
+      "size": 2218298,
       "contentType": "video/mp4",
-      "r2Key": "site-media/be/be4d4ede0668aee773c283502518d0b725efa567952902f258272c105bc37216.mp4",
-      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/be/be4d4ede0668aee773c283502518d0b725efa567952902f258272c105bc37216.mp4",
-      "updatedAt": "2026-08-12T03:28:48.240439+00:00"
+      "r2Key": "site-media/25/2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/25/2598b48da3a5b762635befd404edd28fcdab969c9527b1e8140d777d637b08a0.mp4",
+      "updatedAt": "2026-08-12T03:43:54.144021+00:00"
     }
   },
   "mode": "mirror",

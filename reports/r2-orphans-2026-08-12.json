@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-12T03:32:50.091587+00:00",
+  "generatedAt": "2026-08-12T03:43:54.209922+00:00",
   "mode": "report",
   "bucket": "mycys-media",
   "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
   "usedKeyCount": 1150,
-  "orphanUniqueKeyCount": 5,
+  "orphanUniqueKeyCount": 6,
   "deletedCount": 0,
   "deleteFailedCount": 0,
   "orphanObjects": [
@@ -40,6 +40,13 @@
       "sha256": "70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23",
       "r2Key": "site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
       "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "contentType": "video/mp4",
+      "source": "local-asset"
+    },
+    {
+      "sha256": "be4d4ede0668aee773c283502518d0b725efa567952902f258272c105bc37216",
+      "r2Key": "site-media/be/be4d4ede0668aee773c283502518d0b725efa567952902f258272c105bc37216.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/be/be4d4ede0668aee773c283502518d0b725efa567952902f258272c105bc37216.mp4",
       "contentType": "video/mp4",
       "source": "local-asset"
     }
