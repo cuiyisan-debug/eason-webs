@@ -73,4 +73,5 @@
 
   restoreScroll();
   hydrateArticleCardCovers();
+  document.addEventListener("ai-plus-content-rendered", hydrateArticleCardCovers);
 })();

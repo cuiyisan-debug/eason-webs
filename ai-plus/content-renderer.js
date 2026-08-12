@@ -105,7 +105,7 @@
       <div class="ai-plus-resource-links compact">
         <a href="${escapeHtml(item.linkUrl)}" target="_blank" rel="noopener noreferrer">
           <strong>${escapeHtml(item.linkTitle || item.title)}</strong>
-          <small>${escapeHtml(item.linkUrl)}</small>
+          <small>${escapeHtml(item.note || item.body || "打开链接")}</small>
         </a>
       </div>` : "";
     return `
@@ -124,7 +124,7 @@
       const data = await response.json();
       const page = data.pages?.[pageKey];
       if (!page?.records?.length) return;
-      const records = await mergeArticleCovers(page.records);
+      const records = await mergeArticleCovers(page.records.filter((item) => item.enabled !== false));
       const heroHtml = renderHero(records);
       const sections = Array.from(groupBy(records.filter((item) => !["hero", "caption"].includes(item.moduleType))).entries());
       const sectionHtml = sections.map(([section, items]) => renderSection(section, items)).join("");

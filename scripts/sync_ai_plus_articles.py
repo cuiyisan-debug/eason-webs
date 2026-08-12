@@ -125,8 +125,53 @@ def content_records() -> list[dict[str, Any]]:
     return records
 
 
+def text_blocks(blocks: list[dict[str, Any]]) -> list[str]:
+    values: list[str] = []
+    for block in blocks:
+        if not isinstance(block, dict):
+            continue
+        if block.get("type") not in {"paragraph", "heading", "list_item", "quote"}:
+            continue
+        text = str(block.get("text") or "").strip()
+        if text:
+            values.append(text)
+    return values
+
+
+def derive_doc_title(fallback: str, body: str, blocks: list[dict[str, Any]]) -> str:
+    for text in text_blocks(blocks):
+        cleaned = text.strip()
+        if cleaned:
+            return cleaned[:80]
+    first_line = next((line.strip() for line in body.splitlines() if line.strip()), "")
+    return (first_line or fallback or "AI++ 文章")[:80]
+
+
+def derive_summary(fallback: str, body: str, blocks: list[dict[str, Any]], title: str) -> str:
+    candidates = text_blocks(blocks)
+    if not candidates:
+        candidates = [line.strip() for line in body.splitlines() if line.strip()]
+    normalized_title = title.strip()
+    filtered: list[str] = []
+    seen: set[str] = set()
+    for text in candidates:
+        cleaned = re.sub(r"\s+", " ", text).strip()
+        if not cleaned or cleaned == normalized_title:
+            continue
+        if cleaned in seen:
+            continue
+        if re.match(r"^(图|截图)\s*\d*[:：]", cleaned):
+            continue
+        seen.add(cleaned)
+        filtered.append(cleaned)
+    summary = " ".join(filtered[:2]).strip()
+    if len(summary) > 180:
+        summary = summary[:177].rstrip() + "..."
+    return summary or fallback or body[:160]
+
+
 def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
-    title = str(record.get("title") or "AI++ 文章").strip()
+    fallback_title = str(record.get("title") or "AI++ 文章").strip()
     url = str(record.get("linkUrl") or "").strip()
     record_cover = str(record.get("cover") or "").strip()
     linked = refresh.fetch_feishu_doc_content(token, url) if url else {}
@@ -135,7 +180,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
     content_blocks: list[dict[str, Any]] = []
     media: list[str] = []
     if raw_blocks:
-        content_blocks = refresh.build_doc_content_blocks(raw_blocks, title)
+        content_blocks = refresh.build_doc_content_blocks(raw_blocks, fallback_title)
     doc_tokens = linked.get("mediaTokens") if isinstance(linked.get("mediaTokens"), list) else []
     doc_urls: dict[str, str] = {}
     if doc_tokens:
@@ -157,6 +202,8 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
             if block["url"] not in existing_urls:
                 content_blocks.append(block)
     inject_manual_videos(article_key, body, content_blocks, media)
+    title = derive_doc_title(fallback_title, body, content_blocks)
+    summary = derive_summary(str(record.get("body") or "").strip(), body, content_blocks, title)
     return {
         "id": record.get("key") or record.get("id"),
         "key": record.get("key") or record.get("id"),
@@ -165,7 +212,7 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
         "pagePath": record.get("pagePath"),
         "section": record.get("section"),
         "title": title,
-        "summary": record.get("body") or body[:160],
+        "summary": summary,
         "body": body,
         "contentUrl": url,
         "sourceRecordId": record.get("recordId"),
