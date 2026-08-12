@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-08-12T02:54:33.113324+00:00",
+  "mode": "report",
+  "bucket": "mycys-media",
+  "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
+  "usedKeyCount": 1149,
+  "orphanUniqueKeyCount": 5,
+  "deletedCount": 0,
+  "deleteFailedCount": 0,
+  "orphanObjects": [
+    {
+      "sha256": "dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2",
+      "r2Key": "site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "contentType": "video/mp4",
+      "source": "local-asset"
+    },
+    {
+      "sha256": "aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c",
+      "r2Key": "site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "contentType": "video/mp4",
+      "source": "local-asset"
+    },
+    {
+      "sha256": "88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8",
+      "r2Key": "site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "contentType": "video/mp4",
+      "source": "local-asset"
+    },
+    {
+      "sha256": "8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62",
+      "r2Key": "site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "contentType": "video/mp4",
+      "source": "local-asset"
+    },
+    {
+      "sha256": "70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23",
+      "r2Key": "site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "contentType": "video/mp4",
+      "source": "local-asset"
+    }
+  ],
+  "orphanLocalAssets": [
+    {
+      "path": "assets/journey-city-data-mobile.mp4",
+      "r2Key": "site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/db/dbe01e9b075cb6c9dedcf5f8381f217049822cbe4682b850672616cd504844d2.mp4",
+      "contentType": "video/mp4"
+    },
+    {
+      "path": "assets/journey-fifth-mobile.mp4",
+      "r2Key": "site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/aa/aa7866b87c5fc2e6cae34d7cb135e5dc5f79235009ef10a791ca359278470e0c.mp4",
+      "contentType": "video/mp4"
+    },
+    {
+      "path": "assets/journey-fourth-mobile.mp4",
+      "r2Key": "site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/88/88063b018b9e47d8e846748119a79a7fdfc79a67dfc68a9f62adc42ffb4f64e8.mp4",
+      "contentType": "video/mp4"
+    },
+    {
+      "path": "assets/journey-hero-mobile.mp4",
+      "r2Key": "site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/82/8221d03e509bea9d3d3257de81f14d1be80a686f6504404b12259fffbd894d62.mp4",
+      "contentType": "video/mp4"
+    },
+    {
+      "path": "assets/journey-tools-mobile.mp4",
+      "r2Key": "site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/site-media/70/70267fe690c99789914810194cd34cd7d7e200770520ba7037d044b61c47ec23.mp4",
+      "contentType": "video/mp4"
+    }
+  ],
+  "failures": []
+}
