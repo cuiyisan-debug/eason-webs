@@ -1,6 +1,6 @@
 {
   "source": "feishu-bitable",
-  "generatedAt": "2026-08-12T01:47:04.801647+00:00",
+  "generatedAt": "2026-08-12T02:26:16.244837+00:00",
   "pages": {
     "overview": {
       "name": "AI 概述",
@@ -878,6 +878,44 @@
           "key": "models.canvas",
           "enabled": true,
           "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
+        },
+        {
+          "id": "open-models-cases-section",
+          "recordId": "recvs2SlvyjIAG",
+          "pageKey": "open-models",
+          "pageName": "开源模型",
+          "pagePath": "ai-plus/open-models.html",
+          "moduleType": "section",
+          "section": "应用实例",
+          "order": 450,
+          "title": "应用实例",
+          "tag": "",
+          "body": "把模型、节点、画布和工作流放回真实任务中观察：不是只看模型参数，而是看它能否形成可复用的创作方法。",
+          "note": "",
+          "linkTitle": "",
+          "linkUrl": "",
+          "key": "open-models.cases.section",
+          "enabled": true,
+          "remark": "AI++ 开源模型页面应用实例板块标题"
+        },
+        {
+          "id": "open-models-case-001",
+          "recordId": "recvs2SmtHMOhw",
+          "pageKey": "open-models",
+          "pageName": "开源模型",
+          "pagePath": "ai-plus/open-models.html",
+          "moduleType": "case",
+          "section": "应用实例",
+          "order": 460,
+          "title": "开源模型应用实例",
+          "tag": "FEISHU DOC / CASE",
+          "body": "从飞书云文档读取案例内容，后续可继续补充缩略图、步骤记录和模型配置。",
+          "note": "应用实例板块用于沉淀真实创作过程：模型选择、节点工作流、输入输出、迭代记录与最终效果。",
+          "linkTitle": "打开飞书案例文档",
+          "linkUrl": "https://my.feishu.cn/docx/EPrWdPee9oziP8xiRHscFKsLnuf",
+          "key": "open-models.case.001",
+          "enabled": true,
+          "remark": "AI++ 开源模型页面应用实例入口"
         }
       ]
     },
