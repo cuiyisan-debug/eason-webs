@@ -1,10 +1,10 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
-  if (!params.has("feishu")) return;
-
   const pageKey = document.body?.dataset?.section;
   const root = document.querySelector("[data-ai-plus-content]");
   if (!pageKey || !root) return;
+  const shouldRender = params.has("feishu") || root.dataset.aiPlusLive === "true";
+  if (params.has("static") || !shouldRender) return;
 
   const escapeHtml = (value = "") =>
     String(value).replace(/[&<>"']/g, (char) => ({
