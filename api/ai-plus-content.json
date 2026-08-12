@@ -1,6 +1,6 @@
 {
   "source": "feishu-bitable",
-  "generatedAt": "2026-08-12T04:11:15.819210+00:00",
+  "generatedAt": "2026-08-12T04:42:09.367233+00:00",
   "pages": {
     "overview": {
       "name": "AI 概述",
@@ -715,6 +715,26 @@
           "key": "office.habit",
           "enabled": true,
           "remark": "由 AI++ 页面内容转换，供后续飞书维护网站使用。"
+        },
+        {
+          "id": "office-habit-article-001",
+          "recordId": "recvs3qBs3SgJi",
+          "pageKey": "office",
+          "pageName": "日常增效",
+          "pagePath": "ai-plus/office.html",
+          "moduleType": "case",
+          "section": "工作习惯建议",
+          "order": 44,
+          "title": "工作习惯应用实例",
+          "tag": "FEISHU DOC / HABIT",
+          "body": "以飞书云文档沉淀日常工作习惯、任务推进节奏和可复用流程。",
+          "note": "独立飞书云文档文章卡；封面留空时由文档首图自动兜底。",
+          "linkTitle": "打开飞书文章",
+          "linkUrl": "https://my.feishu.cn/docx/GGr3d9UQso5eY8xXsOYc8DOznuh",
+          "cover": "",
+          "key": "office.habit.article.001",
+          "enabled": true,
+          "remark": "日常增效 / 工作习惯建议下新增飞书文章卡。"
         }
       ]
     },
