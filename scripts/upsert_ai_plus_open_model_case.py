@@ -119,7 +119,7 @@ def main() -> int:
                 "正文": "从飞书云文档读取案例内容，后续可继续补充缩略图、步骤记录和模型配置。",
                 "小字/说明": "应用实例板块用于沉淀真实创作过程：模型选择、节点工作流、输入输出、迭代记录与最终效果。",
                 "链接标题": "打开飞书案例文档",
-                "链接URL": "https://my.feishu.cn/docx/EPrWdPee9oziP8xiRHscFKsLnuf",
+                "链接URL": "https://my.feishu.cn/docx/PGTrdaKiOoTffix5anpcLclzndd",
                 "数据键": CASE_KEY,
                 "是否启用": "是",
                 "备注": "AI++ 开源模型页面应用实例入口",

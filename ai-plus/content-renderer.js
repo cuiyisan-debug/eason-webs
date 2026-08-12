@@ -64,9 +64,9 @@
   }
 
   function renderCaseCard(item) {
-    const href = item.linkUrl || "#";
+    const href = `./article.html?id=${encodeURIComponent(item.key || item.id)}&from=${encodeURIComponent(item.pagePath?.split("/").pop() || "open-models.html")}`;
     return `
-      <a class="ai-plus-case-card" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">
+      <a class="ai-plus-case-card" href="${escapeHtml(href)}" data-ai-plus-article-link>
         <span class="ai-plus-case-thumb" aria-hidden="true">
           <span class="case-node node-1"></span>
           <span class="case-node node-2"></span>

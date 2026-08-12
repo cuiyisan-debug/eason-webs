@@ -1,0 +1,45 @@
+name: Sync AI Plus Articles
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      LARK_APP_ID: ${{ secrets.LARK_APP_ID }}
+      LARK_APP_SECRET: ${{ secrets.LARK_APP_SECRET }}
+      LARK_R2_ACCOUNT_ID: ${{ secrets.LARK_R2_ACCOUNT_ID }}
+      LARK_R2_ACCESS_KEY_ID: ${{ secrets.LARK_R2_ACCESS_KEY_ID }}
+      LARK_R2_SECRET_ACCESS_KEY: ${{ secrets.LARK_R2_SECRET_ACCESS_KEY }}
+      LARK_R2_BUCKET: ${{ secrets.LARK_R2_BUCKET }}
+      LARK_R2_PUBLIC_BASE_URL: ${{ secrets.LARK_R2_PUBLIC_BASE_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync AI++ Bitables
+        run: python scripts/sync_ai_plus_content.py
+
+      - name: Sync AI++ Feishu articles
+        run: python scripts/sync_ai_plus_articles.py
+
+      - name: Commit AI++ article JSON
+        run: |
+          git add api/ai-plus-content.json api/ai-plus-articles.json
+          if git diff --cached --quiet -- api/ai-plus-content.json api/ai-plus-articles.json; then
+            echo "No AI++ article changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "sync AI plus Feishu articles"
+          git push
