@@ -8,6 +8,7 @@ refresh.py without changing the main portfolio/zhixing sync flow.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -85,7 +86,10 @@ def sync_article(token: str, record: dict[str, Any]) -> dict[str, Any]:
 
 
 def main() -> int:
-    refresh.require_env()
+    if not os.environ.get("LARK_ACCESS_TOKEN") and (
+        not os.environ.get("LARK_APP_ID") or not os.environ.get("LARK_APP_SECRET")
+    ):
+        raise RuntimeError("Missing LARK_APP_ID/LARK_APP_SECRET or LARK_ACCESS_TOKEN")
     token = refresh.access_token()
     records = content_records()
     articles = [sync_article(token, record) for record in records]
