@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-12T03:43:54.210188+00:00",
+  "generatedAt": "2026-08-12T04:04:44.824747+00:00",
   "r2Prefix": "feishu-media",
   "r2LocalMediaPrefix": "site-media",
   "publicBaseUrl": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev",
@@ -11564,6 +11564,236 @@
       "source": "local-asset",
       "createdAt": "2026-08-12T03:43:54.144001+00:00",
       "lastSeenAt": "2026-08-12T03:43:54.144015+00:00"
+    },
+    "a3235d2a888c320ddaf68e2aa4053d1fe162d20e1166f03567815bfc2be52cd2": {
+      "sha256": "a3235d2a888c320ddaf68e2aa4053d1fe162d20e1166f03567815bfc2be52cd2",
+      "size": 2383,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/a3/a3235d2a888c320ddaf68e2aa4053d1fe162d20e1166f03567815bfc2be52cd2.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/a3/a3235d2a888c320ddaf68e2aa4053d1fe162d20e1166f03567815bfc2be52cd2.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:41.019191+00:00",
+      "lastSeenAt": "2026-08-12T04:03:41.019203+00:00"
+    },
+    "c30ee545e5eb9b0119ae03b3897853ddf7d033a766087cdc4b45c2ff0918e9fe": {
+      "sha256": "c30ee545e5eb9b0119ae03b3897853ddf7d033a766087cdc4b45c2ff0918e9fe",
+      "size": 1365,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/c3/c30ee545e5eb9b0119ae03b3897853ddf7d033a766087cdc4b45c2ff0918e9fe.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c3/c30ee545e5eb9b0119ae03b3897853ddf7d033a766087cdc4b45c2ff0918e9fe.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:41.050967+00:00",
+      "lastSeenAt": "2026-08-12T04:03:41.050980+00:00"
+    },
+    "dbd76fd866916f85d8a8c0225f129bb7bf955f82f37eaf6fe88d00140ec1e366": {
+      "sha256": "dbd76fd866916f85d8a8c0225f129bb7bf955f82f37eaf6fe88d00140ec1e366",
+      "size": 28523,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/db/dbd76fd866916f85d8a8c0225f129bb7bf955f82f37eaf6fe88d00140ec1e366.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/db/dbd76fd866916f85d8a8c0225f129bb7bf955f82f37eaf6fe88d00140ec1e366.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:41.240255+00:00",
+      "lastSeenAt": "2026-08-12T04:03:41.240267+00:00"
+    },
+    "b490f3a28f0cb7a0af7c435a683ce6887e2f0a99354943c0892fa394b30835be": {
+      "sha256": "b490f3a28f0cb7a0af7c435a683ce6887e2f0a99354943c0892fa394b30835be",
+      "size": 1212,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/b4/b490f3a28f0cb7a0af7c435a683ce6887e2f0a99354943c0892fa394b30835be.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/b4/b490f3a28f0cb7a0af7c435a683ce6887e2f0a99354943c0892fa394b30835be.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:41.508718+00:00",
+      "lastSeenAt": "2026-08-12T04:03:41.508729+00:00"
+    },
+    "c4fd8c05190cafc98284d147c8c17ca07ef8b067068c3382c5ecdf8c1f333fa7": {
+      "sha256": "c4fd8c05190cafc98284d147c8c17ca07ef8b067068c3382c5ecdf8c1f333fa7",
+      "size": 1998,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/c4/c4fd8c05190cafc98284d147c8c17ca07ef8b067068c3382c5ecdf8c1f333fa7.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/c4/c4fd8c05190cafc98284d147c8c17ca07ef8b067068c3382c5ecdf8c1f333fa7.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:41.562347+00:00",
+      "lastSeenAt": "2026-08-12T04:03:41.562358+00:00"
+    },
+    "421beaec1f93c6ee45d620904168a704a040065c490e6de86787ef562a677404": {
+      "sha256": "421beaec1f93c6ee45d620904168a704a040065c490e6de86787ef562a677404",
+      "size": 862,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/42/421beaec1f93c6ee45d620904168a704a040065c490e6de86787ef562a677404.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/42/421beaec1f93c6ee45d620904168a704a040065c490e6de86787ef562a677404.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:42.220068+00:00",
+      "lastSeenAt": "2026-08-12T04:03:42.220080+00:00"
+    },
+    "ecaeb64907f400f18ce86f52538127dc2120f3bad4896ff0239b68f95e1685b1": {
+      "sha256": "ecaeb64907f400f18ce86f52538127dc2120f3bad4896ff0239b68f95e1685b1",
+      "size": 4701,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/ec/ecaeb64907f400f18ce86f52538127dc2120f3bad4896ff0239b68f95e1685b1.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/ec/ecaeb64907f400f18ce86f52538127dc2120f3bad4896ff0239b68f95e1685b1.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:42.370478+00:00",
+      "lastSeenAt": "2026-08-12T04:03:42.370490+00:00"
+    },
+    "6a9c012e8966b885ed1c348756e7a4b125ac4434fa941215505a9bb7bf3ada6a": {
+      "sha256": "6a9c012e8966b885ed1c348756e7a4b125ac4434fa941215505a9bb7bf3ada6a",
+      "size": 55490,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/6a/6a9c012e8966b885ed1c348756e7a4b125ac4434fa941215505a9bb7bf3ada6a.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/6a/6a9c012e8966b885ed1c348756e7a4b125ac4434fa941215505a9bb7bf3ada6a.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:42.390194+00:00",
+      "lastSeenAt": "2026-08-12T04:03:42.390205+00:00"
+    },
+    "d1644cafa8f3a1ba47b83b15ce5122a7ace9d314688f5c80da0aa42ad3de74fa": {
+      "sha256": "d1644cafa8f3a1ba47b83b15ce5122a7ace9d314688f5c80da0aa42ad3de74fa",
+      "size": 624,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/d1/d1644cafa8f3a1ba47b83b15ce5122a7ace9d314688f5c80da0aa42ad3de74fa.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/d1/d1644cafa8f3a1ba47b83b15ce5122a7ace9d314688f5c80da0aa42ad3de74fa.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:42.873394+00:00",
+      "lastSeenAt": "2026-08-12T04:03:42.873405+00:00"
+    },
+    "70fcf635ab4802a6974d8db2db03db3392d8be258312deaa685764aeb84c35f9": {
+      "sha256": "70fcf635ab4802a6974d8db2db03db3392d8be258312deaa685764aeb84c35f9",
+      "size": 1166,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/70/70fcf635ab4802a6974d8db2db03db3392d8be258312deaa685764aeb84c35f9.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/70/70fcf635ab4802a6974d8db2db03db3392d8be258312deaa685764aeb84c35f9.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:43.099222+00:00",
+      "lastSeenAt": "2026-08-12T04:03:43.099234+00:00"
+    },
+    "86d22bb4fbcf78398abcd4dd95dade22b2a83b4ddb8d1292ba84c95da89bdf86": {
+      "sha256": "86d22bb4fbcf78398abcd4dd95dade22b2a83b4ddb8d1292ba84c95da89bdf86",
+      "size": 1485962,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/86/86d22bb4fbcf78398abcd4dd95dade22b2a83b4ddb8d1292ba84c95da89bdf86.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/86/86d22bb4fbcf78398abcd4dd95dade22b2a83b4ddb8d1292ba84c95da89bdf86.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:43.517828+00:00",
+      "lastSeenAt": "2026-08-12T04:03:43.517836+00:00"
+    },
+    "1a81fbfbf0a8efe0a8a9a16f0951e679dbbda131fe014a150176056199968e06": {
+      "sha256": "1a81fbfbf0a8efe0a8a9a16f0951e679dbbda131fe014a150176056199968e06",
+      "size": 519,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/1a/1a81fbfbf0a8efe0a8a9a16f0951e679dbbda131fe014a150176056199968e06.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1a/1a81fbfbf0a8efe0a8a9a16f0951e679dbbda131fe014a150176056199968e06.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:43.569023+00:00",
+      "lastSeenAt": "2026-08-12T04:03:43.569030+00:00"
+    },
+    "e31355832d6ea1a9f0f6b575cfafe67324a2e2260f5df8856f25108dc8e98f41": {
+      "sha256": "e31355832d6ea1a9f0f6b575cfafe67324a2e2260f5df8856f25108dc8e98f41",
+      "size": 1110,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/e3/e31355832d6ea1a9f0f6b575cfafe67324a2e2260f5df8856f25108dc8e98f41.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e3/e31355832d6ea1a9f0f6b575cfafe67324a2e2260f5df8856f25108dc8e98f41.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:43.679144+00:00",
+      "lastSeenAt": "2026-08-12T04:03:43.679154+00:00"
+    },
+    "e16ecf14d9e61e5857cb95d1908143ba4ba336d636a6a177350b5004cec21d87": {
+      "sha256": "e16ecf14d9e61e5857cb95d1908143ba4ba336d636a6a177350b5004cec21d87",
+      "size": 1171,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/e1/e16ecf14d9e61e5857cb95d1908143ba4ba336d636a6a177350b5004cec21d87.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/e1/e16ecf14d9e61e5857cb95d1908143ba4ba336d636a6a177350b5004cec21d87.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:43.996627+00:00",
+      "lastSeenAt": "2026-08-12T04:03:43.996639+00:00"
+    },
+    "472714e8a0317fc5b5f48b319781ddcf6814aedd95455b85867896d67ff51bff": {
+      "sha256": "472714e8a0317fc5b5f48b319781ddcf6814aedd95455b85867896d67ff51bff",
+      "size": 113336,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/47/472714e8a0317fc5b5f48b319781ddcf6814aedd95455b85867896d67ff51bff.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/47/472714e8a0317fc5b5f48b319781ddcf6814aedd95455b85867896d67ff51bff.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:44.005697+00:00",
+      "lastSeenAt": "2026-08-12T04:03:44.005704+00:00"
+    },
+    "5a7325e9fe8e94b709ce8ed5e572da896bfced6eeddf662e21de7b4953fd828c": {
+      "sha256": "5a7325e9fe8e94b709ce8ed5e572da896bfced6eeddf662e21de7b4953fd828c",
+      "size": 1446,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/5a/5a7325e9fe8e94b709ce8ed5e572da896bfced6eeddf662e21de7b4953fd828c.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/5a/5a7325e9fe8e94b709ce8ed5e572da896bfced6eeddf662e21de7b4953fd828c.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:44.641038+00:00",
+      "lastSeenAt": "2026-08-12T04:03:44.641049+00:00"
+    },
+    "1f4253a963b6649eaaecfbd8173c08c68ca89e572ef9adbeb280dbec9d79adf1": {
+      "sha256": "1f4253a963b6649eaaecfbd8173c08c68ca89e572ef9adbeb280dbec9d79adf1",
+      "size": 1420,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/1f/1f4253a963b6649eaaecfbd8173c08c68ca89e572ef9adbeb280dbec9d79adf1.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/1f/1f4253a963b6649eaaecfbd8173c08c68ca89e572ef9adbeb280dbec9d79adf1.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:44.934107+00:00",
+      "lastSeenAt": "2026-08-12T04:03:44.934120+00:00"
+    },
+    "189f97f0f346d64aaa4c28ed9dae200170208a2793b87f501cd1f6fc95bbc087": {
+      "sha256": "189f97f0f346d64aaa4c28ed9dae200170208a2793b87f501cd1f6fc95bbc087",
+      "size": 940,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/18/189f97f0f346d64aaa4c28ed9dae200170208a2793b87f501cd1f6fc95bbc087.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/18/189f97f0f346d64aaa4c28ed9dae200170208a2793b87f501cd1f6fc95bbc087.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:45.600715+00:00",
+      "lastSeenAt": "2026-08-12T04:03:45.600726+00:00"
+    },
+    "13b5107bf47680b7c8fe0c25c9b30d6fcb31d041b72ad0f57adce919a916e45c": {
+      "sha256": "13b5107bf47680b7c8fe0c25c9b30d6fcb31d041b72ad0f57adce919a916e45c",
+      "size": 6171,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/13/13b5107bf47680b7c8fe0c25c9b30d6fcb31d041b72ad0f57adce919a916e45c.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/13/13b5107bf47680b7c8fe0c25c9b30d6fcb31d041b72ad0f57adce919a916e45c.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:45.972576+00:00",
+      "lastSeenAt": "2026-08-12T04:03:45.972586+00:00"
+    },
+    "83248259d1f0e1a0cb8ee28922d124bc3bc38f0af823ab85bc03061979bc0503": {
+      "sha256": "83248259d1f0e1a0cb8ee28922d124bc3bc38f0af823ab85bc03061979bc0503",
+      "size": 2439,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/83/83248259d1f0e1a0cb8ee28922d124bc3bc38f0af823ab85bc03061979bc0503.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/83/83248259d1f0e1a0cb8ee28922d124bc3bc38f0af823ab85bc03061979bc0503.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:46.321038+00:00",
+      "lastSeenAt": "2026-08-12T04:03:46.321051+00:00"
+    },
+    "1173696e7428d77bb52df510703d5b8d54d9cee18aaf9d1ddb59aaabd47fd68e": {
+      "sha256": "1173696e7428d77bb52df510703d5b8d54d9cee18aaf9d1ddb59aaabd47fd68e",
+      "size": 5242,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/11/1173696e7428d77bb52df510703d5b8d54d9cee18aaf9d1ddb59aaabd47fd68e.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/11/1173696e7428d77bb52df510703d5b8d54d9cee18aaf9d1ddb59aaabd47fd68e.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:46.682493+00:00",
+      "lastSeenAt": "2026-08-12T04:03:46.682503+00:00"
+    },
+    "8f786c37a386566126f9e2d2c3492cd428d2105ad24fe901c6b96cc937b9c3e3": {
+      "sha256": "8f786c37a386566126f9e2d2c3492cd428d2105ad24fe901c6b96cc937b9c3e3",
+      "size": 713,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/8f/8f786c37a386566126f9e2d2c3492cd428d2105ad24fe901c6b96cc937b9c3e3.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/8f/8f786c37a386566126f9e2d2c3492cd428d2105ad24fe901c6b96cc937b9c3e3.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:48.484822+00:00",
+      "lastSeenAt": "2026-08-12T04:03:48.484834+00:00"
+    },
+    "249049118b2825764dd9dd840721c3795483dc10138a206eedfdcd3f5319744c": {
+      "sha256": "249049118b2825764dd9dd840721c3795483dc10138a206eedfdcd3f5319744c",
+      "size": 3271,
+      "contentType": "image/png",
+      "r2Key": "feishu-media/24/249049118b2825764dd9dd840721c3795483dc10138a206eedfdcd3f5319744c.png",
+      "r2Url": "https://pub-a0425f41996c4db49bbd1eb2225d74f2.r2.dev/feishu-media/24/249049118b2825764dd9dd840721c3795483dc10138a206eedfdcd3f5319744c.png",
+      "sourceUrlHost": "internal-api-drive-stream.feishu.cn",
+      "createdAt": "2026-08-12T04:03:48.496872+00:00",
+      "lastSeenAt": "2026-08-12T04:03:48.496880+00:00"
     }
   },
   "localAssets": {
