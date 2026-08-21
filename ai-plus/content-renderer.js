@@ -544,6 +544,24 @@
     }
   }
 
+  function hydrateStaticHero(hero, captions = []) {
+    const staticHero = root.querySelector(".ai-plus-module-hero");
+    if (!staticHero || !hero) return staticHero;
+    const kicker = staticHero.querySelector(".ai-plus-module-kicker");
+    const title = staticHero.querySelector("h1");
+    const lead = staticHero.querySelector(".ai-plus-module-copy > p:not(.ai-plus-module-kicker)");
+    if (kicker && hero.tag) kicker.textContent = hero.tag;
+    if (title && hero.title) title.textContent = hero.title;
+    if (lead && textOf(hero)) lead.textContent = textOf(hero);
+    if (captions.length) {
+      const captionNodes = staticHero.querySelectorAll(".ai-plus-module-caption span");
+      captions.slice(0, captionNodes.length).forEach((item, index) => {
+        captionNodes[index].textContent = item.title || textOf(item);
+      });
+    }
+    return staticHero;
+  }
+
   async function boot() {
     try {
       const response = await fetch(`../api/ai-plus-content.json?v=${Date.now()}`, { cache: "no-store" });
@@ -554,7 +572,13 @@
       const records = await mergeArticleCovers(page.records.filter((item) => item.enabled !== false));
       const html = renderPageContent(records);
       if (!html) return;
+      const hero = firstOfType(records, "hero");
+      const captions = records.filter((item) => item.section === "顶部引导" && item.moduleType === "caption");
+      const staticHero = hydrateStaticHero(hero, captions);
       root.innerHTML = html;
+      const liveHero = root.querySelector(".live-hero");
+      if (liveHero) liveHero.remove();
+      if (staticHero) root.prepend(staticHero);
       root.classList.add("live-rendered");
       root.dataset.feishuRendered = "true";
       initToolboxFilters();
