@@ -60,6 +60,65 @@
   const sectionItems = (sections, name, type) => (sections.get(name) || []).filter((item) => item.moduleType === type);
   const firstOfType = (records, type) => records.find((item) => item.moduleType === type);
 
+  function renderHeroVisual() {
+    switch (pageKey) {
+      case "overview":
+        return `
+          <div class="ai-plus-lab-visual overview-constellation" aria-hidden="true">
+            <span class="overview-node node-a"></span>
+            <span class="overview-node node-b"></span>
+            <span class="overview-node node-c"></span>
+            <span class="overview-node node-d"></span>
+            <span class="overview-line line-a"></span>
+            <span class="overview-line line-b"></span>
+            <span class="overview-line line-c"></span>
+            <span class="overview-ring ring-a"></span>
+          </div>`;
+      case "office":
+        return `
+          <div class="ai-plus-lab-visual office-flow" aria-hidden="true">
+            <span class="office-card card-a"></span>
+            <span class="office-card card-b"></span>
+            <span class="office-card card-c"></span>
+            <span class="office-line line-a"></span>
+            <span class="office-line line-b"></span>
+            <span class="office-dot dot-a"></span>
+          </div>`;
+      case "open-models":
+        return `
+          <div class="ai-plus-lab-visual model-cluster" aria-hidden="true">
+            <span class="model-node node-a"></span>
+            <span class="model-node node-b"></span>
+            <span class="model-node node-c"></span>
+            <span class="model-frame frame-a"></span>
+            <span class="model-frame frame-b"></span>
+            <span class="model-frame frame-c"></span>
+            <span class="model-path path-a"></span>
+            <span class="model-path path-b"></span>
+          </div>`;
+      case "agents":
+        return `
+          <div class="ai-plus-lab-visual agent-loop" aria-hidden="true">
+            <span class="agent-orbit"></span>
+            <span class="agent-core">AI</span>
+            <span class="agent-step step-a">PLAN</span>
+            <span class="agent-step step-b">TOOL</span>
+            <span class="agent-step step-c">CHECK</span>
+            <span class="agent-step step-d">LOOP</span>
+          </div>`;
+      case "toolbox":
+        return `
+          <div class="ai-plus-lab-visual toolbox-stack" aria-hidden="true">
+            <span class="toolbox-tile tile-a"></span>
+            <span class="toolbox-tile tile-b"></span>
+            <span class="toolbox-tile tile-c"></span>
+            <span class="toolbox-tile tile-d"></span>
+          </div>`;
+      default:
+        return "";
+    }
+  }
+
   function renderHero(hero, captions = []) {
     if (!hero) return "";
     return `
@@ -69,7 +128,8 @@
           <h1>${escapeHtml(hero.title || "")}</h1>
           ${textOf(hero) ? `<p class="live-hero-lead">${escapeHtml(textOf(hero))}</p>` : ""}
         </div>
-        <div class="live-hero-art" aria-hidden="true">
+        <div class="live-hero-art live-hero-art--${escapeHtml(pageKey)}" aria-hidden="true">
+          ${renderHeroVisual()}
           <span class="orb orb-a"></span>
           <span class="orb orb-b"></span>
           <span class="orb orb-c"></span>
@@ -484,6 +544,24 @@
     }
   }
 
+  function hydrateStaticHero(hero, captions = []) {
+    const staticHero = root.querySelector(".ai-plus-module-hero");
+    if (!staticHero || !hero) return staticHero;
+    const kicker = staticHero.querySelector(".ai-plus-module-kicker");
+    const title = staticHero.querySelector("h1");
+    const lead = staticHero.querySelector(".ai-plus-module-copy > p:not(.ai-plus-module-kicker)");
+    if (kicker && hero.tag) kicker.textContent = hero.tag;
+    if (title && hero.title) title.textContent = hero.title;
+    if (lead && textOf(hero)) lead.textContent = textOf(hero);
+    if (captions.length) {
+      const captionNodes = staticHero.querySelectorAll(".ai-plus-module-caption span");
+      captions.slice(0, captionNodes.length).forEach((item, index) => {
+        captionNodes[index].textContent = item.title || textOf(item);
+      });
+    }
+    return staticHero;
+  }
+
   async function boot() {
     try {
       const response = await fetch(`../api/ai-plus-content.json?v=${Date.now()}`, { cache: "no-store" });
@@ -494,7 +572,13 @@
       const records = await mergeArticleCovers(page.records.filter((item) => item.enabled !== false));
       const html = renderPageContent(records);
       if (!html) return;
+      const hero = firstOfType(records, "hero");
+      const captions = records.filter((item) => item.section === "顶部引导" && item.moduleType === "caption");
+      const staticHero = hydrateStaticHero(hero, captions);
       root.innerHTML = html;
+      const liveHero = root.querySelector(".live-hero");
+      if (liveHero) liveHero.remove();
+      if (staticHero) root.prepend(staticHero);
       root.classList.add("live-rendered");
       root.dataset.feishuRendered = "true";
       initToolboxFilters();
